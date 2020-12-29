@@ -1,0 +1,11 @@
+.navbar-dark .navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.nav-link {
+    padding-left: 13px;
+}
