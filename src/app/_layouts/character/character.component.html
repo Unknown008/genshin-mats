@@ -36,7 +36,7 @@
                         <input type="number" id="level" #level="ngModel"
                             [(ngModel)]="character.level" title="Current level" 
                             class="form-control" name="level" max="90" min="1" 
-                           >
+                            (keyup)="checkAscension('c')">
                     </div>
                     <div class="col-md-4 pl-0 flex center-y">
                         <i class="fas fa-arrow-right"></i>
@@ -44,7 +44,7 @@
                     <div class="col-md-4 pl-0">
                         <input type="number" id="tlevel" [(ngModel)]="character.tlevel" 
                             title="Target level" class="form-control" #tlevel="ngModel"
-                            name="tlevel" max="90" min="1">
+                            name="tlevel" max="90" min="1" (keyup)="checkAscension('t')">
                     </div>
                 </div>
                 <div class="row">
@@ -56,7 +56,7 @@
                             [(ngModel)]="character.ascension" 
                             title="Current ascension" #ascension="ngModel"
                             class="form-control" max="6" min="1" 
-                           >
+                            (keyup)="checkLevel('c')">
                     </div>
                     <div class="col-md-4 pl-0 flex center-y">
                         <i class="fas fa-arrow-right"></i>
@@ -65,7 +65,7 @@
                         <input type="number" id="tascension" name="tascension" 
                             [(ngModel)]="character.tascension"  title="Target ascension" 
                             class="form-control" #tascension="ngModel" max="6" min="1" 
-                           >
+                            (keyup)="checkLevel('t')">
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                                     [(ngModel)]="character.balevel" 
                                     title="Current basic attack level" 
                                     class="form-control" #balevel="ngModel" max="10"
-                                    min="1">
+                                    min="1" (keyup)="checkTalent('cba')">
                             </div>
                             <div class="col-md-4 pl-0 flex center-y">
                                 <i class="fas fa-arrow-right"></i>
