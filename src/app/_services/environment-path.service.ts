@@ -15,6 +15,6 @@ export class EnvironmentPathService {
         if (this.url.includes("localhost"))
             return path;
         else
-            return "/angular-page-test/" + path.replace(/^[./]*/, "");
+            return "angular-page-test/" + path.replace(/^[./]*/, "");
     }
 }
