@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { JsonService } from "../_services/json.service";
-import { Router } from "@angular/router";
+import { EnvironmentPathService } from "../_services/environment-path.service";
 
 declare var $: any;
 @Component({
@@ -30,16 +30,11 @@ export class HomeComponent implements OnInit {
     
     constructor(
         private json: JsonService,
-        private router: Router
+        private url: EnvironmentPathService
     ) { }
 
     ngOnInit() {
-        console.log("Router: " + this.router.url);
-        const parsedUrl = new URL(window.location.href);
-        const baseUrl = parsedUrl.origin;
-        console.log("windowlocation" + baseUrl);
-
-        this.json.getJSON("assets/resources/items/_weapons.json")
+        this.json.getJSON(this.url.getUrl() + "assets/resources/items/_weapons.json")
             .subscribe((data: any) => {
                 for (let type in this.weapons) {
                     for (let quality of data[type]) {
