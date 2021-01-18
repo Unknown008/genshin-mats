@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
         "Ballad": [],
         "Gold": []
     };
-    public charPath: string = this.url.getUrl("../../assets/resources/characters/");
+    public charPath: string = this.url.getUrl("../../assets/resources/characters/", true);
     public weapons = {
         "Decarabian": [],
         "Relic": [],
@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
         "Shackle": [],
         "Aerosiderite": []
     };
-    public weapPath: string = this.url.getUrl("../../assets/resources/items/");
+    public weapPath: string = this.url.getUrl("../../assets/resources/items/", true);
     
     constructor(
         private json: JsonService,
