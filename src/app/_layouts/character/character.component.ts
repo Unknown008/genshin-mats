@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { EnvironmentPathService } from 'src/app/_services/environment-path.service';
 import { CharacterModel } from './../../_models/character.model';
 
 @Component({
@@ -13,9 +14,11 @@ export class CharacterComponent implements OnInit {
     
     characterForm: FormGroup;
 
-    public path: string = "./../../assets/resources/characters/";
+    public path: string = this.url.getUrl("./../../assets/resources/characters/", true);
 
-    constructor() { }
+    constructor(
+        private url: EnvironmentPathService
+    ) { }
 
     ngOnInit() {
         this.character.file = this.path + this.character.file + ".png";

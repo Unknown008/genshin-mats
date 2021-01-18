@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { EnvironmentPathService } from "src/app/_services/environment-path.service";
 
 @Component({
     selector: "app-navbar",
@@ -7,10 +8,12 @@ import { Component, OnInit } from "@angular/core";
 })
 export class NavbarComponent implements OnInit {
     public logoPath: string = "";
-    constructor() { }
+
+    constructor(
+        private url: EnvironmentPathService
+    ) { }
 
     ngOnInit() {
-        this.logoPath = "../../../assets/resources/logo.png"
+        this.logoPath = this.url.getUrl("../../../assets/resources/logo.png", true);
     }
-
 }
