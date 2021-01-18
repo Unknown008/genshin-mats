@@ -1,0 +1,679 @@
+{
+    "Traveler (Anemo)": {
+        "element": "anemo",
+        "ascension": {
+            "element": "adaptive",
+            "local_specialty": "Windwheel_Aster",
+            "common_drop": "Mask"
+        },
+        "talent": {
+            "talent1": {
+                "1": {
+                    "book": "Freedom",
+                    "common_drop": "Scroll"
+                },
+                "2": {
+                    "book": "Resistance",
+                    "common_drop": "Scroll"
+                },
+                "3": {
+                    "book": "Ballad",
+                    "common_drop": "Scroll"
+                },
+                "4": {
+                    "book": "Freedom",
+                    "common_drop": "Scroll"
+                },
+                "5": {
+                    "book": "Resistance",
+                    "common_drop": "Scroll"
+                },
+                "6": {
+                    "book": "Ballad",
+                    "common_drop": "Scroll",
+                    "boss_drop": "Dvalin's_Sigh"
+                },
+                "7": {
+                    "book": "Freedom",
+                    "common_drop": "Scroll",
+                    "boss_drop": "Dvalin's_Sigh"
+                },
+                "8": {
+                    "book": "Resistance",
+                    "common_drop": "Scroll",
+                    "boss_drop": "Dvalin's_Sigh"
+                },
+                "9": {
+                    "book": "Ballad",
+                    "common_drop": "Scroll",
+                    "boss_drop": "Dvalin's_Sigh"
+                }
+            },
+            "talent2": {
+                "1": {
+                    "book": "Freedom",
+                    "common_drop": "Scroll"
+                },
+                "2": {
+                    "book": "Resistance",
+                    "common_drop": "Scroll"
+                },
+                "3": {
+                    "book": "Ballad",
+                    "common_drop": "Scroll"
+                },
+                "4": {
+                    "book": "Freedom",
+                    "common_drop": "Scroll"
+                },
+                "5": {
+                    "book": "Resistance",
+                    "common_drop": "Scroll"
+                },
+                "6": {
+                    "book": "Ballad",
+                    "common_drop": "Scroll",
+                    "boss_drop": "Dvalin's_Sigh"
+                },
+                "7": {
+                    "book": "Freedom",
+                    "common_drop": "Scroll",
+                    "boss_drop": "Dvalin's_Sigh"
+                },
+                "8": {
+                    "book": "Resistance",
+                    "common_drop": "Scroll",
+                    "boss_drop": "Dvalin's_Sigh"
+                },
+                "9": {
+                    "book": "Ballad",
+                    "common_drop": "Scroll",
+                    "boss_drop": "Dvalin's_Sigh"
+                }
+            },
+            "talent3": {
+                "1": {
+                    "book": "Freedom",
+                    "common_drop": "Scroll"
+                },
+                "2": {
+                    "book": "Resistance",
+                    "common_drop": "Scroll"
+                },
+                "3": {
+                    "book": "Ballad",
+                    "common_drop": "Scroll"
+                },
+                "4": {
+                    "book": "Freedom",
+                    "common_drop": "Scroll"
+                },
+                "5": {
+                    "book": "Resistance",
+                    "common_drop": "Scroll"
+                },
+                "6": {
+                    "book": "Ballad",
+                    "common_drop": "Scroll",
+                    "boss_drop": "Dvalin's_Sigh"
+                },
+                "7": {
+                    "book": "Freedom",
+                    "common_drop": "Scroll",
+                    "boss_drop": "Dvalin's_Sigh"
+                },
+                "8": {
+                    "book": "Resistance",
+                    "common_drop": "Scroll",
+                    "boss_drop": "Dvalin's_Sigh"
+                },
+                "9": {
+                    "book": "Ballad",
+                    "common_drop": "Scroll",
+                    "boss_drop": "Dvalin's_Sigh"
+                }
+            }
+        }
+    },
+    "Traveler (Geo)": {
+        "element": "geo",
+        "ascension": {
+            "element": "adaptive",
+            "local_specialty": "Windwheel_Aster",
+            "common_drop": "Mask"
+        },
+        "talent": {
+            "talent1": {
+                "1": {
+                    "book": "Freedom",
+                    "common_drop": "Scroll"
+                },
+                "2": {
+                    "book": "Resistance",
+                    "common_drop": "Scroll"
+                },
+                "3": {
+                    "book": "Ballad",
+                    "common_drop": "Scroll"
+                },
+                "4": {
+                    "book": "Freedom",
+                    "common_drop": "Scroll"
+                },
+                "5": {
+                    "book": "Resistance",
+                    "common_drop": "Scroll"
+                },
+                "6": {
+                    "book": "Ballad",
+                    "common_drop": "Scroll",
+                    "boss_drop": "Dvalin's_Sigh"
+                },
+                "7": {
+                    "book": "Freedom",
+                    "common_drop": "Scroll",
+                    "boss_drop": "Dvalin's_Sigh"
+                },
+                "8": {
+                    "book": "Resistance",
+                    "common_drop": "Scroll",
+                    "boss_drop": "Dvalin's_Sigh"
+                },
+                "9": {
+                    "book": "Ballad",
+                    "common_drop": "Scroll",
+                    "boss_drop": "Dvalin's_Sigh"
+                }
+            },
+            "talent2": {
+                "1": {
+                    "book": "Prosperity",
+                    "common_drop": "Arrowhead"
+                },
+                "2": {
+                    "book": "Diligence",
+                    "common_drop": "Arrowhead"
+                },
+                "3": {
+                    "book": "Gold",
+                    "common_drop": "Arrowhead"
+                },
+                "4": {
+                    "book": "Prosperity",
+                    "common_drop": "Arrowhead"
+                },
+                "5": {
+                    "book": "Diligence",
+                    "common_drop": "Arrowhead"
+                },
+                "6": {
+                    "book": "Gold",
+                    "common_drop": "Arrowhead",
+                    "boss_drop": "Tail_Of_Boreas"
+                },
+                "7": {
+                    "book": "Prosperity",
+                    "common_drop": "Arrowhead",
+                    "boss_drop": "Tail_Of_Boreas"
+                },
+                "8": {
+                    "book": "Diligence",
+                    "common_drop": "Arrowhead",
+                    "boss_drop": "Tail_Of_Boreas"
+                },
+                "9": {
+                    "book": "Gold",
+                    "common_drop": "Arrowhead",
+                    "boss_drop": "Tail_Of_Boreas"
+                }
+            },
+            "talent3": {
+                "1": {
+                    "book": "Prosperity",
+                    "common_drop": "Arrowhead"
+                },
+                "2": {
+                    "book": "Diligence",
+                    "common_drop": "Arrowhead"
+                },
+                "3": {
+                    "book": "Gold",
+                    "common_drop": "Arrowhead"
+                },
+                "4": {
+                    "book": "Prosperity",
+                    "common_drop": "Arrowhead"
+                },
+                "5": {
+                    "book": "Diligence",
+                    "common_drop": "Arrowhead"
+                },
+                "6": {
+                    "book": "Gold",
+                    "common_drop": "Arrowhead",
+                    "boss_drop": "Tail_Of_Boreas"
+                },
+                "7": {
+                    "book": "Prosperity",
+                    "common_drop": "Arrowhead",
+                    "boss_drop": "Tail_Of_Boreas"
+                },
+                "8": {
+                    "book": "Diligence",
+                    "common_drop": "Arrowhead",
+                    "boss_drop": "Tail_Of_Boreas"
+                },
+                "9": {
+                    "book": "Gold",
+                    "common_drop": "Arrowhead",
+                    "boss_drop": "Tail_Of_Boreas"
+                }
+            }
+        }
+    },
+    "Amber": {
+        "element": "pyro",
+        "ascension": {
+            "element": "pyro",
+            "local_specialty": "Small_Lamp_Grass",
+            "common_drop": "Arrowhead"
+        },
+        "talent": {
+            "all": {
+                "book": "Freedom",
+                "common_drop": "Arrowhead",
+                "boss_drop": "Dvalin's_Sigh"
+            }
+        }
+    },
+    "Lisa": {
+        "element": "electro",
+        "ascension": {
+            "element": "electro",
+            "local_specialty": "Valberry",
+            "common_drop": "Slime"
+        },
+        "talent": {
+            "all": {
+                "book": "Ballad",
+                "common_drop": "Slime",
+                "boss_drop": "Dvalin's_Claw"
+            }
+        }
+    },
+    "Kaeya": {
+        "element": "cryo",
+        "ascension": {
+            "element": "cryo",
+            "local_specialty": "Calla_Lily",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        },
+        "talent": {
+            "all": {
+                "book": "Ballad",
+                "common_drop": "Treasure_Hoarder_Insignia",
+                "boss_drop": "Spirit_Locket_Of_Boreas"
+            }
+        }
+    },
+    "Barbara": {
+        "element": "hydro",
+        "ascension": {
+            "element": "hydro",
+            "local_specialty": "Philanemo_Mushroom",
+            "common_drop": "Scroll"
+        },
+        "talent": {
+            "all": {
+                "book": "Freedom",
+                "common_drop": "Scroll",
+                "boss_drop": "Ring_Of_Boreas"
+            }
+        }
+    },
+    "Noelle": {
+        "element": "geo",
+        "ascension": {
+            "element": "geo",
+            "local_specialty": "Valberry",
+            "common_drop": "Mask"
+        },
+        "talent": {
+            "all": {
+                "book": "Resistance",
+                "common_drop": "Mask",
+                "boss_drop": "Dvalin's_Claw"
+            }
+        }
+    },
+    "Ningguang": {
+        "element": "geo",
+        "ascension": {
+            "element": "geo",
+            "local_specialty": "Glaze_Lily",
+            "common_drop": "Fatui_Insignia"
+        },
+        "talent": {
+            "all": {
+                "book": "Prosperity",
+                "common_drop": "Fatui_Insignia",
+                "boss_drop": "Spirit_Locket_Of_Boreas"
+            }
+        }
+    },
+    "Fischl": {
+        "element": "electro",
+        "ascension": {
+            "element": "electro",
+            "local_specialty": "Small_Lamp_Grass",
+            "common_drop": "Arrowhead"
+        },
+        "talent": {
+            "all": {
+                "book": "Ballad",
+                "common_drop": "Arrowhead",
+                "boss_drop": "Spirit_Locket_Of_Boreas"
+            }
+        }
+    },
+    "Xiangling": {
+        "element": "pyro",
+        "ascension": {
+            "element": "pyro",
+            "local_specialty": "Jueyun_Chili",
+            "common_drop": "Slime"
+        },
+        "talent": {
+            "all": {
+                "book": "Diligence",
+                "common_drop": "Slime",
+                "boss_drop": "Dvalin's_Claw"
+            }
+        }
+    },
+    "Beidou": {
+        "element": "electro",
+        "ascension": {
+            "element": "electro",
+            "local_specialty": "Noctilucous_Jade",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        },
+        "talent": {
+            "all": {
+                "book": "Gold",
+                "common_drop": "Treasure_Hoarder_Insignia",
+                "boss_drop": "Dvalin's_Sigh"
+            }
+        }
+    },
+    "Razor": {
+        "element": "electro",
+        "ascension": {
+            "element": "electro",
+            "local_specialty": "Wolfhook",
+            "common_drop": "Mask"
+        },
+        "talent": {
+            "all": {
+                "book": "Resistance",
+                "common_drop": "Mask",
+                "boss_drop": "Dvalin's_Claw"
+            }
+        }
+    },
+    "Chongyun": {
+        "element": "cryo",
+        "ascension": {
+            "element": "cryo",
+            "local_specialty": "Cor_Lapis",
+            "common_drop": "Mask"
+        },
+        "talent": {
+            "all": {
+                "book": "Diligence",
+                "common_drop": "Mask",
+                "boss_drop": "Dvalin's_Sigh"
+            }
+        }
+    },
+    "Diluc": {
+        "element": "pyro",
+        "ascension": {
+            "element": "pyro",
+            "local_specialty": "Small_Lamp_Grass",
+            "common_drop": "Fatui_Insignia"
+        },
+        "talent": {
+            "all": {
+                "book": "Resistance",
+                "common_drop": "Fatui_Insignia",
+                "boss_drop": "Dvalin's_Plume"
+            }
+        }
+    },
+    "Klee": {
+        "element": "pyro",
+        "ascension": {
+            "element": "pyro",
+            "local_specialty": "Philanemo_Mushroom",
+            "common_drop": "Scroll"
+        },
+        "talent": {
+            "all": {
+                "book": "Freedom",
+                "common_drop": "Scroll",
+                "boss_drop": "Ring_Of_Boreas"
+            }
+        }
+    },
+    "Venti": {
+        "element": "anemo",
+        "ascension": {
+            "element": "anemo",
+            "local_specialty": "Cecilia",
+            "common_drop": "Slime"
+        },
+        "talent": {
+            "all": {
+                "book": "Ballad",
+                "common_drop": "Slime",
+                "boss_drop": "Tail_Of_Boreas"
+            }
+        }
+    },
+    "Mona": {
+        "element": "hydro",
+        "ascension": {
+            "element": "hydro",
+            "local_specialty": "Philanemo_Mushroom",
+            "common_drop": "Nectar"
+        },
+        "talent": {
+            "all": {
+                "book": "Resistance",
+                "common_drop": "Nectar",
+                "boss_drop": "Ring_Of_Boreas"
+            }
+        }
+    },
+    "Qiqi": {
+        "element": "cryo",
+        "ascension": {
+            "element": "cryo",
+            "local_specialty": "Violetgrass",
+            "common_drop": "Scroll"
+        },
+        "talent": {
+            "all": {
+                "book": "Prosperity",
+                "common_drop": "Scroll",
+                "boss_drop": "Tail_Of_Boreas"
+            }
+        }
+    },
+    "Keqing": {
+        "element": "electro",
+        "ascension": {
+            "element": "electro",
+            "local_specialty": "Cor_Lapis",
+            "common_drop": "Nectar"
+        },
+        "talent": {
+            "all": {
+                "book": "Prosperity",
+                "common_drop": "Nectar",
+                "boss_drop": "Ring_Of_Boreas"
+            }
+        }
+    },
+    "Jean": {
+        "element": "anemo",
+        "ascension": {
+            "element": "anemo",
+            "local_specialty": "Dandelion_Seed",
+            "common_drop": "Mask"
+        },
+        "talent": {
+            "all": {
+                "book": "Resistance",
+                "common_drop": "Mask",
+                "boss_drop": "Dvalin's_Plume"
+            }
+        }
+    },
+    "Bennett": {
+        "element": "pyro",
+        "ascension": {
+            "element": "pyro",
+            "local_specialty": "Windwheel_Aster",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        },
+        "talent": {
+            "all": {
+                "book": "Resistance",
+                "common_drop": "Treasure_Hoarder_Insignia",
+                "boss_drop": "Dvalin's_Plume"
+            }
+        }
+    },
+    "Sucrose": {
+        "element": "anemo",
+        "ascension": {
+            "element": "anemo",
+            "local_specialty": "Windwheel_Aster",
+            "common_drop": "Nectar"
+        },
+        "talent": {
+            "all": {
+                "book": "Freedom",
+                "common_drop": "Nectar",
+                "boss_drop": "Spirit_Locket_Of_Boreas"
+            }
+        }
+    },
+    "Xingqiu": {
+        "element": "hydro",
+        "ascension": {
+            "element": "hydro",
+            "local_specialty": "Silk_Flower",
+            "common_drop": "Mask"
+        },
+        "talent": {
+            "all": {
+                "book": "Gold",
+                "common_drop": "Mask",
+                "boss_drop": "Tail_Of_Boreas"
+            }
+        }
+    },
+    "Childe": {
+        "element": "hydro",
+        "ascension": {
+            "element": "hydro",
+            "local_specialty": "Starconch",
+            "common_drop": "Fatui_Insignia"
+        },
+        "talent": {
+            "all": {
+                "book": "Freedom",
+                "common_drop": "Fatui_Insignia",
+                "boss_drop": "Shard_Of_A_Foul_Legacy"
+            }
+        }
+    },
+    "Diona": {
+        "element": "cryo",
+        "ascension": {
+            "element": "cryo",
+            "local_specialty": "Calla_Lily",
+            "common_drop": "Arrowhead"
+        },
+        "talent": {
+            "all": {
+                "book": "Freedom",
+                "common_drop": "Arrowhead",
+                "boss_drop": "Shard_Of_A_Foul_Legacy"
+            }
+        }
+    },
+    "Zhongli": {
+        "element": "geo",
+        "ascension": {
+            "element": "geo",
+            "local_specialty": "Cor_Lapis",
+            "common_drop": "Slime"
+        },
+        "talent": {
+            "all": {
+                "book": "Gold",
+                "common_drop": "Slime",
+                "boss_drop": "Tusk_Of_Monoceros_Caeli"
+            }
+        }
+    },
+    "Xinyan": {
+        "element": "pyro",
+        "ascension": {
+            "element": "pyro",
+            "local_specialty": "Violetgrass",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        },
+        "talent": {
+            "all": {
+                "book": "Gold",
+                "common_drop": "Treasure_Hoarder_Insignia",
+                "boss_drop": "Tusk_Of_Monoceros_Caeli"
+            }
+        }
+    },
+    "Albedo": {
+        "element": "geo",
+        "ascension": {
+            "element": "geo",
+            "local_specialty": "Cecilia",
+            "common_drop": "Scroll"
+        },
+        "talent": {
+            "all": {
+                "book": "Ballad",
+                "common_drop": "Scroll",
+                "boss_drop": "Tusk_Of_Monoceros_Caeli"
+            }
+        }
+    },
+    "Ganyu": {
+        "element": "cryo",
+        "ascension": {
+            "element": "cryo",
+            "local_specialty": "Qingxin",
+            "common_drop": "Nectar"
+        },
+        "talent": {
+            "all": {
+                "book": "Diligence",
+                "common_drop": "Nectar",
+                "boss_drop": "Shadow_Of_The_Warrior"
+            }
+        }
+    }
+}

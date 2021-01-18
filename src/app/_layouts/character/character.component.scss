@@ -1,0 +1,62 @@
+.character {
+    background-color: #212529;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 1rem;
+}
+
+.character-card {
+    position: relative;
+}
+
+.controls {
+    display: inline-block;
+    position: absolute;
+    padding: 0;
+    left: 1rem;
+}
+
+.button-container {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+}
+
+.button-container button{
+    color: #ffffff8c;
+    padding: 2px;
+    border: none;
+    background: none;
+}
+
+.form-label {
+    color: #ffffff8c;
+    font-size: 0.8rem;
+}
+
+.form-control {
+    color: #fff;
+    background: none;
+    border: none;
+    transition: none;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.portrait {
+    max-width: 110px;
+    max-height: 110px;
+}
+
+.stat-row {
+    display: inline-block;
+}
+
+.row-label {
+    height: 16px;
+}

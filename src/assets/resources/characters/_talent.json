@@ -1,0 +1,134 @@
+{
+    "1": {
+        "cost": 12500,
+        "book": {
+            "quality": "green",
+            "quantity": 3
+        },
+        "common_drop": {
+            "quality": "grey",
+            "quantity": 6
+        },
+        "boss_drop": null,
+        "limited": null
+    },
+    "2": {
+        "cost": 17500,
+        "book": {
+            "quality": "blue",
+            "quantity": 2
+        },
+        "common_drop": {
+            "quality": "green",
+            "quantity": 3
+        },
+        "boss_drop": null,
+        "limited": null
+    },
+    "3": {
+        "cost": 25000,
+        "book": {
+            "quality": "blue",
+            "quantity": 4
+        },
+        "common_drop": {
+            "quality": "green",
+            "quantity": 4
+        },
+        "boss_drop": null,
+        "limited": null
+    },
+    "4": {
+        "cost": 30000,
+        "book": {
+            "quality": "blue",
+            "quantity": 6
+        },
+        "common_drop": {
+            "quality": "green",
+            "quantity": 6
+        },
+        "boss_drop": null,
+        "limited": null
+    },
+    "5": {
+        "cost": 37500,
+        "book": {
+            "quality": "blue",
+            "quantity": 9
+        },
+        "common_drop": {
+            "quality": "green",
+            "quantity": 9
+        },
+        "boss_drop": null,
+        "limited": null
+    },
+    "6": {
+        "cost": 120000,
+        "book": {
+            "quality": "purple",
+            "quantity": 4
+        },
+        "common_drop": {
+            "quality": "blue",
+            "quantity": 4
+        },
+        "boss_drop": {
+            "quality": "gold",
+            "quantity": 1
+        },
+        "limited": null
+    },
+    "7": {
+        "cost": 260000,
+        "book": {
+            "quality": "purple",
+            "quantity": 6
+        },
+        "common_drop": {
+            "quality": "blue",
+            "quantity": 6
+        },
+        "boss_drop": {
+            "quality": "gold",
+            "quantity": 1
+        },
+        "limited": null
+    },
+    "8": {
+        "cost": 450000,
+        "book": {
+            "quality": "purple",
+            "quantity": 12
+        },
+        "common_drop": {
+            "quality": "blue",
+            "quantity": 9
+        },
+        "boss_drop": {
+            "quality": "gold",
+            "quantity": 2
+        },
+        "limited": null
+    },
+    "9": {
+        "cost": 700000,
+        "book": {
+            "quality": "purple",
+            "quantity": 16
+        },
+        "common_drop": {
+            "quality": "blue",
+            "quantity": 12
+        },
+        "boss_drop": {
+            "quality": "gold",
+            "quantity": 2
+        },
+        "limited": {
+            "quality": "gold",
+            "quantity": 1
+        }
+    }
+}

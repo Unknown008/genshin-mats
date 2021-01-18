@@ -1,0 +1,36 @@
+<div class="col-lg-10">
+    <form #userData="ngForm">
+        <div class="alert alert-warning alert-dismissible fade show text-left" role="alert" 
+            *ngIf="alertSeen == 'false'">
+            The website may use cookies to personalise content. Those cookies are saved on
+            your device and will not be used for any other purpose than to retain saved information on this website. 
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
+                (click)="disclaimerSeen()">
+            </button>
+        </div>
+        <div class="row text-left">
+            <label for="characters" class="form-label px-0">Characters</label>
+        </div>
+        <div class="row">
+            <textarea class="form-control" id="characters" [(ngModel)]="characterString"
+                name="characters" #characters="ngModel" rows="8">
+            </textarea>
+        </div>
+        <div class="row">
+            <div class="text-left display-inherit">
+                <button class="btn ms-0 default" (click)="save()" 
+                    title="Save text to browser">
+                    Save
+                </button>
+                <button class="btn default" (click)="load()"
+                    title="Load text to characters">
+                    Load
+                </button>
+                <button class="btn danger" (click)="delete()" [disabled]="canDelete" 
+                    [title]="deleteTitle">
+                    Delete saved data
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

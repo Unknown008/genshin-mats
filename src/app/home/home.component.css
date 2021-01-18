@@ -1,25 +1,10 @@
-.dark {
-    background-color: #0D1117;
-}
-
-.page {
-    text-align: center;
-    color: #fff;
-    font-family: "Lucida Grande", "Lucida Sans Unicode", "Arial", "Helvetica", "sans-serif";
-    padding: 0 20px;
-}
-
-.genshin-logo {
-    height: 50px;
-}
-
 .page-title {
     text-transform: uppercase;
-    margin: 20px auto 10px;
+    margin: 10px auto;
 }
 
 .day-row {
-    color: #5EB3BC;   
+    color: #5eb3bc;
 }
 
 .small-padding {
@@ -48,7 +33,7 @@
 
 fieldset {
     border-width: 1px 0 0 0 !important;
-    border-top: #fff solid !important;
+    border-top: #ffffff8c solid !important;
 }
 
 legend {
@@ -59,7 +44,7 @@ legend {
 
 .weapon-block {
     margin: 30px 20px 0;
-    overflow: hidden;
+    overflow-x: hidden;
     white-space: nowrap;
 }
 
@@ -105,16 +90,5 @@ legend {
 }
 
 .char-row {
-    height: 100%
-}
-
-.url {
-    float: right;
-    color: #fff;
-    text-decoration: none;
-}
-
-.url:hover {
-    text-decoration: underline;
-    color: #fff
+    height: 100%;
 }

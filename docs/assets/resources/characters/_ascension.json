@@ -1,0 +1,149 @@
+{
+    "gem": {
+        "pyro": {
+            "gem": "Agnidus_Agate",
+            "boss_drop": "Everflame_Seed"
+        },
+        "hydro": {
+            "gem": "Varunada_Lazurite",
+            "boss_drop": "Cleansing_Heart"
+        },
+        "cryo": {
+            "gem": "Shivada_Jade",
+            "boss_drop": "Hoarfrost_Core"
+        },
+        "electro": {
+            "gem": "Vajrada_Amethyst",
+            "boss_drop": "Lightning_Prism"
+        },
+        "anemo": {
+            "gem": "Vayuda_Turquoise",
+            "boss_drop": "Hurricane_Seed"
+        },
+        "geo": {
+            "gem": "Prithiva_Topaz",
+            "boss_drop": "Basalt_Pillar"
+        },
+        "dendro": {
+            "gem": "",
+            "boss_drop": ""
+        },
+        "adaptive": {
+            "gem": "Brilliant_Diamond",
+            "boss_drop": ""
+        }
+    },
+    "cost": {
+        "20": {
+            "cost": 20000,
+            "gem": {
+                "quality": "green",
+                "quantity": 1
+            },
+            "local_specialty": {
+                "quality": null,
+                "quantity": 3
+            },
+            "common_drop": {
+                "quality": "grey",
+                "quantity": 3
+            },
+            "boss_drop": null
+        },
+        "40": {
+            "cost": 40000,
+            "gem": {
+                "quality": "blue",
+                "quantity": 3
+            },
+            "local_specialty": {
+                "quality": null,
+                "quantity": 10
+            },
+            "common_drop": {
+                "quality": "grey",
+                "quantity": 15
+            },
+            "boss_drop": {
+                "quality": null,
+                "quantity": 2
+            }
+        },
+        "50": {
+            "cost": 60000,
+            "gem": {
+                "quality": "blue",
+                "quantity": 6
+            },
+            "local_specialty": {
+                "quality": null,
+                "quantity": 20
+            },
+            "common_drop": {
+                "quality": "green",
+                "quantity": 12
+            },
+            "boss_drop": {
+                "quality": null,
+                "quantity": 4
+            }
+        },
+        "60": {
+            "cost": 80000,
+            "gem": {
+                "quality": "purple",
+                "quantity": 3
+            },
+            "local_specialty": {
+                "quality": null,
+                "quantity": 30
+            },
+            "common_drop": {
+                "quality": "green",
+                "quantity": 18
+            },
+            "boss_drop": {
+                "quality": null,
+                "quantity": 8
+            }
+        },
+        "70": {
+            "cost": 100000,
+            "gem": {
+                "quality": "purple",
+                "quantity": 6
+            },
+            "local_specialty": {
+                "quality": null,
+                "quantity": 45
+            },
+            "common_drop": {
+                "quality": "blue",
+                "quantity": 12
+            },
+            "boss_drop": {
+                "quality": null,
+                "quantity": 12
+            }
+        },
+        "80": {
+            "cost": 120000,
+            "gem": {
+                "quality": "gold",
+                "quantity": 6
+            },
+            "local_specialty": {
+                "quality": null,
+                "quantity": 60
+            },
+            "common_drop": {
+                "quality": "blue",
+                "quantity": 24
+            },
+            "boss_drop": {
+                "quality": null,
+                "quantity": 20
+            }
+        }
+    }
+}
