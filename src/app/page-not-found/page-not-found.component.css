@@ -1,0 +1,5 @@
+.dead-center {
+    position: absolute;
+    bottom: calc(50% - 108px);
+    right: calc(50% - 384.4px);
+}

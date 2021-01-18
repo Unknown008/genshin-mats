@@ -1,0 +1,76 @@
+<form #tableOptions="ngForm">
+    <div class="table-options">
+        <div class="table-option">
+            <div class="form-check form-switch">
+                <label class="form-check-label" for="rarityDisplay">
+                    Rarity
+                </label>
+                <input class="form-check-input" type="checkbox" id="rarityDisplay" 
+                    [checked]="displayRarity" (click)="toggle('rarity')">
+            </div>
+        </div>
+        <div class="table-option">
+            <div class="form-check form-switch">
+                <label class="form-check-label" for="totalsDisplay">
+                    Totals
+                </label>
+                <input class="form-check-input" type="checkbox" id="totalsDisplay" 
+                    [checked]="displayTotals" (click)="toggle('totals')">
+            </div>
+        </div>
+    </div>
+</form>
+<table class="table white">
+    <caption></caption>
+    <thead>
+        <th *ngFor="let col of displayedColumns" scope="col">
+            {{col}}
+        </th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of tableData">
+            <td class="" *ngFor="let col of displayedColumns">
+                <div *ngIf="col == 'Name'">
+                    {{row[col]}}
+                </div>
+                <div *ngIf="col != 'Name' && row[col].length > 0">
+                    <div class="items-row" *ngFor="let item of row[col]">
+                        <div [ngClass]="item.type">
+                            <div class="item-holder" [ngClass]="displayRarity ? item.qly : ''">
+                                <img class="item-single" [src]="item.path" 
+                                    [alt]="item.name" [title]="item.name">
+                            </div>
+                            <span class="item-qty">x {{item.qty | numberFormat}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="col != 'Name' && row[col].length == 0">
+                    <div class="maxed">Max</div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table *ngIf="displayTotals" class="table white">
+    <caption></caption>
+    <thead>
+        <th *ngFor="let col of totalColumns" scope="col">
+            Total {{col}}
+        </th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of totalsData">
+            <td class="" *ngFor="let col of totalColumns">
+                <div class="items-row" *ngFor="let item of row[col]">
+                    <div [ngClass]="item.type">
+                        <div class="item-holder" [ngClass]="displayRarity ? item.qly : ''">
+                            <img class="item-single" [src]="item.path" 
+                                [alt]="item.name" [title]="item.name">
+                        </div>
+                        <span class="item-qty">x {{item.qty | numberFormat}}</span>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

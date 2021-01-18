@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Traveler (Anemo)",
+        "file": "Traveler",
+        "level": 1,
+        "ascension": 0,
+        "balevel": 1,
+        "eslevel": 1,
+        "eblevel": 1,
+        "tlevel": 90,
+        "tascension": 6,
+        "tbalevel": 10,
+        "teslevel": 10,
+        "teblevel": 10,
+        "display": true
+    },
+    {
+        "name": "Amber",
+        "file": "Amber",
+        "level": 1,
+        "ascension": 0,
+        "balevel": 1,
+        "eslevel": 1,
+        "eblevel": 1,
+        "tlevel": 90,
+        "tascension": 6,
+        "tbalevel": 10,
+        "teslevel": 10,
+        "teblevel": 10,
+        "display": true
+    },
+    {
+        "name": "Lisa",
+        "file": "Lisa",
+        "level": 1,
+        "ascension": 0,
+        "balevel": 1,
+        "eslevel": 1,
+        "eblevel": 1,
+        "tlevel": 90,
+        "tascension": 6,
+        "tbalevel": 10,
+        "teslevel": 10,
+        "teblevel": 10,
+        "display": true
+    },
+    {
+        "name": "Kaeya",
+        "file": "Kaeya",
+        "level": 1,
+        "ascension": 0,
+        "balevel": 1,
+        "eslevel": 1,
+        "eblevel": 1,
+        "tlevel": 90,
+        "tascension": 6,
+        "tbalevel": 10,
+        "teslevel": 10,
+        "teblevel": 10,
+        "display": true
+    }
+]

@@ -1,0 +1,160 @@
+<div class="character col-lg-5">
+    <form #characterForm="ngForm">
+        <div class="row text-left character-card">
+            <div class="controls">
+                <div class="button-container">
+                    <button type="button" (click)="removeCharacter()" title="Remove character">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+                <div class="button-container">
+                    <button type="button" (click)="toggleCharacterDisplay()" 
+                        title="Hide character from mats table">
+                        <i class="fas" 
+                            [ngClass]="character.display ? 'fa-eye' : 'fa-eye-slash'">
+                        </i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-4 flex center-x center-y">
+                <img class="portrait" [src]="character.file">
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <label for="name" class="form-label px-0">Name</label>
+                </div>
+                <div class="row">
+                    <input type="text" class="form-control" id="name" 
+                        disabled [(ngModel)]="character.name" name="name"
+                        #name="ngModel">
+                </div>
+                <div class="row">
+                    <label for="level" class="form-label px-0">Level</label>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 pl-0">
+                        <input type="number" id="level" #level="ngModel"
+                            [(ngModel)]="character.level" title="Current level" 
+                            class="form-control" name="level" max="90" min="1" 
+                           >
+                    </div>
+                    <div class="col-md-4 pl-0 flex center-y">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="col-md-4 pl-0">
+                        <input type="number" id="tlevel" [(ngModel)]="character.tlevel" 
+                            title="Target level" class="form-control" #tlevel="ngModel"
+                            name="tlevel" max="90" min="1">
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="ascension" class="form-label px-0">Ascension</label>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 pl-0">
+                        <input type="number" id="ascension" name="ascension"
+                            [(ngModel)]="character.ascension" 
+                            title="Current ascension" #ascension="ngModel"
+                            class="form-control" max="6" min="1" 
+                           >
+                    </div>
+                    <div class="col-md-4 pl-0 flex center-y">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="col-md-4 pl-0">
+                        <input type="number" id="tascension" name="tascension" 
+                            [(ngModel)]="character.tascension"  title="Target ascension" 
+                            class="form-control" #tascension="ngModel" max="6" min="1" 
+                           >
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <label for="balevel" class="form-label px-0">
+                                Basic Attack Level
+                            </label>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 pl-0">
+                                <input type="number" id="balevel" name="balevel"
+                                    [(ngModel)]="character.balevel" 
+                                    title="Current basic attack level" 
+                                    class="form-control" #balevel="ngModel" max="10"
+                                    min="1">
+                            </div>
+                            <div class="col-md-4 pl-0 flex center-y">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="col-md-4 pl-0">
+                                <input type="number" id="tbalevel" name="tbalevel"
+                                    [(ngModel)]="character.tbalevel" 
+                                    title="Target basic attack level" 
+                                    class="form-control" #tbalevel="ngModel" max="10"
+                                    min="1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <label for="eslevel" class="form-label px-0">
+                                Elemental Skill Level
+                            </label>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 pl-0">
+                                <input type="number" id="eslevel" name="eslevel" 
+                                    [(ngModel)]="character.eslevel" 
+                                    title="Current elemental level" 
+                                    class="form-control" #eslevel="ngModel" max="10"
+                                    min="1">
+                            </div>
+                            <div class="col-md-4 pl-0 flex center-y">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="col-md-4 pl-0">
+                                <input type="number" id="teslevel" name="teslevel"
+                                    [(ngModel)]="character.teslevel" 
+                                    title="Target elemental skill level" 
+                                    class="form-control" #teslevel="ngModel" max="10"
+                                    min="1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <label for="eblevel" class="form-label px-0">
+                                Elemental Burst Level
+                            </label>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 pl-0">
+                                <input type="number" id="eblevel" name="eblevel"
+                                    [(ngModel)]="character.eblevel" 
+                                    title="Current burst level" 
+                                    class="form-control" #eblevel="ngModel" max="10"
+                                    min="1">
+                            </div>
+                            <div class="col-md-4 pl-0 flex center-y">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="col-md-4 pl-0">
+                                <input type="number" id="teblevel" name="teblevel"
+                                    [(ngModel)]="character.teblevel" 
+                                    title="Target burst attack level" 
+                                    class="form-control" #teblevel="ngModel" max="10"
+                                    min="1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

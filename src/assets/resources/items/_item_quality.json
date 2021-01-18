@@ -1,0 +1,80 @@
+{
+    "gem": {
+        "green": "Sliver",
+        "blue": "Fragment",
+        "purple": "Chunk",
+        "gold": "Gemstone"
+    },
+    "common_drop": {
+        "Mask": {
+            "grey": "Damaged_Mask",
+            "green": "Stained_Mask",
+            "blue": "Ominous_Mask"
+        },
+        "Arrowhead": {
+            "grey": "Firm_Arrowhead",
+            "green": "Sharp_Arrowhead",
+            "blue": "Weathered_Arrowhead"
+        },
+        "Slime": {
+            "grey": "Firm_Arrowhead",
+            "green": "Sharp_Arrowhead",
+            "blue": "Weathered_Arrowhead"
+        },
+        "Scroll": {
+            "grey": "Sealed_Scroll",
+            "green": "Divining_Scroll",
+            "blue": "Forbidden_Curse_Scroll"
+        },
+        "Nectar": {
+            "grey": "Whopperflower_Nectar",
+            "green": "Shimmering_Nectar",
+            "blue": "Energy_Nectar"
+        },
+        "Treasure_Hoarder_Insignia": {
+            "grey": "Treasure_Hoarder_Insignia",
+            "green": "Silver_Raven_Insignia",
+            "blue": "Golden_Raven_Insignia"
+        },
+        "Fatui_Insignia": {
+            "grey": "Recruit's_Insignia",
+            "green": "Sergeant's_Insignia",
+            "blue": "Lieutenant's_Insignia"
+        },
+        "Branch": {
+            "green": "Dead_Ley_Line_Branch",
+            "blue": "Dead_Ley_Line_Leaves",
+            "purple": "Ley_Line_Sprouts"
+        },
+        "Horn": {
+            "green": "Heavy_Horn",
+            "blue": "Black_Bronze_Horn",
+            "purple": "Black_Crystal_Horn"
+        },
+        "Bone": {
+            "green": "Fragile_Bone_Shard",
+            "blue": "Sturdy_Bone_Shard",
+            "purple": "Fossilized_Bone_Shard"
+        },
+        "Knife": {
+            "green": "Hunter's_Sacrificial_Knife",
+            "blue": "Agent's_Sacrificial_Knife",
+            "purple": "Inspector's_Sacrificial_Knife"
+        },
+        "Mist_Grass": {
+            "green": "Mist_Grass_Pollen",
+            "blue": "Mist_Grass",
+            "purple": "Mist_Grass_Wick"
+        },
+        "Chaos": {
+            "green": "Chaos_Device",
+            "blue": "Chaos_Circuit",
+            "purple": "Chaos_Core"
+        }
+    },
+    "talent": {
+        "green": "Teachings_of_",
+        "blue": "Guide_to_",
+        "purple": "Philosophies_of_"
+    }
+}
