@@ -313,7 +313,7 @@ class HomeComponent {
             "Ballad": [],
             "Gold": []
         };
-        this.charPath = "../../assets/resources/characters/";
+        this.charPath = this.url.getUrl("../../assets/resources/characters/");
         this.weapons = {
             "Decarabian": [],
             "Relic": [],
@@ -322,10 +322,10 @@ class HomeComponent {
             "Shackle": [],
             "Aerosiderite": []
         };
-        this.weapPath = "../../assets/resources/items/";
+        this.weapPath = this.url.getUrl("../../assets/resources/items/");
     }
     ngOnInit() {
-        this.json.getJSON(this.url.getUrl() + "assets/resources/items/_weapons.json")
+        this.json.getJSON(this.url.getUrl("assets/resources/items/_weapons.json"))
             .subscribe((data) => {
             for (let type in this.weapons) {
                 for (let quality of data[type]) {
@@ -337,7 +337,7 @@ class HomeComponent {
                 }
             }
         });
-        this.json.getJSON("assets/resources/talents/_talents.json")
+        this.json.getJSON(this.url.getUrl("assets/resources/talents/_talents.json"))
             .subscribe((data) => {
             for (let type in this.talents) {
                 for (let char of data[type]) {
@@ -2119,12 +2119,11 @@ class EnvironmentPathService {
         const parsedUrl = new URL(window.location.href);
         this.url = parsedUrl.origin;
     }
-    getUrl() {
-        console.log(this.url);
+    getUrl(path) {
         if (this.url.includes("localhost"))
-            return "./";
+            return path;
         else
-            return this.url + "/angular-page-test/";
+            return "/angular-page-test/" + path.replace(/^[./]*/, "");
     }
 }
 EnvironmentPathService.ɵfac = function EnvironmentPathService_Factory(t) { return new (t || EnvironmentPathService)(); };

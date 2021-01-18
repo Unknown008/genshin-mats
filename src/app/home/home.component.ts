@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
         "Ballad": [],
         "Gold": []
     };
-    public charPath: string = "../../assets/resources/characters/";
+    public charPath: string = this.url.getUrl("../../assets/resources/characters/");
     public weapons = {
         "Decarabian": [],
         "Relic": [],
@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
         "Shackle": [],
         "Aerosiderite": []
     };
-    public weapPath: string = "../../assets/resources/items/";
+    public weapPath: string = this.url.getUrl("../../assets/resources/items/");
     
     constructor(
         private json: JsonService,
@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        this.json.getJSON(this.url.getUrl() + "assets/resources/items/_weapons.json")
+        this.json.getJSON(this.url.getUrl("assets/resources/items/_weapons.json"))
             .subscribe((data: any) => {
                 for (let type in this.weapons) {
                     for (let quality of data[type]) {
@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
                 }
             });
 
-        this.json.getJSON("assets/resources/talents/_talents.json")
+        this.json.getJSON(this.url.getUrl("assets/resources/talents/_talents.json"))
             .subscribe((data: any) => {
                 for (let type in this.talents) {
                     for (let char of data[type]) {
