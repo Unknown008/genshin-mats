@@ -184,7 +184,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _services_json_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../_services/json.service */ "Osnj");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _services_environment_path_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../_services/environment-path.service */ "RR3w");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "ofXK");
 /* harmony import */ var _shared_footer_footer_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../_shared/footer/footer.component */ "JClc");
 
@@ -302,9 +302,9 @@ function HomeComponent_span_101_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", char_r23.path, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
 } }
 class HomeComponent {
-    constructor(json, router) {
+    constructor(json, url) {
         this.json = json;
-        this.router = router;
+        this.url = url;
         this.talents = {
             "Freedom": [],
             "Prosperity": [],
@@ -325,11 +325,7 @@ class HomeComponent {
         this.weapPath = "../../assets/resources/items/";
     }
     ngOnInit() {
-        console.log("Router: " + this.router.url);
-        const parsedUrl = new URL(window.location.href);
-        const baseUrl = parsedUrl.origin;
-        console.log("windowlocation" + baseUrl);
-        this.json.getJSON("assets/resources/items/_weapons.json")
+        this.json.getJSON(this.url.getUrl() + "assets/resources/items/_weapons.json")
             .subscribe((data) => {
             for (let type in this.weapons) {
                 for (let quality of data[type]) {
@@ -354,7 +350,7 @@ class HomeComponent {
         });
     }
 }
-HomeComponent.ɵfac = function HomeComponent_Factory(t) { return new (t || HomeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_json_service__WEBPACK_IMPORTED_MODULE_1__["JsonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"])); };
+HomeComponent.ɵfac = function HomeComponent_Factory(t) { return new (t || HomeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_json_service__WEBPACK_IMPORTED_MODULE_1__["JsonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_environment_path_service__WEBPACK_IMPORTED_MODULE_2__["EnvironmentPathService"])); };
 HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["app-home"]], decls: 105, vars: 12, consts: [[1, "page", "col-md-12"], [1, "page-title"], [1, "day-row", "row"], [1, "col-md-4", "small-padding"], [1, "section"], [1, "table-header"], [1, "weapon-row", "row"], [1, "floating-title"], [1, "weapon-block"], [1, "mat-row"], [4, "ngFor", "ngForOf"], [1, "talent-row", "row"], [1, "char-block"], [1, "char-row"], ["alt", "weapon.name", 1, "mat", 3, "src", "ngClass"], ["alt", "char.name", 1, "char", 3, "src"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
@@ -568,7 +564,7 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
                 templateUrl: "./home.component.html",
                 styleUrls: ["./home.component.css"]
             }]
-    }], function () { return [{ type: _services_json_service__WEBPACK_IMPORTED_MODULE_1__["JsonService"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }]; }, null); })();
+    }], function () { return [{ type: _services_json_service__WEBPACK_IMPORTED_MODULE_1__["JsonService"] }, { type: _services_environment_path_service__WEBPACK_IMPORTED_MODULE_2__["EnvironmentPathService"] }]; }, null); })();
 
 
 /***/ }),
@@ -2101,6 +2097,44 @@ JsonService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjec
                 providedIn: "root"
             }]
     }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "RR3w":
+/*!*******************************************************!*\
+  !*** ./src/app/_services/environment-path.service.ts ***!
+  \*******************************************************/
+/*! exports provided: EnvironmentPathService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EnvironmentPathService", function() { return EnvironmentPathService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
+
+class EnvironmentPathService {
+    constructor() {
+        const parsedUrl = new URL(window.location.href);
+        this.url = parsedUrl.origin;
+    }
+    getUrl() {
+        console.log(this.url);
+        if (this.url.includes("localhost"))
+            return "./";
+        else
+            return this.url + "/angular-page-test/";
+    }
+}
+EnvironmentPathService.ɵfac = function EnvironmentPathService_Factory(t) { return new (t || EnvironmentPathService)(); };
+EnvironmentPathService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: EnvironmentPathService, factory: EnvironmentPathService.ɵfac, providedIn: "root" });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](EnvironmentPathService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+                providedIn: "root"
+            }]
+    }], function () { return []; }, null); })();
 
 
 /***/ }),
