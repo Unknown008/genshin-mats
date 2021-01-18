@@ -2123,7 +2123,7 @@ class EnvironmentPathService {
         if (this.url.includes("localhost"))
             return path;
         else
-            return "/angular-page-test/" + path.replace(/^[./]*/, "");
+            return "angular-page-test/" + path.replace(/^[./]*/, "");
     }
 }
 EnvironmentPathService.ɵfac = function EnvironmentPathService_Factory(t) { return new (t || EnvironmentPathService)(); };
