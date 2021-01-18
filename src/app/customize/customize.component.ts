@@ -74,11 +74,15 @@ export class CustomizeComponent implements OnInit {
             this.json.getJSON(this.url.getUrl("assets/resources/characters/template.json"))
                 .subscribe((data: CharacterModel[]) => {
                     this.characters = data;
+                    this.loadCharData();
                 });
         } else {
             this.characters = JSON.parse(userData);
+            this.loadCharData();
         }
+    }
 
+    loadCharData() {
         this.json.getJSON(this.url.getUrl("assets/resources/characters/data.json"))
             .subscribe((data: any) => {
                 this.charData = data;

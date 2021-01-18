@@ -2802,15 +2802,20 @@ CharacterModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineIn
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageNotFoundComponent", function() { return PageNotFoundComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _services_environment_path_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../_services/environment-path.service */ "RR3w");
+
 
 
 class PageNotFoundComponent {
-    constructor() { }
+    constructor(url) {
+        this.url = url;
+        this.path = this.url.getUrl("./../../../assets/resources/404.png");
+    }
     ngOnInit() {
     }
 }
-PageNotFoundComponent.ɵfac = function PageNotFoundComponent_Factory(t) { return new (t || PageNotFoundComponent)(); };
-PageNotFoundComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PageNotFoundComponent, selectors: [["app-page-not-found"]], decls: 6, vars: 0, consts: [[1, "dark"], [1, "page", "col-md-12", "full-height"], [1, "dead-center"], ["src", "./../../../assets/resources/404.png"]], template: function PageNotFoundComponent_Template(rf, ctx) { if (rf & 1) {
+PageNotFoundComponent.ɵfac = function PageNotFoundComponent_Factory(t) { return new (t || PageNotFoundComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_environment_path_service__WEBPACK_IMPORTED_MODULE_1__["EnvironmentPathService"])); };
+PageNotFoundComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PageNotFoundComponent, selectors: [["app-page-not-found"]], decls: 6, vars: 1, consts: [[1, "dark"], [1, "page", "col-md-12", "full-height"], [1, "dead-center"], [3, "src"]], template: function PageNotFoundComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "body", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -2821,6 +2826,9 @@ PageNotFoundComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", ctx.path, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
     } }, styles: [".dead-center[_ngcontent-%COMP%] {\r\n    position: absolute;\r\n    bottom: calc(50% - 108px);\r\n    right: calc(50% - 384.4px);\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2Utbm90LWZvdW5kLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxrQkFBa0I7SUFDbEIseUJBQXlCO0lBQ3pCLDBCQUEwQjtBQUM5QiIsImZpbGUiOiJwYWdlLW5vdC1mb3VuZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmRlYWQtY2VudGVyIHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIGJvdHRvbTogY2FsYyg1MCUgLSAxMDhweCk7XHJcbiAgICByaWdodDogY2FsYyg1MCUgLSAzODQuNHB4KTtcclxufSJdfQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PageNotFoundComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
@@ -2829,7 +2837,7 @@ PageNotFoundComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
                 templateUrl: "./page-not-found.component.html",
                 styleUrls: ["./page-not-found.component.css"]
             }]
-    }], function () { return []; }, null); })();
+    }], function () { return [{ type: _services_environment_path_service__WEBPACK_IMPORTED_MODULE_1__["EnvironmentPathService"] }]; }, null); })();
 
 
 /***/ }),
@@ -2945,11 +2953,15 @@ class CustomizeComponent {
             this.json.getJSON(this.url.getUrl("assets/resources/characters/template.json"))
                 .subscribe((data) => {
                 this.characters = data;
+                this.loadCharData();
             });
         }
         else {
             this.characters = JSON.parse(userData);
+            this.loadCharData();
         }
+    }
+    loadCharData() {
         this.json.getJSON(this.url.getUrl("assets/resources/characters/data.json"))
             .subscribe((data) => {
             this.charData = data;
