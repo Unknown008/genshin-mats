@@ -11,9 +11,11 @@ export class EnvironmentPathService {
         this.url = parsedUrl.origin;
     }
 
-    public getUrl(path: string) {
+    public getUrl(path: string, src: boolean = false) {
         if (this.url.includes("localhost"))
             return path;
+        else if (src)
+            return path.replace(/^[./]*/, "");
         else
             return "angular-page-test/" + path.replace(/^[./]*/, "");
     }

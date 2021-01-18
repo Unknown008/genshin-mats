@@ -34,7 +34,7 @@
                 <div class="weapon-block">
                     <div class="mat-row">
                         <span *ngFor="let weapon of weapons.Decarabian">
-                            <img [src]="weapon.path" alt="weapon.name" 
+                            <img [src]="weapon.path" [alt]="weapon.name" 
                                 class="mat" [ngClass]="weapon.quality">
                         </span>
                     </div>
@@ -43,7 +43,7 @@
                 <div class="weapon-block">
                     <div class="mat-row">
                         <span *ngFor="let weapon of weapons.Relic">
-                            <img [src]="weapon.path" alt="weapon.name" 
+                            <img [src]="weapon.path" [alt]="weapon.name" 
                                 class="mat" [ngClass]="weapon.quality">
                         </span>
                     </div>
@@ -56,7 +56,7 @@
                 <div class="weapon-block">
                     <div class="mat-row">
                         <span *ngFor="let weapon of weapons.Fang">
-                            <img [src]="weapon.path" alt="weapon.name" 
+                            <img [src]="weapon.path" [alt]="weapon.name" 
                                 class="mat" [ngClass]="weapon.quality">
                         </span>
                     </div>
@@ -65,7 +65,7 @@
                 <div class="weapon-block">
                     <div class="mat-row">
                         <span *ngFor="let weapon of weapons.Dango">
-                            <img [src]="weapon.path" alt="weapon.name" 
+                            <img [src]="weapon.path" [alt]="weapon.name" 
                                 class="mat" [ngClass]="weapon.quality">
                         </span>
                     </div>
@@ -78,7 +78,7 @@
                 <div class="weapon-block">
                     <div class="mat-row">
                         <span *ngFor="let weapon of weapons.Shackle">
-                            <img [src]="weapon.path" alt="weapon.name" 
+                            <img [src]="weapon.path" [alt]="weapon.name" 
                                 class="mat" [ngClass]="weapon.quality">
                         </span>
                     </div>
@@ -87,7 +87,7 @@
                 <div class="weapon-block">
                     <div class="mat-row">
                         <span *ngFor="let weapon of weapons.Aerosiderite">
-                            <img [src]="weapon.path" alt="weapon.name" 
+                            <img [src]="weapon.path" [alt]="weapon.name" 
                                 class="mat" [ngClass]="weapon.quality">
                         </span>
                     </div>
@@ -112,7 +112,7 @@
                 <div class="char-block">
                     <div class="char-row">
                         <span *ngFor="let char of talents.Freedom">
-                            <img [src]="char.path" alt="char.name" class="char">
+                            <img [src]="char.path" [alt]="char.name" class="char">
                         </span>
                     </div>
                     <h5>Freedom</h5>
@@ -120,7 +120,7 @@
                 <div class="char-block">
                     <div class="char-row">
                         <span *ngFor="let char of talents.Prosperity">
-                            <img [src]="char.path" alt="char.name" class="char">
+                            <img [src]="char.path" [alt]="char.name" class="char">
                         </span>
                     </div>
                     <h5>Prosperity</h5>
@@ -132,7 +132,7 @@
                 <div class="char-block">
                     <div class="char-row">
                         <span *ngFor="let char of talents.Resistance">
-                            <img [src]="char.path" alt="char.name" class="char">
+                            <img [src]="char.path" [alt]="char.name" class="char">
                         </span>
                     </div>
                     <h5>Resistance</h5>
@@ -141,7 +141,7 @@
                     <div class="char-row">
                         <div class="char-row">
                             <span *ngFor="let char of talents.Diligence">
-                                <img [src]="char.path" alt="char.name" class="char">
+                                <img [src]="char.path" [alt]="char.name" class="char">
                             </span>
                         </div>
                     </div>
@@ -155,7 +155,7 @@
                     <div class="char-row">
                         <div class="char-row">
                             <span *ngFor="let char of talents.Ballad">
-                                <img [src]="char.path" alt="char.name" class="char">
+                                <img [src]="char.path" [alt]="char.name" class="char">
                             </span>
                         </div>
                     </div>
@@ -165,7 +165,7 @@
                     <div class="char-row">
                         <div class="char-row">
                             <span *ngFor="let char of talents.Gold">
-                                <img [src]="char.path" alt="char.name" class="char">
+                                <img [src]="char.path" [alt]="char.name" class="char">
                             </span>
                         </div>
                     </div>
