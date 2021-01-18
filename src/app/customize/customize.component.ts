@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
 import { CharacterModel } from '../_models/character.model';
+import { EnvironmentPathService } from '../_services/environment-path.service';
 import { JsonService } from '../_services/json.service';
 
 @Component({
@@ -21,37 +22,38 @@ export class CustomizeComponent implements OnInit {
     public allCharacters: any[] = [];
     public filteredCharacters: any[] = [];
     public charFilter: string = "";
-    public path: string = "./../../assets/resources/";
+    public path: string = this.url.getUrl("./../../assets/resources/", true);
 
     public charSelect: FormGroup;
 
     constructor(
         private json: JsonService,
-        private cookieService: CookieService
+        private cookieService: CookieService,
+        private url: EnvironmentPathService
     ) { }
 
     ngOnInit() {
-        this.json.getJSON("assets/resources/characters/_levelup.json")
+        this.json.getJSON(this.url.getUrl("assets/resources/characters/levelup.json"))
             .subscribe((data: any) => {
                 this.levelUpData = data;
             });
 
-        this.json.getJSON("assets/resources/items/_exp.json")
+        this.json.getJSON(this.url.getUrl("assets/resources/items/exp.json"))
             .subscribe((data: any) => {
                 this.expData = data;
             });
 
-        this.json.getJSON("assets/resources/items/_item_quality.json")
+        this.json.getJSON(this.url.getUrl("assets/resources/items/item_quality.json"))
             .subscribe((data: any) => {
                 this.itemQualityData = data;
             });
 
-        this.json.getJSON("assets/resources/characters/_ascension.json")
+        this.json.getJSON(this.url.getUrl("assets/resources/characters/ascension.json"))
             .subscribe((data: any) => {
                 this.ascensionData = data;
             });
 
-        this.json.getJSON("assets/resources/characters/_talent.json")
+        this.json.getJSON(this.url.getUrl("assets/resources/characters/talent.json"))
             .subscribe((data: any) => {
                 this.talentData = data;
             });
@@ -69,7 +71,7 @@ export class CustomizeComponent implements OnInit {
     loadCharacters() {
         let userData = this.cookieService.get('genshin-characters');
         if (userData == null || userData == "") {
-            this.json.getJSON("assets/resources/characters/_template.json")
+            this.json.getJSON(this.url.getUrl("assets/resources/characters/template.json"))
                 .subscribe((data: CharacterModel[]) => {
                     this.characters = data;
                 });
@@ -77,7 +79,7 @@ export class CustomizeComponent implements OnInit {
             this.characters = JSON.parse(userData);
         }
 
-        this.json.getJSON("assets/resources/characters/_data.json")
+        this.json.getJSON(this.url.getUrl("assets/resources/characters/data.json"))
             .subscribe((data: any) => {
                 this.charData = data;
                 for (let char in data) {

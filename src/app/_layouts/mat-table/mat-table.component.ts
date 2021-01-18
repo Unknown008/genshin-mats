@@ -1,5 +1,6 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { EnvironmentPathService } from 'src/app/_services/environment-path.service';
 import { NumberFormatPipeModule } from 'src/app/_shared/directives/number-format';
 import { CharacterModel } from './../../_models/character.model';
 
@@ -25,7 +26,7 @@ export class MatTableComponent implements OnChanges {
     public totalColumns: string[] = ["Exp", "Gems", "Local Specialties", "Common Drops", "Books", "Boss Drops", "Limited", "Mora"];
     public tableData: any = [];
     public totalsData: any = [];
-    public path: string = "./../../../assets/resources/";
+    public path: string = this.url.getUrl("./../../../assets/resources/", true);
     public ascensionLevels = [20, 40, 50, 60, 70, 80];
     public displayRarity: boolean = true;
     public displayTotals: boolean = true;
@@ -38,7 +39,8 @@ export class MatTableComponent implements OnChanges {
     ];
 
     constructor(
-        numberFormat: NumberFormatPipeModule
+        numberFormat: NumberFormatPipeModule,
+        private url: EnvironmentPathService
     ) { 
         this.numberFormat = numberFormat;
     }
