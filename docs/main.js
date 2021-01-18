@@ -1869,6 +1869,9 @@ class CharacterComponent {
         this.url = url;
         this.deleteCharacter = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.path = this.url.getUrl("./../../assets/resources/characters/", true);
+        this.levels = [1, 20, 40, 50, 60, 70, 80, 90];
+        this.ascensions = [0, 1, 2, 3, 4, 5, 6, 7];
+        this.talents = [1, 1, 2, 4, 6, 8, 10];
     }
     ngOnInit() {
         this.character.file = this.path + this.character.file + ".png";
@@ -1879,9 +1882,242 @@ class CharacterComponent {
     toggleCharacterDisplay() {
         this.character.display = !this.character.display;
     }
+    checkAscension(type) {
+        switch (type) {
+            case "c":
+                if (this.character.ascension < 0 || this.character.ascension > 6)
+                    return;
+                this.syncAscToLevel();
+                this.syncTlevelToLevel();
+                this.syncTascToTlevel();
+                this.syncTalentToAsc();
+                break;
+            case "t":
+                if (this.character.tascension < 0 || this.character.tascension > 6)
+                    return;
+                this.syncTascToTlevel();
+                this.syncLevelToTlevel();
+                this.syncAscToLevel();
+                this.syncTtalentToTasc();
+                break;
+        }
+    }
+    checkLevel(type) {
+        switch (type) {
+            case "c":
+                if (this.character.ascension < 0 || this.character.ascension > 6)
+                    return;
+                this.syncLevelToAsc();
+                this.syncTascToAsc();
+                this.syncTlevelToTasc();
+                break;
+            case "t":
+                if (this.character.tascension < 0 || this.character.tascension > 6)
+                    return;
+                this.syncTlevelToTasc();
+                this.syncAscToTasc();
+                this.syncLevelToAsc();
+                break;
+        }
+    }
+    checkTalent(type) {
+        switch (type) {
+            case "cba":
+                if (this.character.balevel < 0 || this.character.balevel > 10)
+                    return;
+                this.syncTtalentToTalent("ba");
+                // sync asc & level
+                // sync tasc & tlevel
+                break;
+            case "tba":
+                if (this.character.tbalevel < 0 || this.character.tbalevel > 10)
+                    return;
+                break;
+            case "ces":
+                if (this.character.eslevel < 0 || this.character.eslevel > 10)
+                    return;
+                this.syncTtalentToTalent("es");
+                break;
+            case "tes":
+                if (this.character.teslevel < 0 || this.character.teslevel > 10)
+                    return;
+                break;
+            case "ceb":
+                if (this.character.eblevel < 0 || this.character.eblevel > 10)
+                    return;
+                this.syncTtalentToTalent("eb");
+                break;
+            case "teb":
+                if (this.character.teblevel < 0 || this.character.teblevel > 10)
+                    return;
+                break;
+        }
+    }
+    syncAscToLevel() {
+        if (this.character.level >= this.levels[this.character.ascension] &&
+            this.character.level <= this.levels[this.character.ascension + 1]) { }
+        else {
+            let previous = 0;
+            for (let i = 0; i < this.levels.length; i++) {
+                if (previous == 0) {
+                    previous = this.levels[i];
+                    continue;
+                }
+                if (this.character.level >= previous &&
+                    this.character.level <= this.levels[i]) {
+                    this.character.ascension = this.ascensions[i] - 1;
+                    break;
+                }
+                previous = this.levels[i];
+            }
+        }
+    }
+    syncTlevelToLevel() {
+        if (this.character.level > this.character.tlevel) {
+            this.character.tlevel = this.character.level;
+        }
+    }
+    syncLevelToTlevel() {
+        if (this.character.level > this.character.tlevel) {
+            this.character.level = this.character.tlevel;
+        }
+    }
+    syncTascToTlevel() {
+        if (this.character.tlevel >= this.levels[this.character.tascension] &&
+            this.character.tlevel <= this.levels[this.character.tascension + 1]) { }
+        else {
+            let previous = 0;
+            for (let i = 0; i < this.levels.length; i++) {
+                if (previous == 0) {
+                    previous = this.levels[i];
+                    continue;
+                }
+                if (this.character.tlevel >= previous &&
+                    this.character.tlevel <= this.levels[i]) {
+                    this.character.tascension = this.ascensions[i] - 1;
+                    break;
+                }
+                previous = this.levels[i];
+            }
+        }
+    }
+    syncLevelToAsc() {
+        if (this.character.level >= this.levels[this.character.ascension] &&
+            this.character.level <= this.levels[this.character.ascension + 1]) { }
+        else {
+            for (let i = 0; i < this.ascensions.length; i++) {
+                if (this.character.ascension == this.ascensions[i]) {
+                    this.character.level = this.levels[i];
+                    break;
+                }
+            }
+        }
+    }
+    syncTascToAsc() {
+        if (this.character.ascension > this.character.tascension) {
+            this.character.tascension = this.character.ascension;
+        }
+    }
+    syncTlevelToTasc() {
+        if (this.character.tlevel >= this.levels[this.character.tascension] &&
+            this.character.tlevel <= this.levels[this.character.tascension + 1]) { }
+        else {
+            for (let i = 0; i < this.ascensions.length; i++) {
+                if (this.character.tascension == this.ascensions[i]) {
+                    this.character.tlevel = this.levels[i];
+                    break;
+                }
+            }
+        }
+    }
+    syncAscToTasc() {
+        if (this.character.ascension > this.character.tascension) {
+            this.character.ascension = this.character.tascension;
+        }
+    }
+    syncTtalentToTasc() {
+        if (this.character.tbalevel >= this.talents[this.character.tascension] &&
+            this.character.tbalevel <= this.talents[this.character.tascension + 1]) { }
+        else {
+            for (let i = 0; i < this.ascensions.length; i++) {
+                if (this.character.tascension == this.ascensions[i]) {
+                    this.character.tbalevel = this.talents[i];
+                    break;
+                }
+            }
+        }
+        if (this.character.teslevel >= this.talents[this.character.tascension] &&
+            this.character.teslevel <= this.talents[this.character.tascension + 1]) { }
+        else {
+            for (let i = 0; i < this.ascensions.length; i++) {
+                if (this.character.tascension == this.ascensions[i]) {
+                    this.character.teslevel = this.talents[i];
+                    break;
+                }
+            }
+        }
+        if (this.character.teblevel >= this.talents[this.character.tascension] &&
+            this.character.teblevel <= this.talents[this.character.tascension + 1]) { }
+        else {
+            for (let i = 0; i < this.ascensions.length; i++) {
+                if (this.character.tascension == this.ascensions[i]) {
+                    this.character.teblevel = this.talents[i];
+                    break;
+                }
+            }
+        }
+    }
+    syncTalentToAsc() {
+        if (this.character.balevel >= this.talents[this.character.ascension] &&
+            this.character.balevel <= this.talents[this.character.ascension + 1]) { }
+        else {
+            for (let i = 0; i < this.ascensions.length; i++) {
+                if (this.character.ascension == this.ascensions[i]) {
+                    this.character.balevel = this.talents[i];
+                    break;
+                }
+            }
+        }
+        if (this.character.eslevel >= this.talents[this.character.ascension] &&
+            this.character.eslevel <= this.talents[this.character.ascension + 1]) { }
+        else {
+            for (let i = 0; i < this.ascensions.length; i++) {
+                if (this.character.ascension == this.ascensions[i]) {
+                    this.character.eslevel = this.talents[i];
+                    break;
+                }
+            }
+        }
+        if (this.character.eblevel >= this.talents[this.character.ascension] &&
+            this.character.eblevel <= this.talents[this.character.ascension + 1]) { }
+        else {
+            for (let i = 0; i < this.ascensions.length; i++) {
+                if (this.character.ascension == this.ascensions[i]) {
+                    this.character.eblevel = this.talents[i];
+                    break;
+                }
+            }
+        }
+    }
+    syncTtalentToTalent(type) {
+        switch (type) {
+            case "ba":
+                if (this.character.balevel > this.character.tbalevel)
+                    this.character.tbalevel = this.character.balevel;
+                break;
+            case "es":
+                if (this.character.eslevel > this.character.teslevel)
+                    this.character.teslevel = this.character.eslevel;
+                break;
+            case "eb":
+                if (this.character.eblevel > this.character.teblevel)
+                    this.character.teblevel = this.character.eblevel;
+                break;
+        }
+    }
 }
 CharacterComponent.ɵfac = function CharacterComponent_Factory(t) { return new (t || CharacterComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_environment_path_service__WEBPACK_IMPORTED_MODULE_1__["EnvironmentPathService"])); };
-CharacterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: CharacterComponent, selectors: [["app-character"]], inputs: { character: "character" }, outputs: { deleteCharacter: "deleteCharacter" }, decls: 87, vars: 13, consts: [[1, "character", "col-lg-5"], ["characterForm", "ngForm"], [1, "row", "text-left", "character-card"], [1, "controls"], [1, "button-container"], ["type", "button", "title", "Remove character", 3, "click"], [1, "fas", "fa-trash-alt"], ["type", "button", "title", "Hide character from mats table", 3, "click"], [1, "fas", 3, "ngClass"], [1, "col-md-4", "flex", "center-x", "center-y"], [1, "portrait", 3, "src"], [1, "col-md-4"], [1, "row"], ["for", "name", 1, "form-label", "px-0"], ["type", "text", "id", "name", "disabled", "", "name", "name", 1, "form-control", 3, "ngModel", "ngModelChange"], ["name", "ngModel"], ["for", "level", 1, "form-label", "px-0"], [1, "col-md-4", "pl-0"], ["type", "number", "id", "level", "title", "Current level", "name", "level", "max", "90", "min", "1", 1, "form-control", 3, "ngModel", "ngModelChange"], ["level", "ngModel"], [1, "col-md-4", "pl-0", "flex", "center-y"], [1, "fas", "fa-arrow-right"], ["type", "number", "id", "tlevel", "title", "Target level", "name", "tlevel", "max", "90", "min", "1", 1, "form-control", 3, "ngModel", "ngModelChange"], ["tlevel", "ngModel"], ["for", "ascension", 1, "form-label", "px-0"], ["type", "number", "id", "ascension", "name", "ascension", "title", "Current ascension", "max", "6", "min", "1", 1, "form-control", 3, "ngModel", "ngModelChange"], ["ascension", "ngModel"], ["type", "number", "id", "tascension", "name", "tascension", "title", "Target ascension", "max", "6", "min", "1", 1, "form-control", 3, "ngModel", "ngModelChange"], ["tascension", "ngModel"], [1, "col-md-12"], ["for", "balevel", 1, "form-label", "px-0"], ["type", "number", "id", "balevel", "name", "balevel", "title", "Current basic attack level", "max", "10", "min", "1", 1, "form-control", 3, "ngModel", "ngModelChange"], ["balevel", "ngModel"], ["type", "number", "id", "tbalevel", "name", "tbalevel", "title", "Target basic attack level", "max", "10", "min", "1", 1, "form-control", 3, "ngModel", "ngModelChange"], ["tbalevel", "ngModel"], ["for", "eslevel", 1, "form-label", "px-0"], ["type", "number", "id", "eslevel", "name", "eslevel", "title", "Current elemental level", "max", "10", "min", "1", 1, "form-control", 3, "ngModel", "ngModelChange"], ["eslevel", "ngModel"], ["type", "number", "id", "teslevel", "name", "teslevel", "title", "Target elemental skill level", "max", "10", "min", "1", 1, "form-control", 3, "ngModel", "ngModelChange"], ["teslevel", "ngModel"], ["for", "eblevel", 1, "form-label", "px-0"], ["type", "number", "id", "eblevel", "name", "eblevel", "title", "Current burst level", "max", "10", "min", "1", 1, "form-control", 3, "ngModel", "ngModelChange"], ["eblevel", "ngModel"], ["type", "number", "id", "teblevel", "name", "teblevel", "title", "Target burst attack level", "max", "10", "min", "1", 1, "form-control", 3, "ngModel", "ngModelChange"], ["teblevel", "ngModel"]], template: function CharacterComponent_Template(rf, ctx) { if (rf & 1) {
+CharacterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: CharacterComponent, selectors: [["app-character"]], inputs: { character: "character" }, outputs: { deleteCharacter: "deleteCharacter" }, decls: 87, vars: 13, consts: [[1, "character", "col-lg-5"], ["characterForm", "ngForm"], [1, "row", "text-left", "character-card"], [1, "controls"], [1, "button-container"], ["type", "button", "title", "Remove character", 3, "click"], [1, "fas", "fa-trash-alt"], ["type", "button", "title", "Hide character from mats table", 3, "click"], [1, "fas", 3, "ngClass"], [1, "col-md-4", "flex", "center-x", "center-y"], [1, "portrait", 3, "src"], [1, "col-md-4"], [1, "row"], ["for", "name", 1, "form-label", "px-0"], ["type", "text", "id", "name", "disabled", "", "name", "name", 1, "form-control", 3, "ngModel", "ngModelChange"], ["name", "ngModel"], ["for", "level", 1, "form-label", "px-0"], [1, "col-md-4", "pl-0"], ["type", "number", "id", "level", "title", "Current level", "name", "level", "max", "90", "min", "1", 1, "form-control", 3, "ngModel", "ngModelChange", "keyup"], ["level", "ngModel"], [1, "col-md-4", "pl-0", "flex", "center-y"], [1, "fas", "fa-arrow-right"], ["type", "number", "id", "tlevel", "title", "Target level", "name", "tlevel", "max", "90", "min", "1", 1, "form-control", 3, "ngModel", "ngModelChange", "keyup"], ["tlevel", "ngModel"], ["for", "ascension", 1, "form-label", "px-0"], ["type", "number", "id", "ascension", "name", "ascension", "title", "Current ascension", "max", "6", "min", "1", 1, "form-control", 3, "ngModel", "ngModelChange", "keyup"], ["ascension", "ngModel"], ["type", "number", "id", "tascension", "name", "tascension", "title", "Target ascension", "max", "6", "min", "1", 1, "form-control", 3, "ngModel", "ngModelChange", "keyup"], ["tascension", "ngModel"], [1, "col-md-12"], ["for", "balevel", 1, "form-label", "px-0"], ["type", "number", "id", "balevel", "name", "balevel", "title", "Current basic attack level", "max", "10", "min", "1", 1, "form-control", 3, "ngModel", "ngModelChange", "keyup"], ["balevel", "ngModel"], ["type", "number", "id", "tbalevel", "name", "tbalevel", "title", "Target basic attack level", "max", "10", "min", "1", 1, "form-control", 3, "ngModel", "ngModelChange"], ["tbalevel", "ngModel"], ["for", "eslevel", 1, "form-label", "px-0"], ["type", "number", "id", "eslevel", "name", "eslevel", "title", "Current elemental level", "max", "10", "min", "1", 1, "form-control", 3, "ngModel", "ngModelChange"], ["eslevel", "ngModel"], ["type", "number", "id", "teslevel", "name", "teslevel", "title", "Target elemental skill level", "max", "10", "min", "1", 1, "form-control", 3, "ngModel", "ngModelChange"], ["teslevel", "ngModel"], ["for", "eblevel", 1, "form-label", "px-0"], ["type", "number", "id", "eblevel", "name", "eblevel", "title", "Current burst level", "max", "10", "min", "1", 1, "form-control", 3, "ngModel", "ngModelChange"], ["eblevel", "ngModel"], ["type", "number", "id", "teblevel", "name", "teblevel", "title", "Target burst attack level", "max", "10", "min", "1", 1, "form-control", 3, "ngModel", "ngModelChange"], ["teblevel", "ngModel"]], template: function CharacterComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "form", null, 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 2);
@@ -1921,7 +2157,7 @@ CharacterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefin
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 12);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "div", 17);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "input", 18, 19);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function CharacterComponent_Template_input_ngModelChange_25_listener($event) { return ctx.character.level = $event; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function CharacterComponent_Template_input_ngModelChange_25_listener($event) { return ctx.character.level = $event; })("keyup", function CharacterComponent_Template_input_keyup_25_listener() { return ctx.checkAscension("c"); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "div", 20);
@@ -1929,7 +2165,7 @@ CharacterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefin
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "div", 17);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "input", 22, 23);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function CharacterComponent_Template_input_ngModelChange_30_listener($event) { return ctx.character.tlevel = $event; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function CharacterComponent_Template_input_ngModelChange_30_listener($event) { return ctx.character.tlevel = $event; })("keyup", function CharacterComponent_Template_input_keyup_30_listener() { return ctx.checkAscension("t"); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -1941,7 +2177,7 @@ CharacterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefin
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "div", 12);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "div", 17);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "input", 25, 26);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function CharacterComponent_Template_input_ngModelChange_37_listener($event) { return ctx.character.ascension = $event; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function CharacterComponent_Template_input_ngModelChange_37_listener($event) { return ctx.character.ascension = $event; })("keyup", function CharacterComponent_Template_input_keyup_37_listener() { return ctx.checkLevel("c"); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "div", 20);
@@ -1949,7 +2185,7 @@ CharacterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefin
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "div", 17);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "input", 27, 28);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function CharacterComponent_Template_input_ngModelChange_42_listener($event) { return ctx.character.tascension = $event; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function CharacterComponent_Template_input_ngModelChange_42_listener($event) { return ctx.character.tascension = $event; })("keyup", function CharacterComponent_Template_input_keyup_42_listener() { return ctx.checkLevel("t"); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -1965,7 +2201,7 @@ CharacterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefin
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](50, "div", 12);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](51, "div", 17);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "input", 31, 32);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function CharacterComponent_Template_input_ngModelChange_52_listener($event) { return ctx.character.balevel = $event; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function CharacterComponent_Template_input_ngModelChange_52_listener($event) { return ctx.character.balevel = $event; })("keyup", function CharacterComponent_Template_input_keyup_52_listener() { return ctx.checkTalent("cba"); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](54, "div", 20);
@@ -2058,7 +2294,7 @@ CharacterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefin
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.character.eblevel);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.character.teblevel);
-    } }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgForm"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgClass"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgModel"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NumberValueAccessor"]], styles: [".character[_ngcontent-%COMP%] {\n  background-color: #212529;\n  display: inline-block;\n  margin: 10px;\n  padding: 10px;\n  border-radius: 1rem;\n}\n\n.character-card[_ngcontent-%COMP%] {\n  position: relative;\n}\n\n.controls[_ngcontent-%COMP%] {\n  display: inline-block;\n  position: absolute;\n  padding: 0;\n  left: 1rem;\n}\n\n.button-container[_ngcontent-%COMP%] {\n  width: 25px;\n  height: 25px;\n  text-align: center;\n}\n\n.button-container[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  color: #ffffff8c;\n  padding: 2px;\n  border: none;\n  background: none;\n}\n\n.form-label[_ngcontent-%COMP%] {\n  color: #ffffff8c;\n  font-size: 0.8rem;\n}\n\n.form-control[_ngcontent-%COMP%] {\n  color: #fff;\n  background: none;\n  border: none;\n  transition: none;\n  padding-left: 0px;\n  padding-right: 0px;\n}\n\n.form-control[_ngcontent-%COMP%]:focus {\n  box-shadow: none;\n}\n\n.portrait[_ngcontent-%COMP%] {\n  max-width: 110px;\n  max-height: 110px;\n}\n\n.stat-row[_ngcontent-%COMP%] {\n  display: inline-block;\n}\n\n.row-label[_ngcontent-%COMP%] {\n  height: 16px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXC4uXFxjaGFyYWN0ZXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSx5QkFBQTtFQUNBLHFCQUFBO0VBQ0EsWUFBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtBQUNKOztBQUVBO0VBQ0ksa0JBQUE7QUFDSjs7QUFFQTtFQUNJLHFCQUFBO0VBQ0Esa0JBQUE7RUFDQSxVQUFBO0VBQ0EsVUFBQTtBQUNKOztBQUVBO0VBQ0ksV0FBQTtFQUNBLFlBQUE7RUFDQSxrQkFBQTtBQUNKOztBQUVBO0VBQ0ksZ0JBQUE7RUFDQSxZQUFBO0VBQ0EsWUFBQTtFQUNBLGdCQUFBO0FBQ0o7O0FBRUE7RUFDSSxnQkFBQTtFQUNBLGlCQUFBO0FBQ0o7O0FBRUE7RUFDSSxXQUFBO0VBQ0EsZ0JBQUE7RUFDQSxZQUFBO0VBQ0EsZ0JBQUE7RUFDQSxpQkFBQTtFQUNBLGtCQUFBO0FBQ0o7O0FBRUE7RUFDSSxnQkFBQTtBQUNKOztBQUVBO0VBQ0ksZ0JBQUE7RUFDQSxpQkFBQTtBQUNKOztBQUVBO0VBQ0kscUJBQUE7QUFDSjs7QUFFQTtFQUNJLFlBQUE7QUFDSiIsImZpbGUiOiJjaGFyYWN0ZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2hhcmFjdGVyIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMyMTI1Mjk7XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICBtYXJnaW46IDEwcHg7XHJcbiAgICBwYWRkaW5nOiAxMHB4O1xyXG4gICAgYm9yZGVyLXJhZGl1czogMXJlbTtcclxufVxyXG5cclxuLmNoYXJhY3Rlci1jYXJkIHtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxufVxyXG5cclxuLmNvbnRyb2xzIHtcclxuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHBhZGRpbmc6IDA7XHJcbiAgICBsZWZ0OiAxcmVtO1xyXG59XHJcblxyXG4uYnV0dG9uLWNvbnRhaW5lciB7XHJcbiAgICB3aWR0aDogMjVweDtcclxuICAgIGhlaWdodDogMjVweDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5cclxuLmJ1dHRvbi1jb250YWluZXIgYnV0dG9ue1xyXG4gICAgY29sb3I6ICNmZmZmZmY4YztcclxuICAgIHBhZGRpbmc6IDJweDtcclxuICAgIGJvcmRlcjogbm9uZTtcclxuICAgIGJhY2tncm91bmQ6IG5vbmU7XHJcbn1cclxuXHJcbi5mb3JtLWxhYmVsIHtcclxuICAgIGNvbG9yOiAjZmZmZmZmOGM7XHJcbiAgICBmb250LXNpemU6IDAuOHJlbTtcclxufVxyXG5cclxuLmZvcm0tY29udHJvbCB7XHJcbiAgICBjb2xvcjogI2ZmZjtcclxuICAgIGJhY2tncm91bmQ6IG5vbmU7XHJcbiAgICBib3JkZXI6IG5vbmU7XHJcbiAgICB0cmFuc2l0aW9uOiBub25lO1xyXG4gICAgcGFkZGluZy1sZWZ0OiAwcHg7XHJcbiAgICBwYWRkaW5nLXJpZ2h0OiAwcHg7XHJcbn1cclxuXHJcbi5mb3JtLWNvbnRyb2w6Zm9jdXMge1xyXG4gICAgYm94LXNoYWRvdzogbm9uZTtcclxufVxyXG5cclxuLnBvcnRyYWl0IHtcclxuICAgIG1heC13aWR0aDogMTEwcHg7XHJcbiAgICBtYXgtaGVpZ2h0OiAxMTBweDtcclxufVxyXG5cclxuLnN0YXQtcm93IHtcclxuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxufVxyXG5cclxuLnJvdy1sYWJlbCB7XHJcbiAgICBoZWlnaHQ6IDE2cHg7XHJcbn0iXX0= */"] });
+    } }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgForm"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgClass"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgModel"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NumberValueAccessor"]], styles: [".character[_ngcontent-%COMP%] {\n  background-color: #212529;\n  display: inline-block;\n  margin: 10px;\n  padding: 10px;\n  border-radius: 1rem;\n}\n\n.character-card[_ngcontent-%COMP%] {\n  position: relative;\n}\n\n.controls[_ngcontent-%COMP%] {\n  display: inline-block;\n  position: absolute;\n  padding: 0;\n  left: 1rem;\n  width: 25px;\n}\n\n.button-container[_ngcontent-%COMP%] {\n  width: 25px;\n  height: 25px;\n  text-align: center;\n}\n\n.button-container[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  color: #ffffff8c;\n  padding: 2px;\n  border: none;\n  background: none;\n}\n\n.form-label[_ngcontent-%COMP%] {\n  color: #ffffff8c;\n  font-size: 0.8rem;\n}\n\n.form-control[_ngcontent-%COMP%] {\n  color: #fff;\n  background: none;\n  border: none;\n  transition: none;\n  padding-left: 0px;\n  padding-right: 0px;\n}\n\n.form-control[_ngcontent-%COMP%]:focus {\n  box-shadow: none;\n}\n\n.portrait[_ngcontent-%COMP%] {\n  max-width: 110px;\n  max-height: 110px;\n}\n\n.stat-row[_ngcontent-%COMP%] {\n  display: inline-block;\n}\n\n.row-label[_ngcontent-%COMP%] {\n  height: 16px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXC4uXFxjaGFyYWN0ZXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSx5QkFBQTtFQUNBLHFCQUFBO0VBQ0EsWUFBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtBQUNKOztBQUVBO0VBQ0ksa0JBQUE7QUFDSjs7QUFFQTtFQUNJLHFCQUFBO0VBQ0Esa0JBQUE7RUFDQSxVQUFBO0VBQ0EsVUFBQTtFQUNBLFdBQUE7QUFDSjs7QUFFQTtFQUNJLFdBQUE7RUFDQSxZQUFBO0VBQ0Esa0JBQUE7QUFDSjs7QUFFQTtFQUNJLGdCQUFBO0VBQ0EsWUFBQTtFQUNBLFlBQUE7RUFDQSxnQkFBQTtBQUNKOztBQUVBO0VBQ0ksZ0JBQUE7RUFDQSxpQkFBQTtBQUNKOztBQUVBO0VBQ0ksV0FBQTtFQUNBLGdCQUFBO0VBQ0EsWUFBQTtFQUNBLGdCQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtBQUNKOztBQUVBO0VBQ0ksZ0JBQUE7QUFDSjs7QUFFQTtFQUNJLGdCQUFBO0VBQ0EsaUJBQUE7QUFDSjs7QUFFQTtFQUNJLHFCQUFBO0FBQ0o7O0FBRUE7RUFDSSxZQUFBO0FBQ0oiLCJmaWxlIjoiY2hhcmFjdGVyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNoYXJhY3RlciB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMjEyNTI5O1xyXG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgbWFyZ2luOiAxMHB4O1xyXG4gICAgcGFkZGluZzogMTBweDtcclxuICAgIGJvcmRlci1yYWRpdXM6IDFyZW07XHJcbn1cclxuXHJcbi5jaGFyYWN0ZXItY2FyZCB7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbn1cclxuXHJcbi5jb250cm9scyB7XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG4gICAgbGVmdDogMXJlbTtcclxuICAgIHdpZHRoOiAyNXB4O1xyXG59XHJcblxyXG4uYnV0dG9uLWNvbnRhaW5lciB7XHJcbiAgICB3aWR0aDogMjVweDtcclxuICAgIGhlaWdodDogMjVweDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5cclxuLmJ1dHRvbi1jb250YWluZXIgYnV0dG9uIHtcclxuICAgIGNvbG9yOiAjZmZmZmZmOGM7XHJcbiAgICBwYWRkaW5nOiAycHg7XHJcbiAgICBib3JkZXI6IG5vbmU7XHJcbiAgICBiYWNrZ3JvdW5kOiBub25lO1xyXG59XHJcblxyXG4uZm9ybS1sYWJlbCB7XHJcbiAgICBjb2xvcjogI2ZmZmZmZjhjO1xyXG4gICAgZm9udC1zaXplOiAwLjhyZW07XHJcbn1cclxuXHJcbi5mb3JtLWNvbnRyb2wge1xyXG4gICAgY29sb3I6ICNmZmY7XHJcbiAgICBiYWNrZ3JvdW5kOiBub25lO1xyXG4gICAgYm9yZGVyOiBub25lO1xyXG4gICAgdHJhbnNpdGlvbjogbm9uZTtcclxuICAgIHBhZGRpbmctbGVmdDogMHB4O1xyXG4gICAgcGFkZGluZy1yaWdodDogMHB4O1xyXG59XHJcblxyXG4uZm9ybS1jb250cm9sOmZvY3VzIHtcclxuICAgIGJveC1zaGFkb3c6IG5vbmU7XHJcbn1cclxuXHJcbi5wb3J0cmFpdCB7XHJcbiAgICBtYXgtd2lkdGg6IDExMHB4O1xyXG4gICAgbWF4LWhlaWdodDogMTEwcHg7XHJcbn1cclxuXHJcbi5zdGF0LXJvdyB7XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbn1cclxuXHJcbi5yb3ctbGFiZWwge1xyXG4gICAgaGVpZ2h0OiAxNnB4O1xyXG59Il19 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](CharacterComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -2165,14 +2401,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class AppComponent {
-    constructor(router) {
-        this.router = router;
-    }
-    ngOnInit() {
-        this.router.navigate(['/home']);
-    }
+    constructor() { }
 }
-AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"])); };
+AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
 AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 1, vars: 0, template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "router-outlet");
     } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterOutlet"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAuY29tcG9uZW50LmNzcyJ9 */"] });
@@ -2183,7 +2414,7 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
                 templateUrl: "./app.component.html",
                 styleUrls: ["./app.component.css"]
             }]
-    }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] }]; }, null); })();
+    }], function () { return []; }, null); })();
 
 
 /***/ }),
