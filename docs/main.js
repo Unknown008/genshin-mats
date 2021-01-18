@@ -325,7 +325,7 @@ class HomeComponent {
         this.weapPath = this.url.getUrl("../../assets/resources/items/");
     }
     ngOnInit() {
-        this.json.getJSON(this.url.getUrl("assets/resources/items/_weapons.json"))
+        this.json.getJSON(this.url.getUrl("assets/resources/items/weapons.json"))
             .subscribe((data) => {
             for (let type in this.weapons) {
                 for (let quality of data[type]) {
@@ -337,7 +337,7 @@ class HomeComponent {
                 }
             }
         });
-        this.json.getJSON(this.url.getUrl("assets/resources/talents/_talents.json"))
+        this.json.getJSON(this.url.getUrl("assets/resources/talents/talents.json"))
             .subscribe((data) => {
             for (let type in this.talents) {
                 for (let char of data[type]) {
