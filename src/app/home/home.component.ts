@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        this.json.getJSON(this.url.getUrl("assets/resources/items/_weapons.json"))
+        this.json.getJSON(this.url.getUrl("assets/resources/items/weapons.json"))
             .subscribe((data: any) => {
                 for (let type in this.weapons) {
                     for (let quality of data[type]) {
@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
                 }
             });
 
-        this.json.getJSON(this.url.getUrl("assets/resources/talents/_talents.json"))
+        this.json.getJSON(this.url.getUrl("assets/resources/talents/talents.json"))
             .subscribe((data: any) => {
                 for (let type in this.talents) {
                     for (let char of data[type]) {
