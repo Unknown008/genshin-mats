@@ -36,7 +36,8 @@
                 <div *ngIf="col != 'Name' && row[col].length > 0">
                     <div class="items-row" *ngFor="let item of row[col]">
                         <div [ngClass]="item.type">
-                            <div class="item-holder" [ngClass]="displayRarity ? item.qly : ''">
+                            <div class="item-holder" 
+                                [ngClass]="displayRarity ? item.qly : ''">
                                 <img class="item-single" [src]="item.path" 
                                     [alt]="item.name" [title]="item.name">
                             </div>
@@ -45,7 +46,8 @@
                     </div>
                 </div>
                 <div *ngIf="col != 'Name' && row[col].length == 0">
-                    <div class="maxed">Max</div>
+                    <div class="maxed" *ngIf="!row['Name'].includes('Traveler')">Max</div>
+                    <div class="maxed" *ngIf="row['Name'].includes('Traveler')">Shared</div>
                 </div>
             </td>
         </tr>

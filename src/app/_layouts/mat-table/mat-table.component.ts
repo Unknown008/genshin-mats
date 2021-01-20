@@ -23,6 +23,10 @@ export class MatTableComponent implements OnChanges {
     public numberFormat: NumberFormatPipeModule;
 
     public displayedColumns: string[] = [];
+    public displayedColumnsOrder: string[] = [
+        "Name", "Exp", "Exp Mora", "Ascension", "Ascension Mora", "Talent", 
+        "Talent Mora"
+    ];
     public totalColumns: string[] = ["Exp", "Gems", "Local Specialties", "Common Drops", "Books", "Boss Drops", "Limited", "Mora"];
     public tableData: any = [];
     public totalsData: any = [];
@@ -80,26 +84,49 @@ export class MatTableComponent implements OnChanges {
                     break;
             }
         }
+        this.displayedColumns.sort((a: any, b: any) => {
+            if (
+                this.displayedColumnsOrder.indexOf(a) < 
+                    this.displayedColumnsOrder.indexOf(b)
+            )
+                return -1;
+            else if (
+                this.displayedColumnsOrder.indexOf(a) > 
+                    this.displayedColumnsOrder.indexOf(b)
+            )
+                return 1;
+            else
+                return 0;
+        });
 
+        let traveler = false;
         for (let char of this.characters) {
             if (!char.display) continue;
-            let exp = this.calcExp(char.level, char.tlevel);
+
+            let exp = {exp: [], mora: []};
+            let ascensions = {items: [], mora: []};
             let talents = this.calcTalent(
                 char.name, char.balevel, char.eslevel, char.eblevel, 
                 char.tbalevel, char.teslevel, char.teblevel
             );
-            let ascensions = this.calcAscension(char.name, char.level, char.tlevel);
+
+            if (!char.name.includes("Traveler") || !traveler) {                
+                if (char.name.includes("Traveler"))
+                    traveler = true;
+                exp = this.calcExp(char.level, char.tlevel);
+                ascensions = this.calcAscension(char.name, char.level, char.tlevel);
+            }
 
             this.tableData.push({
                 "Name": char.name,
                 "Exp": exp.exp,
-                "Exp Mora": exp.mora,
+                "Exp Mora": exp.exp.length == 0 ? [] : exp.mora,
                 "Ascension": ascensions.items,
-                "Ascension Mora": ascensions.mora,
+                "Ascension Mora": ascensions.items.length == 0 ? [] :ascensions.mora,
                 "Talent": talents.items,
-                "Talent Mora": talents.mora
+                "Talent Mora": talents.items.length == 0 ? [] : talents.mora
             });
-
+            
             this.getTotals(exp, talents, ascensions);
         }
     }
@@ -520,13 +547,8 @@ export class MatTableComponent implements OnChanges {
                 "Mora": [{
                     name: exp.mora[0].name,
                     path: exp.mora[0].path,
-                    cost: (exp.mora[0].qty + ascensions.mora[0].qty + 
-                        talents.mora[0].qty),
-                    qty: (exp.mora[0].qty + ascensions.mora[0].qty + 
-                        talents.mora[0].qty).toString().replace(
-                            /\d(?=(?:\d{3})+$)/g, (m: string) => {
-                                return m + ",";
-                            })
+                    qty: exp.mora[0].qty + ascensions.mora[0].qty + 
+                        talents.mora[0].qty
                 }]
             });
         } else {
@@ -544,13 +566,11 @@ export class MatTableComponent implements OnChanges {
             this.totalsData[0]["Mora"] = this.totalsData[0]["Mora"].map(d => ({
                 name: d.name,
                 path: d.path,
-                qty: (d.cost + exp.mora[0].qty + ascensions.mora[0].qty + 
-                    talents.mora[0].qty).toString().replace(
-                        /\d(?=(?:\d{3})+$)/g, (m: string) => {
-                            return m + ",";
-                        }),
-                cost: d.cost + exp.mora[0].qty + ascensions.mora[0].qty + 
-                    talents.mora[0].qty,
+                qty: 
+                    d.cost + 
+                    (exp.mora.length == 0 ? 0 : exp.mora[0].qty) + 
+                    (ascensions.mora.length == 0 ? 0 : ascensions.mora[0].qty) + 
+                    (talents.mora.length == 0 ? 0 : talents.mora[0].qty)
             }));
         
             let gemList = this.totalsData[0]["Gems"];

@@ -61,12 +61,15 @@ export class CustomizeComponent implements OnInit {
         this.loadCharacters();
     }
 
+    /**
+     * Dummy function to allow ngOnChanges to trigger
+     */
     incrChange() {
         this.change = !this.change;
     }
 
     /**
-     * 
+     * Load characters from cookie if available, otherwise from default template
      */
     loadCharacters() {
         let userData = this.cookieService.get('genshin-characters');
@@ -82,6 +85,9 @@ export class CustomizeComponent implements OnInit {
         }
     }
 
+    /**
+     * Load the data json file for characters
+     */
     loadCharData() {
         this.json.getJSON(this.url.getUrl("assets/resources/characters/data.json"))
             .subscribe((data: any) => {
@@ -106,7 +112,8 @@ export class CustomizeComponent implements OnInit {
     }
 
     /**
-     * 
+     * Adds a new character to the character list
+     * @character The object for the character that is being added
      */
     addCharacter(character: CharacterModel) {
         let selectedChar = this.allCharacters.filter((c: any) => c.name == character.name)[0];
@@ -141,7 +148,8 @@ export class CustomizeComponent implements OnInit {
     }
 
     /**
-     * 
+     * Removes a character from the character list
+     * @name The name of the character
      */
     deleteCharacter(name: string) {
         let charId = this.characters.findIndex(c => c.name == name);
@@ -149,11 +157,9 @@ export class CustomizeComponent implements OnInit {
     }
 
     /**
-     * 
-     * @event 
+     * Filters the full character list with the keywords typed by the user
      */
     filterCharacters() {
-        console.log(this.charFilter);
         let elements = ["pyro", "hydro", "electro", "anemo", "cryo", "geo"];
         if (elements.includes(this.charFilter.toLowerCase())) {
             this.filteredCharacters = JSON.parse(JSON.stringify(
