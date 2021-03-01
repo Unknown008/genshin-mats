@@ -1,4 +1,4 @@
-<div class="page col-md-12">
+<div class="page col-md-12 main-panel">
     <ul class="nav nav-tabs nav-fill" role="tablist">
         <li class="nav-item" role="presentation">
             <a class="nav-link active" id="char-tab" data-bs-toggle="tab"
@@ -32,15 +32,17 @@
                 </button>
             </div>
             <app-character *ngFor="let char of characters" [character]="char"
+                [weaponData]="weaponData" [characterData]="charData"
                 (deleteCharacter)="deleteCharacter($event)">
             </app-character>
         </div>
         <div id="materials" role="tabpanel" aria-labelledby="mat-tab"
             class="tab-pane fade">
             <app-mat-table [characters]="characters" [levelUpData]="levelUpData" 
-                [expData]="expData" [ascensionData]="ascensionData" 
+                [ascensionData]="ascensionData" 
                 [talentData]="talentData" [charData]="charData"
-                [itemQualityData]="itemQualityData" [change]="change">
+                [itemQualityData]="itemQualityData"
+                [change]="change">
             </app-mat-table>
         </div>
         <div id="data" role="tabpanel" aria-labelledby="data-tab"
@@ -66,11 +68,11 @@
             <div class="modal-header">
                 <form #charSelect="ngForm" class="full-width">
                     <input type="text" (keyup)="filterCharacters()" [(ngModel)]="charFilter"
-                        [ngModelOptions]="{standalone: true}" class="character-filter"
+                        [ngModelOptions]="{standalone: true}" class="input-filter"
                         placeholder="Filter characters...">
                 </form>
             </div>
-            <div class="modal-body">
+            <div class="modal-body modal-panel">
                 <div class="modal-body-content">
                     <form>
                         <div class="list-group">

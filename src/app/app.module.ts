@@ -3,9 +3,9 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
 import { RouterModule } from "@angular/router";
+import { FormsModule } from "@angular/forms";
 
 // Custom modules
-import { OverlayscrollbarsModule } from "overlayscrollbars-ngx";
 import { NavbarModule } from "./_shared/navbar/navbar.module";
 import { FooterModule } from "./_shared/footer/footer.module";
 import { CustomizeModule } from "./customize/customize.module";
@@ -18,7 +18,6 @@ import { DefaultComponent } from "./_layouts/default/default.component";
 
 // Routing
 import { AppRoutes } from "./app.routing";
-import { FormsModule } from "@angular/forms";
 
 // Providers
 import { CookieService } from 'ngx-cookie-service';
@@ -31,7 +30,6 @@ import { CookieService } from 'ngx-cookie-service';
     imports: [
         BrowserModule,
         FormsModule,
-        OverlayscrollbarsModule,
         HttpClientModule,
         RouterModule.forRoot(AppRoutes),
         NavbarModule,

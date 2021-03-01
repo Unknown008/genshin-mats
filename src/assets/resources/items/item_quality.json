@@ -72,6 +72,72 @@
             "purple": "Chaos_Core"
         }
     },
+    "exp": {
+        "green": {
+            "exp": 1000,
+            "name": "Wanderer's_Advice"
+        },
+        "blue": {
+            "exp": 5000,
+            "name": "Adventurer's_Experience"
+        },
+        "purple": {
+            "exp": 20000,
+            "name": "Hero's_Wit"
+        }
+    },
+    "weapon": {
+        "Decarabian": {
+            "green": "Tile_of_Decarabian's_Tower",
+            "blue": "Debris_of_Decarabian's_City",
+            "purple": "Fragment_of_Decarabian's_Epic",
+            "gold": "Scattered_Piece_of_Decarabian's_Dream"
+        },
+        "Relic": {
+            "green": "Luminous_Sands_from_Guyun",
+            "blue": "Lustrous_Stone_from_Guyun",
+            "purple": "Relic_from_Guyun",
+            "gold": "Divine_Body_from_Guyun"
+        },
+        "Fang": {
+            "green": "Boreal_Wolf's_Milk_Tooth",
+            "blue": "Boreal_Wolf's_Cracked_Tooth",
+            "purple": "Boreal_Wolf's_Broken_Fang",
+            "gold": "Boreal_Wolf's_Nostalgia"
+        },
+        "Dango": {
+            "green": "Mist_Veiled_Lead_Elixir",
+            "blue": "Mist_Veiled_Mercury_Elixir",
+            "purple": "Mist_Veiled_Gold_Elixir",
+            "gold": "Mist_Veiled_Primo_Elixir"
+        },
+        "Shackle": {
+            "green": "Fetters_of_the_Dandelion_Gladiator",
+            "blue": "Chains_of_the_Dandelion_Gladiator",
+            "purple": "Shackles_of_the_Dandelion_Gladiator",
+            "gold": "Dream_of_the_Dandelion_Gladiator"
+        },
+        "Aerosiderite": {
+            "green": "Grain_of_Aerosiderite",
+            "blue": "Piece_of_Aerosiderite",
+            "purple": "Bit_of_Aerosiderite",
+            "gold": "Chunk_of_Aerosiderite"
+        }
+    },
+    "weapon_exp": {
+        "grey": {
+            "exp": 400,
+            "name": "Enhancement Ore"
+        },
+        "green": {
+            "exp": 2000,
+            "name": "Fine Enhancement Ore"
+        },
+        "blue": {
+            "exp": 10000,
+            "name": "Mystic Enhancement Ore"
+        }
+    },
     "talent": {
         "green": "Teachings_of_",
         "blue": "Guide_to_",

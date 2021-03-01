@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { JsonService } from "../_services/json.service";
 import { EnvironmentPathService } from "../_services/environment-path.service";
+import PerfectScrollbar from "perfect-scrollbar";
 
 declare var $: any;
 @Component({
@@ -34,6 +35,9 @@ export class HomeComponent implements OnInit {
     ) { }
 
     ngOnInit() {
+        let mainPanel = document.querySelector('.main-panel');
+        new PerfectScrollbar(mainPanel);
+        
         this.json.getJSON(this.url.getUrl("assets/resources/items/weapons.json"))
             .subscribe((data: any) => {
                 for (let type in this.weapons) {

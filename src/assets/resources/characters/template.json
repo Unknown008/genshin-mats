@@ -12,6 +12,14 @@
         "tbalevel": 10,
         "teslevel": 10,
         "teblevel": 10,
+        "weapon": {
+            "name": "",
+            "level": 1,
+            "tlevel": 90,
+            "ascension": 0,
+            "tascension": 6,
+            "display": false
+        },
         "display": true
     },
     {
@@ -27,6 +35,14 @@
         "tbalevel": 10,
         "teslevel": 10,
         "teblevel": 10,
+        "weapon": {
+            "name": "",
+            "level": 1,
+            "tlevel": 90,
+            "ascension": 0,
+            "tascension": 6,
+            "display": false
+        },
         "display": true
     },
     {
@@ -42,6 +58,14 @@
         "tbalevel": 10,
         "teslevel": 10,
         "teblevel": 10,
+        "weapon": {
+            "name": "",
+            "level": 1,
+            "tlevel": 90,
+            "ascension": 0,
+            "tascension": 6,
+            "display": false
+        },
         "display": true
     },
     {
@@ -57,6 +81,14 @@
         "tbalevel": 10,
         "teslevel": 10,
         "teblevel": 10,
+        "weapon": {
+            "name": "",
+            "level": 1,
+            "tlevel": 90,
+            "ascension": 0,
+            "tascension": 6,
+            "display": false
+        },
         "display": true
     }
 ]

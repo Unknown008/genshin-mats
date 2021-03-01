@@ -7,12 +7,16 @@ body {
     background-color: #0d1117;
 }
 
-.pretty-scroll {
-    overflow: hidden;
+.main-panel {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
-.pretty-scroll:hover {
-    overflow: scroll;
+.modal-panel {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .page {

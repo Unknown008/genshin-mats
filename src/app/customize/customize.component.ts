@@ -13,11 +13,12 @@ import { JsonService } from '../_services/json.service';
 export class CustomizeComponent implements OnInit {
     public characters: CharacterModel[];
     public levelUpData: any;
-    public expData: any;
     public ascensionData: any;
     public talentData: any;
     public charData: any;
     public itemQualityData: any;
+    public weaponData: any;
+    public weaponExpData: any;
     public change: boolean = false;
     public allCharacters: any[] = [];
     public filteredCharacters: any[] = [];
@@ -38,26 +39,32 @@ export class CustomizeComponent implements OnInit {
                 this.levelUpData = data;
             });
 
-        this.json.getJSON(this.url.getUrl("assets/resources/items/exp.json"))
-            .subscribe((data: any) => {
-                this.expData = data;
-            });
-
         this.json.getJSON(this.url.getUrl("assets/resources/items/item_quality.json"))
             .subscribe((data: any) => {
                 this.itemQualityData = data;
             });
 
-        this.json.getJSON(this.url.getUrl("assets/resources/characters/ascension.json"))
-            .subscribe((data: any) => {
-                this.ascensionData = data;
-            });
+        this.json.getJSON(this.url.getUrl(
+            "assets/resources/characters/ascension.json"
+        )).subscribe((data: any) => {
+            this.ascensionData = data;
+        });
 
         this.json.getJSON(this.url.getUrl("assets/resources/characters/talent.json"))
             .subscribe((data: any) => {
                 this.talentData = data;
             });
 
+        this.json.getJSON(this.url.getUrl("assets/resources/weapons/data.json"))
+            .subscribe((data: any) => {
+                this.weaponData = data;
+            });
+
+        this.json.getJSON(this.url.getUrl("assets/resources/weapons/levelup.json"))
+            .subscribe((data: any) => {
+                this.weaponExpData = data;
+            });
+        
         this.loadCharacters();
     }
 

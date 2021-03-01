@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { WeaponModel } from 'src/app/_models/weapon.model';
 import { EnvironmentPathService } from 'src/app/_services/environment-path.service';
 import { CharacterModel } from './../../_models/character.model';
 
@@ -10,6 +11,8 @@ import { CharacterModel } from './../../_models/character.model';
 })
 export class CharacterComponent implements OnInit {
     @Input() character: CharacterModel;
+    @Input() characterData: any[];
+    @Input() weaponData: WeaponModel[];
     @Output() deleteCharacter = new EventEmitter<string>();
 
     characterForm: FormGroup;
@@ -19,12 +22,17 @@ export class CharacterComponent implements OnInit {
     public ascensions = [0, 1, 2, 3, 4, 5, 6, 7];
     public talents = [1, 1, 2, 4, 6, 8, 10];
 
+    public weaponFilter: string = "";
+    public filteredWeapons: any[] = [];
+
     constructor(
         private url: EnvironmentPathService
     ) { }
 
     ngOnInit() {
         this.character.file = this.path + this.character.file + ".png";
+        let weaponType = this.characterData[this.character.name].weapon;
+        this.filteredWeapons = this.weaponData.filter(w => w.type == weaponType);
     }
 
     /**
@@ -45,6 +53,13 @@ export class CharacterComponent implements OnInit {
      * 
      */
     setWeapon() {
+
+    }
+
+    /**
+     * Filters the full weapon list with the keywords typed by the user
+     */
+    filterWeapons() {
 
     }
 

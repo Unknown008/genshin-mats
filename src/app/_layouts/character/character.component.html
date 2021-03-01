@@ -16,7 +16,8 @@
                     </button>
                 </div>
                 <div class="button-container">
-                    <button type="button" (click)="setWeapon()" title="Set weapon">
+                    <button type="button" title="Set weapon"
+                        data-bs-toggle="modal" data-bs-target="#setWeapon">
                         <i class="fas weapon"></i>
                     </button>
                 </div>
@@ -162,4 +163,46 @@
             </div>
         </div>
     </form>
+</div>
+
+<div class="modal fade" id="setWeapon" tabindex="-1" aria-labelledby="modalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Choose Weapon</h5>
+                <button type="button" data-bs-dismiss="modal"
+                    aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-header">
+                <form #charSelect="ngForm" class="full-width">
+                    <input type="text" (keyup)="filterWeapons()" 
+                        [(ngModel)]="weaponFilter" class="input-filter"
+                        [ngModelOptions]="{standalone: true}" 
+                        placeholder="Filter weapons...">
+                </form>
+            </div>
+            <div class="modal-body modal-panel">
+                <div class="modal-body-content">
+                    <form>
+                        <div class="list-group">
+                            <label class="list-group-item" 
+                                *ngFor="let weapon of filteredWeapons">
+                                <input class="form-check-input me-1" type="checkbox" 
+                                    (click)="setWeapon(weapon)" 
+                                    [checked]="weapon.selected">
+                                <span class="weapon-container">
+                                    <div class="weapon-name">
+                                        {{weapon.name}}
+                                    </div>
+                                </span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

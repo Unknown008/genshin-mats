@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import "../node_modules/overlayscrollbars/css/OverlayScrollbars.css";
+@import "../node_modules/perfect-scrollbar/css/perfect-scrollbar.css";
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
 @import "./assets/sass/common.scss";

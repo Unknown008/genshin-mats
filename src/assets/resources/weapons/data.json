@@ -1,0 +1,191 @@
+{
+    "Alley Hunter": {
+        "type": "bow",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Branch",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
+    "Amber Catalyst": {
+        "type": "catalyst",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "",
+            "rare_drop": "",
+            "common_drop": ""
+        }
+    },
+    "Amos' Bow": {
+        "type": "bow",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Shackle",
+            "rare_drop": "Chaos",
+            "common_drop": "Slime"
+        }
+    },
+    "Apprentice's Notes": {
+        "type": "catalyst",
+        "rarity": 1,
+        "ascension": {
+            "domain_drop": "Decarabian",
+            "rare_drop": "Horn",
+            "common_drop": "Mask"
+        }
+    },
+    "Aquila Favonia": {
+        "type": "sword",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Decarabian",
+            "rare_drop": "Horn",
+            "common_drop": "Arrowhead"
+        }
+    },
+    "Beginner's Protector": {
+        "type": "spear",
+        "rarity": 1,
+        "ascension": {
+            "domain_drop": "Shackle",
+            "rare_drop": "Chaos",
+            "common_drop": "Scroll"
+        }
+    },
+    "Black Tassel": {
+        "type": "spear",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Aerosiderite",
+            "rare_drop": "Bone",
+            "common_drop": "Arrowhead"
+        }
+    },
+    "Blackcliff_Agate": {
+        "type": "catalyst",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Relic",
+            "rare_drop": "Knife",
+            "common_drop": "Scroll"
+        }
+    },
+    "Blackcliff Longsword": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Relic",
+            "rare_drop": "Knife",
+            "common_drop": "Arrowhead"
+        }
+    },
+    "Blackcliff Pole": {
+        "type": "spear",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Dango",
+            "rare_drop": "Mist_Grass",
+            "common_drop": "Fatui_Insignia"
+        }
+    },
+    "Blackcliff_Slasher": {
+        "type": "claymore",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Dango",
+            "rare_drop": "Mist_Grass",
+            "common_drop": "Fatui_Insignia"
+        }
+    },
+    "Blackcliff_Warbow": {
+        "type": "bow",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Relic",
+            "rare_drop": "Knife",
+            "common_drop": "Nectar"
+        }
+    },
+    "Bloodtainted Greatsword": {
+        "type": "claymore",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Branch",
+            "common_drop": "Arrowhead"
+        }
+    },
+    "Compound Bow": {
+        "type": "bow",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Aerosiderite",
+            "rare_drop": "Bone",
+            "common_drop": "Fatui_Insignia"
+        }
+    },
+    "Cold Steel": {
+        "type": "sword",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Decarabian",
+            "rare_drop": "Horn",
+            "common_drop": "Arrowhead"
+        }
+    },
+    "Crescent_Pike": {
+        "type": "spear",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Relic",
+            "rare_drop": "Knife",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
+    "Dark_Iron_Sword": {
+        "type": "sword",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Relic",
+            "rare_drop": "Knife",
+            "common_drop": "Mask"
+        }
+    },
+    "Deathmatch": {
+        "type": "spear",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Branch",
+            "common_drop": "Nectar"
+        }
+    },
+    "Debate_Club": {
+        "type": "claymore",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Dango",
+            "rare_drop": "Mist_Grass",
+            "common_drop": "Mask"
+        }
+    },
+    "Dragon's Bane": {
+        "type": "spear",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Dango",
+            "rare_drop": "Mist_Grass",
+            "common_drop": "Scroll"
+        }
+    },
+    "Dragonspine Spear": {
+        "type": "spear",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Mist_Grass",
+            "common_drop": "Fatui_Insignia"
+        }
+    }
+}

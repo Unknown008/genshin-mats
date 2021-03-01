@@ -12,7 +12,6 @@ import { CharacterModel } from './../../_models/character.model';
 export class MatTableComponent implements OnChanges {
     @Input() characters: CharacterModel[];
     @Input() levelUpData: any;
-    @Input() expData: any;
     @Input() ascensionData: any;
     @Input() talentData: any;
     @Input() charData: any;
@@ -54,7 +53,6 @@ export class MatTableComponent implements OnChanges {
             this.characters == null || 
             this.levelUpData == null || 
             this.ascensionData == null ||
-            this.expData == null ||
             this.talentData == null ||
             this.charData == null || 
             this.itemQualityData == null
@@ -157,15 +155,15 @@ export class MatTableComponent implements OnChanges {
         });
 
         let cards = [];
-        for (let t in this.expData) {
-            let d = this.expData[t];
+        for (let t in this.itemQualityData.exp) {
+            let d = this.itemQualityData.exp[t];
             cards.push({
-                name: t,
-                path: this.path + "items/" + t + ".png",
+                name: d.name,
+                path: this.path + "items/" + d.name + ".png",
                 qty: 0,
                 exp: d.exp,
-                cost: d.cost,
-                qly: this.displayRarity ? d.quality : ""
+                cost: d.exp * 5,
+                qly: this.displayRarity ? t : ""
             });
         }
         cards = cards.sort((a, b) => b.exp - a.exp);
