@@ -112,7 +112,7 @@ export class MatTableComponent implements OnChanges {
                 if (char.name.includes("Traveler"))
                     traveler = true;
                 exp = this.calcExp(char.level, char.tlevel);
-                ascensions = this.calcAscension(char.name, char.level, char.tlevel);
+                ascensions = this.calcAscension(char.name, char.ascension, char.tascension);
             }
 
             this.tableData.push({
@@ -206,10 +206,10 @@ export class MatTableComponent implements OnChanges {
     /**
      * Returns the total materials and mora required for ascensions
      * @char Character name
-     * @clevel Current level of character
-     * @tlevel Target level of character
+     * @cascension Current ascension of character
+     * @tascension Target ascension of character
      */
-    calcAscension(char: string, clevel: number, tlevel: number) {
+    calcAscension(char: string, cascension: number, tascension: number) {
         let characterAscensionData = this.charData[char].ascension;
         let mats = {
             cost: 0,
@@ -220,15 +220,14 @@ export class MatTableComponent implements OnChanges {
         };
 
         for (
-            let i = 0; 
-            this.ascensionLevels[i] < tlevel && this.ascensionLevels[i] < 90;
+            let i = cascension; 
+            i < tascension;
             i++
         ) {
             let data = JSON.parse(JSON.stringify(
                 this.ascensionData.cost[this.ascensionLevels[i]]
             ));
 
-            if (clevel > this.ascensionLevels[i]) continue
             mats.cost += data.cost;
             if (data.gem != null) {
                 let reqs = this.ascensionData.gem[characterAscensionData.element];
@@ -251,7 +250,11 @@ export class MatTableComponent implements OnChanges {
                     mats.gem[gemId].qty += data.gem.quantity;
 
                 if (data.boss_drop != null && reqs.boss_drop != "") {
-                    let bossDropName = reqs.boss_drop;
+                    let bossDropName;
+                    if (characterAscensionData.hasOwnProperty("boss_drop"))
+                        bossDropName = characterAscensionData.boss_drop;
+                    else
+                        bossDropName = reqs.boss_drop;
 
                     if (mats.boss_drop.length == 0)
                         mats.boss_drop.push({
@@ -495,8 +498,9 @@ export class MatTableComponent implements OnChanges {
      */
     getTotals(exp: any, talents: any, ascensions: any) {
         if (this.totalsData.length == 0) {
-            let commonDropList = JSON.parse(JSON.stringify(ascensions.items
-                .filter((i: any) => i.type == "item-common-drop")));
+            let commonDropList = JSON.parse(JSON.stringify(
+                ascensions.items.filter((i: any) => i.type == "item-common-drop")
+            ));
             for (
                 let commonDrop of talents.items
                     .filter((e: any) => e.type == "item-common-drop")
@@ -511,7 +515,7 @@ export class MatTableComponent implements OnChanges {
             }
 
             let bossDropList = JSON.parse(JSON.stringify(
-                talents.items.filter((i: any) => i.type == "item-boss-drop")
+                ascensions.items.filter((i: any) => i.type == "item-boss-drop")
             ));
             for (
                 let bossDrop of talents.items

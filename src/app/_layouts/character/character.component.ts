@@ -32,7 +32,7 @@ export class CharacterComponent implements OnInit {
     ngOnInit() {
         this.character.file = this.path + this.character.file + ".png";
         let weaponType = this.characterData[this.character.name].weapon;
-        this.filteredWeapons = this.weaponData.filter(w => w.type == weaponType);
+        //this.filteredWeapons = this.weaponData.filter(w => w.type == weaponType);
     }
 
     /**

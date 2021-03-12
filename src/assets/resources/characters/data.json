@@ -704,5 +704,39 @@
             }
         },
         "weapon": "bow"
+    },
+    "Xiao": {
+        "element": "anemo",
+        "ascension": {
+            "element": "anemo",
+            "local_specialty": "Qingxin",
+            "common_drop": "Slime",
+            "boss_drop": "Juvenile_Jade"
+        },
+        "talent": {
+            "all": {
+                "book": "Prosperity",
+                "common_drop": "Slime",
+                "boss_drop": "Shadow_Of_The_Warrior"
+            }
+        },
+        "weapon": "spear"
+    },
+    "Hu Tao": {
+        "element": "pyro",
+        "ascension": {
+            "element": "pyro",
+            "local_specialty": "Silk_Flower",
+            "common_drop": "Nectar",
+            "boss_drop": "Juvenile_Jade"
+        },
+        "talent": {
+            "all": {
+                "book": "Diligence",
+                "common_drop": "Nectar",
+                "boss_drop": "Shard_Of_A_Foul_Legacy"
+            }
+        },
+        "weapon": "spear"
     }
 }

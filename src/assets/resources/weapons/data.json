@@ -62,7 +62,7 @@
             "common_drop": "Arrowhead"
         }
     },
-    "Blackcliff_Agate": {
+    "Blackcliff Agate": {
         "type": "catalyst",
         "rarity": 4,
         "ascension": {
@@ -89,7 +89,7 @@
             "common_drop": "Fatui_Insignia"
         }
     },
-    "Blackcliff_Slasher": {
+    "Blackcliff Slasher": {
         "type": "claymore",
         "rarity": 4,
         "ascension": {
@@ -98,7 +98,7 @@
             "common_drop": "Fatui_Insignia"
         }
     },
-    "Blackcliff_Warbow": {
+    "Blackcliff Warbow": {
         "type": "bow",
         "rarity": 4,
         "ascension": {
@@ -143,7 +143,7 @@
             "common_drop": "Treasure_Hoarder_Insignia"
         }
     },
-    "Dark_Iron_Sword": {
+    "Dark Iron Sword": {
         "type": "sword",
         "rarity": 3,
         "ascension": {
@@ -161,7 +161,7 @@
             "common_drop": "Nectar"
         }
     },
-    "Debate_Club": {
+    "Debate Club": {
         "type": "claymore",
         "rarity": 3,
         "ascension": {
@@ -186,6 +186,789 @@
             "domain_drop": "Fang",
             "rare_drop": "Mist_Grass",
             "common_drop": "Fatui_Insignia"
+        }
+    },
+    "Dull Blade": {
+        "type": "sword",
+        "rarity": 1,
+        "ascension": {
+            "domain_drop": "Decarabian",
+            "rare_drop": "Horn",
+            "common_drop": "Arrowhead"
+        }
+    },
+    "Ebony Bow": {
+        "type": "bow",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "",
+            "rare_drop": "",
+            "common_drop": ""
+        }
+    },
+    "Elegy for the End": {
+        "type": "bow",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "",
+            "rare_drop": "",
+            "common_drop": ""
+        }
+    },
+    "Emerald Orb": {
+        "type": "catalyst",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Guyun",
+            "rare_drop": "Knife",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
+    "Eye of Perception": {
+        "type": "catalyst",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Dango",
+            "rare_drop": "Mist_Grass",
+            "common_drop": "Mask"
+        }
+    },
+    "Favonius Codex": {
+        "type": "catalyst",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Decarabian",
+            "rare_drop": "Horn",
+            "common_drop": "Scroll"
+        }
+    },
+    "Favonius Greatsword": {
+        "type": "claymore",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Shackle",
+            "rare_drop": "Chaos",
+            "common_drop": "Fatui_Insignia"
+        }
+    },
+    "Favonius Lance": {
+        "type": "spear",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Shackle",
+            "rare_drop": "Chaos",
+            "common_drop": "Slime"
+        }
+    },
+    "Favonius Sword": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Decarabian",
+            "rare_drop": "Horn",
+            "common_drop": "Arrowhead"
+        }
+    },
+    "Favonius Warbow": {
+        "type": "bow",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Shackle",
+            "rare_drop": "Chaos",
+            "common_drop": "Nectar"
+        }
+    },
+    "Ferrous Shadow": {
+        "type": "claymore",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Decarabian",
+            "rare_drop": "Horn",
+            "common_drop": "Nectar"
+        }
+    },
+    "Festering Desire": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Shackle",
+            "rare_drop": "Horn",
+            "common_drop": "Fatui_Insignia"
+        }
+    },
+    "Fillet Blade": {
+        "type": "sword",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Dango",
+            "rare_drop": "Mist_Grass",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
+    "Frostbearer": {
+        "type": "Catalyst",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Shackle",
+            "rare_drop": "Chaos",
+            "common_drop": "Nectar"
+        }
+    },
+    "Halberd": {
+        "type": "spear",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Dango",
+            "rare_drop": "Mist_Grass",
+            "common_drop": "Nectar"
+        }
+    },
+    "Harbinger of Dawn": {
+        "type": "sword",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Branch",
+            "common_drop": "Slime"
+        }
+    },
+    "Hunter's Bow": {
+        "type": "bow",
+        "rarity": 1,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Branch",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
+    "Iron Point": {
+        "type": "spear",
+        "rarity": 2,
+        "ascension": {
+            "domain_drop": "Shackle",
+            "rare_drop": "Chaos",
+            "common_drop": "Scroll"
+        }
+    },
+    "Iron Sting": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Aerosiderite",
+            "rare_drop": "Bone",
+            "common_drop": "Nectar"
+        }
+    },
+    "Lion's Roar": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Guyun",
+            "rare_drop": "Knife",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
+    "Lithic Blade": {
+        "type": "claymore",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Guyun",
+            "rare_drop": "Knife",
+            "common_drop": "Arrowhead"
+        }
+    },
+    "Lithic Spear": {
+        "type": "spear",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Aerosiderite",
+            "rare_drop": "Bone",
+            "common_drop": "Arrowhead"
+        }
+    },
+    "Lost Prayer to the Sacred Winds": {
+        "type": "catalyst",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Shackle",
+            "rare_drop": "Chaos",
+            "common_drop": "Slime"
+        }
+    },
+    "Magic Guide": {
+        "type": "catalyst",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Decarabian",
+            "rare_drop": "Horn",
+            "common_drop": "Slime"
+        }
+    },
+    "Mappa Mare": {
+        "type": "catalyst",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Aerosiderite",
+            "rare_drop": "Bone",
+            "common_drop": "Slime"
+        }
+    },
+    "Memory of Dust": {
+        "type": "catalyst",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Aerosiderite",
+            "rare_drop": "Bone",
+            "common_drop": "Mask"
+        }
+    },
+    "Messenger": {
+        "type": "bow",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Dango",
+            "rare_drop": "Mist_Grass",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
+    "Old Merc's Pal": {
+        "type": "claymore",
+        "rarity": 2,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Branch",
+            "common_drop": "Slime"
+        }
+    },
+    "Otherworldly Story": {
+        "type": "catalyst",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Shackle",
+            "rare_drop": "Chaos",
+            "common_drop": "Mask"
+        }
+    },
+    "Pocket Grimoire": {
+        "type": "catalyst",
+        "rarity": 2,
+        "ascension": {
+            "domain_drop": "Decarabian",
+            "rare_drop": "Horn",
+            "common_drop": "Mask"
+        }
+    },
+    "Primordial Jade Cutter": {
+        "type": "sword",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Dango",
+            "rare_drop": "Mist_Grass",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
+    "Primordial Jade Winged Spear": {
+        "type": "spear",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Guyun",
+            "rare_drop": "Knife",
+            "common_drop": "Fatui_Insignia"
+        }
+    },
+    "Prototype Amber": {
+        "type": "catalyst",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Dango",
+            "rare_drop": "Mist_Grass",
+            "common_drop": "Arrowhead"
+        }
+    },
+    "Prototype Archaic": {
+        "type": "claymore",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Aerosiderite",
+            "rare_drop": "Bone",
+            "common_drop": "Mask"
+        }
+    },
+    "Prototype Crescent": {
+        "type": "bow",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Dango",
+            "rare_drop": "Mist_Grass",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
+    "Prototype Rancour": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Dango",
+            "rare_drop": "Mist_Grass",
+            "common_drop": "Fatui_Insignia"
+        }
+    },
+    "Prototype Starglitter": {
+        "type": "spear",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Aerosiderite",
+            "rare_drop": "Bone",
+            "common_drop": "Mask"
+        }
+    },
+    "Quartz": {
+        "type": "claymore",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "",
+            "rare_drop": "",
+            "common_drop": ""
+        }
+    },
+    "Rainslasher": {
+        "type": "claymore",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Dango",
+            "rare_drop": "Mist_Grass",
+            "common_drop": "Scroll"
+        }
+    },
+    "Raven Bow": {
+        "type": "bow",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Decarabian",
+            "rare_drop": "Horn",
+            "common_drop": "Arrowhead"
+        }
+    },
+    "Recurve Bow": {
+        "type": "bow",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Shackle",
+            "rare_drop": "Chaos",
+            "common_drop": "Scroll"
+        }
+    },
+    "Royal Bow": {
+        "type": "bow",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Shackle",
+            "rare_drop": "Chaos",
+            "common_drop": "Slime"
+        }
+    },
+    "Royal Greatsword": {
+        "type": "claymore",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Shackle",
+            "rare_drop": "Chaos",
+            "common_drop": "Slime"
+        }
+    },
+    "Royal Grimoire": {
+        "type": "catalyst",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Decarabian",
+            "rare_drop": "Horn",
+            "common_drop": "Fatui_Insignia"
+        }
+    },
+    "Royal Longsowrd": {
+        "type": "claymore",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Decarabian",
+            "rare_drop": "Horn",
+            "common_drop": "Arrowhead"
+        }
+    },
+    "Royal Spear": {
+        "type": "spear",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Dango",
+            "rare_drop": "Mist_Grass",
+            "common_drop": "Fatui_Insignia"
+        }
+    },
+    "Rust": {
+        "type": "bow",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Guyun",
+            "rare_drop": "Knife",
+            "common_drop": "Mask"
+        }
+    },
+    "Sacrificial Bow": {
+        "type": "bow",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Branch",
+            "common_drop": "Slime"
+        }
+    },
+    "Sacrificial Fragments": {
+        "type": "catalyst",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Shackle",
+            "rare_drop": "Chaos",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
+    "Sacrificial Greatsword": {
+        "type": "claymore",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Branch",
+            "common_drop": "Arrowhead"
+        }
+    },
+    "Sacrificial Sword": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Shackle",
+            "rare_drop": "Chaos",
+            "common_drop": "Scroll"
+        }
+    },
+    "Seasoned Hunter's Bow": {
+        "type": "bow",
+        "rarity": 2,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Branch",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
+    "Serpent Spine": {
+        "type": "claymore",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Aerosiderite",
+            "rare_drop": "Bone",
+            "common_drop": "Nectar"
+        }
+    },
+    "Sharpshooter's Oath": {
+        "type": "bow",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Branch",
+            "common_drop": "Slime"
+        }
+    },
+    "Silver Sword": {
+        "type": "sword",
+        "rarity": 2,
+        "ascension": {
+            "domain_drop": "Decarabian",
+            "rare_drop": "Horn",
+            "common_drop": "Arrowhead"
+        }
+    },
+    "Skyrider Greatsword": {
+        "type": "claymore",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Aerosiderite",
+            "rare_drop": "Bone",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
+    "Skyrider Sword": {
+        "type": "sword",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Aerosiderite",
+            "rare_drop": "Bone",
+            "common_drop": "Fatui_Insignia"
+        }
+    },
+    "Skyward Atlas": {
+        "type": "catalyst",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Branch",
+            "common_drop": "Arrowhead"
+        }
+    },
+    "Skyward Blade": {
+        "type": "sword",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Branch",
+            "common_drop": "Slime"
+        }
+    },
+    "Skyward Harp": {
+        "type": "bow",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Branch",
+            "common_drop": "Arrowhead"
+        }
+    },
+    "Skyward Pride": {
+        "type": "claymore",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Branch",
+            "common_drop": "Slime"
+        }
+    },
+    "Skyward Spine": {
+        "type": "spear",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Shackle",
+            "rare_drop": "Chaos",
+            "common_drop": "Scroll"
+        }
+    },
+    "Slingshot": {
+        "type": "bow",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Guyun",
+            "rare_drop": "Knife",
+            "common_drop": "Mask"
+        }
+    },
+    "Snow-Tombed Starsilver": {
+        "type": "claymore",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Decarabian",
+            "rare_drop": "Horn",
+            "common_drop": "Slime"
+        }
+    },
+    "Solar Pearl": {
+        "type": "catalyst",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Guyun",
+            "rare_drop": "Knife",
+            "common_drop": "Nectar"
+        }
+    },
+    "Staff of Homa": {
+        "type": "spear",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Aerosiderite",
+            "rare_drop": "Branch",
+            "common_drop": "Slime"
+        }
+    },
+    "Summit Shaper": {
+        "type": "sword",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Guyun",
+            "rare_drop": "Knife",
+            "common_drop": "Mask"
+        }
+    },
+    "Sword of Descension": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Branch",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
+    "The Alley Flash": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "",
+            "rare_drop": "",
+            "common_drop": ""
+        }
+    },
+    "The Bell": {
+        "type": "claymore",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Decarabian",
+            "rare_drop": "Horn",
+            "common_drop": "Nectar"
+        }
+    },
+    "The Black Sword": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Branch",
+            "common_drop": "Slime"
+        }
+    },
+    "The Flute": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Branch",
+            "common_drop": "Slime"
+        }
+    },
+    "The Stringless": {
+        "type": "bow",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Decarabian",
+            "rare_drop": "Horn",
+            "common_drop": "Arrowhead"
+        }
+    },
+    "The Unforged": {
+        "type": "claymore",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Dango",
+            "rare_drop": "Mist_Grass",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
+    "The Viridescent Hunt": {
+        "type": "bow",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Decarabian",
+            "rare_drop": "Horn",
+            "common_drop": "Arrowhead"
+        }
+    },
+    "The Widsith": {
+        "type": "catalyst",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Branch",
+            "common_drop": "Mask"
+        }
+    },
+    "Thrilling Tales of Dragon Slayers": {
+        "type": "catalyst",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Branch",
+            "common_drop": "Scroll"
+        }
+    },
+    "Traveler's Handy Sword": {
+        "type": "sword",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Shackle",
+            "rare_drop": "Chaos",
+            "common_drop": "Scroll"
+        }
+    },
+    "Twin Nephrite": {
+        "type": "catalyst",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Dango",
+            "rare_drop": "Mist_Grass",
+            "common_drop": "Fatui_Insignia"
+        }
+    },
+    "Vortex Vanquisher": {
+        "type": "spear",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Aerosiderite",
+            "rare_drop": "Bone",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
+    "Waster Greatsword": {
+        "type": "claymore",
+        "rarity": 1,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Branch",
+            "common_drop": "Slime"
+        }
+    },
+    "White Iron Greatsword": {
+        "type": "claymore",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Shackle",
+            "rare_drop": "Chaos",
+            "common_drop": "Slime"
+        }
+    },
+    "White Tassel": {
+        "type": "spear",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Guyun",
+            "rare_drop": "Knife",
+            "common_drop": "Fatui_Insignia"
+        }
+    },
+    "Whiteblind": {
+        "type": "claymore",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Guyun",
+            "rare_drop": "Knife",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
+    "Whiteblume Ode": {
+        "type": "bow",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "",
+            "rare_drop": "",
+            "common_drop": ""
+        }
+    },
+    "Wine and Song": {
+        "type": "catalyst",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Branch",
+            "common_drop": "Scroll"
+        }
+    },
+    "Wolf's Gravestone": {
+        "type": "claymore",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Shackle",
+            "rare_drop": "Chaos",
+            "common_drop": "Scroll"
         }
     }
 }
