@@ -68,7 +68,7 @@ export class UserDataComponent implements OnChanges {
                 level: c.weapon.level,
                 ascension: c.weapon.ascension,
                 tlevel: c.weapon.tlevel,
-                tascensoin: c.weapon.tascension
+                tascension: c.weapon.tascension
             }
         })));
     }
@@ -88,6 +88,7 @@ export class UserDataComponent implements OnChanges {
         this.characters = JSON.parse(this.characterString);
         this.alertMsg = "Character data loaded!";
         this.displayAlert();
+        this.charactersChange.emit(this.characters);
     }
 
     delete() {

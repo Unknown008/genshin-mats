@@ -66,7 +66,7 @@
         "type": "catalyst",
         "rarity": 4,
         "ascension": {
-            "domain_drop": "Relic",
+            "domain_drop": "Guyun",
             "rare_drop": "Knife",
             "common_drop": "Scroll"
         }
@@ -75,7 +75,7 @@
         "type": "sword",
         "rarity": 4,
         "ascension": {
-            "domain_drop": "Relic",
+            "domain_drop": "Guyun",
             "rare_drop": "Knife",
             "common_drop": "Arrowhead"
         }
@@ -102,7 +102,7 @@
         "type": "bow",
         "rarity": 4,
         "ascension": {
-            "domain_drop": "Relic",
+            "domain_drop": "Guyun",
             "rare_drop": "Knife",
             "common_drop": "Nectar"
         }
@@ -134,11 +134,11 @@
             "common_drop": "Arrowhead"
         }
     },
-    "Crescent_Pike": {
+    "Crescent Pike": {
         "type": "spear",
         "rarity": 4,
         "ascension": {
-            "domain_drop": "Relic",
+            "domain_drop": "Guyun",
             "rare_drop": "Knife",
             "common_drop": "Treasure_Hoarder_Insignia"
         }
@@ -147,7 +147,7 @@
         "type": "sword",
         "rarity": 3,
         "ascension": {
-            "domain_drop": "Relic",
+            "domain_drop": "Guyun",
             "rare_drop": "Knife",
             "common_drop": "Mask"
         }
@@ -584,7 +584,7 @@
             "common_drop": "Fatui_Insignia"
         }
     },
-    "Royal Longsowrd": {
+    "Royal Longsword": {
         "type": "claymore",
         "rarity": 4,
         "ascension": {
