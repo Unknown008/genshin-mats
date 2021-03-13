@@ -50,8 +50,11 @@
 }
 
 .portrait {
+    width: 100%;
+    height: 100%;
     max-width: 110px;
     max-height: 110px;
+    cursor: pointer;
 }
 
 .stat-row {
@@ -60,27 +63,4 @@
 
 .row-label {
     height: 16px;
-}
-
-.input-filter {
-    width: calc(100% - 30px);
-    margin: 0 15px;
-}
-
-.weapon-name {
-    display: inline-block;
-}
-
-.list-group-item {
-    background: none;
-    color: #ffffff8c;
-}
-
-.form-check-input:checked {
-    background-color: #ffffff8c;
-    border-color: #ffffff8c;
-}
-
-.form-check-input:focus {
-    box-shadow: 0 0 0 0.25rem rgba(255,255,255,.25);
 }

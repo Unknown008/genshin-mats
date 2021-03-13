@@ -133,7 +133,8 @@
                     "boss_drop": "Dvalin's_Sigh"
                 }
             }
-        }
+        },
+        "weapon": "sword"
     },
     "Traveler (Geo)": {
         "element": "geo",
@@ -269,7 +270,8 @@
                     "boss_drop": "Tail_Of_Boreas"
                 }
             }
-        }
+        },
+        "weapon": "sword"
     },
     "Amber": {
         "element": "pyro",
@@ -284,7 +286,8 @@
                 "common_drop": "Arrowhead",
                 "boss_drop": "Dvalin's_Sigh"
             }
-        }
+        },
+        "weapon": "bow"
     },
     "Lisa": {
         "element": "electro",
@@ -299,7 +302,8 @@
                 "common_drop": "Slime",
                 "boss_drop": "Dvalin's_Claw"
             }
-        }
+        },
+        "weapon": "catalyst"
     },
     "Kaeya": {
         "element": "cryo",
@@ -314,7 +318,8 @@
                 "common_drop": "Treasure_Hoarder_Insignia",
                 "boss_drop": "Spirit_Locket_Of_Boreas"
             }
-        }
+        },
+        "weapon": "sword"
     },
     "Barbara": {
         "element": "hydro",
@@ -329,7 +334,8 @@
                 "common_drop": "Scroll",
                 "boss_drop": "Ring_Of_Boreas"
             }
-        }
+        },
+        "weapon": "catalyst"
     },
     "Noelle": {
         "element": "geo",
@@ -344,7 +350,8 @@
                 "common_drop": "Mask",
                 "boss_drop": "Dvalin's_Claw"
             }
-        }
+        },
+        "weapon": "claymore"
     },
     "Ningguang": {
         "element": "geo",
@@ -359,7 +366,8 @@
                 "common_drop": "Fatui_Insignia",
                 "boss_drop": "Spirit_Locket_Of_Boreas"
             }
-        }
+        },
+        "weapon": "catalyst"
     },
     "Fischl": {
         "element": "electro",
@@ -374,7 +382,8 @@
                 "common_drop": "Arrowhead",
                 "boss_drop": "Spirit_Locket_Of_Boreas"
             }
-        }
+        },
+        "weapon": "bow"
     },
     "Xiangling": {
         "element": "pyro",
@@ -389,7 +398,8 @@
                 "common_drop": "Slime",
                 "boss_drop": "Dvalin's_Claw"
             }
-        }
+        },
+        "weapon": "spear"
     },
     "Beidou": {
         "element": "electro",
@@ -404,7 +414,8 @@
                 "common_drop": "Treasure_Hoarder_Insignia",
                 "boss_drop": "Dvalin's_Sigh"
             }
-        }
+        },
+        "weapon": "claymore"
     },
     "Razor": {
         "element": "electro",
@@ -419,7 +430,8 @@
                 "common_drop": "Mask",
                 "boss_drop": "Dvalin's_Claw"
             }
-        }
+        },
+        "weapon": "claymore"
     },
     "Chongyun": {
         "element": "cryo",
@@ -434,7 +446,8 @@
                 "common_drop": "Mask",
                 "boss_drop": "Dvalin's_Sigh"
             }
-        }
+        },
+        "weapon": "claymore"
     },
     "Diluc": {
         "element": "pyro",
@@ -449,7 +462,8 @@
                 "common_drop": "Fatui_Insignia",
                 "boss_drop": "Dvalin's_Plume"
             }
-        }
+        },
+        "weapon": "claymore"
     },
     "Klee": {
         "element": "pyro",
@@ -464,7 +478,8 @@
                 "common_drop": "Scroll",
                 "boss_drop": "Ring_Of_Boreas"
             }
-        }
+        },
+        "weapon": "catalyst"
     },
     "Venti": {
         "element": "anemo",
@@ -479,7 +494,8 @@
                 "common_drop": "Slime",
                 "boss_drop": "Tail_Of_Boreas"
             }
-        }
+        },
+        "weapon": "bow"
     },
     "Mona": {
         "element": "hydro",
@@ -494,7 +510,8 @@
                 "common_drop": "Nectar",
                 "boss_drop": "Ring_Of_Boreas"
             }
-        }
+        },
+        "weapon": "catalyst"
     },
     "Qiqi": {
         "element": "cryo",
@@ -509,7 +526,8 @@
                 "common_drop": "Scroll",
                 "boss_drop": "Tail_Of_Boreas"
             }
-        }
+        },
+        "weapon": "sword"
     },
     "Keqing": {
         "element": "electro",
@@ -524,7 +542,8 @@
                 "common_drop": "Nectar",
                 "boss_drop": "Ring_Of_Boreas"
             }
-        }
+        },
+        "weapon": "sword"
     },
     "Jean": {
         "element": "anemo",
@@ -539,7 +558,8 @@
                 "common_drop": "Mask",
                 "boss_drop": "Dvalin's_Plume"
             }
-        }
+        },
+        "weapon": "sword"
     },
     "Bennett": {
         "element": "pyro",
@@ -554,7 +574,8 @@
                 "common_drop": "Treasure_Hoarder_Insignia",
                 "boss_drop": "Dvalin's_Plume"
             }
-        }
+        },
+        "weapon": "sword"
     },
     "Sucrose": {
         "element": "anemo",
@@ -569,7 +590,8 @@
                 "common_drop": "Nectar",
                 "boss_drop": "Spirit_Locket_Of_Boreas"
             }
-        }
+        },
+        "weapon": "catalyst"
     },
     "Xingqiu": {
         "element": "hydro",
@@ -584,7 +606,8 @@
                 "common_drop": "Mask",
                 "boss_drop": "Tail_Of_Boreas"
             }
-        }
+        },
+        "weapon": "sword"
     },
     "Childe": {
         "element": "hydro",
@@ -599,7 +622,8 @@
                 "common_drop": "Fatui_Insignia",
                 "boss_drop": "Shard_Of_A_Foul_Legacy"
             }
-        }
+        },
+        "weapon": "bow"
     },
     "Diona": {
         "element": "cryo",
@@ -614,7 +638,8 @@
                 "common_drop": "Arrowhead",
                 "boss_drop": "Shard_Of_A_Foul_Legacy"
             }
-        }
+        },
+        "weapon": "bow"
     },
     "Zhongli": {
         "element": "geo",
@@ -629,7 +654,8 @@
                 "common_drop": "Slime",
                 "boss_drop": "Tusk_Of_Monoceros_Caeli"
             }
-        }
+        },
+        "weapon": "spear"
     },
     "Xinyan": {
         "element": "pyro",
@@ -644,7 +670,8 @@
                 "common_drop": "Treasure_Hoarder_Insignia",
                 "boss_drop": "Tusk_Of_Monoceros_Caeli"
             }
-        }
+        },
+        "weapon": "claymore"
     },
     "Albedo": {
         "element": "geo",
@@ -659,7 +686,8 @@
                 "common_drop": "Scroll",
                 "boss_drop": "Tusk_Of_Monoceros_Caeli"
             }
-        }
+        },
+        "weapon": "sword"
     },
     "Ganyu": {
         "element": "cryo",
@@ -674,6 +702,41 @@
                 "common_drop": "Nectar",
                 "boss_drop": "Shadow_Of_The_Warrior"
             }
-        }
+        },
+        "weapon": "bow"
+    },
+    "Xiao": {
+        "element": "anemo",
+        "ascension": {
+            "element": "anemo",
+            "local_specialty": "Qingxin",
+            "common_drop": "Slime",
+            "boss_drop": "Juvenile_Jade"
+        },
+        "talent": {
+            "all": {
+                "book": "Prosperity",
+                "common_drop": "Slime",
+                "boss_drop": "Shadow_Of_The_Warrior"
+            }
+        },
+        "weapon": "spear"
+    },
+    "Hu Tao": {
+        "element": "pyro",
+        "ascension": {
+            "element": "pyro",
+            "local_specialty": "Silk_Flower",
+            "common_drop": "Nectar",
+            "boss_drop": "Juvenile_Jade"
+        },
+        "talent": {
+            "all": {
+                "book": "Diligence",
+                "common_drop": "Nectar",
+                "boss_drop": "Shard_Of_A_Foul_Legacy"
+            }
+        },
+        "weapon": "spear"
     }
 }

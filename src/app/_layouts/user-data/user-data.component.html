@@ -26,11 +26,18 @@
                     title="Load text to characters">
                     Load
                 </button>
-                <button class="btn danger" (click)="delete()" [disabled]="canDelete" 
+                <button class="btn danger" (click)="delete()" [disabled]="disableDelete" 
                     [title]="deleteTitle">
                     Delete saved data
                 </button>
             </div>
         </div>
     </form>
+</div>
+
+<div class="alert alert-success fade show text-left float" role="alert" 
+    [ngClass]="showAlert ? 'in' : ''">
+    {{alertMsg}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+    </button>
 </div>

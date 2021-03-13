@@ -1,0 +1,230 @@
+<div class="col-md-12">
+    <div class="page-title">
+        <h1>Upgrade materials domain daily rotation</h1>
+    </div>
+    <form class="table-options">
+        <div class="table-option">
+            <div class="form-check form-switch">
+                <label class="form-check-label" for="personalise">
+                    Personalise
+                </label>
+                <input class="form-check-input" type="checkbox" id="personalise" 
+                    [checked]="isPersonalised" (click)="togglePersonalise()">
+            </div>
+        </div>
+    </form>
+    <div class="day-row row">
+        <div class="col-md-4 small-padding">
+            <div class="section" [ngClass]="{'today': day.mon || day.thu}">
+                <h3 class="table-header">Mon/Thu</h3>
+            </div>
+        </div>
+        <div class="col-md-4 small-padding">
+            <div class="section" [ngClass]="{'today': day.tue || day.fri}">
+                <h3 class="table-header">Tue/Fri</h3>
+            </div>
+        </div>
+        <div class="col-md-4 small-padding">
+            <div class="section" [ngClass]="{'today': day.wed || day.sat}">
+                <h3 class="table-header">Wed/Sat</h3>
+            </div>
+        </div>
+    </div>
+    <div class="weapon-row row">
+        <div class="floating-title">
+            <form>
+                <fieldset>
+                    <legend>
+                        Weapon upgrade materials
+                    </legend>
+                </fieldset>
+            </form>
+        </div>
+        <div class="col-md-4 small-padding">
+            <div class="section" [ngClass]="{'today': day.mon || day.thu}">
+                <div class="weapon-block" *ngIf="weapons.Decarabian.length > 0 ||
+                    charWeapons.Decarabian.length > 0 ">
+                    <h5>Decarabian</h5>
+                    <div class="mat-row" *ngIf="weapons.Decarabian.length > 0">
+                        <span *ngFor="let weapon of weapons.Decarabian">
+                            <img [src]="weapon.path" [alt]="weapon.name" 
+                                class="mat" [ngClass]="weapon.quality">
+                        </span>
+                    </div>
+                    <div class="char-row" *ngIf="charWeapons.Decarabian.length > 0">
+                        <span *ngFor="let char of charWeapons.Decarabian">
+                            <img [src]="char.path" [alt]="char.name" [title]="char.name"
+                                class="char">
+                        </span>
+                    </div>
+                </div>
+                <div class="weapon-block" *ngIf="weapons.Guyun.length > 0 ||
+                    charWeapons.Guyun.length > 0 ">
+                    <h5>Guyun</h5>
+                    <div class="mat-row" *ngIf="weapons.Guyun.length > 0">
+                        <span *ngFor="let weapon of weapons.Guyun">
+                            <img [src]="weapon.path" [alt]="weapon.name" 
+                                class="mat" [ngClass]="weapon.quality">
+                        </span>
+                    </div>
+                    <div class="char-row" *ngIf="charWeapons.Guyun.length > 0">
+                        <span *ngFor="let char of charWeapons.Guyun">
+                            <img [src]="char.path" [alt]="char.name" [title]="char.name"
+                                class="char">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 small-padding">
+            <div class="section" [ngClass]="{'today': day.tue || day.fri}">
+                <div class="weapon-block" *ngIf="weapons.Fang.length > 0 ||
+                    charWeapons.Fang.length > 0 ">
+                    <h5>Fang</h5>
+                    <div class="mat-row" *ngIf="weapons.Fang.length > 0">
+                        <span *ngFor="let weapon of weapons.Fang">
+                            <img [src]="weapon.path" [alt]="weapon.name" 
+                                class="mat" [ngClass]="weapon.quality">
+                        </span>
+                    </div>
+                    <div class="char-row" *ngIf="charWeapons.Fang.length > 0">
+                        <span *ngFor="let char of charWeapons.Fang">
+                            <img [src]="char.path" [alt]="char.name" [title]="char.name"
+                                class="char">
+                        </span>
+                    </div>
+                </div>
+                <div class="weapon-block" *ngIf="weapons.Dango.length > 0 ||
+                    charWeapons.Dango.length > 0 ">
+                    <h5>Dango</h5>
+                    <div class="mat-row" *ngIf="weapons.Dango.length > 0">
+                        <span *ngFor="let weapon of weapons.Dango">
+                            <img [src]="weapon.path" [alt]="weapon.name" 
+                                class="mat" [ngClass]="weapon.quality">
+                        </span>
+                    </div>
+                    <div class="char-row" *ngIf="charWeapons.Decarabian.length > 0">
+                        <span *ngFor="let char of charWeapons.Decarabian">
+                            <img [src]="char.path" [alt]="char.name" [title]="char.name"
+                                class="char">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 small-padding">
+            <div class="section" [ngClass]="{'today': day.wed || day.sat}">
+                <div class="weapon-block" *ngIf="weapons.Shackle.length > 0 ||
+                    charWeapons.Shackle.length > 0 ">
+                    <h5>Shackle</h5>
+                    <div class="mat-row" *ngIf="weapons.Shackle.length > 0">
+                        <span *ngFor="let weapon of weapons.Shackle">
+                            <img [src]="weapon.path" [alt]="weapon.name" 
+                                class="mat" [ngClass]="weapon.quality">
+                        </span>
+                    </div>
+                    <div class="char-row" *ngIf="charWeapons.Shackle.length > 0">
+                        <span *ngFor="let char of charWeapons.Shackle">
+                            <img [src]="char.path" [alt]="char.name" [title]="char.name"
+                                class="char">
+                        </span>
+                    </div>
+                </div>
+                <div class="weapon-block" *ngIf="weapons.Aerosiderite.length > 0 ||
+                    charWeapons.Aerosiderite.length > 0 ">
+                    <h5>Aerosiderite</h5>
+                    <div class="mat-row" *ngIf="weapons.Aerosiderite.length > 0">
+                        <span *ngFor="let weapon of weapons.Aerosiderite">
+                            <img [src]="weapon.path" [alt]="weapon.name" 
+                                class="mat" [ngClass]="weapon.quality">
+                        </span>
+                    </div>
+                    <div class="char-row" *ngIf="charWeapons.Aerosiderite.length > 0">
+                        <span *ngFor="let char of charWeapons.Aerosiderite">
+                            <img [src]="char.path" [alt]="char.name" [title]="char.name"
+                                class="char">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="talent-row row">
+        <div class="floating-title">
+            <form>
+                <fieldset>
+                    <legend>
+                        Talent upgrade materials
+                    </legend>
+                </fieldset>
+            </form>
+        </div>
+        <div class="col-md-4 small-padding">
+            <div class="section" [ngClass]="{'today': day.mon || day.thu}">
+                <div class="char-block" *ngIf="talents.Freedom.length > 0">
+                    <h5>Freedom</h5>
+                    <div class="char-row">
+                        <span *ngFor="let char of talents.Freedom">
+                            <img [src]="char.path" [alt]="char.name" [title]="char.name"
+                                class="char">
+                        </span>
+                    </div>
+                </div>
+                <div class="char-block" *ngIf="talents.Prosperity.length > 0">
+                    <h5>Prosperity</h5>
+                    <div class="char-row">
+                        <span *ngFor="let char of talents.Prosperity">
+                            <img [src]="char.path" [alt]="char.name" [title]="char.name"
+                                class="char">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 small-padding">
+            <div class="section" [ngClass]="{'today': day.tue || day.fri}">
+                <div class="char-block" *ngIf="talents.Resistance.length > 0">
+                    <h5>Resistance</h5>
+                    <div class="char-row">
+                        <span *ngFor="let char of talents.Resistance">
+                            <img [src]="char.path" [alt]="char.name" [title]="char.name"
+                                class="char">
+                        </span>
+                    </div>
+                </div>
+                <div class="char-block" *ngIf="talents.Diligence.length > 0">
+                    <h5>Diligence</h5>
+                    <div class="char-row">
+                        <span *ngFor="let char of talents.Diligence">
+                            <img [src]="char.path" [alt]="char.name" [title]="char.name"
+                                class="char">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 small-padding">
+            <div class="section" [ngClass]="{'today': day.wed || day.sat}">
+                <div class="char-block" *ngIf="talents.Ballad.length > 0">
+                    <h5>Ballad</h5>
+                    <div class="char-row">
+                        <span *ngFor="let char of talents.Ballad">
+                            <img [src]="char.path" [alt]="char.name" [title]="char.name"
+                                class="char">
+                        </span>
+                    </div>
+                </div>
+                <div class="char-block" *ngIf="talents.Gold.length > 0">
+                    <h5>Gold</h5>
+                    <div class="char-row">
+                        <span *ngFor="let char of talents.Gold">
+                            <img [src]="char.path" [alt]="char.name" [title]="char.name"
+                                class="char">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

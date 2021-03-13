@@ -93,7 +93,7 @@
             "purple": "Fragment_of_Decarabian's_Epic",
             "gold": "Scattered_Piece_of_Decarabian's_Dream"
         },
-        "Relic": {
+        "Guyun": {
             "green": "Luminous_Sands_from_Guyun",
             "blue": "Lustrous_Stone_from_Guyun",
             "purple": "Relic_from_Guyun",
@@ -127,15 +127,15 @@
     "weapon_exp": {
         "grey": {
             "exp": 400,
-            "name": "Enhancement Ore"
+            "name": "Enhancement_Ore"
         },
         "green": {
             "exp": 2000,
-            "name": "Fine Enhancement Ore"
+            "name": "Fine_Enhancement_Ore"
         },
         "blue": {
             "exp": 10000,
-            "name": "Mystic Enhancement Ore"
+            "name": "Mystic_Enhancement_Ore"
         }
     },
     "talent": {

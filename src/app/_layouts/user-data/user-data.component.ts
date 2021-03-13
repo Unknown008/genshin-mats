@@ -1,7 +1,7 @@
 import { Component, Input, OnChanges, Output, EventEmitter } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
-import { CharacterModel } from 'src/app/_models/character.model';
+import { CharacterModel } from './../../_models/character.model';
 
 @Component({
     selector: 'app-user-data',
@@ -16,7 +16,10 @@ export class UserDataComponent implements OnChanges {
     public alertSeen: string = "false";
     public characterString: string = "";
     public deleteTitle: string = "";
-    public canDelete: boolean = true;
+    public disableDelete: boolean = false;
+    public showAlert: boolean = false;
+    public alertMsg: string = "";
+    public timeouts: any = null;
 
     public userData: FormGroup
 
@@ -31,10 +34,10 @@ export class UserDataComponent implements OnChanges {
         
         let userData = this.cookieService.get("genshin-characters");
         if (userData == null || userData == "") {
-            this.canDelete = false;
+            this.disableDelete = true;
             this.deleteTitle = "No data saved to browser";
         } else {
-            this.canDelete = true;
+            this.disableDelete = false;
             this.deleteTitle = "Deleted saved data from browser";
         }
     }
@@ -56,7 +59,17 @@ export class UserDataComponent implements OnChanges {
             teslevel: c.teslevel,
             teblevel: c.teblevel,
             tascension: c.tascension,
-            display: c.display
+            display: c.display,
+            weaponMode: false,
+            weapon: {
+                name: c.weapon.name,
+                file: c.weapon.name,
+                rarity: c.weapon.rarity,
+                level: c.weapon.level,
+                ascension: c.weapon.ascension,
+                tlevel: c.weapon.tlevel,
+                tascensoin: c.weapon.tascension
+            }
         })));
     }
 
@@ -66,13 +79,31 @@ export class UserDataComponent implements OnChanges {
 
     save() {
         this.cookieService.set("genshin-characters", this.characterString);
+        this.alertMsg = "Character data saved!";
+        this.disableDelete = false;
+        this.displayAlert();
     }
 
     load() {
         this.characters = JSON.parse(this.characterString);
+        this.alertMsg = "Character data loaded!";
+        this.displayAlert();
     }
 
     delete() {
         this.cookieService.delete("genshin-characters");
+        this.disableDelete = true;
+        this.alertMsg = "Character data deleted!";
+        this.displayAlert();
+    }
+
+    displayAlert() {
+        this.showAlert = true;
+        if (this.timeouts != null)
+            clearTimeout(this.timeouts);
+
+        this.timeouts = setTimeout(() => {
+            this.showAlert = false;
+        }, 5000);
     }
 }

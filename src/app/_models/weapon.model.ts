@@ -1,9 +1,9 @@
 export class WeaponModel {
     name: string
-    type: string
+    file: string
+    rarity: number
     level: number
     ascension: number
     tlevel: number
     tascension: number
-    display: boolean
 }

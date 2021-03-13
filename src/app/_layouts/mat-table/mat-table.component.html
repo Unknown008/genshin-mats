@@ -1,5 +1,15 @@
-<form #tableOptions="ngForm">
+<form class="options-container" #tableOptions="ngForm"
+    [ngClass]="displayWeapon ? 'weapon-size' : ''">
     <div class="table-options">
+        <div class="table-option">
+            <div class="form-check form-switch">
+                <label class="form-check-label" for="weaponDisplay">
+                    Weapons
+                </label>
+                <input class="form-check-input" type="checkbox" id="weaponDisplay" 
+                    [checked]="displayWeapon" (click)="toggle('weapon')">
+            </div>
+        </div>
         <div class="table-option">
             <div class="form-check form-switch">
                 <label class="form-check-label" for="rarityDisplay">
@@ -20,7 +30,7 @@
         </div>
     </div>
 </form>
-<table class="table white">
+<table class="table white" [ngClass]="displayWeapon ? 'weapon-size' : ''">
     <caption></caption>
     <thead>
         <th *ngFor="let col of displayedColumns" scope="col">
@@ -53,7 +63,7 @@
         </tr>
     </tbody>
 </table>
-<table *ngIf="displayTotals" class="table white">
+<table *ngIf="displayTotals" class="table white" [ngClass]="displayWeapon ? 'weapon-size' : ''">
     <caption></caption>
     <thead>
         <th *ngFor="let col of totalColumns" scope="col">

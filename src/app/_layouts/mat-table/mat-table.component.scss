@@ -1,6 +1,11 @@
+.options-container {
+    height: 26px;
+}
+
 .table-options {
     font-size: 14px;
-    text-align: right;
+    position: fixed;
+    right: 10px;
 }
 
 .table-option {
@@ -16,9 +21,11 @@
 .item-gem,
 .item-common-drop,
 .item-boss-drop,
-.item-book,
+.item-domain,
 .item-limited,
-.item-local-specialty {
+.item-local-specialty,
+.weapon-exp,
+.item-domain-drop {
     width: 50px;
 }
 
@@ -104,4 +111,8 @@ label.form-check-label {
 .form-check-input:focus {
     border-color: #ffffff8c;
     box-shadow: 0 0 0 0.25rem rgb(255 255 255 / 0.25);
+}
+
+.weapon-size {
+    width: 150% !important;
 }

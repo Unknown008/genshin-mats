@@ -1,3 +1,5 @@
+import { WeaponModel } from "./weapon.model"
+
 export class CharacterModel {
     name: string
     file: string
@@ -12,4 +14,6 @@ export class CharacterModel {
     teblevel: number
     tascension: number
     display: boolean
+    weaponMode: boolean
+    weapon: WeaponModel
 }

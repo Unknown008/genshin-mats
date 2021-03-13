@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { WeaponModel } from 'src/app/_models/weapon.model';
-import { EnvironmentPathService } from 'src/app/_services/environment-path.service';
+import { EnvironmentPathService } from './../../_services/environment-path.service';
 import { CharacterModel } from './../../_models/character.model';
+import PerfectScrollbar from "perfect-scrollbar";
 
 @Component({
     selector: 'app-character',
@@ -11,28 +11,43 @@ import { CharacterModel } from './../../_models/character.model';
 })
 export class CharacterComponent implements OnInit {
     @Input() character: CharacterModel;
-    @Input() characterData: any[];
-    @Input() weaponData: WeaponModel[];
+    @Input() charData: any[];
+    @Input() weaponData: any[];
     @Output() deleteCharacter = new EventEmitter<string>();
+    @Output() setWeapon = new EventEmitter<string>();
+    @Output() setCharacter = new EventEmitter<string>();
 
     characterForm: FormGroup;
 
     public path: string = this.url.getUrl("./../../assets/resources/characters/", true);
+    public weaponPath: string = this.url.getUrl("./../../assets/resources/weapons/", true);
     public levels = [1, 20, 40, 50, 60, 70, 80, 90];
     public ascensions = [0, 1, 2, 3, 4, 5, 6, 7];
     public talents = [1, 1, 2, 4, 6, 8, 10];
 
     public weaponFilter: string = "";
+    public allWeapons: any[] = [];
     public filteredWeapons: any[] = [];
+    public weaponTitle: string = "Set weapon";
 
     constructor(
         private url: EnvironmentPathService
     ) { }
 
     ngOnInit() {
+        let modalPanel = document.querySelector('.modal-panel');
+        if (modalPanel)
+            new PerfectScrollbar(modalPanel);
+
         this.character.file = this.path + this.character.file + ".png";
-        let weaponType = this.characterData[this.character.name].weapon;
-        //this.filteredWeapons = this.weaponData.filter(w => w.type == weaponType);
+        this.setDefaultWeapon();
+    }
+
+    /**
+     * Displays list of selectble weapons
+     */
+    chooseCharacter() {
+        this.setCharacter.emit(this.character.name);
     }
 
     /**
@@ -50,23 +65,50 @@ export class CharacterComponent implements OnInit {
     }
 
     /**
-     * 
+     * Filters the list of weapons to give the weapons the character can wield
      */
-    setWeapon() {
-
+    showCharacterWeapons() {
+        this.character.weaponMode = !this.character.weaponMode;
+        this.weaponTitle = this.character.weaponMode ? "View character" : "Set weapon";
+        this.setDefaultWeapon();
     }
 
     /**
-     * Filters the full weapon list with the keywords typed by the user
+     * Sets a default weapon
      */
-    filterWeapons() {
+    setDefaultWeapon() {
+        if (this.character.weapon.file == "") {
+            let weaponType = this.charData[this.character.name].weapon;
+            let defaultWeapon;
+            for (let weapon in this.weaponData) {
+                if (
+                    this.weaponData[weapon].type == weaponType && 
+                    this.weaponData[weapon].rarity == 1
+                ) {
+                    defaultWeapon = weapon;
+                    break;
+                }
+            }
+            this.character.weapon.file = this.weaponPath + defaultWeapon.replace(/ /g, "_") +
+                ".png";
+            this.character.weapon.name = defaultWeapon;
+        } else if (!this.character.weapon.file.includes(".png")) {
+            this.character.weapon.file = this.weaponPath + 
+                this.character.weapon.file.replace(/ /g, "_") + ".png";
+        }
+    }
 
+    /**
+     * Displays list of selectble weapons
+     */
+    chooseWeapon() {
+        this.setWeapon.emit(this.character.name);
     }
 
     /**
      * Checks if ascension of character needs to be adjusted with change in level, 
      * and checks for related consequential changes 
-     * @type c or t, c meaning current and t meaning target
+     * @param type c or t, c meaning current and t meaning target
      */
     checkAscension(type: string) {
         switch (type) {
@@ -102,7 +144,7 @@ export class CharacterComponent implements OnInit {
     /**
      * Checks if level of character needs to be adjusted with change in ascension, 
      * and checks for related consequential changes 
-     * @type c or t, c meaning current and t meaning target
+     * @param type c or t, c meaning current and t meaning target
      */
     checkLevel(type: string) {
         switch (type) {
@@ -138,7 +180,7 @@ export class CharacterComponent implements OnInit {
     /**
      * Checks if talent of character needs to be adjusted with change in talent, 
      * and checks for related consequential changes 
-     * @type 
+     * @param type 
      *     cba - current base attack level
      *     tba - target base attack level
      *     ces - current elemental skill level
@@ -220,7 +262,6 @@ export class CharacterComponent implements OnInit {
     /**
      * Methods adjusting attributes
      */
-
     syncAscToLevel() {
         if (
             this.character.level >= this.levels[this.character.ascension] &&
@@ -458,6 +499,182 @@ export class CharacterComponent implements OnInit {
             this.syncTlevelToTasc();
             this.syncAscToTasc();
             this.syncLevelToAsc();
+        }
+    }
+
+
+    /**
+     * Checks if ascension of weapon needs to be adjusted with change in level
+     * @param type c or t, c meaning current and t meaning target
+     */
+    checkWAscension(type: string) {
+        let maxAsc = this.character.weapon.rarity < 3 ? 4 : 6;
+        switch (type) {
+            case "c":
+                if (
+                    this.character.weapon.ascension ==  null || 
+                    this.character.weapon.ascension < 0 || 
+                    this.character.weapon.ascension > maxAsc
+                )
+                    return;
+
+                this.syncWAscToWLevel();
+                this.syncWTlevelToWLevel();
+                this.syncWTascToWTlevel();
+                break;
+            case "t":
+                if (
+                    this.character.weapon.tascension == null || 
+                    this.character.weapon.tascension < 0 || 
+                    this.character.weapon.tascension > maxAsc
+                )
+                    return;
+
+                this.syncWTascToWTlevel();
+                this.syncWAscToWTasc();
+                this.syncWLevelToWTlevel();
+                break;
+        }
+    }
+
+    /**
+     * Checks if level of weapon needs to be adjusted with change in ascension
+     * @param type c or t, c meaning current and t meaning target
+     */
+    checkWLevel(type: string) {
+        let maxAsc = this.character.weapon.rarity < 3 ? 4 : 6;
+        switch (type) {
+            case "c":
+                if (
+                    this.character.ascension == null || 
+                    this.character.ascension < 0 || 
+                    this.character.ascension > maxAsc
+                )
+                    return;
+
+                this.syncWLevelToWAsc();
+                this.syncWTascToWAsc();
+                this.syncWTlevelToWTasc();
+                break;
+            case "t":
+                if (
+                    this.character.weapon.tascension == null || 
+                    this.character.weapon.tascension < 0 || 
+                    this.character.weapon.tascension > maxAsc
+                )
+                    return;
+
+                this.syncWTlevelToWTasc();
+                this.syncWAscToWTasc();
+                this.syncWLevelToWAsc();
+                break;
+        }
+    }
+
+    /**
+     * Methods adjusting attributes
+     */
+    syncWAscToWLevel() {
+        if (
+            this.character.weapon.level >= this.levels[this.character.weapon.ascension] &&
+            this.character.weapon.level <= this.levels[this.character.weapon.ascension + 1]
+        ) { } else {
+            let previous = 0;
+            for (let i = 0; i < this.levels.length; i++) {
+                if (previous == 0) {
+                    previous = this.levels[i];
+                    continue;
+                }
+                if (
+                    this.character.weapon.level >= previous &&
+                    this.character.weapon.level <= this.levels[i]
+                ) {
+                    this.character.weapon.ascension = this.ascensions[i] - 1;
+                    break;
+                }
+
+                previous = this.levels[i];
+            }
+        }
+    }
+
+    syncWTlevelToWLevel() {
+        if (this.character.weapon.level > this.character.weapon.tlevel) {
+            this.character.weapon.tlevel = this.character.weapon.level;
+        }
+    }
+
+    syncWTascToWTlevel() {
+        if (
+            this.character.weapon.tlevel >= 
+                this.levels[this.character.weapon.tascension] &&
+            this.character.weapon.tlevel <= 
+                this.levels[this.character.weapon.tascension + 1]
+        ) { } else {
+            let previous = 0;
+            for (let i = 0; i < this.levels.length; i++) {
+                if (previous == 0) {
+                    previous = this.levels[i];
+                    continue;
+                }
+                if (
+                    this.character.weapon.tlevel >= previous &&
+                    this.character.weapon.tlevel <= this.levels[i]
+                ) {
+                    this.character.weapon.tascension = this.ascensions[i] - 1;
+                    break;
+                }
+
+                previous = this.levels[i];
+            }
+        }
+    }
+
+    syncWAscToWTasc() {
+        if (this.character.weapon.ascension > this.character.weapon.tascension) {
+            this.character.weapon.ascension = this.character.weapon.tascension;
+        }
+    }
+
+    syncWLevelToWTlevel() {
+        if (this.character.weapon.level > this.character.weapon.tlevel) {
+            this.character.weapon.level = this.character.weapon.tlevel;
+        }
+    }
+
+    syncWLevelToWAsc() {
+        if (
+            this.character.weapon.level >= this.levels[this.character.weapon.ascension] &&
+            this.character.weapon.level <= this.levels[this.character.weapon.ascension + 1]
+        ) { } else {
+            for (let i = 0; i < this.ascensions.length; i++) {
+                if (this.character.weapon.ascension == this.ascensions[i]) {
+                    this.character.weapon.level = this.levels[i];
+                    break;
+                }
+            }
+        }
+    }
+
+    syncWTascToWAsc() {
+        if (this.character.weapon.ascension > this.character.weapon.tascension) {
+            this.character.weapon.tascension = this.character.weapon.ascension;
+        }
+    }
+
+    syncWTlevelToWTasc() {
+        if (
+            this.character.weapon.tlevel >= 
+                this.levels[this.character.weapon.tascension] &&
+            this.character.weapon.tlevel <= 
+                this.levels[this.character.weapon.tascension + 1]
+        ) { } else {
+            for (let i = 0; i < this.ascensions.length; i++) {
+                if (this.character.weapon.tascension == this.ascensions[i]) {
+                    this.character.weapon.tlevel = this.levels[i+1];
+                    break;
+                }
+            }
         }
     }
 }
