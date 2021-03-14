@@ -17,6 +17,6 @@ export class EnvironmentPathService {
         else if (src)
             return path.replace(/^[./]*/, "");
         else
-            return "angular-page-test/" + path.replace(/^[./]*/, "");
+            return "genshin-mats/" + path.replace(/^[./]*/, "");
     }
 }

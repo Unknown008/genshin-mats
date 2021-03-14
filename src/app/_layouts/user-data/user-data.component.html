@@ -1,4 +1,4 @@
-<div class="col-lg-10">
+<div class="col-lg-12">
     <form #userData="ngForm">
         <div class="alert alert-warning alert-dismissible fade show text-left" role="alert" 
             *ngIf="alertSeen == 'false'">
@@ -9,11 +9,11 @@
             </button>
         </div>
         <div class="row text-left">
-            <label for="characters" class="form-label px-0">Characters</label>
+            <label for="characters" class="form-label px-0">Character Data</label>
         </div>
         <div class="row">
             <textarea class="form-control" id="characters" [(ngModel)]="characterString"
-                name="characters" #characters="ngModel" rows="8">
+                name="characters" #characters="ngModel" rows="8" spellcheck="false">
             </textarea>
         </div>
         <div class="row">
@@ -26,7 +26,7 @@
                     title="Load text to characters">
                     Load
                 </button>
-                <button class="btn danger" (click)="delete()" [disabled]="canDelete" 
+                <button class="btn danger" (click)="delete()" [disabled]="disableDelete" 
                     [title]="deleteTitle">
                     Delete saved data
                 </button>
@@ -34,3 +34,12 @@
         </div>
     </form>
 </div>
+
+<div class="alert alert-success fade show text-left float" role="alert" 
+    [ngClass]="showAlert ? 'in' : ''">
+    {{alertMsg}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+    </button>
+</div>
+
+<app-loader *ngIf="loading"></app-loader>

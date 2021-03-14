@@ -1,11 +1,11 @@
-import { Routes } from '@angular/router';
-import { PageNotFoundComponent } from './page-not-found.component';
+import { Routes } from "@angular/router";
+import { PageNotFoundComponent } from "./page-not-found.component";
 
 export const PageNotFoundRoutes: Routes = [
     {
-        path: '',
+        path: "",
         children: [{
-            path: '',
+            path: "",
             component: PageNotFoundComponent
         }]
     }

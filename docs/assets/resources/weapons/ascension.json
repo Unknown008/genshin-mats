@@ -1,0 +1,412 @@
+{
+    "1": {
+        "cost": {
+            "20": {
+                "cost": 0,
+                "domain_drop": {
+                    "quality": "green",
+                    "quantity": 1
+                },
+                "common_drop": {
+                    "quality": "grey",
+                    "quantity": 1
+                },
+                "rare_drop": {
+                    "quality": "green",
+                    "quantity": 1
+                }
+            },
+            "40": {
+                "cost": 5000,
+                "domain_drop": {
+                    "quality": "blue",
+                    "quantity": 1
+                },
+                "common_drop": {
+                    "quality": "grey",
+                    "quantity": 2
+                },
+                "rare_drop": {
+                    "quality": "green",
+                    "quantity": 4
+                }
+            },
+            "50": {
+                "cost": 5000,
+                "domain_drop": {
+                    "quality": "blue",
+                    "quantity": 2
+                },
+                "common_drop": {
+                    "quality": "green",
+                    "quantity": 2
+                },
+                "rare_drop": {
+                    "quality": "blue",
+                    "quantity": 2
+                }
+            },
+            "60": {
+                "cost": 10000,
+                "domain_drop": {
+                    "quality": "purple",
+                    "quantity": 1
+                },
+                "common_drop": {
+                    "quality": "green",
+                    "quantity": 3
+                },
+                "rare_drop": {
+                    "quality": "blue",
+                    "quantity": 4
+                }
+            }
+        }
+    },
+    "2": {
+        "cost": {
+            "20": {
+                "cost": 5000,
+                "domain_drop": {
+                    "quality": "green",
+                    "quantity": 1
+                },
+                "common_drop": {
+                    "quality": "grey",
+                    "quantity": 1
+                },
+                "rare_drop": {
+                    "quality": "green",
+                    "quantity": 1
+                }
+            },
+            "40": {
+                "cost": 5000,
+                "domain_drop": {
+                    "quality": "blue",
+                    "quantity": 1
+                },
+                "common_drop": {
+                    "quality": "grey",
+                    "quantity": 4
+                },
+                "rare_drop": {
+                    "quality": "green",
+                    "quantity": 5
+                }
+            },
+            "50": {
+                "cost": 10000,
+                "domain_drop": {
+                    "quality": "blue",
+                    "quantity": 3
+                },
+                "common_drop": {
+                    "quality": "green",
+                    "quantity": 3
+                },
+                "rare_drop": {
+                    "quality": "blue",
+                    "quantity": 3
+                }
+            },
+            "60": {
+                "cost": 15000,
+                "domain_drop": {
+                    "quality": "purple",
+                    "quantity": 1
+                },
+                "common_drop": {
+                    "quality": "green",
+                    "quantity": 4
+                },
+                "rare_drop": {
+                    "quality": "blue",
+                    "quantity": 5
+                }
+            }
+        }
+    },
+    "3": {
+        "cost": {
+            "20": {
+                "cost": 5000,
+                "domain_drop": {
+                    "quality": "green",
+                    "quantity": 2
+                },
+                "common_drop": {
+                    "quality": "grey",
+                    "quantity": 1
+                },
+                "rare_drop": {
+                    "quality": "green",
+                    "quantity": 2
+                }
+            },
+            "40": {
+                "cost": 10000,
+                "domain_drop": {
+                    "quality": "blue",
+                    "quantity": 2
+                },
+                "common_drop": {
+                    "quality": "grey",
+                    "quantity": 5
+                },
+                "rare_drop": {
+                    "quality": "green",
+                    "quantity": 8
+                }
+            },
+            "50": {
+                "cost": 15000,
+                "domain_drop": {
+                    "quality": "blue",
+                    "quantity": 4
+                },
+                "common_drop": {
+                    "quality": "green",
+                    "quantity": 4
+                },
+                "rare_drop": {
+                    "quality": "blue",
+                    "quantity": 4
+                }
+            },
+            "60": {
+                "cost": 20000,
+                "domain_drop": {
+                    "quality": "purple",
+                    "quantity": 2
+                },
+                "common_drop": {
+                    "quality": "green",
+                    "quantity": 6
+                },
+                "rare_drop": {
+                    "quality": "blue",
+                    "quantity": 8
+                }
+            },
+            "70": {
+                "cost": 25000,
+                "domain_drop": {
+                    "quality": "purple",
+                    "quantity": 4
+                },
+                "common_drop": {
+                    "quality": "blue",
+                    "quantity": 4
+                },
+                "rare_drop": {
+                    "quality": "purple",
+                    "quantity": 6
+                }
+            },
+            "80": {
+                "cost": 30000,
+                "domain_drop": {
+                    "quality": "gold",
+                    "quantity": 3
+                },
+                "common_drop": {
+                    "quality": "blue",
+                    "quantity": 8
+                },
+                "rare_drop": {
+                    "quality": "purple",
+                    "quantity": 12
+                }
+            }
+        }
+    },
+    "4": {
+        "cost": {
+            "20": {
+                "cost": 5000,
+                "domain_drop": {
+                    "quality": "green",
+                    "quantity": 3
+                },
+                "common_drop": {
+                    "quality": "grey",
+                    "quantity": 2
+                },
+                "rare_drop": {
+                    "quality": "green",
+                    "quantity": 3
+                }
+            },
+            "40": {
+                "cost": 15000,
+                "domain_drop": {
+                    "quality": "blue",
+                    "quantity": 3
+                },
+                "common_drop": {
+                    "quality": "grey",
+                    "quantity": 8
+                },
+                "rare_drop": {
+                    "quality": "green",
+                    "quantity": 12
+                }
+            },
+            "50": {
+                "cost": 20000,
+                "domain_drop": {
+                    "quality": "blue",
+                    "quantity": 6
+                },
+                "common_drop": {
+                    "quality": "green",
+                    "quantity": 6
+                },
+                "rare_drop": {
+                    "quality": "blue",
+                    "quantity": 6
+                }
+            },
+            "60": {
+                "cost": 30000,
+                "domain_drop": {
+                    "quality": "purple",
+                    "quantity": 3
+                },
+                "common_drop": {
+                    "quality": "green",
+                    "quantity": 9
+                },
+                "rare_drop": {
+                    "quality": "blue",
+                    "quantity": 12
+                }
+            },
+            "70": {
+                "cost": 35000,
+                "domain_drop": {
+                    "quality": "purple",
+                    "quantity": 6
+                },
+                "common_drop": {
+                    "quality": "blue",
+                    "quantity": 6
+                },
+                "rare_drop": {
+                    "quality": "purple",
+                    "quantity": 9
+                }
+            },
+            "80": {
+                "cost": 45000,
+                "domain_drop": {
+                    "quality": "gold",
+                    "quantity": 4
+                },
+                "common_drop": {
+                    "quality": "blue",
+                    "quantity": 12
+                },
+                "rare_drop": {
+                    "quality": "purple",
+                    "quantity": 18
+                }
+            }
+        }
+    },
+    "5": {
+        "cost": {
+            "20": {
+                "cost": 10000,
+                "domain_drop": {
+                    "quality": "green",
+                    "quantity": 5
+                },
+                "common_drop": {
+                    "quality": "grey",
+                    "quantity": 3
+                },
+                "rare_drop": {
+                    "quality": "green",
+                    "quantity": 5
+                }
+            },
+            "40": {
+                "cost": 20000,
+                "domain_drop": {
+                    "quality": "blue",
+                    "quantity": 5
+                },
+                "common_drop": {
+                    "quality": "grey",
+                    "quantity": 12
+                },
+                "rare_drop": {
+                    "quality": "green",
+                    "quantity": 18
+                }
+            },
+            "50": {
+                "cost": 30000,
+                "domain_drop": {
+                    "quality": "blue",
+                    "quantity": 9
+                },
+                "common_drop": {
+                    "quality": "green",
+                    "quantity": 9
+                },
+                "rare_drop": {
+                    "quality": "blue",
+                    "quantity": 9
+                }
+            },
+            "60": {
+                "cost": 45000,
+                "domain_drop": {
+                    "quality": "purple",
+                    "quantity": 5
+                },
+                "common_drop": {
+                    "quality": "green",
+                    "quantity": 14
+                },
+                "rare_drop": {
+                    "quality": "blue",
+                    "quantity": 18
+                }
+            },
+            "70": {
+                "cost": 55000,
+                "domain_drop": {
+                    "quality": "purple",
+                    "quantity": 9
+                },
+                "common_drop": {
+                    "quality": "blue",
+                    "quantity": 9
+                },
+                "rare_drop": {
+                    "quality": "purple",
+                    "quantity": 14
+                }
+            },
+            "80": {
+                "cost": 65000,
+                "domain_drop": {
+                    "quality": "gold",
+                    "quantity": 6
+                },
+                "common_drop": {
+                    "quality": "blue",
+                    "quantity": 18
+                },
+                "rare_drop": {
+                    "quality": "purple",
+                    "quantity": 27
+                }
+            }
+        }
+    }
+}

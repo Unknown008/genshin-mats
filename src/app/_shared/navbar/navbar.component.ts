@@ -1,10 +1,10 @@
 import { Component, OnInit } from "@angular/core";
-import { EnvironmentPathService } from "src/app/_services/environment-path.service";
+import { EnvironmentPathService } from "./../../_services/environment-path.service";
 
 @Component({
     selector: "app-navbar",
     templateUrl: "./navbar.component.html",
-    styleUrls: ["./navbar.component.css"]
+    styleUrls: ["./navbar.component.scss"]
 })
 export class NavbarComponent implements OnInit {
     public logoPath: string = "";

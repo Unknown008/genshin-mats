@@ -1,0 +1,17 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    height: 54px;
+}
+
+.logo-row {
+    position: absolute;
+    left: calc(50% - 68px);
+    top: 0;
+}
+
+.genshin-logo {
+    height: 50px;
+}

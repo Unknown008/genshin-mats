@@ -1,178 +1,208 @@
-<div class="page col-md-12">
-    <div class="page-title">
-        <h1>Upgrade materials domain daily rotation</h1>
+<div class="page col-md-12 main-panel">
+    <div class="nav-container">
+        <ul class="nav nav-tabs nav-fill" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="drops-tab" data-bs-toggle="tab"
+                    href="#drops" role="tab" aria-controls="drops"
+                    aria-selected="true" (click)="incrChange()">
+                    Drops
+                </a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="char-tab" data-bs-toggle="tab"
+                    href="#characters" role="tab" aria-controls="char"
+                    aria-selected="true">
+                    Characters
+                </a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="mat-tab" data-bs-toggle="tab"   
+                    href="#materials" role="tab" aria-controls="mat" aria-selected="false"
+                    (click)="incrChange()">
+                    Materials
+                </a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="data-tab" data-bs-toggle="tab"   
+                    href="#data" role="tab" aria-controls="data" aria-selected="false"
+                    (click)="incrChange()">
+                    Data
+                </a>
+            </li>
+        </ul>
     </div>
-    <div class="day-row row">
-        <div class="col-md-4 small-padding">
-            <div class="section">
-                <h3 class="table-header">Mon/Thu</h3>
+    <div class="tab-content">
+        <div id="drops" role="tabpanel" aria-labelledby="data-tab"
+            class="tab-pane fade show active">
+            <app-drops [characters]="characters"></app-drops>
+        </div>
+        <div id="characters" role="tabpanel" aria-labelledby="char-tab"
+            class="tab-pane fade">
+            <div class="button-container">
+                <button type="button" title="Add character" data-bs-toggle="modal"
+                    data-bs-target="#addCharacter">
+                    <i class="fas fa-plus"></i>
+                </button>
             </div>
+            <app-character *ngFor="let char of characters" [character]="char"
+                [weaponData]="weaponData" [charData]="charData"
+                (deleteCharacter)="deleteCharacter($event)" (setWeapon)="showWeapon($event)"
+                (setCharacter)="showCharacter($event)">
+            </app-character>
         </div>
-        <div class="col-md-4 small-padding">
-            <div class="section">
-                <h3 class="table-header">Tue/Fri</h3>
-            </div>
+        <div id="materials" role="tabpanel" aria-labelledby="mat-tab"
+            class="tab-pane fade">
+            <app-mat-table [characters]="characters" [weaponData]="weaponData"
+                [levelUpData]="levelUpData" [ascensionData]="ascensionData" 
+                [talentData]="talentData" [charData]="charData"
+                [itemQualityData]="itemQualityData"
+                [weaponLevelUpData]="weaponLevelUpData" 
+                [weaponAscensionData]="weaponAscensionData" [change]="change">
+            </app-mat-table>
         </div>
-        <div class="col-md-4 small-padding">
-            <div class="section">
-                <h3 class="table-header">Wed/Sat</h3>
-            </div>
-        </div>
-    </div>
-    <div class="weapon-row row">
-        <div class="floating-title">
-            <form>
-                <fieldset>
-                    <legend>
-                        Weapon upgrade materials
-                    </legend>
-                </fieldset>
-            </form>
-        </div>
-        <div class="col-md-4 small-padding">
-            <div class="section">
-                <div class="weapon-block">
-                    <div class="mat-row">
-                        <span *ngFor="let weapon of weapons.Decarabian">
-                            <img [src]="weapon.path" [alt]="weapon.name" 
-                                class="mat" [ngClass]="weapon.quality">
-                        </span>
-                    </div>
-                    <h5>Decarabian</h5>
-                </div>
-                <div class="weapon-block">
-                    <div class="mat-row">
-                        <span *ngFor="let weapon of weapons.Relic">
-                            <img [src]="weapon.path" [alt]="weapon.name" 
-                                class="mat" [ngClass]="weapon.quality">
-                        </span>
-                    </div>
-                    <h5>Relic</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 small-padding">
-            <div class="section">
-                <div class="weapon-block">
-                    <div class="mat-row">
-                        <span *ngFor="let weapon of weapons.Fang">
-                            <img [src]="weapon.path" [alt]="weapon.name" 
-                                class="mat" [ngClass]="weapon.quality">
-                        </span>
-                    </div>
-                    <h5>Fang</h5>
-                </div>
-                <div class="weapon-block">
-                    <div class="mat-row">
-                        <span *ngFor="let weapon of weapons.Dango">
-                            <img [src]="weapon.path" [alt]="weapon.name" 
-                                class="mat" [ngClass]="weapon.quality">
-                        </span>
-                    </div>
-                    <h5>Dango</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 small-padding">
-            <div class="section">
-                <div class="weapon-block">
-                    <div class="mat-row">
-                        <span *ngFor="let weapon of weapons.Shackle">
-                            <img [src]="weapon.path" [alt]="weapon.name" 
-                                class="mat" [ngClass]="weapon.quality">
-                        </span>
-                    </div>
-                    <h5>Shackle</h5>
-                </div>
-                <div class="weapon-block">
-                    <div class="mat-row">
-                        <span *ngFor="let weapon of weapons.Aerosiderite">
-                            <img [src]="weapon.path" [alt]="weapon.name" 
-                                class="mat" [ngClass]="weapon.quality">
-                        </span>
-                    </div>
-                    <h5>Aerosiderite</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="talent-row row">
-        <div class="floating-title">
-            <form>
-                <fieldset>
-                    <legend>
-                        Talent upgrade materials
-                    </legend>
-                </fieldset>
-            </form>
-        </div>
-        <div class="col-md-4 small-padding">
-            <div class="section">
-                <div class="char-block">
-                    <div class="char-row">
-                        <span *ngFor="let char of talents.Freedom">
-                            <img [src]="char.path" [alt]="char.name" class="char">
-                        </span>
-                    </div>
-                    <h5>Freedom</h5>
-                </div>
-                <div class="char-block">
-                    <div class="char-row">
-                        <span *ngFor="let char of talents.Prosperity">
-                            <img [src]="char.path" [alt]="char.name" class="char">
-                        </span>
-                    </div>
-                    <h5>Prosperity</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 small-padding">
-            <div class="section">
-                <div class="char-block">
-                    <div class="char-row">
-                        <span *ngFor="let char of talents.Resistance">
-                            <img [src]="char.path" [alt]="char.name" class="char">
-                        </span>
-                    </div>
-                    <h5>Resistance</h5>
-                </div>
-                <div class="char-block">
-                    <div class="char-row">
-                        <div class="char-row">
-                            <span *ngFor="let char of talents.Diligence">
-                                <img [src]="char.path" [alt]="char.name" class="char">
-                            </span>
-                        </div>
-                    </div>
-                    <h5>Diligence</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 small-padding">
-            <div class="section">
-                <div class="char-block">
-                    <div class="char-row">
-                        <div class="char-row">
-                            <span *ngFor="let char of talents.Ballad">
-                                <img [src]="char.path" [alt]="char.name" class="char">
-                            </span>
-                        </div>
-                    </div>
-                    <h5>Ballad</h5>
-                </div>
-                <div class="char-block">
-                    <div class="char-row">
-                        <div class="char-row">
-                            <span *ngFor="let char of talents.Gold">
-                                <img [src]="char.path" [alt]="char.name" class="char">
-                            </span>
-                        </div>
-                    </div>
-                    <h5>Gold</h5>
-                </div>
-            </div>
+        <div id="data" role="tabpanel" aria-labelledby="data-tab"
+            class="tab-pane fade">
+            <app-user-data [(characters)]="characters" [charData]="charData"
+                [weaponData]="weaponData" [change]="change">
+            </app-user-data>
         </div>
     </div>
     <app-footer></app-footer>
 </div>
+
+<!-- Multi character modal -->
+<div class="modal fade" id="addCharacter" tabindex="-1" aria-labelledby="modalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Add/Remove Characters</h5>
+                <button type="button" data-bs-dismiss="modal"
+                    aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-header">
+                <form #charSelect="ngForm" class="full-width">
+                    <input type="text" (keyup)="filterCharacters()" [(ngModel)]="charFilter"
+                        [ngModelOptions]="{standalone: true}" class="input-filter"
+                        placeholder="Filter characters...">
+                </form>
+            </div>
+            <div class="modal-body modal-panel">
+                <div class="modal-body-content">
+                    <form>
+                        <div class="list-group">
+                            <label class="list-group-item" 
+                                *ngFor="let character of filteredCharacters">
+                                <input class="form-check-input me-1" type="checkbox" 
+                                    (click)="addCharacter(character)" 
+                                    [checked]="character.selected">
+                                <span class="character-container">
+                                    <div class="character-element">
+                                        <img [src]="character.vision">
+                                    </div>
+                                    <div class="character-name">
+                                        {{character.name}}
+                                    </div>
+                                </span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Single character modal -->
+<div class="modal fade" id="chooseCharacter" tabindex="-1" aria-labelledby="modalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Change Character</h5>
+                <button type="button" data-bs-dismiss="modal"
+                    aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-header">
+                <form #charSelect="ngForm" class="full-width">
+                    <input type="text" (keyup)="filterPickCharacters()" 
+                        [(ngModel)]="pickCharFilter"
+                        [ngModelOptions]="{standalone: true}" class="input-filter"
+                        placeholder="Filter characters...">
+                </form>
+            </div>
+            <div class="modal-body modal-panel">
+                <div class="modal-body-content">
+                    <form>
+                        <div class="list-group">
+                            <label class="list-group-item" 
+                                *ngFor="let character of filteredPickCharacters">
+                                <input class="form-check-input me-1" type="radio" 
+                                    (click)="changeCharacter(character.name)"
+                                    [checked]="character.selected" 
+                                    name="character">
+                                <span class="character-container">
+                                    <div class="character-element">
+                                        <img [src]="character.vision">
+                                    </div>
+                                    <div class="character-name">
+                                        {{character.name}}
+                                    </div>
+                                </span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Weapon modal -->
+<div class="modal fade" id="chooseWeapon" tabindex="-1" aria-labelledby="modalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Choose Weapon</h5>
+                <button type="button" data-bs-dismiss="modal"
+                    aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-header">
+                <form #charSelect="ngForm" class="full-width">
+                    <input type="text" (keyup)="filterWeapons()" 
+                        [(ngModel)]="weaponFilter" class="input-filter"
+                        [ngModelOptions]="{standalone: true}" 
+                        placeholder="Filter weapons...">
+                </form>
+            </div>
+            <div class="modal-body modal-panel">
+                <div class="modal-body-content">
+                    <form>
+                        <div class="list-group">
+                            <label class="list-group-item" 
+                                *ngFor="let weapon of filteredWeapons">
+                                <input class="form-check-input me-1" type="radio" 
+                                    name="weapon" (click)="changeWeapon(weapon.name)"
+                                    [checked]="weapon.selected">
+                                <span class="weapon-container">
+                                    <div class="weapon-name">
+                                        {{weapon.name}}
+                                    </div>
+                                </span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-loader *ngIf="loading"></app-loader>

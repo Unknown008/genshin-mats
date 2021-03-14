@@ -12,7 +12,17 @@
         "tbalevel": 10,
         "teslevel": 10,
         "teblevel": 10,
-        "display": true
+        "weapon": {
+            "name": "",
+            "file": "",
+            "rarity": 1,
+            "level": 1,
+            "tlevel": 70,
+            "ascension": 0,
+            "tascension": 4
+        },
+        "display": true,
+        "weaponMode": false
     },
     {
         "name": "Amber",
@@ -27,7 +37,17 @@
         "tbalevel": 10,
         "teslevel": 10,
         "teblevel": 10,
-        "display": true
+        "weapon": {
+            "name": "",
+            "file": "",
+            "rarity": 1,
+            "level": 1,
+            "tlevel": 70,
+            "ascension": 0,
+            "tascension": 4
+        },
+        "display": true,
+        "weaponMode": false
     },
     {
         "name": "Lisa",
@@ -42,7 +62,17 @@
         "tbalevel": 10,
         "teslevel": 10,
         "teblevel": 10,
-        "display": true
+        "weapon": {
+            "name": "",
+            "file": "",
+            "rarity": 1,
+            "level": 1,
+            "tlevel": 70,
+            "ascension": 0,
+            "tascension": 4
+        },
+        "display": true,
+        "weaponMode": false
     },
     {
         "name": "Kaeya",
@@ -57,6 +87,16 @@
         "tbalevel": 10,
         "teslevel": 10,
         "teblevel": 10,
-        "display": true
+        "weapon": {
+            "name": "",
+            "file": "",
+            "rarity": 1,
+            "level": 1,
+            "tlevel": 70,
+            "ascension": 0,
+            "tascension": 4
+        },
+        "display": true,
+        "weaponMode": false
     }
 ]

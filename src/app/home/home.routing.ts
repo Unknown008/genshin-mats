@@ -1,13 +1,11 @@
-import { Routes } from '@angular/router';
-import { DefaultComponent } from '../_layouts/default/default.component';
-import { HomeComponent } from './home.component';
+import { Routes } from "@angular/router";
+import { HomeComponent } from "./home.component";
 
 export const HomeRoutes: Routes = [
     {
-        path: '',
-        component: DefaultComponent,
+        path: "",
         children: [{
-            path: '',
+            path: "",
             component: HomeComponent
         }]
     }

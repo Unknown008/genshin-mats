@@ -1,5 +1,15 @@
-<form #tableOptions="ngForm">
+<form class="options-container" #tableOptions="ngForm"
+    [ngClass]="displayWeapon ? 'weapon-size' : ''">
     <div class="table-options">
+        <div class="table-option">
+            <div class="form-check form-switch">
+                <label class="form-check-label" for="weaponDisplay">
+                    Weapons
+                </label>
+                <input class="form-check-input" type="checkbox" id="weaponDisplay" 
+                    [checked]="displayWeapon" (click)="toggle('weapon')">
+            </div>
+        </div>
         <div class="table-option">
             <div class="form-check form-switch">
                 <label class="form-check-label" for="rarityDisplay">
@@ -20,7 +30,7 @@
         </div>
     </div>
 </form>
-<table class="table white">
+<table class="table white" [ngClass]="displayWeapon ? 'weapon-size' : ''">
     <caption></caption>
     <thead>
         <th *ngFor="let col of displayedColumns" scope="col">
@@ -36,7 +46,8 @@
                 <div *ngIf="col != 'Name' && row[col].length > 0">
                     <div class="items-row" *ngFor="let item of row[col]">
                         <div [ngClass]="item.type">
-                            <div class="item-holder" [ngClass]="displayRarity ? item.qly : ''">
+                            <div class="item-holder" 
+                                [ngClass]="displayRarity ? item.qly : ''">
                                 <img class="item-single" [src]="item.path" 
                                     [alt]="item.name" [title]="item.name">
                             </div>
@@ -45,13 +56,14 @@
                     </div>
                 </div>
                 <div *ngIf="col != 'Name' && row[col].length == 0">
-                    <div class="maxed">Max</div>
+                    <div class="maxed" *ngIf="!row['Name'].includes('Traveler')">Max</div>
+                    <div class="maxed" *ngIf="row['Name'].includes('Traveler')">Shared</div>
                 </div>
             </td>
         </tr>
     </tbody>
 </table>
-<table *ngIf="displayTotals" class="table white">
+<table *ngIf="displayTotals" class="table white" [ngClass]="displayWeapon ? 'weapon-size' : ''">
     <caption></caption>
     <thead>
         <th *ngFor="let col of totalColumns" scope="col">

@@ -1,33 +1,40 @@
-import { Component, Input, OnChanges } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { EnvironmentPathService } from 'src/app/_services/environment-path.service';
-import { NumberFormatPipeModule } from 'src/app/_shared/directives/number-format';
-import { CharacterModel } from './../../_models/character.model';
+import { Component, Input, OnChanges } from "@angular/core";
+import { FormGroup } from "@angular/forms";
+import { WeaponModel } from "./../../_models/weapon.model";
+import { EnvironmentPathService } from "./../../_services/environment-path.service";
+import { NumberFormatPipeModule } from "./../../_shared/directives/number-format";
+import { CharacterModel } from "./../../_models/character.model";
 
 @Component({
-    selector: 'app-mat-table',
-    templateUrl: './mat-table.component.html',
-    styleUrls: ['./mat-table.component.scss']
+    selector: "app-mat-table",
+    templateUrl: "./mat-table.component.html",
+    styleUrls: ["./mat-table.component.scss"]
 })
 export class MatTableComponent implements OnChanges {
     @Input() characters: CharacterModel[];
     @Input() levelUpData: any;
-    @Input() expData: any;
     @Input() ascensionData: any;
     @Input() talentData: any;
     @Input() charData: any;
+    @Input() weaponData: any;
+    @Input() weaponLevelUpData: any;
+    @Input() weaponAscensionData: any;
     @Input() itemQualityData: any;
     @Input() change: boolean;
 
     public tableOptions: FormGroup;
     public numberFormat: NumberFormatPipeModule;
 
-    public displayedColumns: string[] = [];
-    public totalColumns: string[] = ["Exp", "Gems", "Local Specialties", "Common Drops", "Books", "Boss Drops", "Limited", "Mora"];
+    public displayedColumns: string[] = [
+        "Name", "Exp", "Exp Mora", "Ascension", "Ascension Mora", "Talent", 
+        "Talent Mora"
+    ];
+    public totalColumns: string[] = ["Exp", "Gems", "Local Specialties", "Common Drops", "Domain Drops", "Boss Drops", "Limited", "Mora"];
     public tableData: any = [];
     public totalsData: any = [];
     public path: string = this.url.getUrl("./../../../assets/resources/", true);
     public ascensionLevels = [20, 40, 50, 60, 70, 80];
+    public displayWeapon: boolean = false;
     public displayRarity: boolean = true;
     public displayTotals: boolean = true;
     public qualityOrder = ["grey", "green", "blue", "purple", "gold"];
@@ -35,7 +42,8 @@ export class MatTableComponent implements OnChanges {
         "Mask", "Arrowhead", "Slime", "Scroll", "Nectar", "Treasure_Hoarder_Insignia",
         "Fatui_Insignia", "Branch", "Horn", "Bone", "Knife", "Mist_Grass", "Chaos",
         "adaptive", "Freedom", "Resistance", "Ballad", "Prosperity", "Diligence", "Gold",
-        "pyro", "hydro", "electro", "anemo", "cryo", "geo", "weekly"
+        "pyro", "hydro", "electro", "anemo", "cryo", "geo", "weekly", "Decarabian", "Fang",
+        "Shackle", "Guyun", "Dango", "Aerosiderite", "exp", "weapon-exp"
     ];
 
     constructor(
@@ -50,57 +58,82 @@ export class MatTableComponent implements OnChanges {
             this.characters == null || 
             this.levelUpData == null || 
             this.ascensionData == null ||
-            this.expData == null ||
             this.talentData == null ||
             this.charData == null || 
-            this.itemQualityData == null
+            this.itemQualityData == null ||
+            this.weaponData == null ||
+            this.weaponLevelUpData == null ||
+            this.weaponAscensionData == null
         )
             return;
 
-        this.displayedColumns = [];
+        if (this.displayWeapon)
+            this.getWeaponTotals();
+        else
+            this.getTotals();
+    }
+
+    /**
+     * Calculates the material requirements and totals for all characters excluding 
+     * totals for weapons
+     */
+    getTotals() {
         this.tableData = [];
         this.totalsData = [];
 
-        for (let prop in this.characters[0]) {
-            switch (prop) {
-                case "name":
-                    this.displayedColumns.push("Name");
-                    break;
-                case "level":
-                    this.displayedColumns.push("Exp");
-                    this.displayedColumns.push("Exp Mora");
-                    break;
-                case "ascension":
-                    this.displayedColumns.push("Ascension");
-                    this.displayedColumns.push("Ascension Mora");
-                    break;
-                case "balevel":
-                    this.displayedColumns.push("Talent");
-                    this.displayedColumns.push("Talent Mora");
-                    break;
-            }
-        }
-
+        let traveler = false;
         for (let char of this.characters) {
             if (!char.display) continue;
-            let exp = this.calcExp(char.level, char.tlevel);
+
+            let exp = {exp: [], mora: []};
+            let wExp = {exp: [], mora: []};
+            let ascensions = {items: [], mora: []};
+            let wAscensions = {items: [], mora: []};
             let talents = this.calcTalent(
                 char.name, char.balevel, char.eslevel, char.eblevel, 
                 char.tbalevel, char.teslevel, char.teblevel
             );
-            let ascensions = this.calcAscension(char.name, char.level, char.tlevel);
+
+            if (!char.name.includes("Traveler") || !traveler) {                
+                if (char.name.includes("Traveler"))
+                    traveler = true;
+                exp = this.calcExp(char.level, char.tlevel);
+                ascensions = this.calcAscension(char.name, char.ascension, char.tascension);
+                wExp = this.calcWeaponExp(JSON.parse(JSON.stringify(char.weapon)));
+                wAscensions = this.calcWeaponAscension(
+                    JSON.parse(JSON.stringify(char.weapon))
+                );
+            }
 
             this.tableData.push({
                 "Name": char.name,
                 "Exp": exp.exp,
-                "Exp Mora": exp.mora,
+                "Exp Mora": exp.exp.length == 0 ? [] : exp.mora,
                 "Ascension": ascensions.items,
-                "Ascension Mora": ascensions.mora,
+                "Ascension Mora": ascensions.items.length == 0 ? [] :ascensions.mora,
                 "Talent": talents.items,
-                "Talent Mora": talents.mora
+                "Talent Mora": talents.items.length == 0 ? [] : talents.mora,
+                "Weapon Exp": wExp.exp,
+                "Weapon Exp Mora": wExp.exp.length == 0 ? [] : wExp.mora,
+                "Weapon Ascension": wAscensions.items,
+                "Weapon Ascension Mora": wAscensions.items.length == 0 ? [] : 
+                    wAscensions.mora
             });
+            
+            this.calcTotals(char);
+        }
+    }
 
-            this.getTotals(exp, talents, ascensions);
+    /**
+     * Calculates the material requirements and totals for all characters including 
+     * totals for weapons
+     */
+    getWeaponTotals() {
+        this.getTotals();
+
+        for (let char of this.characters) {
+            if (!char.display) continue;
+            this.calcWeaponTotals(char);
         }
     }
 
@@ -130,15 +163,15 @@ export class MatTableComponent implements OnChanges {
         });
 
         let cards = [];
-        for (let t in this.expData) {
-            let d = this.expData[t];
+        for (let t in this.itemQualityData.exp) {
+            let d = this.itemQualityData.exp[t];
             cards.push({
-                name: t,
-                path: this.path + "items/" + t + ".png",
+                name: d.name,
+                path: this.path + "items/" + d.name + ".png",
                 qty: 0,
                 exp: d.exp,
-                cost: d.cost,
-                qly: this.displayRarity ? d.quality : ""
+                cost: d.exp / 5,
+                qly: this.displayRarity ? t : ""
             });
         }
         cards = cards.sort((a, b) => b.exp - a.exp);
@@ -164,7 +197,8 @@ export class MatTableComponent implements OnChanges {
                 path: c.path,
                 qty: c.qty,
                 qly: c.qly,
-                type: "item-exp"
+                type: "item-exp",
+                tag: "exp"
             })),
             mora: [{
                 name: "Mora",
@@ -180,11 +214,11 @@ export class MatTableComponent implements OnChanges {
 
     /**
      * Returns the total materials and mora required for ascensions
-     * @char Character name
-     * @clevel Current level of character
-     * @tlevel Target level of character
+     * @param char Character name
+     * @param cascension Current ascension of character
+     * @param tascension Target ascension of character
      */
-    calcAscension(char: string, clevel: number, tlevel: number) {
+    calcAscension(char: string, cascension: number, tascension: number) {
         let characterAscensionData = this.charData[char].ascension;
         let mats = {
             cost: 0,
@@ -195,15 +229,14 @@ export class MatTableComponent implements OnChanges {
         };
 
         for (
-            let i = 0; 
-            this.ascensionLevels[i] < tlevel && this.ascensionLevels[i] < 90;
+            let i = cascension; 
+            i < tascension;
             i++
         ) {
             let data = JSON.parse(JSON.stringify(
                 this.ascensionData.cost[this.ascensionLevels[i]]
             ));
 
-            if (clevel > this.ascensionLevels[i]) continue
             mats.cost += data.cost;
             if (data.gem != null) {
                 let reqs = this.ascensionData.gem[characterAscensionData.element];
@@ -226,7 +259,11 @@ export class MatTableComponent implements OnChanges {
                     mats.gem[gemId].qty += data.gem.quantity;
 
                 if (data.boss_drop != null && reqs.boss_drop != "") {
-                    let bossDropName = reqs.boss_drop;
+                    let bossDropName;
+                    if (characterAscensionData.hasOwnProperty("boss_drop"))
+                        bossDropName = characterAscensionData.boss_drop;
+                    else
+                        bossDropName = reqs.boss_drop;
 
                     if (mats.boss_drop.length == 0)
                         mats.boss_drop.push({
@@ -295,7 +332,7 @@ export class MatTableComponent implements OnChanges {
 
     /**
      * Returns the total materials and mora required to upgrade talents
-     * @char Character name
+     * @param char Character name
      * @c1 Talent 1 current level
      * @c2 Talent 2 current level
      * @c3 Talent 3 current level
@@ -330,10 +367,10 @@ export class MatTableComponent implements OnChanges {
 
     /**
      * Calculates talent requirements for specific talent
-     * @charTalent Character talent data
-     * @talentNo The talent number (1, 2 or 3)
-     * @from From talent level
-     * @to To talent level
+     * @param charTalent Character talent data
+     * @param talentNo The talent number (1, 2 or 3)
+     * @param from From talent level
+     * @param to To talent level
      */
     talentHandler(
         charTalent: any, talentNo: number, from: number, to: number, mats: any = null
@@ -369,7 +406,7 @@ export class MatTableComponent implements OnChanges {
                         qty: data.book.quantity,
                         qly: data.book.quality,
                         path: this.path + "talents/" + bookName + ".png",
-                        type: "item-book",
+                        type: "item-domain",
                         tag: tag
                     });
                 else
@@ -448,11 +485,204 @@ export class MatTableComponent implements OnChanges {
     }
 
     /**
+     * Returns the total exp and mora required for weapon level ups
+     * @param weapon The weapon object
+     */
+     calcWeaponExp(weapon: WeaponModel) {
+        let batch = [];
+        let maxLevel = weapon.rarity < 3 ? 70 : 90;
+        for (
+            let i = 0; 
+            this.ascensionLevels[i] < weapon.tlevel && this.ascensionLevels[i] < maxLevel;
+            i++
+        ) {
+            if (weapon.level > this.ascensionLevels[i]) continue
+            batch.push({
+                from: weapon.level,
+                to: this.ascensionLevels[i]
+            });
+            weapon.level = this.ascensionLevels[i];
+        }
+        batch.push({
+            from: weapon.level,
+            to: weapon.tlevel
+        });
+
+        let ores = [];
+        for (let t in this.itemQualityData.weapon_exp) {
+            let d = this.itemQualityData.weapon_exp[t];
+            ores.push({
+                name: d.name,
+                path: this.path + "items/" + d.name + ".png",
+                qty: 0,
+                exp: d.exp,
+                cost: d.exp / 10,
+                qly: this.displayRarity ? t : ""
+            });
+        }
+        ores = ores.sort((a, b) => b.exp - a.exp);
+        
+        for (let row of batch) {
+            let texp = this.weaponLevelUpData[weapon.rarity][row.to];
+            let cexp = this.weaponLevelUpData[weapon.rarity][row.from];
+            let exp = texp.cumm_exp - cexp.cumm_exp;
+
+            for (let ore of ores) {
+                ore.qty += Math.floor(exp / ore.exp);
+                exp %= ore.exp;
+            }
+            if (exp > 0)
+                ores[ores.length-1].qty += 1;
+        }
+        
+        ores = ores.sort((a, b) => a.exp - b.exp);
+
+        return {
+            exp: ores.filter(c => c.qty > 0).map(c => ({
+                name: c.name.replace(/_/g, " "),
+                path: c.path,
+                qty: c.qty,
+                qly: c.qly,
+                type: "item-exp",
+                tag: "weapon-exp"
+            })),
+            mora: [{
+                name: "Mora",
+                path: this.path + "items/Mora.png",
+                qty: ores.map(c => ({
+                    cost: c.cost * c.qty
+                })).reduce(
+                    (s, i) => s + i.cost, 0
+                )
+            }]
+        };
+    }
+
+    /**
+     * Returns the total materials and mora required for weapon ascensions
+     * @param weapon The weapon object
+     */
+    calcWeaponAscension(weapon: WeaponModel) {
+        if (weapon.name == "") return {items: [], mora: []};
+
+        let weaponAscensionData = this.weaponData[weapon.name].ascension;
+        let mats = {
+            cost: 0,
+            domain_drop: [],
+            common_drop: [],
+            rare_drop: []
+        };
+
+        for (
+            let i = weapon.ascension; 
+            i < weapon.tascension;
+            i++
+        ) {
+            let data = JSON.parse(JSON.stringify(
+                this.weaponAscensionData[weapon.rarity].cost[this.ascensionLevels[i]]
+            ));
+
+            mats.cost += data.cost;
+
+            if (data.domain_drop != null) {
+                let domainDropName = this.itemQualityData
+                    .weapon[weaponAscensionData.domain_drop][data.domain_drop.quality];
+
+                let domainDropId = mats.domain_drop.findIndex((d: any) => 
+                    d.name == domainDropName.replace(/_/g, " ")
+                );
+                if (domainDropId == -1)
+                    mats.domain_drop.push({
+                        name: domainDropName.replace(/_/g, " "),
+                        qty: data.domain_drop.quantity,
+                        qly: data.domain_drop.quality,
+                        path: this.path + "items/" + domainDropName + ".png",
+                        type: "item-domain",
+                        tag: weaponAscensionData.domain_drop
+                    });
+                else
+                    mats.domain_drop[domainDropId].qty += data.domain_drop.quantity;
+            }
+            
+            if (data.common_drop != null) {
+                let commonDropName = this.itemQualityData
+                    .common_drop[weaponAscensionData.common_drop][data.common_drop.quality];
+
+                let commonDropId = mats.common_drop.findIndex((c: any) => 
+                    c.name == commonDropName.replace(/_/g, " ")
+                );
+                if (commonDropId == -1)
+                    mats.common_drop.push({
+                        name: commonDropName.replace(/_/g, " "),
+                        qty: data.common_drop.quantity,
+                        qly: data.common_drop.quality,
+                        path: this.path + "items/" + commonDropName + ".png",
+                        type: "item-common-drop",
+                        tag: weaponAscensionData.common_drop
+                    });
+                else
+                    mats.common_drop[commonDropId].qty += data.common_drop.quantity;
+            }
+
+            if (data.rare_drop != null) {
+                let rareDropName = this.itemQualityData
+                    .common_drop[weaponAscensionData.rare_drop][data.rare_drop.quality];
+
+                let rareDropId = mats.rare_drop.findIndex((r: any) => 
+                    r.name == rareDropName.replace(/_/g, " ")
+                );
+                if (rareDropId == -1)
+                    mats.rare_drop.push({
+                        name: rareDropName.replace(/_/g, " "),
+                        qty: data.rare_drop.quantity,
+                        qly: data.rare_drop.quality,
+                        path: this.path + "items/" + rareDropName + ".png",
+                        type: "item-common-drop",
+                        tag: weaponAscensionData.rare_drop
+                    });
+                else
+                    mats.rare_drop[rareDropId].qty += data.rare_drop.quantity;
+            }
+        }
+        
+        return {
+            items: [
+                ...mats.domain_drop,
+                ...mats.common_drop,
+                ...mats.rare_drop
+            ],
+            mora: [{
+                name: "Mora",
+                path: this.path + "items/Mora.png",
+                qty: mats.cost
+            }]
+        };
+    }
+
+    /**
      * Toggle values
-     * @item item that requires toggling
+     * @param item item that requires toggling
      */
     toggle(item: string) {
         switch (item) {
+            case "weapon":
+                this.displayWeapon = !this.displayWeapon;
+                if (this.displayWeapon) {
+                    this.displayedColumns.push("Weapon Exp");
+                    this.displayedColumns.push("Weapon Exp Mora");
+                    this.displayedColumns.push("Weapon Ascension");
+                    this.displayedColumns.push("Weapon Ascension Mora");
+                    this.getWeaponTotals();
+                } else {
+                    this.displayedColumns.splice(7, 4);
+                    document.querySelector(".page").scrollLeft = 0;
+                    this.totalsData = [];
+                    for (let char of this.characters) {
+                        if (!char.display) continue;
+                        this.calcTotals(char);
+                    }
+                }
+                break;
             case "rarity":
                 this.displayRarity = !this.displayRarity;
                 break;
@@ -464,16 +694,17 @@ export class MatTableComponent implements OnChanges {
 
     /**
      * Generates the total items required
-     * @exp List of exp items required
-     * @talents List of ascension items required
-     * @ascensions List of talent items required
+     * @param char Character for whom the total is being calculated
      */
-    getTotals(exp: any, talents: any, ascensions: any) {
+    calcTotals(char: CharacterModel) {
+        let rowData = this.tableData.filter(d => d.Name == char.name)[0];
+
         if (this.totalsData.length == 0) {
-            let commonDropList = JSON.parse(JSON.stringify(ascensions.items
-                .filter((i: any) => i.type == "item-common-drop")));
+            let commonDropList = JSON.parse(JSON.stringify(
+                rowData["Ascension"].filter((i: any) => i.type == "item-common-drop")
+            ));
             for (
-                let commonDrop of talents.items
+                let commonDrop of rowData["Talent"]
                     .filter((e: any) => e.type == "item-common-drop")
             ) {
                 let commonDropId = commonDropList
@@ -486,10 +717,10 @@ export class MatTableComponent implements OnChanges {
             }
 
             let bossDropList = JSON.parse(JSON.stringify(
-                talents.items.filter((i: any) => i.type == "item-boss-drop")
+                rowData["Ascension"].filter((i: any) => i.type == "item-boss-drop")
             ));
             for (
-                let bossDrop of talents.items
+                let bossDrop of rowData["Talent"]
                     .filter((e: any) => e.type == "item-boss-drop")
             ) {
                 let bossDropId = bossDropList
@@ -502,36 +733,34 @@ export class MatTableComponent implements OnChanges {
             }
 
             this.totalsData.push({
-                "Exp": JSON.parse(JSON.stringify(exp.exp)),
+                "Exp": JSON.parse(JSON.stringify(rowData["Exp"])),
                 "Gems": JSON.parse(JSON.stringify(
-                    ascensions.items.filter((i: any) => i.type == "item-gem")
+                    rowData["Ascension"].filter((i: any) => i.type == "item-gem")
                 )),
                 "Local Specialties": JSON.parse(JSON.stringify(
-                    ascensions.items.filter((i: any) => i.type == "item-local-specialty")
+                    rowData["Ascension"].filter((i: any) => i.type == "item-local-specialty")
                 )),
                 "Common Drops": commonDropList,
                 "Boss Drops": bossDropList,
-                "Books": JSON.parse(JSON.stringify(
-                    talents.items.filter((i: any) => i.type == "item-book")
+                "Domain Drops": JSON.parse(JSON.stringify(
+                    rowData["Talent"].filter((i: any) => i.type == "item-domain")
                 )),
                 "Limited": JSON.parse(JSON.stringify(
-                    talents.items.filter((i: any) => i.type == "item-limited")
+                    rowData["Talent"].filter((i: any) => i.type == "item-limited")
                 )),
                 "Mora": [{
-                    name: exp.mora[0].name,
-                    path: exp.mora[0].path,
-                    cost: (exp.mora[0].qty + ascensions.mora[0].qty + 
-                        talents.mora[0].qty),
-                    qty: (exp.mora[0].qty + ascensions.mora[0].qty + 
-                        talents.mora[0].qty).toString().replace(
-                            /\d(?=(?:\d{3})+$)/g, (m: string) => {
-                                return m + ",";
-                            })
+                    name: rowData["Exp Mora"][0].name,
+                    path: rowData["Exp Mora"][0].path,
+                    qty: (rowData["Exp Mora"].length == 0 ? 0 : rowData["Exp Mora"][0].qty) + 
+                        (rowData["Ascension Mora"].length == 0 ? 0 : 
+                            rowData["Ascension Mora"][0].qty) + 
+                        (rowData["Talent Mora"].length == 0 ? 0 : 
+                            rowData["Talent Mora"][0].qty)
                 }]
             });
         } else {
             let expList = this.totalsData[0]["Exp"];
-            for (let expItem of exp.exp) {
+            for (let expItem of rowData["Exp"]) {
                 let expId = expList.findIndex((e: any) => e.name == expItem.name);
                 if (expId == -1) {
                     expList.push(JSON.parse(JSON.stringify(expItem)));
@@ -544,17 +773,16 @@ export class MatTableComponent implements OnChanges {
             this.totalsData[0]["Mora"] = this.totalsData[0]["Mora"].map(d => ({
                 name: d.name,
                 path: d.path,
-                qty: (d.cost + exp.mora[0].qty + ascensions.mora[0].qty + 
-                    talents.mora[0].qty).toString().replace(
-                        /\d(?=(?:\d{3})+$)/g, (m: string) => {
-                            return m + ",";
-                        }),
-                cost: d.cost + exp.mora[0].qty + ascensions.mora[0].qty + 
-                    talents.mora[0].qty,
+                qty: d.qty + 
+                    (rowData["Exp Mora"].length == 0 ? 0 : rowData["Exp Mora"][0].qty) + 
+                    (rowData["Ascension Mora"].length == 0 ? 0 : 
+                        rowData["Ascension Mora"][0].qty) + 
+                    (rowData["Talent Mora"].length == 0 ? 0 : 
+                        rowData["Talent Mora"][0].qty)
             }));
         
             let gemList = this.totalsData[0]["Gems"];
-            for (let gem of ascensions.items.filter((e: any) => e.type == "item-gem")) {
+            for (let gem of rowData["Ascension"].filter((e: any) => e.type == "item-gem")) {
                 let gemId = gemList.findIndex((g: any) => g.name == gem.name);
                 if (gemId == -1) {
                     gemList.push(JSON.parse(JSON.stringify(gem)));
@@ -566,7 +794,7 @@ export class MatTableComponent implements OnChanges {
 
             let localSpecialtyList = this.totalsData[0]["Local Specialties"];
             for (
-                let localSpecialty of ascensions.items
+                let localSpecialty of rowData["Ascension"]
                     .filter((e: any) => e.type == "item-local-specialty")
             ) {
                 let localSpecialtyId = localSpecialtyList
@@ -581,7 +809,7 @@ export class MatTableComponent implements OnChanges {
 
             let commonDropList = this.totalsData[0]["Common Drops"];
             for (
-                let commonDrop of ascensions.items
+                let commonDrop of rowData["Ascension"]
                     .filter((e: any) => e.type == "item-common-drop")
             ) {
                 let commonDropId = commonDropList
@@ -593,7 +821,7 @@ export class MatTableComponent implements OnChanges {
                 }
             }
             for (
-                let commonDrop of talents.items
+                let commonDrop of rowData["Talent"]
                     .filter((e: any) => e.type == "item-common-drop")
             ) {
                 let commonDropId = commonDropList
@@ -608,7 +836,7 @@ export class MatTableComponent implements OnChanges {
 
             let bossDropList = this.totalsData[0]["Boss Drops"];
             for (
-                let bossDrop of ascensions.items
+                let bossDrop of rowData["Ascension"]
                     .filter((e: any) => e.type == "item-boss-drop")
             ) {
                 let bossDropId = bossDropList
@@ -620,7 +848,7 @@ export class MatTableComponent implements OnChanges {
                 }
             }
             for (
-                let bossDrop of talents.items
+                let bossDrop of rowData["Talent"]
                     .filter((e: any) => e.type == "item-boss-drop")
             ) {
                 let bossDropId = bossDropList
@@ -633,10 +861,10 @@ export class MatTableComponent implements OnChanges {
             }
             this.totalsData[0]["Boss Drops"] = bossDropList;
 
-            let bookList = this.totalsData[0]["Books"];
+            let bookList = this.totalsData[0]["Domain Drops"];
             for (
-                let book of talents.items
-                    .filter((e: any) => e.type == "item-book")
+                let book of rowData["Talent"]
+                    .filter((e: any) => e.type == "item-domain")
             ) {
                 let bookId = bookList
                     .findIndex((l: any) => l.name == book.name);
@@ -650,7 +878,7 @@ export class MatTableComponent implements OnChanges {
 
             let limitedList = this.totalsData[0]["Limited"];
             for (
-                let limited of talents.items
+                let limited of rowData["Talent"]
                     .filter((e: any) => e.type == "item-limited")
             ) {
                 let limitedId = limitedList
@@ -668,7 +896,74 @@ export class MatTableComponent implements OnChanges {
         this.totalsData[0]["Gems"] = this.sortItem(this.totalsData[0]["Gems"]);
         this.totalsData[0]["Common Drops"] = this.sortItem(this.totalsData[0]["Common Drops"]);
         this.totalsData[0]["Boss Drops"] = this.sortItem(this.totalsData[0]["Boss Drops"]);
-        this.totalsData[0]["Books"] = this.sortItem(this.totalsData[0]["Books"]);
+        this.totalsData[0]["Domain Drops"] = 
+            this.sortItem(this.totalsData[0]["Domain Drops"]);
+    }
+
+    /**
+     * Generates the total items required
+     * @param char Character for whom the total is being calculated
+     */
+    calcWeaponTotals(char: CharacterModel) {
+        let rowData = this.tableData.filter(d => d.Name == char.name)[0];
+
+        let expList = this.totalsData[0]["Exp"];
+        for (let expItem of rowData["Weapon Exp"]) {
+            let expId = expList.findIndex((e: any) => e.name == expItem.name);
+            if (expId == -1) {
+                expList.push(JSON.parse(JSON.stringify(expItem)));
+            } else {
+                expList[expId].qty += expItem.qty;
+            }
+        }
+        this.totalsData[0]["Exp"] = expList;
+
+        this.totalsData[0]["Mora"] = this.totalsData[0]["Mora"].map(d => ({
+            name: d.name,
+            path: d.path,
+            qty: 
+                d.qty + 
+                (rowData["Weapon Exp Mora"].length == 0 ? 0 : 
+                    rowData["Weapon Exp Mora"][0].qty) + 
+                (rowData["Weapon Ascension Mora"].length == 0 ? 0 : 
+                    rowData["Weapon Ascension Mora"][0].qty)
+        }));
+    
+        let commonDropList = this.totalsData[0]["Common Drops"];
+        for (
+            let commonDrop of rowData["Weapon Ascension"]
+                .filter((e: any) => e.type == "item-common-drop")
+        ) {
+            let commonDropId = commonDropList
+                .findIndex((l: any) => l.name == commonDrop.name);
+            if (commonDropId == -1) {
+                commonDropList.push(JSON.parse(JSON.stringify(commonDrop)));
+            } else {
+                commonDropList[commonDropId].qty += commonDrop.qty;
+            }
+        }
+        this.totalsData[0]["Common Drops"] = commonDropList;
+
+        let relicList = this.totalsData[0]["Domain Drops"];
+        for (
+            let relic of rowData["Weapon Ascension"]
+                .filter((e: any) => e.type == "item-domain")
+        ) {
+            let relicId = relicList
+                .findIndex((l: any) => l.name == relic.name);
+            if (relicId == -1) {
+                relicList.push(JSON.parse(JSON.stringify(relic)));
+            } else {
+                relicList[relicId].qty += relic.qty;
+            }
+        }
+        this.totalsData[0]["Domain Drop"] = relicList;
+
+        this.totalsData[0]["Exp"] = this.sortItem(this.totalsData[0]["Exp"]);
+        this.totalsData[0]["Common Drops"] = 
+            this.sortItem(this.totalsData[0]["Common Drops"]);
+        this.totalsData[0]["Domain Drops"] = 
+            this.sortItem(this.totalsData[0]["Domain Drops"]);
     }
 
     /**
@@ -695,10 +990,4 @@ export class MatTableComponent implements OnChanges {
 
         return list;
     }
-}
-
-export class expField {
-    name: string
-    path: string
-    qty: number
 }
