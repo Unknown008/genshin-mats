@@ -13,6 +13,10 @@
     background-color: rgba(33, 37, 41, 0.5);
 }
 
+.tab-content {
+    min-height: calc(100% - 54px);
+}
+
 .tab-content .tab-pane {
     padding-top: 20px;
 }

@@ -125,17 +125,26 @@ button:focus {
 
 .modal-content {
     background-color: #212529;
-
 }
 
-.modal-header, .modal-footer {
+.modal-header,
+.modal-footer {
     border: none;
     color: #ffffff8c;
 }
 
-.modal-header button{
+.modal-header button {
     color: #ffffff8c;
     padding: 2px;
     border: none;
     background: none;
+}
+
+app-loader {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
 }

@@ -62,7 +62,8 @@
         </div>
         <div id="data" role="tabpanel" aria-labelledby="data-tab"
             class="tab-pane fade">
-            <app-user-data [(characters)]="characters" [change]="change">
+            <app-user-data [(characters)]="characters" [charData]="charData"
+                [weaponData]="weaponData" [change]="change">
             </app-user-data>
         </div>
     </div>
@@ -203,3 +204,5 @@
         </div>
     </div>
 </div>
+
+<app-loader *ngIf="loading"></app-loader>

@@ -18,7 +18,7 @@ import { AppComponent } from "./app.component";
 import { AppRoutes } from "./app.routing";
 
 // Providers
-import { CookieService } from 'ngx-cookie-service';
+import { CookieService } from "ngx-cookie-service";
 
 @NgModule({
     declarations: [

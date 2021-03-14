@@ -1,11 +1,11 @@
-import { Routes } from '@angular/router';
-import { HomeComponent } from './home.component';
+import { Routes } from "@angular/router";
+import { HomeComponent } from "./home.component";
 
 export const HomeRoutes: Routes = [
     {
-        path: '',
+        path: "",
         children: [{
-            path: '',
+            path: "",
             component: HomeComponent
         }]
     }

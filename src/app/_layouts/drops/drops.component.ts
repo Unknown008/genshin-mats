@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from "@angular/core";
 import { JsonService } from "../../_services/json.service";
 import { EnvironmentPathService } from "../../_services/environment-path.service";
 import { CharacterModel } from "src/app/_models/character.model";
-import { CookieService } from "ngx-cookie-service";
+import { CookieStorageService } from "../../_services/cookie-storage.service";
 
 declare var $: any;
 @Component({
@@ -56,9 +56,9 @@ export class DropsComponent implements OnInit {
     constructor(
         private json: JsonService,
         private url: EnvironmentPathService,
-        private cookieService: CookieService
+        private cookieStorageService: CookieStorageService
     ) { 
-        this.userData = this.cookieService.get("genshin-characters");
+        this.userData = this.cookieStorageService.get("c");
     }
 
     ngOnInit() {

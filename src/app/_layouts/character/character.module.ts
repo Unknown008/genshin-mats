@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { CharacterComponent } from './character.component';
-import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { CharacterComponent } from "./character.component";
+import { RouterModule } from "@angular/router";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
     imports: [

@@ -6,6 +6,10 @@
     font-size: 14px;
     position: fixed;
     right: 10px;
+    color: #8f9091;
+    background-color: rgba(13, 17, 23, 0.75);
+    border-radius: 0.5rem;
+    z-index: 1;
 }
 
 .table-option {
@@ -99,17 +103,17 @@ label.form-check-label {
 }
 
 .form-check .form-check-input {
-    float: none; 
-    margin-left: 0; 
+    float: none;
+    margin-left: 0;
 }
 
 .form-check-input:checked {
-    background-color: #ffffff8c;
-    border-color: #ffffff8c;
+    background-color: #8f9091;
+    border-color: #8f9091;
 }
 
 .form-check-input:focus {
-    border-color: #ffffff8c;
+    border-color: #8f9091;
     box-shadow: 0 0 0 0.25rem rgb(255 255 255 / 0.25);
 }
 

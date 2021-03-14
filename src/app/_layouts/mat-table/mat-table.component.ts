@@ -1,14 +1,14 @@
-import { Component, Input, OnChanges } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { WeaponModel } from './../../_models/weapon.model';
-import { EnvironmentPathService } from './../../_services/environment-path.service';
-import { NumberFormatPipeModule } from './../../_shared/directives/number-format';
-import { CharacterModel } from './../../_models/character.model';
+import { Component, Input, OnChanges } from "@angular/core";
+import { FormGroup } from "@angular/forms";
+import { WeaponModel } from "./../../_models/weapon.model";
+import { EnvironmentPathService } from "./../../_services/environment-path.service";
+import { NumberFormatPipeModule } from "./../../_shared/directives/number-format";
+import { CharacterModel } from "./../../_models/character.model";
 
 @Component({
-    selector: 'app-mat-table',
-    templateUrl: './mat-table.component.html',
-    styleUrls: ['./mat-table.component.scss']
+    selector: "app-mat-table",
+    templateUrl: "./mat-table.component.html",
+    styleUrls: ["./mat-table.component.scss"]
 })
 export class MatTableComponent implements OnChanges {
     @Input() characters: CharacterModel[];

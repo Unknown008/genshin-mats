@@ -1,13 +1,13 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { EnvironmentPathService } from './../../_services/environment-path.service';
-import { CharacterModel } from './../../_models/character.model';
+import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
+import { FormGroup } from "@angular/forms";
+import { EnvironmentPathService } from "./../../_services/environment-path.service";
+import { CharacterModel } from "./../../_models/character.model";
 import PerfectScrollbar from "perfect-scrollbar";
 
 @Component({
-    selector: 'app-character',
-    templateUrl: './character.component.html',
-    styleUrls: ['./character.component.scss']
+    selector: "app-character",
+    templateUrl: "./character.component.html",
+    styleUrls: ["./character.component.scss"]
 })
 export class CharacterComponent implements OnInit {
     @Input() character: CharacterModel;
@@ -35,7 +35,7 @@ export class CharacterComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        let modalPanel = document.querySelector('.modal-panel');
+        let modalPanel = document.querySelector(".modal-panel");
         if (modalPanel)
             new PerfectScrollbar(modalPanel);
 

@@ -1,16 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { CookieService } from 'ngx-cookie-service';
-import { CharacterModel } from '../_models/character.model';
-import { EnvironmentPathService } from '../_services/environment-path.service';
-import { JsonService } from '../_services/json.service';
+import { Component, OnInit } from "@angular/core";
+import { FormGroup } from "@angular/forms";
+import { CookieStorageService } from "./../_services/cookie-storage.service";
+import { CharacterModel } from "../_models/character.model";
+import { EnvironmentPathService } from "../_services/environment-path.service";
+import { JsonService } from "../_services/json.service";
 import PerfectScrollbar from "perfect-scrollbar";
-import { characterList, weaponList } from '../_models/display.model';
+import { characterList, weaponList } from "../_models/display.model";
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss']
+    selector: "app-home",
+    templateUrl: "./home.component.html",
+    styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent implements OnInit {
     public characters: CharacterModel[];
@@ -35,20 +35,22 @@ export class HomeComponent implements OnInit {
     public oldWeapon: string = "";
     public weaponCharacter: string = "";
     public path: string = this.url.getUrl("./../../assets/resources/", true);
+    public loading: boolean = false;
 
     public charSelect: FormGroup;
 
     constructor(
         private json: JsonService,
-        private cookieService: CookieService,
+        private cookieStorageService: CookieStorageService,
         private url: EnvironmentPathService
     ) { }
 
     ngOnInit() {
-        let mainPanel = document.querySelector('.main-panel');
+        this.loading = true;
+        let mainPanel = document.querySelector(".main-panel");
         new PerfectScrollbar(mainPanel);
 
-        let modalPanels = document.querySelectorAll('.modal-panel');
+        let modalPanels = document.querySelectorAll(".modal-panel");
         for (let i = 0, len = modalPanels.length; i < len; i++) {
             new PerfectScrollbar(modalPanels[i]);
         }
@@ -129,7 +131,8 @@ export class HomeComponent implements OnInit {
      * Load characters from cookie if available, otherwise from default template
      */
     loadCharacters() {
-        let userData = this.cookieService.get('genshin-characters');
+        let userData = this.cookieStorageService.get("c");
+
         if (userData == null || userData == "") {
             this.json.getJSON(this.url.getUrl("assets/resources/characters/template.json"))
                 .subscribe((data: CharacterModel[]) => {
@@ -151,6 +154,7 @@ export class HomeComponent implements OnInit {
         }
 
         this.filteredCharacters = JSON.parse(JSON.stringify(this.allCharacters));
+        this.loading = false;
     }
 
     /**
