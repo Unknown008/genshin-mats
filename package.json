@@ -1,6 +1,6 @@
 {
-    "name": "angular-page-test",
-    "version": "0.0.0",
+    "name": "genshin-mats",
+    "version": "1.0.0",
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
