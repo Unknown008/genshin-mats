@@ -12,33 +12,33 @@ body {
     overflow: hidden;
 }
 
-$circle-size: 20px;
-$circle-margin: 7px;
+$icon-size: 50px;
+$icon-margin: 20px;
 
-.circle {
-    width: $circle-size;
-    height: $circle-size;
-    border-radius: 50%;
-    margin: $circle-margin;
+.icon {
+    width: $icon-size;
+    height: $icon-size;
+    margin: $icon-margin;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-repeat: no-repeat;
+    background-size: $icon-size;
 
     &:before {
         content: "";
-        width: $circle-size;
-        height: $circle-size;
-        border-radius: 50%;
+        width: $icon-size;
+        height: $icon-size;
         opacity: 0.7;
+        background-repeat: no-repeat;
+        background-size: $icon-size;
         animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
     }
 }
 
-@for $i from 1 through 5 {
-    .circle-#{$i} {
-        background-color: nth($color, $i);
+@for $i from 1 through 7 {
+    .icon-#{$i} {
         &:before {
-            background-color: nth($color, $i);
             animation-delay: 200ms * $i;
         }
     }
@@ -55,5 +55,61 @@ $circle-margin: 7px;
     78%,
     100% {
         opacity: 0;
+    }
+}
+
+.pyro {
+    background-image: url("./../../../assets/resources/elements/pyro.png");
+
+    &:before {
+        background-image: url("./../../../assets/resources/elements/pyro.png");
+    }
+}
+
+.hydro {
+    background-image: url("./../../../assets/resources/elements/hydro.png");
+
+    &:before {
+        background-image: url("./../../../assets/resources/elements/hydro.png");
+    }
+}
+
+.anemo {
+    background-image: url("./../../../assets/resources/elements/anemo.png");
+
+    &:before {
+        background-image: url("./../../../assets/resources/elements/anemo.png");
+    }
+}
+
+.electro {
+    background-image: url("./../../../assets/resources/elements/electro.png");
+
+    &:before {
+        background-image: url("./../../../assets/resources/elements/electro.png");
+    }
+}
+
+.dendro {
+    background-image: url("./../../../assets/resources/elements/dendro.png");
+
+    &:before {
+        background-image: url("./../../../assets/resources/elements/dendro.png");
+    }
+}
+
+.cryo {
+    background-image: url("./../../../assets/resources/elements/cryo.png");
+
+    &:before {
+        background-image: url("./../../../assets/resources/elements/cryo.png");
+    }
+}
+
+.geo {
+    background-image: url("./../../../assets/resources/elements/geo.png");
+
+    &:before {
+        background-image: url("./../../../assets/resources/elements/geo.png");
     }
 }
