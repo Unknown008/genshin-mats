@@ -24,3 +24,8 @@ A: You can create a [new issue on the GitHub issues page](https://github.com/Unk
 
 **Q: I have these and those great suggestions! How go I go about telling you so you can add them?**  
 A: It's great that you have suggestions. I don't know if I'm skilled enough to implement them, but feel free to reach me on the links from the previous question.
+
+# Other  
+I would like to thank miHoYo for making Genshin Impact, it's a game I've been enjoying a lot, *cough* despite the game being a bit stingy on drop rates *cough*, but it's fine with me. I guess I'll keep playing this game for a while, while trying to get the characters I got to where I want them to be.  
+
+I would also like to thank [Enzokie](https://github.com/orgs/ProjectDex/people/rhexgomez) who was the one to convince me to play (I heard a bit about Genshin before I started playing but my laptop isn't the best so I already had second thoughts before trying to play a game I might not be able to play in the first place), who's been a great support both in game and outside the game, and who's been a bit of my guinea pig in testing the website before I publicly announced it.
