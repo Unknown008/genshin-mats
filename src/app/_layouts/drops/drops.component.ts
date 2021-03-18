@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input, OnChanges, OnInit } from "@angular/core";
 import { JsonService } from "../../_services/json.service";
 import { EnvironmentPathService } from "../../_services/environment-path.service";
 import { CharacterModel } from "src/app/_models/character.model";
@@ -10,8 +10,9 @@ declare var $: any;
     templateUrl: "./drops.component.html",
     styleUrls: ["./drops.component.scss"]
 })
-export class DropsComponent implements OnInit {
+export class DropsComponent implements OnInit, OnChanges {
     @Input() characters: CharacterModel[];
+    @Input() change: boolean;
     
     public charData: any;
     public weaponData: any;
@@ -85,6 +86,16 @@ export class DropsComponent implements OnInit {
                         });
                     });
             });
+    }
+
+    ngOnChanges() {
+        if (this.userData == null || this.userData == "") {
+            this.isPersonalised = false;
+            this.dePersonalise();
+        } else {
+            this.isPersonalised = true;
+            this.personalise();
+        }
     }
 
     /**
