@@ -738,5 +738,21 @@
             }
         },
         "weapon": "spear"
+    },
+    "Rosaria": {
+        "element": "cryo",
+        "ascension": {
+            "element": "cryo",
+            "local_specialty": "Valberry",
+            "common_drop": "Fatui_Insignia"
+        },
+        "talent": {
+            "all": {
+                "book": "Ballad",
+                "common_drop": "Fatui_Insignia",
+                "boss_drop": "Shadow_Of_The_Warrior"
+            }
+        },
+        "weapon": "spear"
     }
 }
