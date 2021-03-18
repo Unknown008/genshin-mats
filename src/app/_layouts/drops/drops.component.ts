@@ -136,18 +136,25 @@ export class DropsComponent implements OnInit {
                         path: char.file
                     });
                 }
-            } else {
+            } else if (
+                char.tbalevel - char.balevel > 0 ||
+                char.teslevel - char.eslevel > 0 ||
+                char.teblevel - char.eblevel > 0
+            ) {
                 this.talents[this.charData[char.name].talent.all.book].push({
                     name: char.name,
                     path: char.file
                 });
             }
 
-            let relic = this.weaponData[char.weapon.name].ascension.domain_drop;
-            this.charWeapons[relic].push({
-                name: char.name,
-                path: char.file
-            });
+            if (char.weapon.tascension > char.weapon.ascension) {
+                let relic = this.weaponData[char.weapon.name]
+                    .ascension.domain_drop;
+                this.charWeapons[relic].push({
+                    name: char.name,
+                    path: char.file
+                });
+            }
         }
 
         let days = ["mon", "tue", "wed", "thu", "fri", "sat"];
