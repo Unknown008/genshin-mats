@@ -948,9 +948,9 @@
         "type": "bow",
         "rarity": 4,
         "ascension": {
-            "domain_drop": "",
-            "rare_drop": "",
-            "common_drop": ""
+            "domain_drop": "Shackle",
+            "rare_drop": "Branch",
+            "common_drop": "Nectar"
         }
     },
     "Wine and Song": {
