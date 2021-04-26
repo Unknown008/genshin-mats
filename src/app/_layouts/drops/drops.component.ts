@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit } from "@angular/core";
+import { Component, Input, OnInit, OnChanges } from "@angular/core";
 import { JsonService } from "../../_services/json.service";
 import { EnvironmentPathService } from "../../_services/environment-path.service";
 import { CharacterModel } from "src/app/_models/character.model";
@@ -114,6 +114,9 @@ export class DropsComponent implements OnInit, OnChanges {
      * Shows only characters and weapon materials the user has/needs
      */
     personalise() {
+        if (!this.isPersonalised)
+            return;
+
         this.resetLists();
 
         for (let char of this.characters) {

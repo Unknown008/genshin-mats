@@ -754,5 +754,39 @@
             }
         },
         "weapon": "spear"
+    },
+    "Yanfei": {
+        "element": "pyro",
+        "ascension": {
+            "element": "pyro",
+            "local_specialty": "Noctilucous_Jade",
+            "common_drop": "Treasure_Hoarder_Insignia",
+            "boss_drop": "Juvenile_Jade"
+        },
+        "talent": {
+            "all": {
+                "book": "Gold",
+                "common_drop": "Treasure_Hoarder_Insignia",
+                "boss_drop": "Bloodjade_Branch"
+            }
+        },
+        "weapon": "catalyst"
+    },
+    "Eula": {
+        "element": "cryo",
+        "ascension": {
+            "element": "cryo",
+            "local_specialty": "Dandelion_Seed",
+            "common_drop": "Mask",
+            "boss_drop": "Crystalline_Bloon"
+        },
+        "talent": {
+            "all": {
+                "book": "Resistance",
+                "common_drop": "Mask",
+                "boss_drop": "Dragon's_Lord_Crown"
+            }
+        },
+        "weapon": "claymore"
     }
 }
