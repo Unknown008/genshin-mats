@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input, OnInit, OnChanges } from "@angular/core";
 import { JsonService } from "../../_services/json.service";
 import { EnvironmentPathService } from "../../_services/environment-path.service";
 import { CharacterModel } from "src/app/_models/character.model";
@@ -10,7 +10,7 @@ declare var $: any;
     templateUrl: "./drops.component.html",
     styleUrls: ["./drops.component.scss"]
 })
-export class DropsComponent implements OnInit {
+export class DropsComponent implements OnInit, OnChanges {
     @Input() characters: CharacterModel[];
     
     public charData: any;
@@ -87,6 +87,10 @@ export class DropsComponent implements OnInit {
             });
     }
 
+    ngOnChanges() {
+        this.personalise();
+    }
+
     /**
      * Toggles personalisation
      */
@@ -103,6 +107,9 @@ export class DropsComponent implements OnInit {
      * Shows only characters and weapon materials the user has/needs
      */
     personalise() {
+        if (!this.isPersonalised)
+            return;
+
         this.resetLists();
 
         for (let char of this.characters) {
