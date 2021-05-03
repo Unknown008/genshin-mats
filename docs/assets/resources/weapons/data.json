@@ -773,6 +773,15 @@
             "common_drop": "Nectar"
         }
     },
+    "Song of Broken Pines": {
+        "type": "claymore",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Decarabian",
+            "rare_drop": "Horn",
+            "common_drop": "Mask"
+        }
+    },
     "Staff of Homa": {
         "type": "spear",
         "rarity": 5,
