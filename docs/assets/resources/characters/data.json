@@ -778,13 +778,13 @@
             "element": "cryo",
             "local_specialty": "Dandelion_Seed",
             "common_drop": "Mask",
-            "boss_drop": "Crystalline_Bloon"
+            "boss_drop": "Crystalline_Bloom"
         },
         "talent": {
             "all": {
                 "book": "Resistance",
                 "common_drop": "Mask",
-                "boss_drop": "Dragon's_Lord_Crown"
+                "boss_drop": "Dragon_Lord's_Crown"
             }
         },
         "weapon": "claymore"
