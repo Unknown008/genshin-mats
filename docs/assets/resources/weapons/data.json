@@ -170,6 +170,15 @@
             "common_drop": "Mask"
         }
     },
+    "Dodoco Takes": {
+        "type": "catalyst",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Branch",
+            "common_drop": "Mask"
+        }
+    },
     "Dragon's Bane": {
         "type": "spear",
         "rarity": 4,
@@ -428,6 +437,15 @@
         "ascension": {
             "domain_drop": "Dango",
             "rare_drop": "Mist_Grass",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
+    "Mitternachts Waltz": {
+        "type": "bow",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Decarabian",
+            "rare_drop": "Horn",
             "common_drop": "Treasure_Hoarder_Insignia"
         }
     },

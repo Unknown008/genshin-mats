@@ -788,5 +788,73 @@
             }
         },
         "weapon": "claymore"
+    },
+    "Kazuha": {
+        "element": "anemo",
+        "ascension": {
+            "element": "anemo",
+            "local_specialty": "Sea_Ganoderma",
+            "common_drop": "Treasure_Hoarder_Insignia",
+            "boss_drop": "Marionette_Core"
+        },
+        "talent": {
+            "all": {
+                "book": "Diligence",
+                "common_drop": "Treasure_Hoarder_Insignia",
+                "boss_drop": "Glided_Scale"
+            }
+        },
+        "weapon": "sword"
+    },
+    "Yoimiya": {
+        "element": "pyro",
+        "ascension": {
+            "element": "pyro",
+            "local_specialty": "Naku_Weed",
+            "common_drop": "Scroll",
+            "boss_drop": "Smoldering_Pearl"
+        },
+        "talent": {
+            "all": {
+                "book": "Transience",
+                "common_drop": "Scroll",
+                "boss_drop": "Dragon_Lord's_Crown"
+            }
+        },
+        "weapon": "bow"
+    },
+    "Sayu": {
+        "element": "anemo",
+        "ascension": {
+            "element": "anemo",
+            "local_specialty": "Crystal_Marrow",
+            "common_drop": "Nectar",
+            "boss_drop": "Marionette_Core"
+        },
+        "talent": {
+            "all": {
+                "book": "Light",
+                "common_drop": "Nectar",
+                "boss_drop": "Glided_Scale"
+            }
+        },
+        "weapon": "claymore"
+    },
+    "Ayaka": {
+        "element": "cryo",
+        "ascension": {
+            "element": "cryo",
+            "local_specialty": "Sakura_Bloom",
+            "common_drop": "Famed_Handguard",
+            "boss_drop": "Perpetual_Heart"
+        },
+        "talent": {
+            "all": {
+                "book": "Elegance",
+                "common_drop": "Perpetual_Heart",
+                "boss_drop": "Bloodjade_Branch"
+            }
+        },
+        "weapon": "spear"
     }
 }
