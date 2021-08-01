@@ -17,6 +17,15 @@
             "common_drop": ""
         }
     },
+    "Amenoma Kageuchi": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Coral",
+            "rare_drop": "Axis",
+            "common_drop": "Handguard"
+        }
+    },
     "Amos' Bow": {
         "type": "bow",
         "rarity": 5,
@@ -314,6 +323,15 @@
             "common_drop": "Treasure_Hoarder_Insignia"
         }
     },
+    "Freedom-Sworn": {
+        "type": "sword",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Shackle",
+            "rare_drop": "Chaos",
+            "common_drop": "Scroll"
+        }
+    },
     "Frostbearer": {
         "type": "Catalyst",
         "rarity": 4,
@@ -323,6 +341,15 @@
             "common_drop": "Nectar"
         }
     },
+    "Hakushin Ring": {
+        "type": "Catalyst",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Coral",
+            "rare_drop": "Prism",
+            "common_drop": "Scroll"
+        }
+    },
     "Halberd": {
         "type": "spear",
         "rarity": 3,
@@ -330,6 +357,15 @@
             "domain_drop": "Dango",
             "rare_drop": "Mist_Grass",
             "common_drop": "Nectar"
+        }
+    },
+    "Hamayumi": {
+        "type": "bow",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Magatama",
+            "rare_drop": "Prism",
+            "common_drop": "Arrowhead"
         }
     },
     "Harbinger of Dawn": {
@@ -366,6 +402,24 @@
             "domain_drop": "Aerosiderite",
             "rare_drop": "Bone",
             "common_drop": "Nectar"
+        }
+    },
+    "Katsuragikiri Nagamasa": {
+        "type": "claymore",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Magatama",
+            "rare_drop": "Axis",
+            "common_drop": "Handguard"
+        }
+    },
+    "Kitain Cross Spear": {
+        "type": "spear",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Mask",
+            "rare_drop": "Axis",
+            "common_drop": "Treasure_Hoarder_Insignia"
         }
     },
     "Lion's Roar": {
@@ -438,6 +492,15 @@
             "domain_drop": "Dango",
             "rare_drop": "Mist_Grass",
             "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
+    "Mistsplitter Reforged": {
+        "type": "sword",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Coral",
+            "rare_drop": "Axis",
+            "common_drop": "Handguard"
         }
     },
     "Mitternachts Waltz": {
@@ -906,6 +969,15 @@
             "domain_drop": "Fang",
             "rare_drop": "Branch",
             "common_drop": "Scroll"
+        }
+    },
+    "Thundering Pulse": {
+        "type": "bow",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "",
+            "rare_drop": "",
+            "common_drop": ""
         }
     },
     "Traveler's Handy Sword": {

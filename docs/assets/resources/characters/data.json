@@ -273,6 +273,143 @@
         },
         "weapon": "sword"
     },
+    "Traveler (Electro)": {
+        "element": "electro",
+        "ascension": {
+            "element": "adaptive",
+            "local_specialty": "Windwheel_Aster",
+            "common_drop": "Mask"
+        },
+        "talent": {
+            "talent1": {
+                "1": {
+                    "book": "Transience",
+                    "common_drop": "Handguard"
+                },
+                "2": {
+                    "book": "Elegance",
+                    "common_drop": "Handguard"
+                },
+                "3": {
+                    "book": "Light",
+                    "common_drop": "Handguard"
+                },
+                "4": {
+                    "book": "Transience",
+                    "common_drop": "Handguard"
+                },
+                "5": {
+                    "book": "Elegance",
+                    "common_drop": "Handguard"
+                },
+                "6": {
+                    "book": "Light",
+                    "common_drop": "Handguard",
+                    "boss_drop": "Dragon_Lord's_Crown"
+                },
+                "7": {
+                    "book": "Transience",
+                    "common_drop": "Handguard",
+                    "boss_drop": "Dragon_Lord's_Crown"
+                },
+                "8": {
+                    "book": "Elegance",
+                    "common_drop": "Handguard",
+                    "boss_drop": "Dragon_Lord's_Crown"
+                },
+                "9": {
+                    "book": "Light",
+                    "common_drop": "Handguard",
+                    "boss_drop": "Dragon_Lord's_Crown"
+                }
+            },
+            "talent2": {
+                "1": {
+                    "book": "Transience",
+                    "common_drop": "Handguard"
+                },
+                "2": {
+                    "book": "Elegance",
+                    "common_drop": "Handguard"
+                },
+                "3": {
+                    "book": "Light",
+                    "common_drop": "Handguard"
+                },
+                "4": {
+                    "book": "Transience",
+                    "common_drop": "Handguard"
+                },
+                "5": {
+                    "book": "Elegance",
+                    "common_drop": "Handguard"
+                },
+                "6": {
+                    "book": "Light",
+                    "common_drop": "Handguard",
+                    "boss_drop": "Dragon_Lord's_Crown"
+                },
+                "7": {
+                    "book": "Transience",
+                    "common_drop": "Handguard",
+                    "boss_drop": "Dragon_Lord's_Crown"
+                },
+                "8": {
+                    "book": "Elegance",
+                    "common_drop": "Handguard",
+                    "boss_drop": "Dragon_Lord's_Crown"
+                },
+                "9": {
+                    "book": "Light",
+                    "common_drop": "Handguard",
+                    "boss_drop": "Dragon_Lord's_Crown"
+                }
+            },
+            "talent3": {
+                "1": {
+                    "book": "Transience",
+                    "common_drop": "Handguard"
+                },
+                "2": {
+                    "book": "Elegance",
+                    "common_drop": "Handguard"
+                },
+                "3": {
+                    "book": "Light",
+                    "common_drop": "Handguard"
+                },
+                "4": {
+                    "book": "Transience",
+                    "common_drop": "Handguard"
+                },
+                "5": {
+                    "book": "Elegance",
+                    "common_drop": "Handguard"
+                },
+                "6": {
+                    "book": "Light",
+                    "common_drop": "Handguard",
+                    "boss_drop": "Dragon_Lord's_Crown"
+                },
+                "7": {
+                    "book": "Transience",
+                    "common_drop": "Handguard",
+                    "boss_drop": "Dragon_Lord's_Crown"
+                },
+                "8": {
+                    "book": "Elegance",
+                    "common_drop": "Handguard",
+                    "boss_drop": "Dragon_Lord's_Crown"
+                },
+                "9": {
+                    "book": "Light",
+                    "common_drop": "Handguard",
+                    "boss_drop": "Dragon_Lord's_Crown"
+                }
+            }
+        },
+        "weapon": "sword"
+    },
     "Amber": {
         "element": "pyro",
         "ascension": {
@@ -801,7 +938,24 @@
             "all": {
                 "book": "Diligence",
                 "common_drop": "Treasure_Hoarder_Insignia",
-                "boss_drop": "Glided_Scale"
+                "boss_drop": "Gilded_Scale"
+            }
+        },
+        "weapon": "sword"
+    },
+    "Ayaka": {
+        "element": "cryo",
+        "ascension": {
+            "element": "cryo",
+            "local_specialty": "Sakura_Bloom",
+            "common_drop": "Handguard",
+            "boss_drop": "Perpetual_Heart"
+        },
+        "talent": {
+            "all": {
+                "book": "Elegance",
+                "common_drop": "Handguard",
+                "boss_drop": "Bloodjade_Branch"
             }
         },
         "weapon": "sword"
@@ -835,26 +989,9 @@
             "all": {
                 "book": "Light",
                 "common_drop": "Nectar",
-                "boss_drop": "Glided_Scale"
+                "boss_drop": "Gilded_Scale"
             }
         },
         "weapon": "claymore"
-    },
-    "Ayaka": {
-        "element": "cryo",
-        "ascension": {
-            "element": "cryo",
-            "local_specialty": "Sakura_Bloom",
-            "common_drop": "Famed_Handguard",
-            "boss_drop": "Perpetual_Heart"
-        },
-        "talent": {
-            "all": {
-                "book": "Elegance",
-                "common_drop": "Perpetual_Heart",
-                "boss_drop": "Bloodjade_Branch"
-            }
-        },
-        "weapon": "spear"
     }
 }
