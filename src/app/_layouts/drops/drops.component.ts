@@ -16,33 +16,32 @@ export class DropsComponent implements OnInit, OnChanges {
     
     public charData: any;
     public weaponData: any;
-    public weaponQualityData: any;
+    public weaponQualityData: any = null;
     public userData: any;
     public talents = {
         "Freedom": [],
-        "Prosperity": [],
         "Resistance": [],
-        "Diligence": [],
         "Ballad": [],
-        "Gold": []
+        "Prosperity": [],
+        "Diligence": [],
+        "Gold": [],
+        "Light": [],
+        "Elegance": [],
+        "Transience": []
     };
     public charPath: string = this.url.getUrl("../../assets/resources/characters/", true);
     public weapons = {
         "Decarabian": [],
-        "Guyun": [],
         "Fang": [],
-        "Dango": [],
         "Shackle": [],
-        "Aerosiderite": []
-    };
-    public charWeapons = {
-        "Decarabian": [],
         "Guyun": [],
-        "Fang": [],
         "Dango": [],
-        "Shackle": [],
-        "Aerosiderite": []
+        "Aerosiderite": [],
+        "Coral": [],
+        "Magatama": [],
+        "Mask": []
     };
+    public charWeapons: any;
     public weapPath: string = this.url.getUrl("../../assets/resources/items/", true);
     public isPersonalised: boolean = false;
     public day = {
@@ -63,6 +62,8 @@ export class DropsComponent implements OnInit, OnChanges {
     }
 
     ngOnInit() {
+        this.charWeapons = JSON.parse(JSON.stringify(this.weapons));
+
         this.json.getJSON(this.url.getUrl("assets/resources/items/item_quality.json"))
             .subscribe((data: any) => {
                 this.weaponQualityData = data.weapon;
@@ -171,6 +172,15 @@ export class DropsComponent implements OnInit, OnChanges {
             }
         }
 
+        this.day = {
+            mon: false,
+            tue: false,
+            wed: false,
+            thu: false,
+            fri: false,
+            sat: false
+        };
+
         let days = ["mon", "tue", "wed", "thu", "fri", "sat"];
         let day = new Date().getDay();
         this.day[days[day-1]] = true;
@@ -180,6 +190,9 @@ export class DropsComponent implements OnInit, OnChanges {
      * Revert to the default view with all materials and characters
      */
     dePersonalise() {
+        if (this.weaponQualityData == null)
+            return;
+
         this.resetLists();
 
         for (let type in this.weapons) {
@@ -209,27 +222,36 @@ export class DropsComponent implements OnInit, OnChanges {
     resetLists() {
         this.talents = {
             "Freedom": [],
-            "Prosperity": [],
             "Resistance": [],
-            "Diligence": [],
             "Ballad": [],
-            "Gold": []
+            "Prosperity": [],
+            "Diligence": [],
+            "Gold": [],
+            "Light": [],
+            "Elegance": [],
+            "Transience": []
         };
         this.weapons = {
             "Decarabian": [],
-            "Guyun": [],
             "Fang": [],
-            "Dango": [],
             "Shackle": [],
-            "Aerosiderite": []
+            "Guyun": [],
+            "Dango": [],
+            "Aerosiderite": [],
+            "Coral": [],
+            "Magatama": [],
+            "Mask": []
         };
         this.charWeapons = {
             "Decarabian": [],
-            "Guyun": [],
             "Fang": [],
-            "Dango": [],
             "Shackle": [],
-            "Aerosiderite": []
+            "Guyun": [],
+            "Dango": [],
+            "Aerosiderite": [],
+            "Coral": [],
+            "Magatama": [],
+            "Mask": []
         };
     }
 }

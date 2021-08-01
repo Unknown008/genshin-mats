@@ -70,6 +70,21 @@
             "green": "Chaos_Device",
             "blue": "Chaos_Circuit",
             "purple": "Chaos_Core"
+        },
+        "Handguard": {
+            "grey": "Old_Handguard",
+            "green": "Kageuchi_Handguard",
+            "blue": "Famed_Handguard"
+        },
+        "Prism": {
+            "green": "Dismal_Prism",
+            "blue": "Crystal_Prism",
+            "purple": "Polarizing_Prism"
+        },
+        "Axis": {
+            "green": "Chaos_Gear",
+            "blue": "Chaos_Axis",
+            "purple": "Chaos_Oculus"
         }
     },
     "exp": {
@@ -93,23 +108,11 @@
             "purple": "Fragment_of_Decarabian's_Epic",
             "gold": "Scattered_Piece_of_Decarabian's_Dream"
         },
-        "Guyun": {
-            "green": "Luminous_Sands_from_Guyun",
-            "blue": "Lustrous_Stone_from_Guyun",
-            "purple": "Relic_from_Guyun",
-            "gold": "Divine_Body_from_Guyun"
-        },
         "Fang": {
             "green": "Boreal_Wolf's_Milk_Tooth",
             "blue": "Boreal_Wolf's_Cracked_Tooth",
             "purple": "Boreal_Wolf's_Broken_Fang",
             "gold": "Boreal_Wolf's_Nostalgia"
-        },
-        "Dango": {
-            "green": "Mist_Veiled_Lead_Elixir",
-            "blue": "Mist_Veiled_Mercury_Elixir",
-            "purple": "Mist_Veiled_Gold_Elixir",
-            "gold": "Mist_Veiled_Primo_Elixir"
         },
         "Shackle": {
             "green": "Fetters_of_the_Dandelion_Gladiator",
@@ -117,11 +120,41 @@
             "purple": "Shackles_of_the_Dandelion_Gladiator",
             "gold": "Dream_of_the_Dandelion_Gladiator"
         },
+        "Guyun": {
+            "green": "Luminous_Sands_from_Guyun",
+            "blue": "Lustrous_Stone_from_Guyun",
+            "purple": "Relic_from_Guyun",
+            "gold": "Divine_Body_from_Guyun"
+        },
+        "Dango": {
+            "green": "Mist_Veiled_Lead_Elixir",
+            "blue": "Mist_Veiled_Mercury_Elixir",
+            "purple": "Mist_Veiled_Gold_Elixir",
+            "gold": "Mist_Veiled_Primo_Elixir"
+        },
         "Aerosiderite": {
             "green": "Grain_of_Aerosiderite",
             "blue": "Piece_of_Aerosiderite",
             "purple": "Bit_of_Aerosiderite",
             "gold": "Chunk_of_Aerosiderite"
+        },
+        "Coral": {
+            "green": "Coral_Branch_of_a_Distant_Sea",
+            "blue": "Jeweled_Branch_of_a_Distant_Sea",
+            "purple": "Jade_Branch_of_a_Distant_Sea",
+            "gold": "Golden_Branch_of_a_Distant_Sea"
+        },
+        "Magatama": {
+            "green": "Narukami's_Wisdom",
+            "blue": "Narukami's_Joy",
+            "purple": "Narukami's_Affection",
+            "gold": "Narukami's_Valor"
+        },
+        "Mask": {
+            "green": "Mask_of_the_Wicked_Lieutenant",
+            "blue": "Mask_of_the_Tiger's_Bite",
+            "purple": "Mask_of_the_One-Horned",
+            "gold": "Mask_of_the_Kijin"
         }
     },
     "weapon_exp": {
