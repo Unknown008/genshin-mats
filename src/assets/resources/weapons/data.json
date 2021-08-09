@@ -975,9 +975,9 @@
         "type": "bow",
         "rarity": 5,
         "ascension": {
-            "domain_drop": "",
-            "rare_drop": "",
-            "common_drop": ""
+            "domain_drop": "Magatama",
+            "rare_drop": "Prism",
+            "common_drop": "Arrowhead"
         }
     },
     "Traveler's Handy Sword": {
