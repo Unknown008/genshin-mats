@@ -85,6 +85,11 @@
             "green": "Chaos_Gear",
             "blue": "Chaos_Axis",
             "purple": "Chaos_Oculus"
+        },
+        "Spectral": {
+            "green": "Spectral_Husk",
+            "blue": "Spectral_Heart",
+            "purple": "Spectral_Nucleus"
         }
     },
     "exp": {

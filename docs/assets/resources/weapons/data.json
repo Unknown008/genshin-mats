@@ -242,6 +242,15 @@
             "common_drop": "Treasure_Hoarder_Insignia"
         }
     },
+    "Everlasting Moonglow": {
+        "type": "catalyst",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Coral",
+            "rare_drop": "Prism",
+            "common_drop": "Spectral"
+        }
+    },
     "Eye of Perception": {
         "type": "catalyst",
         "rarity": 4,
@@ -915,6 +924,15 @@
             "domain_drop": "Fang",
             "rare_drop": "Branch",
             "common_drop": "Slime"
+        }
+    },
+    "The Catch": {
+        "type": "spear",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Mask",
+            "rare_drop": "Axis",
+            "common_drop": "Spectral"
         }
     },
     "The Flute": {

@@ -98,7 +98,7 @@ export class UserDataComponent implements OnChanges {
         } catch (e) {
             this.loading = false;
             console.log(e);
-            this.alertMsg = "Supplied data is an invalid JSON object and could not be saved"
+            this.alertMsg = e.message;
             this.displayAlert();
             return;
         }
