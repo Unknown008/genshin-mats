@@ -1066,7 +1066,7 @@
         "element": "pyro",
         "ascension": {
             "element": "pyro",
-            "local_specialty": "flourescent_Fungus",
+            "local_specialty": "Flourescent_Fungus",
             "common_drop": "Treasure_Hoarder_Insignia",
             "boss_drop": "Smoldering_Pearl"
         },
@@ -1074,7 +1074,7 @@
             "all": {
                 "book": "Transience",
                 "common_drop": "Treasure_Hoarder_Insignia",
-                "boss_drop": "Hellfire_Butterly"
+                "boss_drop": "Hellfire_Butterfly"
             }
         },
         "weapon": "spear"
