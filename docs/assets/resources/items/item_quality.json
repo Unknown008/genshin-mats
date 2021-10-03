@@ -90,6 +90,11 @@
             "grey": "Spectral_Husk",
             "green": "Spectral_Heart",
             "blue": "Spectral_Nucleus"
+        },
+        "Claw": {
+            "green": "Concealed_Claw",
+            "blue": "Concealed_Unguis",
+            "purple": "Concealed_Talon"
         }
     },
     "exp": {
