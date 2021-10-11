@@ -36,6 +36,17 @@ export class HomeComponent implements OnInit {
     public weaponCharacter: string = "";
     public path: string = this.url.getUrl("./../../assets/resources/", true);
     public loading: boolean = false;
+    public sortOptions = [
+        {label: "Name", key: "name", value: 0},
+        {label: "Level", key: "level", value: 0},
+        {label: "Ascension level", key: "ascension", value: 0},
+        {label: "Basic attack level", key: "balevel", value: 0},
+        {label: "Elemental skill level", key: "eslevel", value: 0},
+        {label: "Elemental burst level", key: "eblevel", value: 0},
+        {label: "Weapon level", key: "level", value: 0},
+        {label: "Weapon ascension level", key: "ascension", value: 0},
+        {label: "Visibility", key: "display", value: 0}
+    ];
 
     public charSelect: FormGroup;
 
@@ -387,5 +398,57 @@ export class HomeComponent implements OnInit {
             this.filteredCharacters = 
                 JSON.parse(JSON.stringify(this.filteredPickCharacters));
         }
+    }
+
+    /**
+     * Sorts the character list depending on the option
+     */
+    sortCharacters(option: string) {
+        let idx = this.sortOptions.findIndex(o => o.label == option);
+        let order = this.sortOptions[idx].value;
+        let key = this.sortOptions[idx].key;
+
+        switch (option) {
+            case "Name":
+                if (order == 0)
+                    this.characters.sort((a, b) => this.textSort(a.name, b.name));
+                else
+                    this.characters.sort((b, a) => this.textSort(a.name, b.name));
+
+                break;
+            case "Level":
+            case "Ascension level":
+            case "Basic attack level":
+            case "Elemental skill level":
+            case "Elemental burst level":
+            case "Visibility":
+                if (order == 0)
+                    this.characters.sort((a, b) => a[key] - b[key]);
+                else
+                    this.characters.sort((b, a) => a[key] - b[key]);
+                break;
+            case "Weapon level":
+            case "Weapon ascension level":
+                if (order == 0)
+                    this.characters.sort((a, b) => a.weapon[key] - b.weapon[key]);
+                else
+                    this.characters.sort((b, a) => a.weapon[key] - b.weapon[key]);
+                break;
+            default:
+                break;
+        }
+        this.sortOptions[idx].value = 1 - order;
+    }
+
+    /**
+     * Text sort
+     */
+    textSort(a, b) {
+        if (a < b)
+            return -1;
+        else if (a > b)
+            return 1;
+        else
+            return 0;
     }
 }

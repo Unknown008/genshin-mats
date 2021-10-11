@@ -23,7 +23,7 @@
 
 .button-container {
     float: left;
-    position: absolute;
+    position: fixed;
     font-size: 40px;
     margin-top: 10px;
 }
@@ -40,12 +40,6 @@
 .input-filter {
     width: calc(100% - 30px);
     margin: 0 15px;
-}
-
-.character-element, 
-.character-name,
-.weapon-name {
-    display: inline-block;
 }
 
 .character-element {
