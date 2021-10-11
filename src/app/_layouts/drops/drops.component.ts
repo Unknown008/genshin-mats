@@ -109,6 +109,8 @@ export class DropsComponent implements OnInit, OnChanges {
             this.personalise();
         else 
             this.dePersonalise();
+        
+        document.querySelector(".page").scrollTop = 0;
     }
 
     /**

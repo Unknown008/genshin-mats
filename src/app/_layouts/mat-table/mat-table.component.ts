@@ -675,13 +675,14 @@ export class MatTableComponent implements OnChanges {
                     this.getWeaponTotals();
                 } else {
                     this.displayedColumns.splice(7, 4);
-                    document.querySelector(".page").scrollLeft = 0;
                     this.totalsData = [];
                     for (let char of this.characters) {
                         if (!char.display) continue;
                         this.calcTotals(char);
                     }
                 }
+                
+                document.querySelector(".page").scrollLeft = 0;
                 break;
             case "rarity":
                 this.displayRarity = !this.displayRarity;

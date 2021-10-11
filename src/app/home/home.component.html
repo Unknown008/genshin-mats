@@ -11,7 +11,7 @@
             <li class="nav-item" role="presentation">
                 <a class="nav-link" id="char-tab" data-bs-toggle="tab"
                     href="#characters" role="tab" aria-controls="char"
-                    aria-selected="true">
+                    aria-selected="true" (click)="incrChange()">
                     Characters
                 </a>
             </li>
@@ -40,8 +40,12 @@
             class="tab-pane fade">
             <div class="button-container">
                 <button type="button" title="Add character" data-bs-toggle="modal"
-                    data-bs-target="#addCharacter">
+                    data-bs-target="#addCharacter" class="d-block mb-3">
                     <i class="fas fa-plus"></i>
+                </button>
+                <button type="button" title="Sort" data-bs-toggle="modal"
+                    data-bs-target="#sortCharacter" class="d-block mb-3">
+                    <i class="fas fa-sort-alpha-down"></i>
                 </button>
             </div>
             <app-character *ngFor="let char of characters" [character]="char"
@@ -99,10 +103,10 @@
                                     (click)="addCharacter(character)" 
                                     [checked]="character.selected">
                                 <span class="character-container">
-                                    <div class="character-element">
+                                    <div class="character-element d-inline-block">
                                         <img [src]="character.vision">
                                     </div>
-                                    <div class="character-name">
+                                    <div class="d-inline-block">
                                         {{character.name}}
                                     </div>
                                 </span>
@@ -146,10 +150,10 @@
                                     [checked]="character.selected" 
                                     name="character">
                                 <span class="character-container">
-                                    <div class="character-element">
+                                    <div class="character-element d-inline-block">
                                         <img [src]="character.vision">
                                     </div>
-                                    <div class="character-name">
+                                    <div class="d-inline-block">
                                         {{character.name}}
                                     </div>
                                 </span>
@@ -192,10 +196,41 @@
                                     name="weapon" (click)="changeWeapon(weapon.name)"
                                     [checked]="weapon.selected">
                                 <span class="weapon-container">
-                                    <div class="weapon-name">
+                                    <div class="d-inline-block">
                                         {{weapon.name}}
                                     </div>
                                 </span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sort options modal -->
+<div class="modal fade" id="sortCharacter" tabindex="-1" aria-labelledby="modalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Sort options</h5>
+                <button type="button" data-bs-dismiss="modal"
+                    aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body modal-panel">
+                <div class="modal-body-content">
+                    <form>
+                        <div class="list-group">
+                            <label class="list-group-item" 
+                                *ngFor="let option of sortOptions">
+                                <div class="d-inline-block nav-link"
+                                    (click)="sortCharacters(option.label)">
+                                    {{option.label}}
+                                </div>
                             </label>
                         </div>
                     </form>
