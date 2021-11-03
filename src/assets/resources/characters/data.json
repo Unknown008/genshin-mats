@@ -1078,5 +1078,39 @@
             }
         },
         "weapon": "spear"
+    },
+    "Gorou": {
+        "element": "geo",
+        "ascension": {
+            "element": "geo",
+            "local_specialty": "Sango_Pearl",
+            "common_drop": "Spectral",
+            "boss_drop": "Marionette_Core"
+        },
+        "talent": {
+            "all": {
+                "book": "Light",
+                "common_drop": "Spectral",
+                "boss_drop": "Molten_Moment"
+            }
+        },
+        "weapon": "bow"
+    },
+    "Arataki Itto": {
+        "element": "geo",
+        "ascension": {
+            "element": "geo",
+            "local_specialty": "Oni_Kabuto",
+            "common_drop": "Slime",
+            "boss_drop": "Riftborn_Regalia"
+        },
+        "talent": {
+            "all": {
+                "book": "Elegance",
+                "common_drop": "Slime",
+                "boss_drop": "Ashen_Heart"
+            }
+        },
+        "weapon": "claymore"
     }
 }
