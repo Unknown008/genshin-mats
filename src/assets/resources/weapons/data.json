@@ -134,6 +134,15 @@
             "common_drop": "Arrowhead"
         }
     },
+    "Cinnabar Spindle": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Decarabian",
+            "rare_drop": "Chaos",
+            "common_drop": "Mask"
+        }
+    },
     "Compound Bow": {
         "type": "bow",
         "rarity": 4,
@@ -681,6 +690,15 @@
             "domain_drop": "Shackle",
             "rare_drop": "Chaos",
             "common_drop": "Scroll"
+        }
+    },
+    "Redhorn Stonethresher": {
+        "type": "claymore",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Magatama",
+            "rare_drop": "Claw",
+            "common_drop": "Handguard"
         }
     },
     "Royal Bow": {
