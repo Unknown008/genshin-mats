@@ -1112,5 +1112,56 @@
             }
         },
         "weapon": "claymore"
+    },
+    "Shenhe": {
+        "element": "cryo",
+        "ascension": {
+            "element": "cryo",
+            "local_specialty": "Qingxin",
+            "common_drop": "Nectar",
+            "boss_drop": "Dragonheir's_False_Fin"
+        },
+        "talent": {
+            "all": {
+                "book": "Prosperity",
+                "common_drop": "Nectar",
+                "boss_drop": "Hellfire_Butterfly"
+            }
+        },
+        "weapon": "spear"
+    },
+    "Yun Jin": {
+        "element": "geo",
+        "ascension": {
+            "element": "geo",
+            "local_specialty": "Glaze_Lily",
+            "common_drop": "Mask",
+            "boss_drop": "Riftborn_Regalia"
+        },
+        "talent": {
+            "all": {
+                "book": "Diligence",
+                "common_drop": "Mask",
+                "boss_drop": "Ashen_Heart"
+            }
+        },
+        "weapon": "spear"
+    },
+    "Yae Miko": {
+        "element": "electro",
+        "ascension": {
+            "element": "electro",
+            "local_specialty": "Sea_Ganoderma",
+            "common_drop": "Handguard",
+            "boss_drop": "Dragonheir's_False_Fin"
+        },
+        "talent": {
+            "all": {
+                "book": "Light",
+                "common_drop": "Handguard",
+                "boss_drop": "TBD"
+            }
+        },
+        "weapon": "catalyst"
     }
 }

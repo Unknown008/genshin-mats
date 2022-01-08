@@ -134,6 +134,15 @@
             "common_drop": "Arrowhead"
         }
     },
+    "Calamity Queller": {
+        "type": "spear",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Dango",
+            "rare_drop": "Mist_Grass",
+            "common_drop": "Nectar"
+        }
+    },
     "Cinnabar Spindle": {
         "type": "sword",
         "rarity": 4,
