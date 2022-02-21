@@ -17,7 +17,7 @@ A: Traveller (MC) requires a lot of books from different regions depending on th
 A: That will be hard without making the page become huge. Different weapons require different materials even in the same category. For example, Prototype Archaic requires Aerosite, but Wolf's Gravestone requires Shackles, even if both are Claymores. If you toggle personalisation on the Drops section, and if you set up your characters and weapons properly, you'll see which character needs which weapon ascension material. I think that should be more useful.
 
 **Q: This and that character is not listed. Can you add them? When will you add them?**  
-A: I will add characters that get released as soon as possible. If I forgot for some reason and you can't wait, feel free to add me on discord (my tag is Unknown008#8008) and leave me a message.
+A: I will add characters that get released as soon as possible. If I forgot for some reason and you can't wait, feel free to add me on discord (my tag is Unknown008#5347) and leave me a message.
 
 **Q: There's this bug in your app. How do I report it?**  
 A: You can create a [new issue on the GitHub issues page](https://github.com/Unknown008/genshin-mats/issues/new) or reach me on my [discord](https://discord.gg/UsMBKxa) or send me a DM to my discord tag (Unknown008#5347). Do be aware that timezones are a thing and that I have a full time job, so I may take some time to reply.
