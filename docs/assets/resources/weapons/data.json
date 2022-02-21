@@ -440,6 +440,15 @@
             "common_drop": "Nectar"
         }
     },
+    "Kagura's Verity": {
+        "type": "catalyst",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Mask",
+            "rare_drop": "Claw",
+            "common_drop": "Sepctral"
+        }
+    },
     "Katsuragikiri Nagamasa": {
         "type": "claymore",
         "rarity": 4,
@@ -563,6 +572,15 @@
         "ascension": {
             "domain_drop": "Magatama",
             "rare_drop": "Prism",
+            "common_drop": "Spectral"
+        }
+    },
+    "Oathsworn Eye": {
+        "type": "catalyst",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Coral",
+            "rare_drop": "Claw",
             "common_drop": "Spectral"
         }
     },
