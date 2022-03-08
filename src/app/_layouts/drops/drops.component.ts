@@ -117,7 +117,7 @@ export class DropsComponent implements OnInit, OnChanges {
      * Shows only characters and weapon materials the user has/needs
      */
     personalise() {
-        if (!this.isPersonalised)
+        if (!this.isPersonalised || !this.characters || !this.charData)
             return;
 
         this.resetLists();
