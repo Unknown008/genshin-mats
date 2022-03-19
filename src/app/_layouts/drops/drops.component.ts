@@ -104,7 +104,7 @@ export class DropsComponent implements OnInit, OnChanges {
      */
     togglePersonalise() {
         this.isPersonalised = !this.isPersonalised;
-        
+
         if (this.isPersonalised)
             this.personalise();
         else 
@@ -158,19 +158,22 @@ export class DropsComponent implements OnInit, OnChanges {
                 char.teslevel - char.eslevel > 0 ||
                 char.teblevel - char.eblevel > 0
             ) {
-                this.talents[this.charData[char.name].talent.all.book].push({
-                    name: char.name,
-                    path: char.file
-                });
+                if (this.charData[char.name].talent.all.book != null)
+                    this.talents[this.charData[char.name].talent.all.book].push({
+                        name: char.name,
+                        path: char.file
+                    });
             }
 
             if (char.weapon.tascension > char.weapon.ascension) {
                 let relic = this.weaponData[char.weapon.name]
                     .ascension.domain_drop;
-                this.charWeapons[relic].push({
-                    name: char.name,
-                    path: char.file
-                });
+
+                if (relic != null)
+                    this.charWeapons[relic].push({
+                        name: char.name,
+                        path: char.file
+                    });
             }
         }
 
@@ -209,7 +212,7 @@ export class DropsComponent implements OnInit, OnChanges {
         }
             
         for (let char in this.charData) {
-            if (char.includes("Traveler")) continue;
+            if (char.includes("Traveler") || this.charData[char].talent.all.book == null) continue;
             
             this.talents[this.charData[char].talent.all.book].push({
                 name: char,

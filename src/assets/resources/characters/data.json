@@ -1163,5 +1163,22 @@
             }
         },
         "weapon": "catalyst"
+    },
+    "Ayato": {
+        "element": "hydro",
+        "ascension": {
+            "element": "hydro",
+            "local_specialty": null,
+            "common_drop": null,
+            "boss_drop": null
+        },
+        "talent": {
+            "all": {
+                "book": null,
+                "common_drop": null,
+                "boss_drop": null
+            }
+        },
+        "weapon": "sword"
     }
 }

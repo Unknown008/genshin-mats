@@ -35,6 +35,10 @@
                         ]
                     },
                     "configurations": {
+                        "development":{
+                            "sourceMap": true,
+                            "optimization": false
+                        },
                         "production": {
                             "fileReplacements": [
                                 {
@@ -70,6 +74,9 @@
                         "browserTarget": "genshin-mats:build"
                     },
                     "configurations": {
+                        "development": {
+                            "browserTarget": "genshin-mats:build:development"
+                        },
                         "production": {
                             "browserTarget": "genshin-mats:build:production"
                         }

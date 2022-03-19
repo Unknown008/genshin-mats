@@ -404,6 +404,15 @@
             "common_drop": "Arrowhead"
         }
     },
+    "Haran Geppaku Futsu": {
+        "type": "sword",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": null,
+            "rare_drop": null,
+            "common_drop": null
+        }
+    },
     "Harbinger of Dawn": {
         "type": "sword",
         "rarity": 3,
