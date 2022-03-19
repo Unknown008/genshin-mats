@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { HomeComponent } from \"./home.component\";\nexport const HomeRoutes = [{\n  path: \"\",\n  children: [{\n    path: \"\",\n    component: HomeComponent\n  }]\n}];","map":null,"metadata":{},"sourceType":"module"}
