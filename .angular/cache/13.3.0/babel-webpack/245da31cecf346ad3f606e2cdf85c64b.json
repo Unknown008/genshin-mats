@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { PageNotFoundComponent } from \"./page-not-found.component\";\nexport const PageNotFoundRoutes = [{\n  path: \"\",\n  children: [{\n    path: \"\",\n    component: PageNotFoundComponent\n  }]\n}];","map":null,"metadata":{},"sourceType":"module"}
