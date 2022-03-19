@@ -2,7 +2,6 @@ import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
 import { FormGroup } from "@angular/forms";
 import { EnvironmentPathService } from "./../../_services/environment-path.service";
 import { CharacterModel } from "./../../_models/character.model";
-import PerfectScrollbar from "perfect-scrollbar";
 
 @Component({
     selector: "app-character",
@@ -35,10 +34,6 @@ export class CharacterComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        let modalPanel = document.querySelector(".modal-panel");
-        if (modalPanel)
-            new PerfectScrollbar(modalPanel);
-
         this.character.file = this.path + this.character.file + ".png";
         this.setDefaultWeapon();
     }
