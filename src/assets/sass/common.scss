@@ -155,6 +155,10 @@ button:focus {
     margin-left: 10px;
 }
 
+.table>:not(:first-child) {
+    border: none;
+}
+
 app-loader {
     position: absolute;
     z-index: 1;

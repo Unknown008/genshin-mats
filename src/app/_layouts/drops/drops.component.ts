@@ -104,7 +104,7 @@ export class DropsComponent implements OnInit, OnChanges {
      */
     togglePersonalise() {
         this.isPersonalised = !this.isPersonalised;
-        
+
         if (this.isPersonalised)
             this.personalise();
         else 
@@ -212,7 +212,7 @@ export class DropsComponent implements OnInit, OnChanges {
         }
             
         for (let char in this.charData) {
-            if (char.includes("Traveler")) continue;
+            if (char.includes("Traveler") || this.charData[char].talent.all.book == null) continue;
             
             this.talents[this.charData[char].talent.all.book].push({
                 name: char,
