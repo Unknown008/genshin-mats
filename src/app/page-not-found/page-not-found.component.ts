@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { EnvironmentPathService } from "../_services/environment-path.service";
 
 @Component({
@@ -6,14 +6,11 @@ import { EnvironmentPathService } from "../_services/environment-path.service";
     templateUrl: "./page-not-found.component.html",
     styleUrls: ["./page-not-found.component.css"]
 })
-export class PageNotFoundComponent implements OnInit {
+export class PageNotFoundComponent {
     public path: string = this.url.getUrl("./../../../assets/resources/404.png");
 
     constructor(
         private url: EnvironmentPathService
     ) { }
-
-    ngOnInit() {
-    }
 
 }

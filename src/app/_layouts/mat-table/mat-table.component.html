@@ -40,10 +40,10 @@
     <tbody>
         <tr *ngFor="let row of tableData">
             <td class="" *ngFor="let col of displayedColumns">
-                <div *ngIf="col == 'Name'">
+                <div *ngIf="col === 'Name'">
                     {{row[col]}}
                 </div>
-                <div *ngIf="col != 'Name' && row[col].length > 0">
+                <div *ngIf="col !== 'Name' && row[col].length > 0">
                     <div class="items-row" *ngFor="let item of row[col]">
                         <div [ngClass]="item.type">
                             <div class="item-holder" 
@@ -55,7 +55,7 @@
                         </div>
                     </div>
                 </div>
-                <div *ngIf="col != 'Name' && row[col].length == 0">
+                <div *ngIf="col !== 'Name' && row[col].length === 0">
                     <div class="maxed" *ngIf="!row['Name'].includes('Traveler')">Max</div>
                     <div class="maxed" *ngIf="row['Name'].includes('Traveler')">Shared</div>
                 </div>

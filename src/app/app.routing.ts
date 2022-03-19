@@ -7,11 +7,11 @@ export const AppRoutes: Routes = [
         children: [
             {
                 path: "home",
-                loadChildren: "./home/home.module#HomeModule"
+                loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
             },
             {
                 path: "404",
-                loadChildren: "./page-not-found/page-not-found.module#PageNotFoundModule"
+                loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule)
             }
         ]
     },
