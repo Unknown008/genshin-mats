@@ -267,10 +267,11 @@ export class MatTableComponent implements OnChanges {
 
                     if (mats.boss_drop.length == 0)
                         mats.boss_drop.push({
-                            name: bossDropName.replace(/_/g, " "),
+                            name: bossDropName == null ? "Boss drop TBD" : bossDropName.replace(/_/g, " "),
                             qty: data.boss_drop.quantity,
                             qly: "purple",
-                            path: this.path + "items/" + bossDropName + ".png",
+                            path: this.path + 
+                                (bossDropName == null ? "tbd.png" : "items/" + bossDropName + ".png"),
                             type: "item-boss-drop",
                             tag: characterAscensionData.element
                         });
@@ -281,13 +282,14 @@ export class MatTableComponent implements OnChanges {
 
             if (data.local_specialty != null) {
                 let localSpecialtyName = characterAscensionData.local_specialty;
-                
+
                 if (mats.local_specialty.length == 0)
                     mats.local_specialty.push({
-                        name: localSpecialtyName.replace(/_/g, " "),
+                        name: localSpecialtyName == null ? "Local specialty TBD" : localSpecialtyName.replace(/_/g, " "),
                         qty: data.local_specialty.quantity,
                         qly: "grey",
-                        path: this.path + "items/" + localSpecialtyName + ".png",
+                        path: this.path + 
+                            (localSpecialtyName == null ? "tbd.png" : "items/" + localSpecialtyName + ".png"),
                         type: "item-local-specialty"
                     });
                 else
@@ -295,23 +297,44 @@ export class MatTableComponent implements OnChanges {
             }
 
             if (data.common_drop != null) {
-                let commonDropName = this.itemQualityData
-                    .common_drop[characterAscensionData.common_drop][data.common_drop.quality];
-
-                let commonDropId = mats.common_drop.findIndex((c: any) => 
-                    c.name == commonDropName.replace(/_/g, " ")
-                );
-                if (commonDropId == -1)
-                    mats.common_drop.push({
-                        name: commonDropName.replace(/_/g, " "),
-                        qty: data.common_drop.quantity,
-                        qly: data.common_drop.quality,
-                        path: this.path + "items/" + commonDropName + ".png",
-                        type: "item-common-drop",
-                        tag: characterAscensionData.common_drop
-                    });
-                else
-                    mats.common_drop[commonDropId].qty += data.common_drop.quantity;
+                if (characterAscensionData.common_drop == null) {
+                    let commonDropId = mats.common_drop.findIndex((c: any) => 
+                        c.name == data.common_drop.quality.replace(/./, (m) => {
+                            return m.toUpperCase()
+                        }) + " common drop TBD"
+                    );
+                    if (commonDropId == -1)
+                        mats.common_drop.push({
+                            name: data.common_drop.quality.replace(/./, (m) => {
+                                return m.toUpperCase();
+                            }) + " common drop TBD",
+                            qty: data.common_drop.quantity,
+                            qly: data.common_drop.quality,
+                            path: this.path + "tbd.png",
+                            type: "item-common-drop",
+                            tag: characterAscensionData.common_drop
+                        });
+                    else
+                        mats.common_drop[commonDropId].qty += data.common_drop.quantity;
+                } else {
+                    let commonDropName = this.itemQualityData
+                        .common_drop[characterAscensionData.common_drop][data.common_drop.quality];
+    
+                    let commonDropId = mats.common_drop.findIndex((c: any) => 
+                        c.name == commonDropName.replace(/_/g, " ")
+                    );
+                    if (commonDropId == -1)
+                        mats.common_drop.push({
+                            name: commonDropName.replace(/_/g, " "),
+                            qty: data.common_drop.quantity,
+                            qly: data.common_drop.quality,
+                            path: this.path + "items/" + commonDropName + ".png",
+                            type: "item-common-drop",
+                            tag: characterAscensionData.common_drop
+                        });
+                    else
+                        mats.common_drop[commonDropId].qty += data.common_drop.quantity;
+                }
             }
         }
         
@@ -396,21 +419,44 @@ export class MatTableComponent implements OnChanges {
                     tag = charTalent["talent" + talentNo.toString()][i].book;
                 else
                     tag = charTalent.all.book;
-                bookName += tag;
-                let bookId = mats.book.findIndex((b: any) => 
-                    b.name == bookName.replace(/_/g, " ")
-                );
-                if (bookId == -1)
-                    mats.book.push({
-                        name: bookName.replace(/_/g, " "),
-                        qty: data.book.quantity,
-                        qly: data.book.quality,
-                        path: this.path + "talents/" + bookName + ".png",
-                        type: "item-domain",
-                        tag: tag
-                    });
-                else
-                    mats.book[bookId].qty += data.book.quantity;
+                
+                if (tag == null) {
+                    let bookId = mats.book.findIndex((b: any) => 
+                        b.name == data.book.quality.replace(/./, (m) => {
+                            return m.toUpperCase();
+                        }) + " talent book TBD"
+                    );
+                    if (bookId == -1)
+                        mats.book.push({
+                            name: data.book.quality.replace(/./, (m) => {
+                                return m.toUpperCase()
+                            }) + " talent book TBD",
+                            qty: data.book.quantity,
+                            qly: data.book.quality,
+                            path: this.path + "tbd.png",
+                            type: "item-domain",
+                            tag: tag
+                        });
+                    else
+                        mats.book[bookId].qty += data.book.quantity;
+
+                } else {
+                    bookName += tag;
+                    let bookId = mats.book.findIndex((b: any) => 
+                        b.name == bookName.replace(/_/g, " ")
+                    );
+                    if (bookId == -1)
+                        mats.book.push({
+                            name: bookName.replace(/_/g, " "),
+                            qty: data.book.quantity,
+                            qly: data.book.quality,
+                            path: this.path + "talents/" + bookName + ".png",
+                            type: "item-domain",
+                            tag: tag
+                        });
+                    else
+                        mats.book[bookId].qty += data.book.quantity;
+                }
             }
             if (data.common_drop != null) {
                 let commonDropType = "";
@@ -421,24 +467,46 @@ export class MatTableComponent implements OnChanges {
                 else
                     commonDropType = charTalent.all.common_drop;
                 
-                let commonDropName = this.itemQualityData
-                    .common_drop[commonDropType][data.common_drop.quality];
+                if (commonDropType == null) {
+                    let commonDropId = mats.common_drop.findIndex((d: any) => 
+                        d.name == data.common_drop.quality.replace(/./, (m) => {
+                            return m.toUpperCase();
+                        }) + " common drop TBD"
+                    );
+                    if (commonDropId == -1)
+                        mats.common_drop.push({
+                            name: data.common_drop.quality.replace(/./, (m) => {
+                                return m.toUpperCase()
+                            }) + " common drop TBD",
+                            qty: data.common_drop.quantity,
+                            qly: data.common_drop.quality,
+                            path: this.path + "tbd.png",
+                            type: "item-common-drop",
+                            tag: commonDropType
+                        });
+                    else
+                        mats.common_drop[commonDropId].qty += 
+                            data.common_drop.quantity;
+                } else {
+                    let commonDropName = this.itemQualityData
+                        .common_drop[commonDropType][data.common_drop.quality];
                 
-                let commonDropId = mats.common_drop.findIndex((d: any) => 
-                    d.name == commonDropName.replace(/_/g, " ")
-                );
-                if (commonDropId == -1)
-                    mats.common_drop.push({
-                        name: commonDropName.replace(/_/g, " "),
-                        qty: data.common_drop.quantity,
-                        qly: data.common_drop.quality,
-                        path: this.path + "items/" + commonDropName + ".png",
-                        type: "item-common-drop",
-                        tag: commonDropType
-                    });
-                else
-                    mats.common_drop[commonDropId].qty += 
-                        data.common_drop.quantity;
+                    let commonDropId = mats.common_drop.findIndex((d: any) => 
+                        d.name == commonDropName.replace(/_/g, " ")
+                    );
+                    if (commonDropId == -1)
+                        mats.common_drop.push({
+                            name: commonDropName.replace(/_/g, " "),
+                            qty: data.common_drop.quantity,
+                            qly: data.common_drop.quality,
+                            path: this.path + "items/" + commonDropName + ".png",
+                            type: "item-common-drop",
+                            tag: commonDropType
+                        });
+                    else
+                        mats.common_drop[commonDropId].qty += 
+                            data.common_drop.quantity;
+                }
             }
             if (data.boss_drop != null) {
                 let bossDropName = "";
@@ -448,21 +516,39 @@ export class MatTableComponent implements OnChanges {
                 else
                     bossDropName = charTalent.all.boss_drop;
 
-                let bossDropId = mats.boss_drop.findIndex((d: any) => 
-                    d.name == bossDropName.replace(/_/g, " ")
-                );
-                if (bossDropId == -1)
-                    mats.boss_drop.push({
-                        name: bossDropName.replace(/_/g, " "),
-                        qty: data.boss_drop.quantity,
-                        qly: "purple",
-                        path: this.path + "talents/" + bossDropName + ".png",
-                        type: "item-boss-drop",
-                        tag: "weekly"
-                    });
-                else
-                    mats.boss_drop[bossDropId].qty += 
-                        data.boss_drop.quantity;
+                if (bossDropName == null) {
+                    let bossDropId = mats.boss_drop.findIndex((d: any) => 
+                        d.name == "Boss drop TBD"
+                    );
+                    if (bossDropId == -1)
+                        mats.boss_drop.push({
+                            name: "Boss drop TBD",
+                            qty: data.boss_drop.quantity,
+                            qly: "purple",
+                            path: this.path + "tbd.png",
+                            type: "item-boss-drop",
+                            tag: "weekly"
+                        });
+                    else
+                        mats.boss_drop[bossDropId].qty += 
+                            data.boss_drop.quantity;
+                } else {
+                    let bossDropId = mats.boss_drop.findIndex((d: any) => 
+                        d.name == bossDropName.replace(/_/g, " ")
+                    );
+                    if (bossDropId == -1)
+                        mats.boss_drop.push({
+                            name: bossDropName.replace(/_/g, " "),
+                            qty: data.boss_drop.quantity,
+                            qly: "purple",
+                            path: this.path + "talents/" + bossDropName + ".png",
+                            type: "item-boss-drop",
+                            tag: "weekly"
+                        });
+                    else
+                        mats.boss_drop[bossDropId].qty += 
+                            data.boss_drop.quantity;
+                }
             }
             if (data.limited != null) {
                 let limitedId = mats.limited
@@ -585,63 +671,126 @@ export class MatTableComponent implements OnChanges {
             mats.cost += data.cost;
 
             if (data.domain_drop != null) {
-                let domainDropName = this.itemQualityData
-                    .weapon[weaponAscensionData.domain_drop][data.domain_drop.quality];
-
-                let domainDropId = mats.domain_drop.findIndex((d: any) => 
-                    d.name == domainDropName.replace(/_/g, " ")
-                );
-                if (domainDropId == -1)
-                    mats.domain_drop.push({
-                        name: domainDropName.replace(/_/g, " "),
-                        qty: data.domain_drop.quantity,
-                        qly: data.domain_drop.quality,
-                        path: this.path + "items/" + domainDropName + ".png",
-                        type: "item-domain",
-                        tag: weaponAscensionData.domain_drop
-                    });
-                else
-                    mats.domain_drop[domainDropId].qty += data.domain_drop.quantity;
+                if (weaponAscensionData.domain_drop == null) {
+                    let domainDropId = mats.domain_drop.findIndex((d: any) => 
+                        d.name == data.domain_drop.quality.replace(/./, (m) => {
+                            return m.toUpperCase();
+                        }) + " weapon mat TBD"
+                    );
+                    if (domainDropId == -1)
+                        mats.domain_drop.push({
+                            name: data.domain_drop.quality.replace(/./, (m) => {
+                                return m.toUpperCase();
+                            }) + " weapon mat TBD",
+                            qty: data.domain_drop.quantity,
+                            qly: data.domain_drop.quality,
+                            path: this.path + "tbd.png",
+                            type: "item-domain",
+                            tag: weaponAscensionData.domain_drop
+                        });
+                    else
+                        mats.domain_drop[domainDropId].qty += data.domain_drop.quantity;
+                } else {
+                    let domainDropName = this.itemQualityData
+                        .weapon[weaponAscensionData.domain_drop][data.domain_drop.quality];
+    
+                    let domainDropId = mats.domain_drop.findIndex((d: any) => 
+                        d.name == domainDropName.replace(/_/g, " ")
+                    );
+                    if (domainDropId == -1)
+                        mats.domain_drop.push({
+                            name: domainDropName.replace(/_/g, " "),
+                            qty: data.domain_drop.quantity,
+                            qly: data.domain_drop.quality,
+                            path: this.path + "items/" + domainDropName + ".png",
+                            type: "item-domain",
+                            tag: weaponAscensionData.domain_drop
+                        });
+                    else
+                        mats.domain_drop[domainDropId].qty += data.domain_drop.quantity;
+                }
             }
             
             if (data.common_drop != null) {
-                let commonDropName = this.itemQualityData
-                    .common_drop[weaponAscensionData.common_drop][data.common_drop.quality];
+                if (weaponAscensionData.common_drop == null) {
+                    let commonDropId = mats.common_drop.findIndex((c: any) => 
+                        c.name == data.common_drop.quality.replace(/./, (m) => {
+                            return m.toUpperCase();
+                        }) + " common drop TBD"
+                    );
+                    if (commonDropId == -1)
+                        mats.common_drop.push({
+                            name: data.common_drop.quality.replace(/./, (m) => {
+                                return m.toUpperCase();
+                            }) + " common drop TBD",
+                            qty: data.common_drop.quantity,
+                            qly: data.common_drop.quality,
+                            path: this.path + "tbd.png",
+                            type: "item-common-drop",
+                            tag: weaponAscensionData.common_drop
+                        });
+                    else
+                        mats.common_drop[commonDropId].qty += data.common_drop.quantity;
+                } else {
+                    let commonDropName = this.itemQualityData
+                        .common_drop[weaponAscensionData.common_drop][data.common_drop.quality];
 
-                let commonDropId = mats.common_drop.findIndex((c: any) => 
-                    c.name == commonDropName.replace(/_/g, " ")
-                );
-                if (commonDropId == -1)
-                    mats.common_drop.push({
-                        name: commonDropName.replace(/_/g, " "),
-                        qty: data.common_drop.quantity,
-                        qly: data.common_drop.quality,
-                        path: this.path + "items/" + commonDropName + ".png",
-                        type: "item-common-drop",
-                        tag: weaponAscensionData.common_drop
-                    });
-                else
-                    mats.common_drop[commonDropId].qty += data.common_drop.quantity;
+                    let commonDropId = mats.common_drop.findIndex((c: any) => 
+                        c.name == commonDropName.replace(/_/g, " ")
+                    );
+                    if (commonDropId == -1)
+                        mats.common_drop.push({
+                            name: commonDropName.replace(/_/g, " "),
+                            qty: data.common_drop.quantity,
+                            qly: data.common_drop.quality,
+                            path: this.path + "items/" + commonDropName + ".png",
+                            type: "item-common-drop",
+                            tag: weaponAscensionData.common_drop
+                        });
+                    else
+                        mats.common_drop[commonDropId].qty += data.common_drop.quantity;
+                }
             }
 
             if (data.rare_drop != null) {
-                let rareDropName = this.itemQualityData
-                    .common_drop[weaponAscensionData.rare_drop][data.rare_drop.quality];
-
-                let rareDropId = mats.rare_drop.findIndex((r: any) => 
-                    r.name == rareDropName.replace(/_/g, " ")
-                );
-                if (rareDropId == -1)
-                    mats.rare_drop.push({
-                        name: rareDropName.replace(/_/g, " "),
-                        qty: data.rare_drop.quantity,
-                        qly: data.rare_drop.quality,
-                        path: this.path + "items/" + rareDropName + ".png",
-                        type: "item-common-drop",
-                        tag: weaponAscensionData.rare_drop
-                    });
+                if (weaponAscensionData.rare_drop == null) {
+                    let rareDropId = mats.rare_drop.findIndex((r: any) => 
+                        r.name == data.rare_drop.quality.replace(/./, (m) => {
+                            return m.toUpperCase();
+                        }) + " rare drop TBD"
+                    );
+                    if (rareDropId == -1)
+                        mats.rare_drop.push({
+                            name: data.rare_drop.quality.replace(/./, (m) => {
+                                return m.toUpperCase();
+                            }) + " rare drop TBD",
+                            qty: data.rare_drop.quantity,
+                            qly: data.rare_drop.quality,
+                            path: this.path + "tbd.png",
+                            type: "item-common-drop",
+                            tag: weaponAscensionData.rare_drop
+                        });
                 else
                     mats.rare_drop[rareDropId].qty += data.rare_drop.quantity;
+                } else {
+                    let rareDropName = this.itemQualityData
+                        .common_drop[weaponAscensionData.rare_drop][data.rare_drop.quality];
+
+                    let rareDropId = mats.rare_drop.findIndex((r: any) => 
+                        r.name == rareDropName.replace(/_/g, " ")
+                    );
+                    if (rareDropId == -1)
+                        mats.rare_drop.push({
+                            name: rareDropName.replace(/_/g, " "),
+                            qty: data.rare_drop.quantity,
+                            qly: data.rare_drop.quality,
+                            path: this.path + "items/" + rareDropName + ".png",
+                            type: "item-common-drop",
+                            tag: weaponAscensionData.rare_drop
+                        });
+                    else
+                        mats.rare_drop[rareDropId].qty += data.rare_drop.quantity;
+                }
             }
         }
         
