@@ -408,9 +408,9 @@
         "type": "sword",
         "rarity": 5,
         "ascension": {
-            "domain_drop": null,
-            "rare_drop": null,
-            "common_drop": null
+            "domain_drop": "Magatama",
+            "rare_drop": "Statuette",
+            "common_drop": "Handguard"
         }
     },
     "Harbinger of Dawn": {

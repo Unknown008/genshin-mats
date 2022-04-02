@@ -1168,15 +1168,15 @@
         "element": "hydro",
         "ascension": {
             "element": "hydro",
-            "local_specialty": null,
-            "common_drop": null,
-            "boss_drop": null
+            "local_specialty": "Sakura_Bloom",
+            "common_drop": "Handguard",
+            "boss_drop": "Dew_of_Repudiation"
         },
         "talent": {
             "all": {
-                "book": null,
-                "common_drop": null,
-                "boss_drop": null
+                "book": "Elegance",
+                "common_drop": "Handguard",
+                "boss_drop": "Mudra_of_the_Malefic_General"
             }
         },
         "weapon": "sword"
