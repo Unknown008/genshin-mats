@@ -95,6 +95,16 @@
             "green": "Concealed_Claw",
             "blue": "Concealed_Unguis",
             "purple": "Concealed_Talon"
+        },
+        "Statuette": {
+            "green": "Gloomy_Statuette",
+            "blue": "Dark_Statuette",
+            "purple": "Deathly_Statuette"
+        },
+        "Spores": {
+            "grey": "Fungal_Spores",
+            "green": "Luminescent_Pollen",
+            "blue": "Crystalline_Cyst_Dust"
         }
     },
     "exp": {
