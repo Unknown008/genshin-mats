@@ -1180,5 +1180,22 @@
             }
         },
         "weapon": "sword"
+    },
+    "Yelan": {
+        "element": "hydro",
+        "ascension": {
+            "element": "hydro",
+            "local_specialty": "Starconch",
+            "common_drop": "Fatui_Insignia",
+            "boss_drop": "Runic_Fang"
+        },
+        "talent": {
+            "all": {
+                "book": "Prosperity",
+                "common_drop": "Fatui_Insignia",
+                "boss_drop": "Gilded_Scale"
+            }
+        },
+        "weapon": "bow"
     }
 }
