@@ -1197,5 +1197,22 @@
             }
         },
         "weapon": "bow"
+    },
+    "Kuki Shinobu": {
+        "element": "electro",
+        "ascension": {
+            "element": "electro",
+            "local_specialty": "Naku_Weed",
+            "common_drop": "Spectral",
+            "boss_drop": "Runic_Fang"
+        },
+        "talent": {
+            "all": {
+                "book": "Elegance",
+                "common_drop": "Spectral",
+                "boss_drop": "Tears_of_the_Calamitous_God"
+            }
+        },
+        "weapon": "sword"
     }
 }

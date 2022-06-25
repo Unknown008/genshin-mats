@@ -898,7 +898,7 @@ export class MatTableComponent implements OnChanges {
                 "Limited": JSON.parse(JSON.stringify(
                     rowData["Talent"].filter((i: any) => i.type == "item-limited")
                 )),
-                "Mora": [{
+                "Mora": (rowData["Exp Mora"].length == 0 && rowData["Ascension Mora"].length == 0 && rowData["Talent Mora"].length == 0) ? [] : [{
                     name: rowData["Exp Mora"][0].name,
                     path: rowData["Exp Mora"][0].path,
                     qty: (rowData["Exp Mora"].length == 0 ? 0 : rowData["Exp Mora"][0].qty) + 
