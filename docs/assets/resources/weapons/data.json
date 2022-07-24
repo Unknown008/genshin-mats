@@ -467,6 +467,15 @@
             "common_drop": "Nectar"
         }
     },
+    "Kagotsurube_Isshin": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Mask",
+            "rare_drop": "Statuette",
+            "common_drop": "Spectral"
+        }
+    },
     "Kagura's Verity": {
         "type": "catalyst",
         "rarity": 5,

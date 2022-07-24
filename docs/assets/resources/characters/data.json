@@ -1214,5 +1214,22 @@
             }
         },
         "weapon": "sword"
+    },
+    "Shikanoin Heizou": {
+        "element": "anemo",
+        "ascension": {
+            "element": "anemo",
+            "local_specialty": "Onikabuto",
+            "common_drop": "Treasure_Hoarder_Insignia",
+            "boss_drop": "Runic_Fang"
+        },
+        "talent": {
+            "all": {
+                "book": "Transience",
+                "common_drop": "Treasure_Hoarder_Insignia",
+                "boss_drop": "The_Meaning_of_Aeons"
+            }
+        },
+        "weapon": "sword"
     }
 }
