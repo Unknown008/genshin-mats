@@ -105,6 +105,21 @@
             "grey": "Fungal_Spores",
             "green": "Luminescent_Pollen",
             "blue": "Crystalline_Cyst_Dust"
+        },
+        "Fungal_Nucleus": {
+            "green": "Inactivated_Fungal_Nucleus",
+            "blue": "Dormant_Fungal_Nucleus",
+            "purple": "Robust_Fungal_Nucleus"
+        },
+        "Red": {
+            "grey": "Faded_Red_Sating",
+            "green": "Trimmed_Red_Silk",
+            "blue": "Rich_Red_Brocade"
+        },
+        "Storage": {
+            "green": "Chaos_Storage",
+            "blue": "Chaos_Module",
+            "purple": "Chaos_Bolt"
         }
     },
     "exp": {
@@ -175,6 +190,24 @@
             "blue": "Mask_of_the_Tiger's_Bite",
             "purple": "Mask_of_the_One-Horned",
             "gold": "Mask_of_the_Kijin"
+        },
+        "Might": {
+            "green": "Echo_of_Scorching_Might",
+            "blue": "Remnant_Glow_of_Scorching_Might",
+            "purple": "Dream_of_Scorching_Might",
+            "gold": "Olden_Days_of_Scorching_Might"
+        },
+        "Talisman": {
+            "green": "Copper_Talisman_of_the_Forest_Dew",
+            "blue": "Iron_Talisman_of_the_Forest_Dew",
+            "purple": "Silver_Talisman_of_the_Forest_Dew",
+            "gold": "Golden_Talisman_of_the_Forest_Dew"
+        },
+        "Oasis": {
+            "green": "Oasis_Garden's_Reminiscence",
+            "blue": "Oasis_Garden's_Kindness",
+            "purple": "Oasis_Garden's_Mourning",
+            "gold": "Oasis_Garden's_Truth"
         }
     },
     "weapon_exp": {

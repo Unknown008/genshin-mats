@@ -278,6 +278,15 @@
             "common_drop": "Treasure_Hoarder_Insignia"
         }
     },
+    "End of the Line": {
+        "type": "",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Might",
+            "rare_drop": "Fungal_Nucleus",
+            "common_drop": "Spores"
+        }
+    },
     "Everlasting Moonglow": {
         "type": "catalyst",
         "rarity": 5,
@@ -377,6 +386,15 @@
             "common_drop": "Treasure_Hoarder_Insignia"
         }
     },
+    "Forest Regalia": {
+        "type": "claymore",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Talisman",
+            "rare_drop": "Storage",
+            "common_drop": "Red"
+        }
+    },
     "Freedom-Sworn": {
         "type": "sword",
         "rarity": 5,
@@ -387,7 +405,7 @@
         }
     },
     "Frostbearer": {
-        "type": "Catalyst",
+        "type": "catalyst",
         "rarity": 4,
         "ascension": {
             "domain_drop": "Shackle",
@@ -395,8 +413,17 @@
             "common_drop": "Nectar"
         }
     },
+    "Fruit of Fulfillment": {
+        "type": "catalyst",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Oasis",
+            "rare_drop": "Statuette",
+            "common_drop": "Spores"
+        }
+    },
     "Hakushin Ring": {
-        "type": "Catalyst",
+        "type": "catalyst",
         "rarity": 4,
         "ascension": {
             "domain_drop": "Coral",
@@ -449,6 +476,15 @@
             "common_drop": "Treasure_Hoarder_Insignia"
         }
     },
+    "Hunter's Path": {
+        "type": "bow",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Might",
+            "rare_drop": "Fungal_Nucleus",
+            "common_drop": "Red"
+        }
+    },
     "Iron Point": {
         "type": "spear",
         "rarity": 2,
@@ -492,6 +528,15 @@
             "domain_drop": "Magatama",
             "rare_drop": "Axis",
             "common_drop": "Handguard"
+        }
+    },
+    "King's Squire": {
+        "type": "bow",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Might",
+            "rare_drop": "Fungal_Nucleus",
+            "common_drop": "Arrowhead"
         }
     },
     "Kitain Cross Spear": {
@@ -600,6 +645,15 @@
             "domain_drop": "Decarabian",
             "rare_drop": "Horn",
             "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
+    "Moonpiercer": {
+        "type": "spear",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Oasis",
+            "rare_drop": "Storage",
+            "common_drop": "Fatui_Insignia"
         }
     },
     "Mouun's Moon": {
@@ -1005,6 +1059,15 @@
             "domain_drop": "Guyun",
             "rare_drop": "Knife",
             "common_drop": "Mask"
+        }
+    },
+    "Sapwood Blade": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Talisman",
+            "rare_drop": "Fungal_Nucleus",
+            "common_drop": "Red"
         }
     },
     "Sword of Descension": {

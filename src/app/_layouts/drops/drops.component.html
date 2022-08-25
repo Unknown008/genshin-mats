@@ -90,6 +90,22 @@
                         </span>
                     </div>
                 </div>
+                <div class="weapon-block" *ngIf="weapons.Talisman.length > 0 ||
+                    charWeapons.Talisman.length > 0 ">
+                    <h5>Talisman</h5>
+                    <div class="mat-row" *ngIf="weapons.Talisman.length > 0">
+                        <span *ngFor="let weapon of weapons.Talisman">
+                            <img [src]="weapon.path" [alt]="weapon.name" 
+                                class="mat" [ngClass]="weapon.quality">
+                        </span>
+                    </div>
+                    <div class="char-row" *ngIf="charWeapons.Talisman.length > 0">
+                        <span *ngFor="let char of charWeapons.Talisman">
+                            <img [src]="char.path" [alt]="char.name" [title]="char.name"
+                                class="char">
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-md-4 small-padding">
@@ -137,6 +153,22 @@
                     </div>
                     <div class="char-row" *ngIf="charWeapons.Magatama.length > 0">
                         <span *ngFor="let char of charWeapons.Magatama">
+                            <img [src]="char.path" [alt]="char.name" [title]="char.name"
+                                class="char">
+                        </span>
+                    </div>
+                </div>
+                <div class="weapon-block" *ngIf="weapons.Oasis.length > 0 ||
+                    charWeapons.Oasis.length > 0 ">
+                    <h5>Oasis</h5>
+                    <div class="mat-row" *ngIf="weapons.Oasis.length > 0">
+                        <span *ngFor="let weapon of weapons.Oasis">
+                            <img [src]="weapon.path" [alt]="weapon.name" 
+                                class="mat" [ngClass]="weapon.quality">
+                        </span>
+                    </div>
+                    <div class="char-row" *ngIf="charWeapons.Oasis.length > 0">
+                        <span *ngFor="let char of charWeapons.Oasis">
                             <img [src]="char.path" [alt]="char.name" [title]="char.name"
                                 class="char">
                         </span>
@@ -194,6 +226,22 @@
                         </span>
                     </div>
                 </div>
+                <div class="weapon-block" *ngIf="weapons.Might.length > 0 ||
+                    charWeapons.Might.length > 0 ">
+                    <h5>Might</h5>
+                    <div class="mat-row" *ngIf="weapons.Might.length > 0">
+                        <span *ngFor="let weapon of weapons.Might">
+                            <img [src]="weapon.path" [alt]="weapon.name" 
+                                class="mat" [ngClass]="weapon.quality">
+                        </span>
+                    </div>
+                    <div class="char-row" *ngIf="charWeapons.Might.length > 0">
+                        <span *ngFor="let char of charWeapons.Might">
+                            <img [src]="char.path" [alt]="char.name" [title]="char.name"
+                                class="char">
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -237,6 +285,15 @@
                         </span>
                     </div>
                 </div>
+                <div class="char-block" *ngIf="talents.Admonition.length > 0">
+                    <h5>Admonition</h5>
+                    <div class="char-row">
+                        <span *ngFor="let char of talents.Admonition">
+                            <img [src]="char.path" [alt]="char.name" [title]="char.name"
+                                class="char">
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-md-4 small-padding">
@@ -268,6 +325,15 @@
                         </span>
                     </div>
                 </div>
+                <div class="char-block" *ngIf="talents.Ingenuity.length > 0">
+                    <h5>Ingenuity</h5>
+                    <div class="char-row">
+                        <span *ngFor="let char of talents.Ingenuity">
+                            <img [src]="char.path" [alt]="char.name" [title]="char.name"
+                                class="char">
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-md-4 small-padding">
@@ -294,6 +360,15 @@
                     <h5>Light</h5>
                     <div class="char-row">
                         <span *ngFor="let char of talents.Light">
+                            <img [src]="char.path" [alt]="char.name" [title]="char.name"
+                                class="char">
+                        </span>
+                    </div>
+                </div>
+                <div class="char-block" *ngIf="talents.Praxis.length > 0">
+                    <h5>Praxis</h5>
+                    <div class="char-row">
+                        <span *ngFor="let char of talents.Praxis">
                             <img [src]="char.path" [alt]="char.name" [title]="char.name"
                                 class="char">
                         </span>
