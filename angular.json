@@ -80,7 +80,8 @@
                         "production": {
                             "browserTarget": "genshin-mats:build:production"
                         }
-                    }
+                    },
+                    "defaultConfiguration": "development"
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -105,9 +106,6 @@
                             "node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js",
                             "node_modules/lzutf8/build/production/lzutf8.min.js",
                             "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-                        ],
-                        "allowedCommonJsDependencies": [
-                            "lzutf8"
                         ]
                     }
                 },

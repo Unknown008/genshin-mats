@@ -410,6 +410,143 @@
         },
         "weapon": "sword"
     },
+    "Traveler (Dendro)": {
+        "element": "dendro",
+        "ascension": {
+            "element": "adaptive",
+            "local_specialty": "Windwheel_Aster",
+            "common_drop": "Mask"
+        },
+        "talent": {
+            "talent1": {
+                "1": {
+                    "book": "Admonition",
+                    "common_drop": "Spores"
+                },
+                "2": {
+                    "book": "Ingenuity",
+                    "common_drop": "Spores"
+                },
+                "3": {
+                    "book": "Praxis",
+                    "common_drop": "Spores"
+                },
+                "4": {
+                    "book": "Admonition",
+                    "common_drop": "Spores"
+                },
+                "5": {
+                    "book": "Ingenuity",
+                    "common_drop": "Spores"
+                },
+                "6": {
+                    "book": "Praxis",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                },
+                "7": {
+                    "book": "Admonition",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                },
+                "8": {
+                    "book": "Ingenuity",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                },
+                "9": {
+                    "book": "Praxis",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                }
+            },
+            "talent2": {
+                "1": {
+                    "book": "Admonition",
+                    "common_drop": "Spores"
+                },
+                "2": {
+                    "book": "Ingenuity",
+                    "common_drop": "Spores"
+                },
+                "3": {
+                    "book": "Praxis",
+                    "common_drop": "Spores"
+                },
+                "4": {
+                    "book": "Admonition",
+                    "common_drop": "Spores"
+                },
+                "5": {
+                    "book": "Ingenuity",
+                    "common_drop": "Spores"
+                },
+                "6": {
+                    "book": "Praxis",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                },
+                "7": {
+                    "book": "Admonition",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                },
+                "8": {
+                    "book": "Ingenuity",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                },
+                "9": {
+                    "book": "Praxis",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                }
+            },
+            "talent3": {
+                "1": {
+                    "book": "Admonition",
+                    "common_drop": "Spores"
+                },
+                "2": {
+                    "book": "Ingenuity",
+                    "common_drop": "Spores"
+                },
+                "3": {
+                    "book": "Praxis",
+                    "common_drop": "Spores"
+                },
+                "4": {
+                    "book": "Admonition",
+                    "common_drop": "Spores"
+                },
+                "5": {
+                    "book": "Ingenuity",
+                    "common_drop": "Spores"
+                },
+                "6": {
+                    "book": "Praxis",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                },
+                "7": {
+                    "book": "Admonition",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                },
+                "8": {
+                    "book": "Ingenuity",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                },
+                "9": {
+                    "book": "Praxis",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                }
+            }
+        },
+        "weapon": "sword"
+    },
     "Amber": {
         "element": "pyro",
         "ascension": {
@@ -1231,5 +1368,39 @@
             }
         },
         "weapon": "sword"
+    },
+    "Tighnari": {
+        "element": "dendro",
+        "ascension": {
+            "element": "dendro",
+            "local_specialty": "Nilotpala_Lotus",
+            "common_drop": "Spores",
+            "boss_drop": "Majestic_Hooked_Beak"
+        },
+        "talent": {
+            "all": {
+                "book": "Admonition",
+                "common_drop": "Spores",
+                "boss_drop": "The_Meaning_of_Aeons"
+            }
+        },
+        "weapon": "bow"
+    },
+    "Collei": {
+        "element": "dendro",
+        "ascension": {
+            "element": "dendro",
+            "local_specialty": "Rukkhashava_Mushrooms",
+            "common_drop": "Arrowhead",
+            "boss_drop": "Majestic_Hooked_Beak"
+        },
+        "talent": {
+            "all": {
+                "book": "Praxis",
+                "common_drop": "Arrowhead",
+                "boss_drop": "Tears_of_the_Calamitous_God"
+            }
+        },
+        "weapon": "bow"
     }
 }
