@@ -1402,5 +1402,22 @@
             }
         },
         "weapon": "bow"
+    },
+    "Dori": {
+        "element": "electro",
+        "ascension": {
+            "element": "electro",
+            "local_specialty": "Kalpalata_Lotus",
+            "common_drop": "Red",
+            "boss_drop": "Thunderclap_Fruit"
+        },
+        "talent": {
+            "all": {
+                "book": "Ingenuity",
+                "common_drop": "Red",
+                "boss_drop": "Bloodjade_Branch"
+            }
+        },
+        "weapon": "claymore"
     }
 }
