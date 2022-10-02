@@ -360,8 +360,7 @@ export class CharacterComponent implements OnInit {
 
     syncTtalentToTasc() {
         if (
-            this.character.tbalevel >= this.talents[this.character.tascension] &&
-            this.character.tbalevel <= this.talents[this.character.tascension - 1]
+            this.character.tbalevel <= this.talents[this.character.tascension]
         ) { } else {
             for (let i = 0; i < this.ascensions.length; i++) {
                 if (this.character.tascension == this.ascensions[i]) {
@@ -372,8 +371,7 @@ export class CharacterComponent implements OnInit {
             }
         }
         if (
-            this.character.teslevel >= this.talents[this.character.tascension] &&
-            this.character.teslevel <= this.talents[this.character.tascension - 1]
+            this.character.teslevel <= this.talents[this.character.tascension]
         ) { } else {
             for (let i = 0; i < this.ascensions.length; i++) {
                 if (this.character.tascension == this.ascensions[i]) {
@@ -384,8 +382,7 @@ export class CharacterComponent implements OnInit {
             }
         }
         if (
-            this.character.teblevel >= this.talents[this.character.tascension] &&
-            this.character.teblevel <= this.talents[this.character.tascension - 1]
+            this.character.teblevel <= this.talents[this.character.tascension]
         ) { } else {
             for (let i = 0; i < this.ascensions.length; i++) {
                 if (this.character.tascension == this.ascensions[i]) {
@@ -474,7 +471,7 @@ export class CharacterComponent implements OnInit {
             this.character.tbalevel, this.character.teslevel, this.character.teblevel
         );
 
-        if (this.talents[this.character.tascension] < highestTalent) {
+        if (highestTalent > this.talents[this.character.tascension]) {
             let previous = 0;
             for (let i = 0; i < this.talents.length; i++) {
                 if (previous == 0) {
