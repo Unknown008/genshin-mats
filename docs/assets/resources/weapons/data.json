@@ -503,7 +503,7 @@
             "common_drop": "Nectar"
         }
     },
-    "Kagotsurube_Isshin": {
+    "Kagotsurube Isshin": {
         "type": "sword",
         "rarity": 4,
         "ascension": {
@@ -602,6 +602,15 @@
             "common_drop": "Slime"
         }
     },
+    "Makhaira Aquamarine": {
+        "type": "claymore",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Might",
+            "rare_drop": "Sotrage",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
     "Mappa Mare": {
         "type": "catalyst",
         "rarity": 4,
@@ -627,6 +636,15 @@
             "domain_drop": "Dango",
             "rare_drop": "Mist_Grass",
             "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
+    "Missive Windspear": {
+        "type": "spear",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Statuette",
+            "common_drop": "Slime"
         }
     },
     "Mistsplitter Reforged": {
@@ -1050,6 +1068,15 @@
             "domain_drop": "Aerosiderite",
             "rare_drop": "Branch",
             "common_drop": "Slime"
+        }
+    },
+    "Staff of the Scarlet Sands": {
+        "type": "spear",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Oasis",
+            "rare_drop": "Storage",
+            "common_drop": "Spores"
         }
     },
     "Summit Shaper": {

@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
     public change: boolean = false;
     public allCharacters: characterList[] = [];
     public filteredCharacters: characterList[] = [];
+    public allFilteredPickCharacters: characterList[] = [];
     public filteredPickCharacters: characterList[] = [];
     public allWeapons: weaponList[] = [];
     public filteredWeapons: weaponList[] = [];
@@ -218,14 +219,14 @@ export class HomeComponent implements OnInit {
      * @param name The name of the character to be replaced
      */
     showCharacter(name: string) {
-        this.filteredPickCharacters = [];
+        this.allFilteredPickCharacters = [];
         this.oldCharacter = name;
         for (let char of this.allCharacters) {
             if (
                 this.characters.findIndex(c => c.name == char.name) == -1 ||
                 name == char.name
             ) {
-                this.filteredPickCharacters.push({
+                this.allFilteredPickCharacters.push({
                     name: char.name,
                     element: char.element,
                     selected: name == char.name,
@@ -233,6 +234,10 @@ export class HomeComponent implements OnInit {
                 });
             }
         }
+        
+        this.filteredPickCharacters = JSON.parse(JSON.stringify(
+            this.allFilteredPickCharacters
+        ));
     }
 
     /**
@@ -357,7 +362,7 @@ export class HomeComponent implements OnInit {
      * Filters the full character list with the keywords typed by the user
      */
     filterCharacters() {
-        let elements = ["pyro", "hydro", "electro", "anemo", "cryo", "geo"];
+        let elements = ["pyro", "hydro", "electro", "anemo", "cryo", "geo", "dendro"];
         if (elements.includes(this.charFilter.toLowerCase())) {
             this.filteredCharacters = JSON.parse(JSON.stringify(
                 this.allCharacters.filter((c: any) =>
@@ -380,24 +385,23 @@ export class HomeComponent implements OnInit {
      * Filters the full character list with the keywords typed by the user
      */
     filterPickCharacters() {
-        let elements = ["pyro", "hydro", "electro", "anemo", "cryo", "geo"];
-        if (elements.includes(this.charFilter.toLowerCase())) {
-            this.filteredCharacters = JSON.parse(JSON.stringify(
-                this.filteredPickCharacters.filter((c: any) =>
-                    c.element == this.charFilter.toLowerCase()
+        let elements = ["pyro", "hydro", "electro", "anemo", "cryo", "geo", "dendro"];
+        if (elements.includes(this.pickCharFilter.toLowerCase())) {
+            this.filteredPickCharacters = JSON.parse(JSON.stringify(
+                this.allFilteredPickCharacters.filter((c: any) =>
+                    c.element == this.pickCharFilter.toLowerCase()
                 )
             ));
-        } else if (this.charFilter != "") {
-            let filtered = this.filteredPickCharacters.filter((c: any) =>
-                c.name.toLowerCase().includes(this.charFilter.toLowerCase())
+        } else if (this.pickCharFilter != "") {
+            let filtered = this.allFilteredPickCharacters.filter((c: any) =>
+                c.name.toLowerCase().includes(this.pickCharFilter.toLowerCase())
             )
             if (filtered.length != 0) {
-                this.filteredCharacters = JSON.parse(JSON.stringify(filtered));
+                this.filteredPickCharacters = JSON.parse(JSON.stringify(filtered));
             }
-        } else {
-            this.filteredCharacters = 
-                JSON.parse(JSON.stringify(this.filteredPickCharacters));
-        }
+        } else
+            this.filteredPickCharacters = 
+                JSON.parse(JSON.stringify(this.allFilteredPickCharacters));
     }
 
     /**

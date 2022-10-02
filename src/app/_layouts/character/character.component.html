@@ -46,18 +46,17 @@
                         <div class="col-md-4 pl-0">
                             <input type="number" id="level" #level="ngModel"
                                 [(ngModel)]="character.level" title="Current level" 
-                                class="form-control" name="level" max="90" min="1" 
-                                (keyup)="checkAscension('c')">
+                                class="form-control w-3" name="level" max="90" 
+                                min="1" (keyup)="checkAscension('c')">
                         </div>
                         <div class="col-md-4 pl-0 flex center-y">
                             <i class="fas arrow-right"></i>
                         </div>
                         <div class="col-md-4 pl-0">
-                            <input type="number" id="tlevel" 
-                                [(ngModel)]="character.tlevel" 
-                                title="Target level" class="form-control" #tlevel="ngModel"
-                                name="tlevel" max="90" min="1" 
-                                (keyup)="checkAscension('t')">
+                            <input type="number" id="tlevel" #tlevel="ngModel"
+                                [(ngModel)]="character.tlevel" title="Target level"
+                                class="form-control w-3" name="tlevel" max="90"
+                                min="1" (keyup)="checkAscension('t')">
                         </div>
                     </div>
                     <div class="row">
@@ -68,7 +67,7 @@
                             <input type="number" id="ascension" name="ascension"
                                 [(ngModel)]="character.ascension" 
                                 title="Current ascension" #ascension="ngModel"
-                                class="form-control" max="6" min="1" 
+                                class="form-control w-3" max="6" min="1" 
                                 (keyup)="checkLevel('c')">
                         </div>
                         <div class="col-md-4 pl-0 flex center-y">
@@ -77,7 +76,7 @@
                         <div class="col-md-4 pl-0">
                             <input type="number" id="tascension" name="tascension" 
                                 [(ngModel)]="character.tascension"  
-                                title="Target ascension" class="form-control"
+                                title="Target ascension" class="form-control w-3"
                                 #tascension="ngModel" max="6" min="1" 
                                 (keyup)="checkLevel('t')">
                         </div>
@@ -96,7 +95,7 @@
                                     <input type="number" id="balevel" name="balevel"
                                         [(ngModel)]="character.balevel" 
                                         title="Current basic attack level" 
-                                        class="form-control" #balevel="ngModel" max="10"
+                                        class="form-control w-3" #balevel="ngModel" max="10"
                                         min="1" (keyup)="checkTalent('tba')">
                                 </div>
                                 <div class="col-md-4 pl-0 flex center-y">
@@ -106,7 +105,7 @@
                                     <input type="number" id="tbalevel" name="tbalevel"
                                         [(ngModel)]="character.tbalevel" 
                                         title="Target basic attack level" 
-                                        class="form-control" #tbalevel="ngModel" max="10"
+                                        class="form-control w-3" #tbalevel="ngModel" max="10"
                                         min="1" (keyup)="checkTalent('cba')">
                                 </div>
                             </div>
@@ -124,7 +123,7 @@
                                     <input type="number" id="eslevel" name="eslevel" 
                                         [(ngModel)]="character.eslevel" 
                                         title="Current elemental level" 
-                                        class="form-control" #eslevel="ngModel" max="10"
+                                        class="form-control w-3" #eslevel="ngModel" max="10"
                                         min="1" (keyup)="checkTalent('tes')">
                                 </div>
                                 <div class="col-md-4 pl-0 flex center-y">
@@ -134,7 +133,7 @@
                                     <input type="number" id="teslevel" name="teslevel"
                                         [(ngModel)]="character.teslevel" 
                                         title="Target elemental skill level" 
-                                        class="form-control" #teslevel="ngModel" max="10"
+                                        class="form-control w-3" #teslevel="ngModel" max="10"
                                         min="1" (keyup)="checkTalent('ces')">
                                 </div>
                             </div>
@@ -152,7 +151,7 @@
                                     <input type="number" id="eblevel" name="eblevel"
                                         [(ngModel)]="character.eblevel" 
                                         title="Current burst level" 
-                                        class="form-control" #eblevel="ngModel" max="10"
+                                        class="form-control w-3" #eblevel="ngModel" max="10"
                                         min="1" (keyup)="checkTalent('teb')">
                                 </div>
                                 <div class="col-md-4 pl-0 flex center-y">
@@ -162,7 +161,7 @@
                                     <input type="number" id="teblevel" name="teblevel"
                                         [(ngModel)]="character.teblevel" 
                                         title="Target burst attack level" 
-                                        class="form-control" #teblevel="ngModel" max="10"
+                                        class="form-control w-3" #teblevel="ngModel" max="10"
                                         min="1" (keyup)="checkTalent('ceb')">
                                 </div>
                             </div>

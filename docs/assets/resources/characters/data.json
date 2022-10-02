@@ -1419,5 +1419,39 @@
             }
         },
         "weapon": "claymore"
+    },
+    "Cyno": {
+        "element": "electro",
+        "ascension": {
+            "element": "electro",
+            "local_specialty": "Scarab",
+            "common_drop": "Scroll",
+            "boss_drop": "Thunderclap_Fruitcore"
+        },
+        "talent": {
+            "all": {
+                "book": "Admonition",
+                "common_drop": "Scroll",
+                "boss_drop": "Mudra_of_the_Malefic_General"
+            }
+        },
+        "weapon": "spear"
+    },
+    "Candace": {
+        "element": "hydro",
+        "ascension": {
+            "element": "hydro",
+            "local_specialty": "Redcrest",
+            "common_drop": "Red",
+            "boss_drop": "Light_Guiding_Tetrahedron"
+        },
+        "talent": {
+            "all": {
+                "book": "Admonition",
+                "common_drop": "Red",
+                "boss_drop": "Tears_of_the_Calamitous_God"
+            }
+        },
+        "weapon": "spear"
     }
 }
