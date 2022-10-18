@@ -44,7 +44,7 @@
         "Branch": {
             "green": "Dead_Ley_Line_Branch",
             "blue": "Dead_Ley_Line_Leaves",
-            "purple": "Ley_Line_Sprouts"
+            "purple": "Ley_Line_Sprout"
         },
         "Horn": {
             "green": "Heavy_Horn",
@@ -120,6 +120,11 @@
             "green": "Chaos_Storage",
             "blue": "Chaos_Module",
             "purple": "Chaos_Bolt"
+        },
+        "Diamond": {
+            "green": "Damaged_Prism",
+            "blue": "Turbid_Prism",
+            "purple": "Radiant_Prism"
         }
     },
     "exp": {

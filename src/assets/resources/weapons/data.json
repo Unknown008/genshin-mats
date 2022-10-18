@@ -534,8 +534,8 @@
         "type": "sword",
         "rarity": 5,
         "ascension": {
-            "domain_drop": "Dew",
-            "rare_drop": "Prism",
+            "domain_drop": "Talisman",
+            "rare_drop": "Diamond",
             "common_drop": "Red"
         }
     },
@@ -1326,8 +1326,8 @@
         "type": "sword",
         "rarity": 4,
         "ascension": {
-            "domain_drop": "Dew",
-            "rare_drop": "Prism",
+            "domain_drop": "Talisman",
+            "rare_drop": "Diamond",
             "common_drop": "Red"
         }
     }
