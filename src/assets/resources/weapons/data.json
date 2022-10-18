@@ -530,6 +530,15 @@
             "common_drop": "Handguard"
         }
     },
+    "Key of Khaj-Nisut": {
+        "type": "sword",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Dew",
+            "rare_drop": "Prism",
+            "common_drop": "Red"
+        }
+    },
     "King's Squire": {
         "type": "bow",
         "rarity": 4,
@@ -607,7 +616,7 @@
         "rarity": 4,
         "ascension": {
             "domain_drop": "Might",
-            "rare_drop": "Sotrage",
+            "rare_drop": "Storage",
             "common_drop": "Treasure_Hoarder_Insignia"
         }
     },
@@ -1232,6 +1241,15 @@
             "common_drop": "Treasure_Hoarder_Insignia"
         }
     },
+    "Wandering Evenstar": {
+        "type": "catalyst",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Oasis",
+            "rare_drop": "Fungal_Nucleus",
+            "common_drop": "Spores"
+        }
+    },
     "Waster Greatsword": {
         "type": "claymore",
         "rarity": 1,
@@ -1302,6 +1320,15 @@
             "domain_drop": "Shackle",
             "rare_drop": "Chaos",
             "common_drop": "Scroll"
+        }
+    },
+    "Xiphos' Moonlight": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Dew",
+            "rare_drop": "Prism",
+            "common_drop": "Red"
         }
     }
 }

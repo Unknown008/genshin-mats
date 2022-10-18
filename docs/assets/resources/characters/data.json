@@ -1453,5 +1453,22 @@
             }
         },
         "weapon": "spear"
+    },
+    "Nilou": {
+        "element": "hydro",
+        "ascension": {
+            "element": "hydro",
+            "local_specialty": "Padisarah",
+            "common_drop": "Spores",
+            "boss_drop": "Perpetual_Caliber"
+        },
+        "talent": {
+            "all": {
+                "book": "Praxis",
+                "common_drop": "Spores",
+                "boss_drop": "Tears_of_the_Calamitous_God"
+            }
+        },
+        "weapon": "sword"
     }
 }
