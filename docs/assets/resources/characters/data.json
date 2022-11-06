@@ -1470,5 +1470,73 @@
             }
         },
         "weapon": "sword"
+    },
+    "Nahida": {
+        "element": "dendro",
+        "ascension": {
+            "element": "dendro",
+            "local_specialty": "Kalpalata_Lotus",
+            "common_drop": "Spores",
+            "boss_drop": "Quelled_Creeper"
+        },
+        "talent": {
+            "all": {
+                "book": "Ingenuity",
+                "common_drop": "Spores",
+                "boss_drop": "Puppet_Strings"
+            }
+        },
+        "weapon": "catalyst"
+    },
+    "Layla": {
+        "element": "cryo",
+        "ascension": {
+            "element": "cryo",
+            "local_specialty": null,
+            "common_drop": null,
+            "boss_drop": null
+        },
+        "talent": {
+            "all": {
+                "book": null,
+                "common_drop": null,
+                "boss_drop": null
+            }
+        },
+        "weapon": "catalyst"
+    },
+    "Wanderer": {
+        "element": "anemo",
+        "ascension": {
+            "element": "anemo",
+            "local_specialty": null,
+            "common_drop": null,
+            "boss_drop": null
+        },
+        "talent": {
+            "all": {
+                "book": null,
+                "common_drop": null,
+                "boss_drop": null
+            }
+        },
+        "weapon": null
+    },
+    "Faruzan": {
+        "element": "anemo",
+        "ascension": {
+            "element": "anemo",
+            "local_specialty": null,
+            "common_drop": null,
+            "boss_drop": null
+        },
+        "talent": {
+            "all": {
+                "book": null,
+                "common_drop": null,
+                "boss_drop": null
+            }
+        },
+        "weapon": null
     }
 }
