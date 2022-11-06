@@ -900,7 +900,7 @@ export class MatTableComponent implements OnChanges {
                 )),
                 "Mora": (rowData["Exp Mora"].length == 0 && rowData["Ascension Mora"].length == 0 && rowData["Talent Mora"].length == 0) ? [] : [{
                     name: "Mora",
-                    path: "./../../../assets/resources/items/Mora.png",
+                    path: this.path + "items/Mora.png",
                     qty: (rowData["Exp Mora"].length == 0 ? 0 : rowData["Exp Mora"][0].qty) + 
                         (rowData["Ascension Mora"].length == 0 ? 0 : 
                             rowData["Ascension Mora"][0].qty) + 
@@ -924,7 +924,7 @@ export class MatTableComponent implements OnChanges {
                 this.totalsData[0]["Mora"] = 
                     (rowData["Exp Mora"].length == 0 && rowData["Ascension Mora"].length == 0 && rowData["Talent Mora"].length == 0) ? [] : [{
                         name: "Mora",
-                        path: "./../../../assets/resources/items/Mora.png",
+                        path: this.path + "items/Mora.png",
                         qty: (rowData["Exp Mora"].length == 0 ? 0 : rowData["Exp Mora"][0].qty) + 
                             (rowData["Ascension Mora"].length == 0 ? 0 : 
                                 rowData["Ascension Mora"][0].qty) + 
