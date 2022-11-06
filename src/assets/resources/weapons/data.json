@@ -1,4 +1,13 @@
 {
+    "A Thousand Floating Dreams": {
+        "type": "catalyst",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Oasis",
+            "rare_drop": "Diamond",
+            "common_drop": "Spores"
+        }
+    },
     "Akuoumaru": {
         "type": "claymore",
         "rarity": 4,

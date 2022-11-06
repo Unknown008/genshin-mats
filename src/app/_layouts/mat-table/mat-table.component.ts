@@ -899,8 +899,8 @@ export class MatTableComponent implements OnChanges {
                     rowData["Talent"].filter((i: any) => i.type == "item-limited")
                 )),
                 "Mora": (rowData["Exp Mora"].length == 0 && rowData["Ascension Mora"].length == 0 && rowData["Talent Mora"].length == 0) ? [] : [{
-                    name: rowData["Exp Mora"][0].name,
-                    path: rowData["Exp Mora"][0].path,
+                    name: "Mora",
+                    path: "./../../../assets/resources/items/Mora.png",
                     qty: (rowData["Exp Mora"].length == 0 ? 0 : rowData["Exp Mora"][0].qty) + 
                         (rowData["Ascension Mora"].length == 0 ? 0 : 
                             rowData["Ascension Mora"][0].qty) + 
@@ -920,16 +920,28 @@ export class MatTableComponent implements OnChanges {
             }
             this.totalsData[0]["Exp"] = expList;
 
-            this.totalsData[0]["Mora"] = this.totalsData[0]["Mora"].map(d => ({
-                name: d.name,
-                path: d.path,
-                qty: d.qty + 
-                    (rowData["Exp Mora"].length == 0 ? 0 : rowData["Exp Mora"][0].qty) + 
-                    (rowData["Ascension Mora"].length == 0 ? 0 : 
-                        rowData["Ascension Mora"][0].qty) + 
-                    (rowData["Talent Mora"].length == 0 ? 0 : 
-                        rowData["Talent Mora"][0].qty)
-            }));
+            if (this.totalsData[0]["Mora"].length == 0)
+                this.totalsData[0]["Mora"] = 
+                    (rowData["Exp Mora"].length == 0 && rowData["Ascension Mora"].length == 0 && rowData["Talent Mora"].length == 0) ? [] : [{
+                        name: "Mora",
+                        path: "./../../../assets/resources/items/Mora.png",
+                        qty: (rowData["Exp Mora"].length == 0 ? 0 : rowData["Exp Mora"][0].qty) + 
+                            (rowData["Ascension Mora"].length == 0 ? 0 : 
+                                rowData["Ascension Mora"][0].qty) + 
+                            (rowData["Talent Mora"].length == 0 ? 0 : 
+                                rowData["Talent Mora"][0].qty)
+                    }]
+            else
+                this.totalsData[0]["Mora"] = this.totalsData[0]["Mora"].map(d => ({
+                    name: d.name,
+                    path: d.path,
+                    qty: d.qty + 
+                        (rowData["Exp Mora"].length == 0 ? 0 : rowData["Exp Mora"][0].qty) + 
+                        (rowData["Ascension Mora"].length == 0 ? 0 : 
+                            rowData["Ascension Mora"][0].qty) + 
+                        (rowData["Talent Mora"].length == 0 ? 0 : 
+                            rowData["Talent Mora"][0].qty)
+                }));
         
             let gemList = this.totalsData[0]["Gems"];
             for (let gem of rowData["Ascension"].filter((e: any) => e.type == "item-gem")) {
