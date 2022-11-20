@@ -1492,15 +1492,15 @@
         "element": "cryo",
         "ascension": {
             "element": "cryo",
-            "local_specialty": null,
-            "common_drop": null,
-            "boss_drop": null
+            "local_specialty": "Nilotpala_Lotus",
+            "common_drop": "Scroll",
+            "boss_drop": "Perpetual_Caliber"
         },
         "talent": {
             "all": {
-                "book": null,
-                "common_drop": null,
-                "boss_drop": null
+                "book": "Ingenuity",
+                "common_drop": "Scroll",
+                "boss_drop": "Mirror_of_Mushin"
             }
         },
         "weapon": "catalyst"
