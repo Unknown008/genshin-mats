@@ -1509,34 +1509,34 @@
         "element": "anemo",
         "ascension": {
             "element": "anemo",
-            "local_specialty": null,
-            "common_drop": null,
-            "boss_drop": null
+            "local_specialty": "Redcrest",
+            "common_drop": "Red",
+            "boss_drop": "Light_Guiding_Tetrahedron"
         },
         "talent": {
             "all": {
-                "book": null,
-                "common_drop": null,
-                "boss_drop": null
+                "book": "Admonition",
+                "common_drop": "Red",
+                "boss_drop": "Puppet_Strings"
             }
         },
-        "weapon": null
+        "weapon": "bow"
     },
     "Faruzan": {
         "element": "anemo",
         "ascension": {
             "element": "anemo",
-            "local_specialty": null,
-            "common_drop": null,
-            "boss_drop": null
+            "local_specialty": "Rukkhashava_Mushrooms",
+            "common_drop": "Handguard",
+            "boss_drop": "Perpetual_Caliber"
         },
         "talent": {
             "all": {
-                "book": null,
-                "common_drop": null,
-                "boss_drop": null
+                "book": "Praxis",
+                "common_drop": "Handguard",
+                "boss_drop": "Daka's_Bell"
             }
         },
-        "weapon": null
+        "weapon": "catalyst"
     }
 }
