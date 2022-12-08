@@ -964,7 +964,7 @@
     },
     "Sharpshooter's Oath": {
         "type": "bow",
-        "rarity": 4,
+        "rarity": 3,
         "ascension": {
             "domain_drop": "Fang",
             "rare_drop": "Branch",
@@ -1223,6 +1223,15 @@
             "common_drop": "Arrowhead"
         }
     },
+    "Toukabou Shigure": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Magatama",
+            "rare_drop": "Diamond",
+            "common_drop": "Shackle"
+        }
+    },
     "Traveler's Handy Sword": {
         "type": "sword",
         "rarity": 3,
@@ -1230,6 +1239,15 @@
             "domain_drop": "Shackle",
             "rare_drop": "Chaos",
             "common_drop": "Scroll"
+        }
+    },
+    "Tulaytullah's Remembrance": {
+        "type": "catalyst",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Might",
+            "rare_drop": "Fungal_Nucleus",
+            "common_drop": "Spores"
         }
     },
     "Twin Nephrite": {
