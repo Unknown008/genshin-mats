@@ -566,6 +566,15 @@
             "common_drop": "Treasure_Hoarder_Insignia"
         }
     },
+    "Light of Foliar Incision": {
+        "type": "sword",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Talisman",
+            "rare_drop": "Shell",
+            "common_drop": "Red"
+        }
+    },
     "Lion's Roar": {
         "type": "sword",
         "rarity": 4,

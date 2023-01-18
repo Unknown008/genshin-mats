@@ -125,6 +125,11 @@
             "green": "Damaged_Prism",
             "blue": "Turbid_Prism",
             "purple": "Radiant_Prism"
+        },
+        "Shell": {
+            "green": "Desiccated_Shell",
+            "blue": "Sturdy_Shell",
+            "purple": "Marked_Shell"
         }
     },
     "exp": {
