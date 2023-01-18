@@ -1520,7 +1520,7 @@
                 "boss_drop": "Puppet_Strings"
             }
         },
-        "weapon": "bow"
+        "weapon": "catalyst"
     },
     "Faruzan": {
         "element": "anemo",
@@ -1537,6 +1537,40 @@
                 "boss_drop": "Daka's_Bell"
             }
         },
-        "weapon": "catalyst"
+        "weapon": "bow"
+    },
+    "Alhaitham": {
+        "element": "dendro",
+        "ascension": {
+            "element": "dendro",
+            "local_specialty": "Sand_Grease_Pupa",
+            "common_drop": "Red",
+            "boss_drop": "Pseudo-Stamens"
+        },
+        "talent": {
+            "all": {
+                "book": "Ingenuity",
+                "common_drop": "Red",
+                "boss_drop": "Mirror_of_Mushin"
+            }
+        },
+        "weapon": "sword"
+    },
+    "Yaoyao": {
+        "element": "dendro",
+        "ascension": {
+            "element": "dendro",
+            "local_specialty": "Jueyun_Chili",
+            "common_drop": "Slime",
+            "boss_drop": "Quelled_Creeper"
+        },
+        "talent": {
+            "all": {
+                "book": "Diligence",
+                "common_drop": "Slime",
+                "boss_drop": "Daka's_Bell"
+            }
+        },
+        "weapon": "spear"
     }
 }
