@@ -1572,5 +1572,39 @@
             }
         },
         "weapon": "spear"
+    },
+    "Dehya": {
+        "element": "pyro",
+        "ascension": {
+            "element": "pyro",
+            "local_specialty": "Sand_Grease_Pupa",
+            "common_drop": "Red",
+            "boss_drop": "Light_Guiding_Tetrahedron"
+        },
+        "talent": {
+            "all": {
+                "book": "Praxis",
+                "common_drop": "Red",
+                "boss_drop": "Puppet_Strings"
+            }
+        },
+        "weapon": "claymore"
+    },
+    "Mika": {
+        "element": "cryo",
+        "ascension": {
+            "element": "cryo",
+            "local_specialty": "Wolfhook",
+            "common_drop": "Fatui_Insignia",
+            "boss_drop": "Pseudo-Stamens"
+        },
+        "talent": {
+            "all": {
+                "book": "Ballad",
+                "common_drop": "Fatui_Insignia",
+                "boss_drop": "Mirror_of_Mushin"
+            }
+        },
+        "weapon": "spear"
     }
 }
