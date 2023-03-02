@@ -80,6 +80,15 @@
             "common_drop": "Arrowhead"
         }
     },
+    "Beacon of the Reed Sea": {
+        "type": "claymore",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Might",
+            "rare_drop": "Shell",
+            "common_drop": "Red"
+        }
+    },
     "Beginner's Protector": {
         "type": "spear",
         "rarity": 1,
