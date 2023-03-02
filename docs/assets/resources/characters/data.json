@@ -1572,5 +1572,22 @@
             }
         },
         "weapon": "spear"
+    },
+    "Dehya": {
+        "element": "pyro",
+        "ascension": {
+            "element": "pyro",
+            "local_specialty": "Sand_Grease_Pupa",
+            "common_drop": "Red",
+            "boss_drop": "Light_Guiding_Tetrahedron"
+        },
+        "talent": {
+            "all": {
+                "book": "Praxis",
+                "common_drop": "Red",
+                "boss_drop": "Puppet_Strings"
+            }
+        },
+        "weapon": "claymore"
     }
 }
