@@ -638,6 +638,15 @@
             "common_drop": "Slime"
         }
     },
+    "Mailed Flower": {
+        "type": "claymore",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Shackle",
+            "rare_drop": "Shell",
+            "common_drop": "Specter"
+        }
+    },
     "Makhaira Aquamarine": {
         "type": "claymore",
         "rarity": 4,
