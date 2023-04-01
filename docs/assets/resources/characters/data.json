@@ -1526,7 +1526,7 @@
         "element": "anemo",
         "ascension": {
             "element": "anemo",
-            "local_specialty": "Rukkhashava_Mushrooms",
+            "local_specialty": "Redcrest",
             "common_drop": "Handguard",
             "boss_drop": "Perpetual_Caliber"
         },
@@ -1589,5 +1589,56 @@
             }
         },
         "weapon": "claymore"
+    },
+    "Mika": {
+        "element": "cryo",
+        "ascension": {
+            "element": "cryo",
+            "local_specialty": "Wolfhook",
+            "common_drop": "Fatui_Insignia",
+            "boss_drop": "Pseudo-Stamens"
+        },
+        "talent": {
+            "all": {
+                "book": "Ballad",
+                "common_drop": "Fatui_Insignia",
+                "boss_drop": "Mirror_of_Mushin"
+            }
+        },
+        "weapon": "spear"
+    },
+    "Kaveh": {
+        "element": "dendro",
+        "ascension": {
+            "element": "dendro",
+            "local_specialty": null,
+            "common_drop": null,
+            "boss_drop": null
+        },
+        "talent": {
+            "all": {
+                "book": null,
+                "common_drop": null,
+                "boss_drop": null
+            }
+        },
+        "weapon": "claymore"
+    },
+    "Baizhu": {
+        "element": "dendro",
+        "ascension": {
+            "element": "dendro",
+            "local_specialty": null,
+            "common_drop": null,
+            "boss_drop": null
+        },
+        "talent": {
+            "all": {
+                "book": null,
+                "common_drop": null,
+                "boss_drop": null
+            }
+        },
+        "weapon": "catalyst"
     }
 }
