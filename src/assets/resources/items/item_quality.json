@@ -130,6 +130,11 @@
             "green": "Desiccated_Shell",
             "blue": "Sturdy_Shell",
             "purple": "Marked_Shell"
+        },
+        "Flower": {
+            "green": "A_Flower_Yet_to_Bloom",
+            "blue": "Treasured_Flower",
+            "purple": "Wanderer's_Blooming_Flower"
         }
     },
     "exp": {
