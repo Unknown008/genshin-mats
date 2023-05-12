@@ -521,6 +521,15 @@
             "common_drop": "Nectar"
         }
     },
+    "Jadefall's Splendor": {
+        "type": "catalyst",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Guyun",
+            "rare_drop": "Flower",
+            "common_drop": "Spores"
+        }
+    },
     "Kagotsurube Isshin": {
         "type": "sword",
         "rarity": 4,

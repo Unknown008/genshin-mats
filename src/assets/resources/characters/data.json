@@ -1611,20 +1611,37 @@
         "element": "dendro",
         "ascension": {
             "element": "dendro",
-            "local_specialty": null,
-            "common_drop": null,
-            "boss_drop": null
+            "local_specialty": "Mourning_Flower",
+            "common_drop": "Spores",
+            "boss_drop": "Quelled_Creeper"
         },
         "talent": {
             "all": {
-                "book": null,
-                "common_drop": null,
-                "boss_drop": null
+                "book": "Ingenuity",
+                "common_drop": "Spores",
+                "boss_drop": "Primordial_Greenbloom"
             }
         },
         "weapon": "claymore"
     },
     "Baizhu": {
+        "element": "dendro",
+        "ascension": {
+            "element": "dendro",
+            "local_specialty": "Violetgrass",
+            "common_drop": "Spores",
+            "boss_drop": "Evergloom_Ring"
+        },
+        "talent": {
+            "all": {
+                "book": "Gold",
+                "common_drop": "Spores",
+                "boss_drop": "Worldspan_Fern"
+            }
+        },
+        "weapon": "catalyst"
+    },
+    "Kirara": {
         "element": "dendro",
         "ascension": {
             "element": "dendro",
@@ -1639,6 +1656,6 @@
                 "boss_drop": null
             }
         },
-        "weapon": "catalyst"
+        "weapon": null
     }
 }
