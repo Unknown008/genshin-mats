@@ -503,6 +503,15 @@
             "common_drop": "Red"
         }
     },
+    "Ibis Pierce": {
+        "type": "bow",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Talisman",
+            "rare_drop": "Flower",
+            "common_drop": "Red"
+        }
+    },
     "Iron Point": {
         "type": "spear",
         "rarity": 2,

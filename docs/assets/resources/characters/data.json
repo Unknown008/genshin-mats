@@ -1645,17 +1645,17 @@
         "element": "dendro",
         "ascension": {
             "element": "dendro",
-            "local_specialty": null,
-            "common_drop": null,
-            "boss_drop": null
+            "local_specialty": "Amakumo_Fruit",
+            "common_drop": "Spectral",
+            "boss_drop": "Evergloom_Ring"
         },
         "talent": {
             "all": {
-                "book": null,
-                "common_drop": null,
-                "boss_drop": null
+                "book": "Transience",
+                "common_drop": "Spectral",
+                "boss_drop": "Everamber"
             }
         },
-        "weapon": null
+        "weapon": "Sword"
     }
 }
