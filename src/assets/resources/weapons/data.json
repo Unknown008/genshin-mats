@@ -80,6 +80,15 @@
             "common_drop": "Arrowhead"
         }
     },
+    "Ballad of the Fjords": {
+        "type": "spear",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Goblet",
+            "rare_drop": "Flower",
+            "common_drop": "Nectar"
+        }
+    },
     "Beacon of the Reed Sea": {
         "type": "claymore",
         "rarity": 5,
@@ -402,6 +411,33 @@
             "domain_drop": "Dango",
             "rare_drop": "Mist_Grass",
             "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
+    "Finale of the Deep": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Dewdrop",
+            "rare_drop": "Water",
+            "common_drop": "Handguard"
+        }
+    },
+    "Fleuve Cendre Ferryman": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Chord",
+            "rare_drop": "Water",
+            "common_drop": "Transoceanic"
+        }
+    },
+    "Flowing Purity": {
+        "type": "catalyst",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Dewdrop",
+            "rare_drop": "Alien",
+            "common_drop": "Transoceanic"
         }
     },
     "Forest Regalia": {
@@ -899,6 +935,15 @@
             "common_drop": "Handguard"
         }
     },
+    "Rightful Reward": {
+        "type": "spear",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Goblet",
+            "rare_drop": "Alien",
+            "common_drop": "Gear"
+        }
+    },
     "Royal Bow": {
         "type": "bow",
         "rarity": 4,
@@ -980,6 +1025,15 @@
             "common_drop": "Arrowhead"
         }
     },
+    "Sacrificial Jade": {
+        "type": "catalyst",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Guyun",
+            "rare_drop": "Mist_Grass",
+            "common_drop": "Scroll"
+        }
+    },
     "Sacrificial Sword": {
         "type": "sword",
         "rarity": 4,
@@ -987,6 +1041,15 @@
             "domain_drop": "Shackle",
             "rare_drop": "Chaos",
             "common_drop": "Scroll"
+        }
+    },
+    "Scion of the Blazing Sun": {
+        "type": "bow",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Might",
+            "rare_drop": "Flower",
+            "common_drop": "Spores"
         }
     },
     "Seasoned Hunter's Bow": {
@@ -1124,6 +1187,15 @@
             "common_drop": "Mask"
         }
     },
+    "Song of Stillness": {
+        "type": "bow",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Chord",
+            "rare_drop": "Water",
+            "common_drop": "Arrowhead"
+        }
+    },
     "Staff of Homa": {
         "type": "spear",
         "rarity": 5,
@@ -1169,13 +1241,22 @@
             "common_drop": "Treasure_Hoarder_Insignia"
         }
     },
+    "Talking Stick": {
+        "type": "claymore",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Oasis",
+            "rare_drop": "Shell",
+            "common_drop": "Slime"
+        }
+    },
     "The Alley Flash": {
         "type": "sword",
         "rarity": 4,
         "ascension": {
-            "domain_drop": "",
-            "rare_drop": "",
-            "common_drop": ""
+            "domain_drop": "Decarabian",
+            "rare_drop": "Horn",
+            "common_drop": "Scroll"
         }
     },
     "The Bell": {
@@ -1203,6 +1284,15 @@
             "domain_drop": "Mask",
             "rare_drop": "Axis",
             "common_drop": "Spectral"
+        }
+    },
+    "The First Great Magic": {
+        "type": "bow",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Chord",
+            "rare_drop": "Water",
+            "common_drop": "Transoceanic"
         }
     },
     "The Flute": {
@@ -1266,6 +1356,15 @@
             "domain_drop": "Magatama",
             "rare_drop": "Prism",
             "common_drop": "Arrowhead"
+        }
+    },
+    "Tidal Shadow": {
+        "type": "claymore",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Goblet",
+            "rare_drop": "Alien",
+            "common_drop": "Gear"
         }
     },
     "Toukabou Shigure": {
@@ -1392,6 +1491,15 @@
             "domain_drop": "Shackle",
             "rare_drop": "Chaos",
             "common_drop": "Scroll"
+        }
+    },
+    "Wolf-Fang": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Decarabian",
+            "rare_drop": "Chaos",
+            "common_drop": "Mask"
         }
     },
     "Xiphos' Moonlight": {

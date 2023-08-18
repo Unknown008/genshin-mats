@@ -135,6 +135,26 @@
             "green": "A_Flower_Yet_to_Bloom",
             "blue": "Treasured_Flower",
             "purple": "Wanderer's_Blooming_Flower"
+        },
+        "Alien": {
+            "green": "Rift_Core",
+            "blue": "Foreign_Synapse",
+            "purple": "Alien_Life_Core"
+        },
+        "Gear": {
+            "grey": "Meshing_Gear",
+            "green": "Mechanical_Spur_Gear",
+            "blue": "Artificed_Dynamic_Gear"
+        },
+        "Transoceanic": {
+            "grey": "Transoceanic_Pearl",
+            "green": "Transoceanic_Chunk",
+            "blue": "Xenochromatic_Crystal"
+        },
+        "Water": {
+            "green": "Drop_of_Tainted_Water",
+            "blue": "Scoop_of_Tainted_Water",
+            "purple": "Newborn_Tainted_Hydro_Phantasm"
         }
     },
     "exp": {
@@ -223,6 +243,24 @@
             "blue": "Oasis_Garden's_Kindness",
             "purple": "Oasis_Garden's_Mourning",
             "gold": "Oasis_Garden's_Truth"
+        },
+        "Chord": {
+            "green": "Fragment_of_an_Ancient_Chord",
+            "blue": "Chapter_of_an_Ancient_Chord",
+            "purple": "Movement_of_an_Ancient_Chord",
+            "gold": "Echo_of_an_Ancient_Chord"
+        },
+        "Dewdrop": {
+            "green": "Dross_of_Pure_Sacred_Dewdrop",
+            "blue": "Sublimation_of_Pure_Sacred_Dewdrop",
+            "purple": "Spring_of_Pure_Sacred_Dewdrop",
+            "gold": "Essence_of_Pure_Sacred_Dewdrop"
+        },
+        "Goblet": {
+            "green": "Broken_Goblet_of_the_Pristine_Sea",
+            "blue": "Wine_Goblet_of_the_Pristine_Sea",
+            "purple": "Silver_Goblet_of_the_Pristine_Sea",
+            "gold": "Golden_Goblet_of_the_Pristine_Sea"
         }
     },
     "weapon_exp": {

@@ -547,6 +547,143 @@
         },
         "weapon": "sword"
     },
+    "Traveler (Hydro)": {
+        "element": "hydro",
+        "ascension": {
+            "element": "adaptive",
+            "local_specialty": "Windwheel_Aster",
+            "common_drop": "Mask"
+        },
+        "talent": {
+            "talent1": {
+                "1": {
+                    "book": "Equity",
+                    "common_drop": "Spores"
+                },
+                "2": {
+                    "book": "Justice",
+                    "common_drop": "Spores"
+                },
+                "3": {
+                    "book": "Order",
+                    "common_drop": "Spores"
+                },
+                "4": {
+                    "book": "Equity",
+                    "common_drop": "Spores"
+                },
+                "5": {
+                    "book": "Justice",
+                    "common_drop": "Spores"
+                },
+                "6": {
+                    "book": "Order",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                },
+                "7": {
+                    "book": "Equity",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                },
+                "8": {
+                    "book": "Justice",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                },
+                "9": {
+                    "book": "Order",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                }
+            },
+            "talent2": {
+                "1": {
+                    "book": "Equity",
+                    "common_drop": "Spores"
+                },
+                "2": {
+                    "book": "Justice",
+                    "common_drop": "Spores"
+                },
+                "3": {
+                    "book": "Order",
+                    "common_drop": "Spores"
+                },
+                "4": {
+                    "book": "Equity",
+                    "common_drop": "Spores"
+                },
+                "5": {
+                    "book": "Justice",
+                    "common_drop": "Spores"
+                },
+                "6": {
+                    "book": "Order",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                },
+                "7": {
+                    "book": "Equity",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                },
+                "8": {
+                    "book": "Justice",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                },
+                "9": {
+                    "book": "Order",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                }
+            },
+            "talent3": {
+                "1": {
+                    "book": "Equity",
+                    "common_drop": "Spores"
+                },
+                "2": {
+                    "book": "Justice",
+                    "common_drop": "Spores"
+                },
+                "3": {
+                    "book": "Order",
+                    "common_drop": "Spores"
+                },
+                "4": {
+                    "book": "Equity",
+                    "common_drop": "Spores"
+                },
+                "5": {
+                    "book": "Justice",
+                    "common_drop": "Spores"
+                },
+                "6": {
+                    "book": "Order",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                },
+                "7": {
+                    "book": "Equity",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                },
+                "8": {
+                    "book": "Justice",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                },
+                "9": {
+                    "book": "Order",
+                    "common_drop": "Spores",
+                    "boss_drop": "Mudra_of_the_Malefic_General"
+                }
+            }
+        },
+        "weapon": "sword"
+    },
     "Amber": {
         "element": "pyro",
         "ascension": {
@@ -1653,6 +1790,40 @@
             "all": {
                 "book": "Transience",
                 "common_drop": "Spectral",
+                "boss_drop": "Everamber"
+            }
+        },
+        "weapon": "sword"
+    },
+    "Lyney": {
+        "element": "pyro",
+        "ascension": {
+            "element": "pyro",
+            "local_specialty": "Rainbow_Rose",
+            "common_drop": "Fatui_Insignia",
+            "boss_drop": "Emperor's_Resolution"
+        },
+        "talent": {
+            "all": {
+                "book": "Equity",
+                "common_drop": "Fatui_Insignia",
+                "boss_drop": "Primordial_Greenbloom"
+            }
+        },
+        "weapon": "bow"
+    },
+    "Lynette": {
+        "element": "anemo",
+        "ascension": {
+            "element": "anemo",
+            "local_specialty": "Lumidouce_Bell",
+            "common_drop": "Gear",
+            "boss_drop": "Artificed_Spare_Clockwork_Component_-_Coppelia"
+        },
+        "talent": {
+            "all": {
+                "book": "Order",
+                "common_drop": "Gear",
                 "boss_drop": "Everamber"
             }
         },
