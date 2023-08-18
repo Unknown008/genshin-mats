@@ -30,7 +30,10 @@ export class DropsComponent implements OnInit, OnChanges {
         "Transience": [],
         "Admonition": [],
         "Ingenuity": [],
-        "Praxis": []
+        "Praxis": [],
+        "Equity": [],
+        "Justice": [],
+        "Order": []
     };
     public charPath: string = this.url.getUrl("../../assets/resources/characters/", true);
     public weapons = {
@@ -45,7 +48,10 @@ export class DropsComponent implements OnInit, OnChanges {
         "Mask": [],
         "Talisman": [],
         "Oasis": [],
-        "Might": []
+        "Might": [],
+        "Chord": [],
+        "Dewdrop": [],
+        "Goblet": []
     };
     public charWeapons: any;
     public weapPath: string = this.url.getUrl("../../assets/resources/items/", true);
@@ -243,7 +249,10 @@ export class DropsComponent implements OnInit, OnChanges {
             "Transience": [],
             "Admonition": [],
             "Ingenuity": [],
-            "Praxis": []
+            "Praxis": [],
+            "Equity": [],
+            "Justice": [],
+            "Order": []
         };
         this.weapons = {
             "Decarabian": [],
@@ -257,7 +266,10 @@ export class DropsComponent implements OnInit, OnChanges {
             "Mask": [],
             "Talisman": [],
             "Oasis": [],
-            "Might": []
+            "Might": [],
+            "Chord": [],
+            "Dewdrop": [],
+            "Goblet": []
         };
         this.charWeapons = {
             "Decarabian": [],
@@ -271,7 +283,10 @@ export class DropsComponent implements OnInit, OnChanges {
             "Mask": [],
             "Talisman": [],
             "Oasis": [],
-            "Might": []
+            "Might": [],
+            "Chord": [],
+            "Dewdrop": [],
+            "Goblet": []
         };
     }
 }
