@@ -133,9 +133,7 @@
             }
         }
     },
-    "defaultProject": "genshin-mats",
     "cli": {
-        "defaultCollection": "@angular-eslint/schematics",
         "analytics": false
     }
 }
