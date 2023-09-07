@@ -558,127 +558,127 @@
             "talent1": {
                 "1": {
                     "book": "Equity",
-                    "common_drop": "Spores"
+                    "common_drop": "Transoceanic"
                 },
                 "2": {
                     "book": "Justice",
-                    "common_drop": "Spores"
+                    "common_drop": "Transoceanic"
                 },
                 "3": {
                     "book": "Order",
-                    "common_drop": "Spores"
+                    "common_drop": "Transoceanic"
                 },
                 "4": {
                     "book": "Equity",
-                    "common_drop": "Spores"
+                    "common_drop": "Transoceanic"
                 },
                 "5": {
                     "book": "Justice",
-                    "common_drop": "Spores"
+                    "common_drop": "Transoceanic"
                 },
                 "6": {
                     "book": "Order",
-                    "common_drop": "Spores",
-                    "boss_drop": "Mudra_of_the_Malefic_General"
+                    "common_drop": "Transoceanic",
+                    "boss_drop": "Worldspan_Fern"
                 },
                 "7": {
                     "book": "Equity",
-                    "common_drop": "Spores",
-                    "boss_drop": "Mudra_of_the_Malefic_General"
+                    "common_drop": "Transoceanic",
+                    "boss_drop": "Worldspan_Fern"
                 },
                 "8": {
                     "book": "Justice",
-                    "common_drop": "Spores",
-                    "boss_drop": "Mudra_of_the_Malefic_General"
+                    "common_drop": "Transoceanic",
+                    "boss_drop": "Worldspan_Fern"
                 },
                 "9": {
                     "book": "Order",
-                    "common_drop": "Spores",
-                    "boss_drop": "Mudra_of_the_Malefic_General"
+                    "common_drop": "Transoceanic",
+                    "boss_drop": "Worldspan_Fern"
                 }
             },
             "talent2": {
                 "1": {
                     "book": "Equity",
-                    "common_drop": "Spores"
+                    "common_drop": "Transoceanic"
                 },
                 "2": {
                     "book": "Justice",
-                    "common_drop": "Spores"
+                    "common_drop": "Transoceanic"
                 },
                 "3": {
                     "book": "Order",
-                    "common_drop": "Spores"
+                    "common_drop": "Transoceanic"
                 },
                 "4": {
                     "book": "Equity",
-                    "common_drop": "Spores"
+                    "common_drop": "Transoceanic"
                 },
                 "5": {
                     "book": "Justice",
-                    "common_drop": "Spores"
+                    "common_drop": "Transoceanic"
                 },
                 "6": {
                     "book": "Order",
-                    "common_drop": "Spores",
-                    "boss_drop": "Mudra_of_the_Malefic_General"
+                    "common_drop": "Transoceanic",
+                    "boss_drop": "Worldspan_Fern"
                 },
                 "7": {
                     "book": "Equity",
-                    "common_drop": "Spores",
-                    "boss_drop": "Mudra_of_the_Malefic_General"
+                    "common_drop": "Transoceanic",
+                    "boss_drop": "Worldspan_Fern"
                 },
                 "8": {
                     "book": "Justice",
-                    "common_drop": "Spores",
-                    "boss_drop": "Mudra_of_the_Malefic_General"
+                    "common_drop": "Transoceanic",
+                    "boss_drop": "Worldspan_Fern"
                 },
                 "9": {
                     "book": "Order",
-                    "common_drop": "Spores",
-                    "boss_drop": "Mudra_of_the_Malefic_General"
+                    "common_drop": "Transoceanic",
+                    "boss_drop": "Worldspan_Fern"
                 }
             },
             "talent3": {
                 "1": {
                     "book": "Equity",
-                    "common_drop": "Spores"
+                    "common_drop": "Transoceanic"
                 },
                 "2": {
                     "book": "Justice",
-                    "common_drop": "Spores"
+                    "common_drop": "Transoceanic"
                 },
                 "3": {
                     "book": "Order",
-                    "common_drop": "Spores"
+                    "common_drop": "Transoceanic"
                 },
                 "4": {
                     "book": "Equity",
-                    "common_drop": "Spores"
+                    "common_drop": "Transoceanic"
                 },
                 "5": {
                     "book": "Justice",
-                    "common_drop": "Spores"
+                    "common_drop": "Transoceanic"
                 },
                 "6": {
                     "book": "Order",
-                    "common_drop": "Spores",
-                    "boss_drop": "Mudra_of_the_Malefic_General"
+                    "common_drop": "Transoceanic",
+                    "boss_drop": "Worldspan_Fern"
                 },
                 "7": {
                     "book": "Equity",
-                    "common_drop": "Spores",
-                    "boss_drop": "Mudra_of_the_Malefic_General"
+                    "common_drop": "Transoceanic",
+                    "boss_drop": "Worldspan_Fern"
                 },
                 "8": {
                     "book": "Justice",
-                    "common_drop": "Spores",
-                    "boss_drop": "Mudra_of_the_Malefic_General"
+                    "common_drop": "Transoceanic",
+                    "boss_drop": "Worldspan_Fern"
                 },
                 "9": {
                     "book": "Order",
-                    "common_drop": "Spores",
-                    "boss_drop": "Mudra_of_the_Malefic_General"
+                    "common_drop": "Transoceanic",
+                    "boss_drop": "Worldspan_Fern"
                 }
             }
         },
@@ -1828,5 +1828,22 @@
             }
         },
         "weapon": "sword"
+    },
+    "Freminet": {
+        "element": "cryo",
+        "ascension": {
+            "element": "cryo",
+            "local_specialty": "Romaritime_Flower",
+            "common_drop": "Transoceanic",
+            "boss_drop": "Artificed_Spare_Clockwork_Component_-_Coppelius"
+        },
+        "talent": {
+            "all": {
+                "book": "Justice",
+                "common_drop": "Transoceanic",
+                "boss_drop": "Worldspan_Fern"
+            }
+        },
+        "weapon": "claymore"
     }
 }
