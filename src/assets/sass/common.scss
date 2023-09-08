@@ -167,3 +167,12 @@ app-loader {
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
 }
+
+.list-group-item {
+    border: none;
+}
+
+.table {
+    --bs-table-color: none;
+    --bs-table-bg: none;
+}
