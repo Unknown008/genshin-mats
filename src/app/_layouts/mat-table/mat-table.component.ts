@@ -414,9 +414,9 @@ export class MatTableComponent implements OnChanges {
             mats.cost = data.cost == null ? data.cost : mats.cost + data.cost;
             if (data.book != null) {
                 let bookName = this.itemQualityData.talent[data.book.quality];
-                let tag = "";
+                let tag = null;
                 if (charTalent.hasOwnProperty("talent" + talentNo.toString()))
-                    tag = charTalent["talent" + talentNo.toString()][i].book;
+                    tag = charTalent["talent" + talentNo.toString()].book;
                 else
                     tag = charTalent.all.book;
                 
@@ -439,9 +439,12 @@ export class MatTableComponent implements OnChanges {
                         });
                     else
                         mats.book[bookId].qty += data.book.quantity;
-
                 } else {
-                    bookName += tag;
+                    if (typeof tag === "string" || tag instanceof String)
+                        bookName += tag;
+                    else
+                        bookName += tag[(i - 1) % 3];
+
                     let bookId = mats.book.findIndex((b: any) => 
                         b.name == bookName.replace(/_/g, " ")
                     );
@@ -463,7 +466,7 @@ export class MatTableComponent implements OnChanges {
                     
                 if (charTalent.hasOwnProperty("talent" + talentNo.toString()))
                     commonDropType = 
-                        charTalent["talent" + talentNo.toString()][i].common_drop;
+                        charTalent["talent" + talentNo.toString()].common_drop;
                 else
                     commonDropType = charTalent.all.common_drop;
                 
@@ -512,7 +515,7 @@ export class MatTableComponent implements OnChanges {
                 let bossDropName = "";
                 if (charTalent.hasOwnProperty("talent" + talentNo.toString()))
                     bossDropName = 
-                        charTalent["talent" + talentNo.toString()][i].boss_drop;
+                        charTalent["talent" + talentNo.toString()].boss_drop;
                 else
                     bossDropName = charTalent.all.boss_drop;
 
