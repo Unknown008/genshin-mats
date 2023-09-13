@@ -166,6 +166,7 @@ export class HomeComponent implements OnInit {
         }
 
         this.filteredCharacters = JSON.parse(JSON.stringify(this.allCharacters));
+        this.charFilter = ""; 
         this.loading = false;
     }
 
@@ -220,6 +221,7 @@ export class HomeComponent implements OnInit {
      */
     showCharacter(name: string) {
         this.allFilteredPickCharacters = [];
+        this.pickCharFilter = "";
         this.oldCharacter = name;
         for (let char of this.allCharacters) {
             if (
@@ -257,6 +259,7 @@ export class HomeComponent implements OnInit {
         let weaponType = this.charData[name].weapon;
         this.allWeapons = [];
         this.filteredWeapons = [];
+        this.weaponFilter = "";
         this.weaponCharacter = name;
         for (let char of this.characters) {
             if (char.name == name) {

@@ -140,23 +140,38 @@ export class DropsComponent implements OnInit, OnChanges {
             if (char.name.includes("Traveler")) {
                 let talents = this.charData[char.name].talent;
                 let books = [];
+                let bookPool = [];
                 if (char.tbalevel - char.balevel > 0) {
+                    if (talents.hasOwnProperty("all"))
+                        bookPool = talents.all.book;
+                    else
+                        bookPool = talents.talent1.book;
+
                     for (let i = char.balevel; i < char.tbalevel; i++) {
-                        if (books.indexOf(talents.talent1[i].book) == -1) {
-                            books.push(talents.talent1[i].book);
-                        }
+                        if (books.indexOf(bookPool[(i - 1) % 3]) == -1)
+                            books.push(bookPool[(i - 1) % 3]);
                     }
                 }
                 if (char.teslevel - char.eslevel > 0) {
+                    if (talents.hasOwnProperty("all"))
+                        bookPool = talents.all.book;
+                    else
+                        bookPool = talents.talent2.book;
+                    
                     for (let i = char.eslevel; i < char.teslevel; i++) {
-                        if (books.indexOf(talents.talent2[i].book) == -1)
-                            books.push(talents.talent2[i].book);
+                        if (books.indexOf(bookPool[(i - 1) % 3]) == -1)
+                            books.push(bookPool[(i - 1) % 3]);
                     }
                 }
                 if (char.teblevel - char.eblevel > 0) {
+                    if (talents.hasOwnProperty("all"))
+                        bookPool = talents.all.book;
+                    else
+                        bookPool = talents.talent3.book;
+                    
                     for (let i = char.eblevel; i < char.teblevel; i++) {
-                        if (books.indexOf(talents.talent3[i].book) == -1)
-                            books.push(talents.talent3[i].book);
+                        if (books.indexOf(bookPool[(i - 1) % 3]) == -1)
+                            books.push(bookPool[(i - 1) % 3]);
                     }
                 }
                 for (let book of books) {
