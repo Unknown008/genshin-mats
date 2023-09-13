@@ -39,7 +39,7 @@ export class CharacterComponent implements OnInit {
     }
 
     /**
-     * Displays list of selectble weapons
+     * Displays list of selectable weapons
      */
     chooseCharacter() {
         this.setCharacter.emit(this.character.name);
