@@ -50,7 +50,7 @@
         },
         "talent": {
             "all": {
-                "book": ["Transience", "Diligence", "Light"],
+                "book": ["Transience", "Elegance", "Light"],
                 "common_drop": "Handguard",
                 "boss_drop": "Dragon_Lord's_Crown"
             }
