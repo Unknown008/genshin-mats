@@ -1250,5 +1250,22 @@
             }
         },
         "weapon": "claymore"
+    },
+    "Neuvillette": {
+        "element": "hydro",
+        "ascension": {
+            "element": "hydro",
+            "local_specialty": "Lumitoile",
+            "common_drop": "Transoceanic",
+            "boss_drop": "Fontemer Unihorn"
+        },
+        "talent": {
+            "all": {
+                "book": "Equity",
+                "common_drop": "Transoceanic",
+                "boss_drop": "Everamber"
+            }
+        },
+        "weapon": "catalyst"
     }
 }

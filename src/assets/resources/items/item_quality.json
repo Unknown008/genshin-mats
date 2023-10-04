@@ -155,6 +155,11 @@
             "green": "Drop_of_Tainted_Water",
             "blue": "Scoop_of_Tainted_Water",
             "purple": "Newborn_Tainted_Hydro_Phantasm"
+        },
+        "Operative": {
+            "green": "Old_Operative's_Pocket_Watch",
+            "blue": "Operative's_Standard_Pocket_Watch",
+            "purple": "Operative's_ConstancyW"
         }
     },
     "exp": {

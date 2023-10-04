@@ -80,6 +80,15 @@
             "common_drop": "Arrowhead"
         }
     },
+    "Ballad of the Boundless Blue": {
+        "type": "catalyst",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Fang",
+            "rare_drop": "Bone",
+            "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
     "Ballad of the Fjords": {
         "type": "spear",
         "rarity": 4,
@@ -177,6 +186,15 @@
             "domain_drop": "Dango",
             "rare_drop": "Mist_Grass",
             "common_drop": "Nectar"
+        }
+    },
+    "Cashflow Supervision": {
+        "type": "catalyst",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": null,
+            "rare_drop": null,
+            "common_drop": null
         }
     },
     "Cinnabar Spindle": {
@@ -827,6 +845,15 @@
             "common_drop": "Spectral"
         }
     },
+    "Portable Power Saw": {
+        "type": "claymore",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Goblet",
+            "rare_drop": "Alien",
+            "common_drop": "Gear"
+        }
+    },
     "Primordial Jade Cutter": {
         "type": "sword",
         "rarity": 5,
@@ -843,6 +870,15 @@
             "domain_drop": "Guyun",
             "rare_drop": "Knife",
             "common_drop": "Fatui_Insignia"
+        }
+    },
+    "Prospector's Drill": {
+        "type": "spear",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": null,
+            "rare_drop": null,
+            "common_drop": null
         }
     },
     "Prototype Amber": {
@@ -906,6 +942,15 @@
             "domain_drop": "Dango",
             "rare_drop": "Mist_Grass",
             "common_drop": "Scroll"
+        }
+    },
+    "Range Gauge": {
+        "type": "bow",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": null,
+            "rare_drop": null,
+            "common_drop": null
         }
     },
     "Raven Bow": {
@@ -1286,6 +1331,15 @@
             "common_drop": "Spectral"
         }
     },
+    "The Dockhand's Assistant": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Dewdrop",
+            "rare_drop": "Operative",
+            "common_drop": "Transoceanic"
+        }
+    },
     "The First Great Magic": {
         "type": "bow",
         "rarity": 5,
@@ -1363,6 +1417,15 @@
         "rarity": 4,
         "ascension": {
             "domain_drop": "Goblet",
+            "rare_drop": "Alien",
+            "common_drop": "Gear"
+        }
+    },
+    "Tome of the Eternal Flow": {
+        "type": "catalyst",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Dewdrop",
             "rare_drop": "Alien",
             "common_drop": "Gear"
         }
