@@ -1267,5 +1267,22 @@
             }
         },
         "weapon": "catalyst"
+    },
+    "Wriothesley": {
+        "element": "cryo",
+        "ascension": {
+            "element": "cryo",
+            "local_specialty": "Subdetection_Unit",
+            "common_drop": "Gear",
+            "boss_drop": "Tourbillon_Decive"
+        },
+        "talent": {
+            "all": {
+                "book": "Order",
+                "common_drop": "Gear",
+                "boss_drop": "Primordial_Greenbloom"
+            }
+        },
+        "weapon": "catalyst"
     }
 }

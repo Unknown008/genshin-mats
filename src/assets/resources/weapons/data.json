@@ -192,9 +192,9 @@
         "type": "catalyst",
         "rarity": 5,
         "ascension": {
-            "domain_drop": null,
-            "rare_drop": null,
-            "common_drop": null
+            "domain_drop": "Goblet",
+            "rare_drop": "Operative",
+            "common_drop": "Transoceanic"
         }
     },
     "Cinnabar Spindle": {
@@ -876,9 +876,9 @@
         "type": "spear",
         "rarity": 4,
         "ascension": {
-            "domain_drop": null,
-            "rare_drop": null,
-            "common_drop": null
+            "domain_drop": "Chord",
+            "rare_drop": "Operative",
+            "common_drop": "Gear"
         }
     },
     "Prototype Amber": {
@@ -948,9 +948,9 @@
         "type": "bow",
         "rarity": 4,
         "ascension": {
-            "domain_drop": null,
-            "rare_drop": null,
-            "common_drop": null
+            "domain_drop": "Chord",
+            "rare_drop": "Alien",
+            "common_drop": "Transoceanic"
         }
     },
     "Raven Bow": {
