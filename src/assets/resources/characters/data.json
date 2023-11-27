@@ -1274,7 +1274,7 @@
             "element": "cryo",
             "local_specialty": "Subdetection_Unit",
             "common_drop": "Gear",
-            "boss_drop": "Tourbillon_Decive"
+            "boss_drop": "Tourbillon_Device"
         },
         "talent": {
             "all": {
@@ -1284,5 +1284,39 @@
             }
         },
         "weapon": "catalyst"
+    },
+    "Charlotte": {
+        "element": "cryo",
+        "ascension": {
+            "element": "cryo",
+            "local_specialty": "Beryl_Conch",
+            "common_drop": "Gear",
+            "boss_drop": "Tourbillon_Device"
+        },
+        "talent": {
+            "all": {
+                "book": "Justice",
+                "common_drop": "Gear",
+                "boss_drop": "Lightless_Silk_String"
+            }
+        },
+        "weapon": "catalyst"
+    },
+    "Furina": {
+        "element": "hydro",
+        "ascension": {
+            "element": "hydro",
+            "local_specialty": "Lakelight_Lily",
+            "common_drop": "Nectar",
+            "boss_drop": "Water_That_Failed_To_Transcend"
+        },
+        "talent": {
+            "all": {
+                "book": "Justice",
+                "common_drop": "Nectar",
+                "boss_drop": "Lightless_Mass"
+            }
+        },
+        "weapon": "sword"
     }
 }
