@@ -1088,6 +1088,15 @@
             "common_drop": "Scroll"
         }
     },
+    "Sapwood Blade": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Talisman",
+            "rare_drop": "Fungal_Nucleus",
+            "common_drop": "Red"
+        }
+    },
     "Scion of the Blazing Sun": {
         "type": "bow",
         "rarity": 4,
@@ -1241,6 +1250,15 @@
             "common_drop": "Arrowhead"
         }
     },
+    "Splendor_of_Tranquil_Waters": {
+        "type": "sword",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Dewdrop",
+            "rare_drop": "Water",
+            "common_drop": "Transoceanic"
+        }
+    },
     "Staff of Homa": {
         "type": "spear",
         "rarity": 5,
@@ -1268,15 +1286,6 @@
             "common_drop": "Mask"
         }
     },
-    "Sapwood Blade": {
-        "type": "sword",
-        "rarity": 4,
-        "ascension": {
-            "domain_drop": "Talisman",
-            "rare_drop": "Fungal_Nucleus",
-            "common_drop": "Red"
-        }
-    },
     "Sword of Descension": {
         "type": "sword",
         "rarity": 4,
@@ -1284,6 +1293,24 @@
             "domain_drop": "Fang",
             "rare_drop": "Branch",
             "common_drop": "Treasure_Hoarder_Insignia"
+        }
+    },
+    "Sword of Narzissenkreuz Ousia": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Chord",
+            "rare_drop": "Operative",
+            "common_drop": "Transoceanic"
+        }
+    },
+    "Sword of Narzissenkreuz Pneuma": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Chord",
+            "rare_drop": "Operative",
+            "common_drop": "Transoceanic"
         }
     },
     "Talking Stick": {
