@@ -1318,5 +1318,22 @@
             }
         },
         "weapon": "sword"
+    },
+    "Navia": {
+        "element": "geo",
+        "ascension": {
+            "element": "geo",
+            "local_specialty": "Spring_of_the_First_Dewdrop",
+            "common_drop": "Transoceanic",
+            "boss_drop": "Artificed_Spare_Clockwork_Component_-_Coppelius"
+        },
+        "talent": {
+            "all": {
+                "book": "Equity",
+                "common_drop": "Transoceanic",
+                "boss_drop": "Lightless_Silk_String"
+            }
+        },
+        "weapon": "claymore"
     }
 }
