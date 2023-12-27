@@ -1493,6 +1493,24 @@
             "common_drop": "Fatui_Insignia"
         }
     },
+    "Ultimate Overlord's Mega Magic Sword": {
+        "type": "claymore",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Goblet",
+            "rare_drop": "Operative",
+            "common_drop": "Gear"
+        }
+    },
+    "Verdict": {
+        "type": "claymore",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Chord",
+            "rare_drop": "Alien",
+            "common_drop": "Gear"
+        }
+    },
     "Vortex Vanquisher": {
         "type": "spear",
         "rarity": 5,
