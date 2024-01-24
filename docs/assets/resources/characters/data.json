@@ -1335,5 +1335,22 @@
             }
         },
         "weapon": "claymore"
+    },
+    "Chevreuse": {
+        "element": "pyro",
+        "ascension": {
+            "element": "pyro",
+            "local_specialty": "Lumidouce_Bell",
+            "common_drop": "Gear",
+            "boss_drop": "Fontemer_Unihorn"
+        },
+        "talent": {
+            "all": {
+                "book": "Order",
+                "common_drop": "Transoceanic",
+                "boss_drop": "Lightless_Eye_of_the_Maelstrom"
+            }
+        },
+        "weapon": "spear"
     }
 }
