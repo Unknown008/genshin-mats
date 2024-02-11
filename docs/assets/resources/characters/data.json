@@ -1352,5 +1352,39 @@
             }
         },
         "weapon": "spear"
+    },
+    "Xianyun": {
+        "element": "anemo",
+        "ascension": {
+            "element": "anemo",
+            "local_specialty": "Lumidouce_Bell",
+            "common_drop": "Scroll",
+            "boss_drop": "Cloudseam_Scale"
+        },
+        "talent": {
+            "all": {
+                "book": "Prosperity",
+                "common_drop": "Scroll",
+                "boss_drop": "Lightless_Eye_of_the_Maelstrom"
+            }
+        },
+        "weapon": "catalyst"
+    },
+    "Gaming": {
+        "element": "pyro",
+        "ascension": {
+            "element": "pyro",
+            "local_specialty": "Starconch",
+            "common_drop": "Slime",
+            "boss_drop": "Emperor's_Resolution"
+        },
+        "talent": {
+            "all": {
+                "book": "Prosperity",
+                "common_drop": "Slime",
+                "boss_drop": "Lightless_Mass"
+            }
+        },
+        "weapon": "claymore"
     }
 }

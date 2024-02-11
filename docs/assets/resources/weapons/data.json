@@ -210,14 +210,23 @@
         "type": "bow",
         "rarity": 4,
         "ascension": {
-            "domain_drop": "Aerosiderite",
-            "rare_drop": "Bone",
-            "common_drop": "Fatui_Insignia"
+            "domain_drop": "Dango",
+            "rare_drop": "Fin",
+            "common_drop": "Scroll"
         }
     },
     "Cold Steel": {
         "type": "sword",
         "rarity": 3,
+        "ascension": {
+            "domain_drop": "Decarabian",
+            "rare_drop": "Horn",
+            "common_drop": "Arrowhead"
+        }
+    },
+    "Crane's Echoing Call": {
+        "type": "catalyst",
+        "rarity": 5,
         "ascension": {
             "domain_drop": "Decarabian",
             "rare_drop": "Horn",
