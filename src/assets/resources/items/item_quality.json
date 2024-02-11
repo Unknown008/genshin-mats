@@ -159,7 +159,12 @@
         "Operative": {
             "green": "Old_Operative's_Pocket_Watch",
             "blue": "Operative's_Standard_Pocket_Watch",
-            "purple": "Operative's_ConstancyW"
+            "purple": "Operative's_Constancy"
+        },
+        "Fin": {
+            "green": "Feathery_Fin",
+            "blue": "Lunar_Fin",
+            "purple": "Chasmlight_Fin"
         }
     },
     "exp": {
