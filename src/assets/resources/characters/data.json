@@ -1386,5 +1386,22 @@
             }
         },
         "weapon": "claymore"
+    },
+    "Chiori": {
+        "element": "geo",
+        "ascension": {
+            "element": "geo",
+            "local_specialty": "Dendrobium",
+            "common_drop": "Spectral",
+            "boss_drop": "Artificed_Spare_Clockwork_Component_-_Coppelia"
+        },
+        "talent": {
+            "all": {
+                "book": "Light",
+                "common_drop": "Spectral",
+                "boss_drop": "Lightless_Silk_String"
+            }
+        },
+        "weapon": "sword"
     }
 }

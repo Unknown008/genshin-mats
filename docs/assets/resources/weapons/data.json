@@ -269,6 +269,15 @@
             "common_drop": "Mask"
         }
     },
+    "Dialogues of the Desert Sages": {
+        "type": "spear",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Dewdrop",
+            "rare_drop": "Fin",
+            "common_drop": "Spectral"
+        }
+    },
     "Dodoco Tales": {
         "type": "catalyst",
         "rarity": 4,
@@ -1511,6 +1520,15 @@
             "common_drop": "Gear"
         }
     },
+    "Uragu Misugiri": {
+        "type": "sword",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Coral",
+            "rare_drop": "Axis",
+            "common_drop": "Handguard"
+        }
+    },
     "Verdict": {
         "type": "claymore",
         "rarity": 5,
@@ -1553,7 +1571,7 @@
         "ascension": {
             "domain_drop": "Mask",
             "rare_drop": "Claw",
-            "common_drop": "Hanguard"
+            "common_drop": "Handguard"
         }
     },
     "White Iron Greatsword": {
