@@ -16,7 +16,7 @@
                         "outputPath": "docs/",
                         "index": "src/index.html",
                         "main": "src/main.ts",
-                        "polyfills": "src/polyfills.ts",
+                        "polyfills": ["zone.js"],
                         "tsConfig": "tsconfig.app.json",
                         "aot": true,
                         "assets": [
@@ -71,14 +71,14 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "genshin-mats:build"
+                      "buildTarget": "genshin-mats:build"
                     },
                     "configurations": {
                         "development": {
-                            "browserTarget": "genshin-mats:build:development"
+                          "buildTarget": "genshin-mats:build:development"
                         },
                         "production": {
-                            "browserTarget": "genshin-mats:build:production"
+                          "buildTarget": "genshin-mats:build:production"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -86,14 +86,14 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "genshin-mats:build"
+                      "buildTarget": "genshin-mats:build"
                     }
                 },
                 "test": {
                     "builder": "@angular-devkit/build-angular:karma",
                     "options": {
                         "main": "src/test.ts",
-                        "polyfills": "src/polyfills.ts",
+                        "polyfills": ["zone.js"],
                         "tsConfig": "tsconfig.spec.json",
                         "karmaConfig": "karma.conf.js",
                         "assets": [
