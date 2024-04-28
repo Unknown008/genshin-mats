@@ -47,23 +47,28 @@ tr:nth-child(even) {
 }
 
 .grey {
-    background-image: radial-gradient(circle, rgba(256, 256, 256, 0.4), #7b827b);
+    background-image: url(../../../assets/resources/quality/grey.png);
+    background-size: cover;
 }
 
 .green {
-    background-image: radial-gradient(circle, rgba(256, 256, 256, 0.4), #5a8a7e);
+    background-image: url(../../../assets/resources/quality/green.png);
+    background-size: cover;
 }
 
 .blue {
-    background-image: radial-gradient(circle, rgba(256, 256, 256, 0.4), #5a789a);
+    background-image: url(../../../assets/resources/quality/blue.png);
+    background-size: cover;
 }
 
 .purple {
-    background-image: radial-gradient(circle, rgba(256, 256, 256, 0.4), #716798);
+    background-image: url(../../../assets/resources/quality/purple.png);
+    background-size: cover;
 }
 
 .gold {
-    background-image: radial-gradient(circle, rgba(256, 256, 256, 0.4), #986426);
+    background-image: url(../../../assets/resources/quality/gold.png);
+    background-size: cover;
 }
 
 td .maxed {

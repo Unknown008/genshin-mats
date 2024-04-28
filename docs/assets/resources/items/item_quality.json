@@ -165,6 +165,11 @@
             "green": "Feathery_Fin",
             "blue": "Lunar_Fin",
             "purple": "Chasmlight_Fin"
+        },
+        "Hilt": {
+            "green": "Ruined_Hilt",
+            "blue": "Splintered_Hilt",
+            "purple": "Still-Smoldering_Hilt"
         }
     },
     "exp": {
