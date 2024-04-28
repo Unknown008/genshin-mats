@@ -1403,5 +1403,22 @@
             }
         },
         "weapon": "sword"
+    },
+    "Arlecchino": {
+        "element": "pyro",
+        "ascension": {
+            "element": "pyro",
+            "local_specialty": "Rainbow_Rose",
+            "common_drop": "Fatui_Insignia",
+            "boss_drop": "Fragment_of_a_Golden_Melody"
+        },
+        "talent": {
+            "all": {
+                "book": "Order",
+                "common_drop": "Fatui_Insignia",
+                "boss_drop": "Fading_Candle"
+            }
+        },
+        "weapon": "sword"
     }
 }

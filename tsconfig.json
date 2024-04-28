@@ -2,22 +2,22 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
-      "baseUrl": "./",
-      "outDir": "./dist/out-tsc",
-      "sourceMap": true,
-      "declaration": false,
-      "downlevelIteration": true,
-      "experimentalDecorators": true,
-      "moduleResolution": "node",
-      "importHelpers": true,
-      "target": "ES2022",
-      "module": "es2020",
-      "lib": [
-        "es2018",
-        "dom"
-      ],
-      "allowSyntheticDefaultImports": true,
-      "esModuleInterop": true,
-      "useDefineForClassFields": false
-    }
+        "baseUrl": "./",
+        "outDir": "./dist/out-tsc",
+        "sourceMap": true,
+        "declaration": false,
+        "downlevelIteration": true,
+        "experimentalDecorators": true,
+        "moduleResolution": "node",
+        "importHelpers": true,
+        "target": "ES2022",
+        "module": "es2020",
+        "lib": [
+            "es2018",
+            "dom"
+        ],
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "useDefineForClassFields": false
+        }
 }

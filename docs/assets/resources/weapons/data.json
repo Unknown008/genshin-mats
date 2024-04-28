@@ -242,6 +242,15 @@
             "common_drop": "Treasure_Hoarder_Insignia"
         }
     },
+    "Crimson Moon's Semblance": {
+        "type": "spear",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Goblet",
+            "rare_drop": "Hilt",
+            "common_drop": "Gear"
+        }
+    },
     "Dark Iron Sword": {
         "type": "sword",
         "rarity": 3,
