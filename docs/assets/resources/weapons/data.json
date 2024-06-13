@@ -8,6 +8,15 @@
             "common_drop": "Spores"
         }
     },
+    "Absolution": {
+        "type": "sword",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Chord",
+            "rare_drop": "Operative",
+            "common_drop": "Gear"
+        }
+    },
     "Akuoumaru": {
         "type": "claymore",
         "rarity": 4,
@@ -204,6 +213,15 @@
             "domain_drop": "Decarabian",
             "rare_drop": "Chaos",
             "common_drop": "Mask"
+        }
+    },
+    "Cloudford": {
+        "type": "bow",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Aerosiderite",
+            "rare_drop": "Hilt",
+            "common_drop": "Fatui_Insignia"
         }
     },
     "Compound Bow": {
