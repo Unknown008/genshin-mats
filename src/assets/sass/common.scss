@@ -131,6 +131,7 @@ button:focus {
 .modal-footer {
     border: none;
     color: #ffffff8c;
+    justify-content: space-between;
 }
 
 .modal-header button {
@@ -138,6 +139,7 @@ button:focus {
     padding: 2px;
     border: none;
     background: none;
+    order: 1;
 }
 
 .table-options {
