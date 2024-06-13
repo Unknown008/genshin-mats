@@ -1420,5 +1420,39 @@
             }
         },
         "weapon": "spear"
+    },
+    "Clorinde": {
+        "element": "electro",
+        "ascension": {
+            "element": "electro",
+            "local_specialty": "Lumitoile",
+            "common_drop": "Transoceanic",
+            "boss_drop": "Fontemer_Unihorn"
+        },
+        "talent": {
+            "all": {
+                "book": "Justice",
+                "common_drop": "Transoceanic",
+                "boss_drop": "Everamber"
+            }
+        },
+        "weapon": "sword"
+    },
+    "Sethos": {
+        "element": "electro",
+        "ascension": {
+            "element": "electro",
+            "local_specialty": "Trishiraite",
+            "common_drop": "Red",
+            "boss_drop": "Cloudseam_Scale"
+        },
+        "talent": {
+            "all": {
+                "book": "Praxis",
+                "common_drop": "Red",
+                "boss_drop": "Daka's_Bell"
+            }
+        },
+        "weapon": "bow"
     }
 }
