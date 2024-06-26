@@ -1454,5 +1454,22 @@
             }
         },
         "weapon": "bow"
+    },
+    "Sigewinne": {
+        "element": "hydro",
+        "ascension": {
+            "element": "hydro",
+            "local_specialty": "Romaritime_Flower",
+            "common_drop": "Transoceanic",
+            "boss_drop": "Water_That_Failed_To_Transcend"
+        },
+        "talent": {
+            "all": {
+                "book": "Equity",
+                "common_drop": "Transoceanic",
+                "boss_drop": "Lightless_Eye_of_the_Maelstrom"
+            }
+        },
+        "weapon": "bow"
     }
 }

@@ -1259,6 +1259,15 @@
             "common_drop": "Mask"
         }
     },
+    "Silvershower Heartstrings": {
+        "type": "bow",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Dewdrop",
+            "rare_drop": "Fin",
+            "common_drop": "Transoceanic"
+        }
+    },
     "Snow-Tombed Starsilver": {
         "type": "claymore",
         "rarity": 4,
