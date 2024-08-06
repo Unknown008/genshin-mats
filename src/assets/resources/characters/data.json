@@ -1471,5 +1471,22 @@
             }
         },
         "weapon": "bow"
+    },
+    "Emilie": {
+        "element": "dendro",
+        "ascension": {
+            "element": "dendro",
+            "local_specialty": "Lakelight_Lily",
+            "common_drop": "Gear",
+            "boss_drop": "Fragment_of_a_Golden_Melody"
+        },
+        "talent": {
+            "all": {
+                "book": "Order",
+                "common_drop": "Gear",
+                "boss_drop": "Silken_Feather"
+            }
+        },
+        "weapon": "spear"
     }
 }

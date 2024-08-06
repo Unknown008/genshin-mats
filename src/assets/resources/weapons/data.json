@@ -746,6 +746,15 @@
             "common_drop": "Slime"
         }
     },
+    "Lumidouce Elegy": {
+        "type": "spear",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Goblet",
+            "rare_drop": "Hilt",
+            "common_drop": "Nectar"
+        }
+    },
     "Magic Guide": {
         "type": "catalyst",
         "rarity": 3,
