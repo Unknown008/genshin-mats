@@ -1,6 +1,6 @@
 {
     "name": "genshin-mats",
-    "version": "4.6.1",
+    "version": "5.0.1",
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
