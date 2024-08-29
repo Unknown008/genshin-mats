@@ -1488,5 +1488,39 @@
             }
         },
         "weapon": "spear"
+    },
+    "Mualani": {
+        "element": "hydro",
+        "ascension": {
+            "element": "hydro",
+            "local_specialty": "Sprayfeather_Gill",
+            "common_drop": "Whistle",
+            "boss_drop": "Mark_of_the_Binding_Blessing"
+        },
+        "talent": {
+            "all": {
+                "book": "Contention",
+                "common_drop": "Whistle",
+                "boss_drop": "Lightless_Mass"
+            }
+        },
+        "weapon": "catalyst"
+    },
+    "Kachina": {
+        "element": "geo",
+        "ascension": {
+            "element": "geo",
+            "local_specialty": "Quenepa_Berry",
+            "common_drop": "Whistle",
+            "boss_drop": "Overripe_Flamegranate"
+        },
+        "talent": {
+            "all": {
+                "book": "Conflict",
+                "common_drop": "Whistle",
+                "boss_drop": "Fading_Candle"
+            }
+        },
+        "weapon": "catalyst"
     }
 }
