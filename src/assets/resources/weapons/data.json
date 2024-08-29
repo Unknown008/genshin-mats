@@ -89,6 +89,15 @@
             "common_drop": "Arrowhead"
         }
     },
+    "Ash-Graven Drinking Horn": {
+        "type": "catalyst",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "NightWind",
+            "rare_drop": "Secret_Source",
+            "common_drop": "Fang"
+        }
+    },
     "Ballad of the Boundless Blue": {
         "type": "catalyst",
         "rarity": 4,
@@ -204,6 +213,15 @@
             "domain_drop": "Goblet",
             "rare_drop": "Operative",
             "common_drop": "Transoceanic"
+        }
+    },
+    "Chain_Breaker": {
+        "type": "bow",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "NightWind",
+            "rare_drop": "Fin",
+            "common_drop": "Fang"
         }
     },
     "Cinnabar Spindle": {
@@ -341,6 +359,15 @@
             "common_drop": "Arrowhead"
         }
     },
+    "Earth Shaker": {
+        "type": "claymore",
+        "rarity": 3,
+        "ascension": {
+            "domain_drop": "Blazing",
+            "rare_drop": "Ignited",
+            "common_drop": "Whistle"
+        }
+    },
     "Ebony Bow": {
         "type": "bow",
         "rarity": 3,
@@ -402,6 +429,15 @@
             "domain_drop": "Aerosiderite",
             "rare_drop": "Knife",
             "common_drop": "Scroll"
+        }
+    },
+    "Fang o the Mountain King": {
+        "type": "claymore",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "",
+            "rare_drop": "",
+            "common_drop": ""
         }
     },
     "Favonius Codex": {
@@ -501,6 +537,24 @@
             "domain_drop": "Dewdrop",
             "rare_drop": "Alien",
             "common_drop": "Transoceanic"
+        }
+    },
+    "Flute_of_Ezpitzal": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Blazing",
+            "rare_drop": "Hilt",
+            "common_drop": "Fang"
+        }
+    },
+    "Footprint_of_the_Rainbow": {
+        "type": "spear",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Delirious",
+            "rare_drop": "Secret_Source",
+            "common_drop": "Whistle"
         }
     },
     "Forest Regalia": {
@@ -1043,6 +1097,15 @@
             "common_drop": "Gear"
         }
     },
+    "Ring_of_Yaxche": {
+        "type": "catalyst",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Delirious",
+            "rare_drop": "Will",
+            "common_drop": "Mask"
+        }
+    },
     "Royal Bow": {
         "type": "bow",
         "rarity": 4,
@@ -1347,6 +1410,15 @@
             "domain_drop": "Guyun",
             "rare_drop": "Knife",
             "common_drop": "Mask"
+        }
+    },
+    "Surf's Up": {
+        "type": "catalyst",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Blazing",
+            "rare_drop": "Will",
+            "common_drop": "Fang"
         }
     },
     "Sword of Descension": {
