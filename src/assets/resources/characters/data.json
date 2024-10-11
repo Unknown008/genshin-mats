@@ -1522,5 +1522,39 @@
             }
         },
         "weapon": "catalyst"
+    },
+    "Kinich": {
+        "element": "dendro",
+        "ascension": {
+            "element": "dendro",
+            "local_specialty": "Saurian_Claw_Succulent",
+            "common_drop": "Fang",
+            "boss_drop": "Overripe_Flamegranate"
+        },
+        "talent": {
+            "all": {
+                "book": "Kindling",
+                "common_drop": "Fang",
+                "boss_drop": "Denial_and_Judgement"
+            }
+        },
+        "weapon": "claymore"
+    },
+    "Xilonen": {
+        "element": "geo",
+        "ascension": {
+            "element": "geo",
+            "local_specialty": "Brilliant_Chrysanthemum",
+            "common_drop": "Whistle",
+            "boss_drop": "Gold-Inscribed_Secret_Source_Core"
+        },
+        "talent": {
+            "all": {
+                "book": "Kindling",
+                "common_drop": "Whistle",
+                "boss_drop": "Mirror_of_Mushin"
+            }
+        },
+        "weapon": "sword"
     }
 }
