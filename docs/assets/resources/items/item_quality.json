@@ -182,9 +182,9 @@
             "purple": "Heart_of_the_Secret_Source"
         },
         "Fang": {
-            "green": "Juvenile_Fang",
-            "blue": "Seasoned_Fang",
-            "purple": "Tyrant's_Fang"
+            "grey": "Juvenile_Fang",
+            "green": "Seasoned_Fang",
+            "blue": "Tyrant's_Fang"
         },
         "Will": {
             "green": "Shard_of_a_Shattered_Will",
