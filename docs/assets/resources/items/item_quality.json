@@ -195,6 +195,11 @@
             "green": "Ignited_Stone",
             "blue": "Ignited_Seed_of_Life",
             "purple": "Ignited_Seeing_Eye"
+        },
+        "Leaf": {
+            "green": "Refractive_Bud",
+            "blue": "Bewildering_Broadleaf",
+            "purple": "Illusory_Leafcoil"
         }
     },
     "exp": {

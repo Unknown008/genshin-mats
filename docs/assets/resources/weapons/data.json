@@ -98,6 +98,15 @@
             "common_drop": "Fang"
         }
     },
+    "Astral Vulture's Crimson Plumage": {
+        "type": "bow",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "NightWind",
+            "rare_drop": "Leaf",
+            "common_drop": "Whistle"
+        }
+    },
     "Ballad of the Boundless Blue": {
         "type": "catalyst",
         "rarity": 4,
@@ -195,6 +204,15 @@
             "domain_drop": "Fang",
             "rare_drop": "Branch",
             "common_drop": "Arrowhead"
+        }
+    },
+    "Calamity of Eshu": {
+        "type": "sword",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Delirious",
+            "rare_drop": "Leaf",
+            "common_drop": "Whistle"
         }
     },
     "Calamity Queller": {
@@ -528,6 +546,15 @@
             "domain_drop": "Chord",
             "rare_drop": "Water",
             "common_drop": "Transoceanic"
+        }
+    },
+    "Flower-Wreathed Feathers": {
+        "type": "bow",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "NightWind",
+            "rare_drop": "Ignited",
+            "common_drop": "Whistle"
         }
     },
     "Flowing Purity": {
@@ -1725,6 +1752,15 @@
             "domain_drop": "Mask",
             "rare_drop": "Claw",
             "common_drop": "Handguard"
+        }
+    },
+    "Waveriding Whirl": {
+        "type": "catalyst",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Blazing",
+            "rare_drop": "Will",
+            "common_drop": "Fang"
         }
     },
     "White Iron Greatsword": {
