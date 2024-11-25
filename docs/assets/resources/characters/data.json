@@ -1556,5 +1556,39 @@
             }
         },
         "weapon": "sword"
+    },
+    "Ororon": {
+        "element": "electro",
+        "ascension": {
+            "element": "electro",
+            "local_specialty": "Glowing_Hornshroom",
+            "common_drop": "Fang",
+            "boss_drop": "Mark_of_the_Binding_Blessing"
+        },
+        "talent": {
+            "all": {
+                "book": "Kindling",
+                "common_drop": "Fang",
+                "boss_drop": "Lightless_Silk_String"
+            }
+        },
+        "weapon": "bow"
+    },
+    "Chasca": {
+        "element": "anemo",
+        "ascension": {
+            "element": "anemo",
+            "local_specialty": "Withering_Purpurbloom",
+            "common_drop": "Fang",
+            "boss_drop": "Ensnaring_Gaze"
+        },
+        "talent": {
+            "all": {
+                "book": "Conflict",
+                "common_drop": "Fang",
+                "boss_drop": "Silken_Feather"
+            }
+        },
+        "weapon": "bow"
     }
 }
