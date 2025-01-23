@@ -1,4 +1,13 @@
 {
+    "A_Thousand_Blazing_Suns": {
+        "type": "claymore",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Blazing",
+            "rare_drop": "Secret_Source",
+            "common_drop": "Fang"
+        }
+    },
     "A Thousand Floating Dreams": {
         "type": "catalyst",
         "rarity": 5,
@@ -1455,6 +1464,15 @@
             "domain_drop": "Oasis",
             "rare_drop": "Will",
             "common_drop": "Flute"
+        }
+    },
+    "Starcaller's_Watch": {
+        "type": "catalyst",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Delirious",
+            "rare_drop": "Will",
+            "common_drop": "Whistle"
         }
     },
     "Sturdy Bone": {
