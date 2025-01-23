@@ -1590,5 +1590,56 @@
             }
         },
         "weapon": "bow"
+    },
+    "Mavuika": {
+        "element": "pyro",
+        "ascension": {
+            "element": "pyro",
+            "local_specialty": "Withering_Purpurbloom",
+            "common_drop": "Whistle",
+            "boss_drop": "Gold-Inscribed_Secret_Source_Core"
+        },
+        "talent": {
+            "all": {
+                "book": "Contention",
+                "common_drop": "Whistle",
+                "boss_drop": "Eroded_Horn"
+            }
+        },
+        "weapon": "claymore"
+    },
+    "Citlali": {
+        "element": "cryo",
+        "ascension": {
+            "element": "cryo",
+            "local_specialty": "Quenepa_Berry",
+            "common_drop": "Fang",
+            "boss_drop": "Talisman_of_the_Enigmatic_Land"
+        },
+        "talent": {
+            "all": {
+                "book": "Kindling",
+                "common_drop": "Fang",
+                "boss_drop": "Denial_and_Judgment"
+            }
+        },
+        "weapon": "catalyst"
+    },
+    "Lan Yan": {
+        "element": "anemo",
+        "ascension": {
+            "element": "anemo",
+            "local_specialty": "Clearwater_Jade",
+            "common_drop": "Nectar",
+            "boss_drop": "Gold-Inscribed_Secret_Source_Core"
+        },
+        "talent": {
+            "all": {
+                "book": "Diligence",
+                "common_drop": "Nectar",
+                "boss_drop": "Eroded_Sunfire"
+            }
+        },
+        "weapon": "catalyst"
     }
 }
