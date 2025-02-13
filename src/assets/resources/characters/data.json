@@ -89,6 +89,22 @@
         },
         "weapon": "sword"
     },
+    "Traveler (Pyro)": {
+        "element": "pyro",
+        "ascension": {
+            "element": "adaptive",
+            "local_specialty": "Windwheel_Aster",
+            "common_drop": "Mask"
+        },
+        "talent": {
+            "all": {
+                "book": ["Contention", "Kindling", "Conflict"],
+                "common_drop": "Whistle",
+                "boss_drop": "The_Cornerstone_of_Stars_and_Flames"
+            }
+        },
+        "weapon": "sword"
+    },
     "Amber": {
         "element": "pyro",
         "ascension": {
@@ -1638,6 +1654,23 @@
                 "book": "Diligence",
                 "common_drop": "Nectar",
                 "boss_drop": "Eroded_Sunfire"
+            }
+        },
+        "weapon": "catalyst"
+    },
+    "Yumemizuki Mizuki": {
+        "element": "anemo",
+        "ascension": {
+            "element": "anemo",
+            "local_specialty": "Sea_Ganoderma",
+            "common_drop": "Handguard",
+            "boss_drop": "Talisman_of_the_Enigmatic_Land"
+        },
+        "talent": {
+            "all": {
+                "book": "Transience",
+                "common_drop": "Handguard",
+                "boss_drop": "Fading_Candle"
             }
         },
         "weapon": "catalyst"

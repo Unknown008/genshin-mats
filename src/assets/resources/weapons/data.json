@@ -86,7 +86,7 @@
         "ascension": {
             "domain_drop": "Guyun",
             "rare_drop": "Statuette",
-            "common_drop": "Specter"
+            "common_drop": "Spectral"
         }
     },
     "Aquila Favonia": {
@@ -869,7 +869,7 @@
         "ascension": {
             "domain_drop": "Shackle",
             "rare_drop": "Shell",
-            "common_drop": "Specter"
+            "common_drop": "Spectral"
         }
     },
     "Makhaira Aquamarine": {
@@ -1493,6 +1493,15 @@
             "common_drop": "Mask"
         }
     },
+    "Sunny_Morning_Sleep-In": {
+        "type": "catalyst",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Maga",
+            "rare_drop": "Ignited",
+            "common_drop": "Spectral"
+        }
+    },
     "Surf's Up": {
         "type": "catalyst",
         "rarity": 5,
@@ -1536,6 +1545,15 @@
             "domain_drop": "Oasis",
             "rare_drop": "Shell",
             "common_drop": "Slime"
+        }
+    },
+    "Taamayuratei no Ohanashi": {
+        "type": "spear",
+        "rarity": 4,
+        "ascension": {
+            "domain_drop": "Mask",
+            "rare_drop": "Leaf",
+            "common_drop": "Handguard"
         }
     },
     "The Alley Flash": {
