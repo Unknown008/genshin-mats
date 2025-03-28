@@ -1674,5 +1674,39 @@
             }
         },
         "weapon": "catalyst"
+    },
+    "Iansan": {
+        "element": "electro",
+        "ascension": {
+            "element": "electro",
+            "local_specialty": "Dracolite",
+            "common_drop": "Whistle",
+            "boss_drop": "Ensnaring_Gaze"
+        },
+        "talent": {
+            "all": {
+                "book": "Contention",
+                "common_drop": "Whistle",
+                "boss_drop": "Denial_and_Judgment"
+            }
+        },
+        "weapon": "spear"
+    },
+    "Varesa": {
+        "element": "electro",
+        "ascension": {
+            "element": "electro",
+            "local_specialty": "Skysplit_Gembloom",
+            "common_drop": "Fang",
+            "boss_drop": "Sparkless_Statue_Core"
+        },
+        "talent": {
+            "all": {
+                "book": "Conflict",
+                "common_drop": "Fang",
+                "boss_drop": "Eroded_Scale-Feather"
+            }
+        },
+        "weapon": "catalyst"
     }
 }

@@ -1754,6 +1754,15 @@
             "common_drop": "Gear"
         }
     },
+    "Vivid_Notions": {
+        "type": "catalyst",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "Mask",
+            "rare_drop": "Furnace_Shell",
+            "common_drop": "Fang"
+        }
+    },
     "Vortex Vanquisher": {
         "type": "spear",
         "rarity": 5,
