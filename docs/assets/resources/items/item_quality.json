@@ -200,6 +200,11 @@
             "green": "Refractive_Bud",
             "blue": "Bewildering_Broadleaf",
             "purple": "Illusory_Leafcoil"
+        },
+        "Furnace_Shell": {
+            "green": "Cold-Cracked-Shellshard",
+            "blue": "Warm_Back-Shell",
+            "purple": "Blazin_Prismshell"
         }
     },
     "exp": {
