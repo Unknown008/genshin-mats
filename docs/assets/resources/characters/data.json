@@ -1708,5 +1708,39 @@
             }
         },
         "weapon": "catalyst"
+    },
+    "Ifa": {
+        "element": "anemo",
+        "ascension": {
+            "element": "anemo",
+            "local_specialty": "Saurian_Claw_Succulent",
+            "common_drop": "Fang",
+            "boss_drop": "Sparkless_Statue_Core"
+        },
+        "talent": {
+            "all": {
+                "book": "Conflict",
+                "common_drop": "Fang",
+                "boss_drop": "Ascended_Sample_Rook"
+            }
+        },
+        "weapon": "catalyst"
+    },
+    "Escoffier": {
+        "element": "cryo",
+        "ascension": {
+            "element": "cryo",
+            "local_specialty": "Beryl_Conch",
+            "common_drop": "Gear",
+            "boss_drop": "Sparkless_Statue_Core"
+        },
+        "talent": {
+            "all": {
+                "book": "Justice",
+                "common_drop": "Gear",
+                "boss_drop": "Eroded_Horn"
+            }
+        },
+        "weapon": "spear"
     }
 }
