@@ -116,6 +116,15 @@
             "common_drop": "Whistle"
         }
     },
+    "Azurelight": {
+        "type": "sword",
+        "rarity": 5,
+        "ascension": {
+            "domain_drop": "NightWind",
+            "rare_drop": "Leaf",
+            "common_drop": "Whistle"
+        }
+    },
     "Ballad of the Boundless Blue": {
         "type": "catalyst",
         "rarity": 4,

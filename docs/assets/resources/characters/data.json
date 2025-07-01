@@ -1732,7 +1732,7 @@
             "element": "cryo",
             "local_specialty": "Beryl_Conch",
             "common_drop": "Gear",
-            "boss_drop": "Sparkless_Statue_Core"
+            "boss_drop": "Secret_Source_Airflow_Accumulator"
         },
         "talent": {
             "all": {
@@ -1742,5 +1742,39 @@
             }
         },
         "weapon": "spear"
+    },
+    "Dahlia": {
+        "element": "hydro",
+        "ascension": {
+            "element": "hydro",
+            "local_specialty": "Calla_Lily",
+            "common_drop": "Arrowhead",
+            "boss_drop": "Secret_Source_Airflow_Accumulator"
+        },
+        "talent": {
+            "all": {
+                "book": "Ballad",
+                "common_drop": "Arrowhead",
+                "boss_drop": "Eroded_Scale-Feather"
+            }
+        },
+        "weapon": "sword"
+    },
+    "Skirk": {
+        "element": "cryo",
+        "ascension": {
+            "element": "cryo",
+            "local_specialty": "Skysplit_Gembloom",
+            "common_drop": "Gear",
+            "boss_drop": "Ensnaring_Gaze"
+        },
+        "talent": {
+            "all": {
+                "book": "Contention",
+                "common_drop": "Gear",
+                "boss_drop": "Ascended_Sample_Knight"
+            }
+        },
+        "weapon": "sword"
     }
 }
