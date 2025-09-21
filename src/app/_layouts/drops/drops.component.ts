@@ -36,7 +36,10 @@ export class DropsComponent implements OnInit, OnChanges {
         "Order": [],
         "Contention": [],
         "Kindling": [],
-        "Conflict": []
+        "Conflict": [],
+        "Moonlight": [],
+        "Elysium": [],
+        "Vagrancy": []
     };
     public charPath: string = this.url.getUrl("../../assets/resources/characters/", true);
     public weapons = {
@@ -57,7 +60,10 @@ export class DropsComponent implements OnInit, OnChanges {
         "Goblet": [],
         "Blazing": [],
         "Delirious": [],
-        "NightWind": []
+        "Night_Wind": [],
+        "Artful_Device": [],
+        "Long_Night_Flint": [],
+        "North_Scions": []
     };
     public charWeapons: any;
     public weapPath: string = this.url.getUrl("../../assets/resources/items/", true);
@@ -276,7 +282,10 @@ export class DropsComponent implements OnInit, OnChanges {
             "Order": [],
             "Contention": [],
             "Kindling": [],
-            "Conflict": []
+            "Conflict": [],
+            "Moonlight": [],
+            "Elysium": [],
+            "Vagrancy": []
         };
         this.weapons = {
             "Decarabian": [],
@@ -296,7 +305,10 @@ export class DropsComponent implements OnInit, OnChanges {
             "Goblet": [],
             "Blazing": [],
             "Delirious": [],
-            "NightWind": []
+            "Night_Wind": [],
+            "Artful_Device": [],
+            "Long_Night_Flint": [],
+            "North_Scions": []
         };
         this.charWeapons = {
             "Decarabian": [],
@@ -316,7 +328,10 @@ export class DropsComponent implements OnInit, OnChanges {
             "Goblet": [],
             "Blazing": [],
             "Delirious": [],
-            "NightWind": []
+            "Night_Wind": [],
+            "Artful_Device": [],
+            "Long_Night_Flint": [],
+            "North_Scions": []
         };
     }
 }

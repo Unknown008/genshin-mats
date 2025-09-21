@@ -202,9 +202,34 @@
             "purple": "Illusory_Leafcoil"
         },
         "Furnace_Shell": {
-            "green": "Cold-Cracked-Shellshard",
+            "green": "Cold-Cracked_Shellshard",
             "blue": "Warm_Back-Shell",
-            "purple": "Blazin_Prismshell"
+            "purple": "Blazing_Prismshell"
+        },
+        "Warrant": {
+            "grey": "Tattered_Warrant",
+            "green": "Immaculate_Warrant",
+            "blue": "Frost-Etched_Warrant"
+        },
+        "Frostnight": {
+            "green": "Frostnight's_Glimmer",
+            "blue": "Frostnight's_Glow",
+            "purple": "Frostnight's_Glory"
+        },
+        "Drive_Shaft": {
+            "grey": "Broken_Drive_Shaft",
+            "green": "Reinforced_Drive_Shaft",
+            "blue": "Precision_Drive_Shaft"
+        },
+        "Radiant": {
+            "green": "Lightless_Bone",
+            "blue": "Glowing_Remains",
+            "purple": "Radiant_Exoskeleton"
+        },
+        "Mistshroud": {
+            "green": "Mistshroud_Manifestation",
+            "blue": "Mistshroud_Plate",
+            "purple": "Mistshroud_Helmet"
         }
     },
     "exp": {
@@ -324,11 +349,29 @@
             "purple": "Delirious_Demeanor_of_the_Sacred_Lord",
             "gold": "Delirious_Divinity_of_the_Sacred_Lord"
         },
-        "NightWind": {
+        "Night_Wind": {
             "green": "Night-Wind's_Mystic_Consideration",
             "blue": "Night-Wind's_Mystic_Premonition",
             "purple": "Night-Wind's_Mystic_Augury",
             "gold": "Night-Wind's_Mystic_Revelation"
+        },
+        "Artful_Device": {
+            "green": "Artful_Device_Fragment",
+            "blue": "Artful_Device_Replica",
+            "purple": "Artful_Device_Inheritance",
+            "gold": "Artful_Device_Wish"
+        },
+        "Long_Night_Flint": {
+            "green": "Ember_of_Long_Night_Flint",
+            "blue": "Afterglow_of_Long_Night_Flint",
+            "purple": "Flare_of_Long_Night_Flint",
+            "gold": "Blaze_of_Long_Night_Flint"
+        },
+        "North_Scions": {
+            "green": "Sundered_Glory_of_the_Far-North_Scions",
+            "blue": "Unyielding_Delusion_of_the_Far-North_Scions",
+            "purple": "Oblation_of_the_Far-North_Scions",
+            "gold": "Aureate_Radiance_of_the_Far-North_Scions"
         }
     },
     "weapon_exp": {
