@@ -1776,5 +1776,73 @@
             }
         },
         "weapon": "sword"
+    },
+    "Ineffa": {
+        "element": "electro",
+        "ascension": {
+            "element": "electro",
+            "local_specialty": "Glowing_Hornshroom",
+            "common_drop": "Whistle",
+            "boss_drop": "Secret_Source_Airflow_Accumulator"
+        },
+        "talent": {
+            "all": {
+                "book": "Conflict",
+                "common_drop": "Whistle",
+                "boss_drop": "Eroded_Sunfire"
+            }
+        },
+        "weapon": "spear"
+    },
+    "Lauma": {
+        "element": "dendro",
+        "ascension": {
+            "element": "dendro",
+            "local_specialty": "Moonfall_Silver",
+            "common_drop": "Warrant",
+            "boss_drop": "Lightbearing_Scale-Feather"
+        },
+        "talent": {
+            "all": {
+                "book": "Moonlight",
+                "common_drop": "Warrant",
+                "boss_drop": "Eroded_Scale-Feather"
+            }
+        },
+        "weapon": "catalyst"
+    },
+    "Aino": {
+        "element": "hydro",
+        "ascension": {
+            "element": "hydro",
+            "local_specialty": "Portable_Bearing",
+            "common_drop": "Drive_Shaft",
+            "boss_drop": "Precision_Kuuvahki_Stamping_Die"
+        },
+        "talent": {
+            "all": {
+                "book": "Elysium",
+                "common_drop": "Drive_Shaft",
+                "boss_drop": "Silken_Feather"
+            }
+        },
+        "weapon": "claymore"
+    },
+    "Flins": {
+        "element": "electro",
+        "ascension": {
+            "element": "electro",
+            "local_specialty": "Frostlamp_Flower",
+            "common_drop": "Drive_Shaft",
+            "boss_drop": "Precision_Kuuvahki_Stamping_Die"
+        },
+        "talent": {
+            "all": {
+                "book": "Vagrancy",
+                "common_drop": "Drive_Shaft",
+                "boss_drop": "Ascended_Sample_Queen"
+            }
+        },
+        "weapon": "spear"
     }
 }
