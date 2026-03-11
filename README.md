@@ -1,3 +1,7 @@
+Dropped the updates. Things are a lot easier to farm now with domains giving all the books for a few days after a new banner is released so, it makes it a bit redundant, plus the mark for enhancement in game also keeps track of what's left to farm so, yea. I'm not going to update this repo anymore.
+
+---
+
 Just a little project I wanted to work on that helps planning when to farm mats and how to allocate resin efficiently for the characters you have and want to develop.
 
 A lot of the Genshin Impact assets/ideas I'm using in this app have been obtained/inspired from the following websites/articles:
